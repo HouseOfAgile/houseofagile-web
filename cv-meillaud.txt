@@ -1,0 +1,97 @@
+jc@houseofagile.com 
+H +33 629024643 
+Wisbyerstrasse 3, 10439 Berlin 
+https://www.linkedin.com/in/jeanchristophemeillaud/ 
+Meillaud Jean-Christophe 
+44 year old French 
+Single 
+
+Chief Technology Officer | Technical Architect | Full-Stack & Cloud Solutions Expert 
+• Highly accomplished Technical Leader and Entrepreneur with over 20 years of experience in full-stack development, cloud computing, DevOps, and AI/ML technologies. 
+• Proven expertise in architecting scalable solutions, driving innovation, and leading cross-functional teams to deliver high-quality software products. 
+• Demonstrated success in managing large-scale projects, optimizing operations, and leveraging cutting-edge technologies to solve complex challenges. 
+• Passionate about continuous learning and staying at the forefront of technological advancements. Experience M 
+Lead Developer & Solution Architect – Sequasa Berlin, Germany [Jun 2023 – Present] 
+Architecture & Dev · Spearheading the design and development of an innovative, scalable music platform offering real-time event management, ticketing solutions, and artist discovery features. 
+Technologies · Implemented microservices architecture using Symfony 6 and PHP 8, leveraging asynchronous mes saging and RESTful APIs via API Platform. 
+Integrations · Integrated external services and APIs including Discogs, SoundCloud, and Wikipedia for enriched content delivery. 
+Frontend Development · Developed responsive, user-centric UI with Vue.js, Webpack, Sass, and Bootstrap. DevOps Practices · Employed Docker and Kubernetes for containerization and orchestration, ensuring high availability and scalability. 
+CI/CD Implementation · Established CI/CD pipelines with GitLab/Github for automated testing and deployment. 
+Chief Technology Officer & Co-founder – House of Agile Hybrid [Mar 2014 – Present] 
+Leadership · Led the development of scalable, full-stack solutions for startups and enterprises, emphasizing Agile methodologies and DevOps practices. 
+Team Management · Managed cross-functional teams to deliver high-quality software products from conception to deploy ment. 
+Key Projects · Developed a custom ticketing platform with real-time analytics and secure payment integrations. · Built community engagement platforms and e-commerce solutions, enhancing user experience through progressive web apps (PWAs). 
+· Implemented growth hacking strategies leveraging data analytics and user behavior insights. 
+Technologies · PHP (Symfony, Laravel), JavaScript (Node.js, Vue.js, React), Python, Bash scripting. Infrastructure · Deployed infrastructure using Docker, Kubernetes, AWS, and GCP. 
+Automation · Automated deployment and configuration management with Ansible, Jenkins, and GitLab CI/CD. 
+Lead Dev & Architect – Painting Event Company (NDA) Berlin, Germany [Apr 2019 – Nov 2022] 
+Platform Development · Architected and led the development of a sophisticated marketing automation platform for event management and digital advertising. 
+Automation · Integrated real-time data feeds and dynamic ad generation, significantly enhancing marketing effi ciency. 
+Technologies · Symfony 4/5, EasyAdmin, Selenium, Chrome Bots, Facebook API. 
+Achievements · Automated Facebook event management and ad production. 
+· Managed a monthly marketing budget exceeding €700,000, optimizing ROI through data-driven strategies. 
+· Improved advertising efficiency and reduced manual workload.
+Experience (continued) M 
+Product Design & Engineering – AI & Crypto Startup (NDA) Hybrid [2018 – 2021] 
+Technologies · Python, AWS Lambda, Pandas, TensorFlow, Docker, Kubernetes. 
+Integrations · Integrated with crypto exchange APIs (Binance, CryptoExchange) for real-time data and trading execution. 
+Achievements · Enhanced trading efficiency and profitability through sophisticated AI/ML models. · Improved system reliability and scalability to handle high-frequency trading demands. 
+· Collaborated with data scientists to refine algorithms and strategies. 
+Chief Technology Officer & Co-founder Scanbots sp. z o.o. Warsaw, Poland [2017 – 2019] 
+Innovation · Founded and led a pioneering startup focused on monitoring linear infrastructures (power lines, pipelines) using long-range UAVs. 
+UAV Operations · Designed custom smart payloads integrating multiple cameras, Lidar sensors, and embedded com puting platforms (Advantech, Nvidia Jetson). 
+Data Systems · Engineered embedded data collection systems with GNSS/IMU/RTK and Riegl LIDAR integration using C++ and Rust. 
+Analytics & AI · Built a complete supply chain for processing 3D data and conducted asset condition assessments using Python and Node.js/Vue.js. 
+Deep Learning · Implemented AI/deep learning models for image recognition and anomaly detection with Tensor Flow/Keras. 
+Big Data & DevOps · Managed terabytes of data using Docker, Kubernetes, OpenShift, and Ansible. Leadership · Recruited and led a multidisciplinary team of over 10 employees, established agile methodologies, and directed product management. 
+Chief Technology Officer & Co-founder – Heypet.me Berlin, Germany [2014 – 2018] 
+Platform Development · Built a social network for pet owners and carers with a responsive API-based backend. Technologies · Angular.js, TypeScript, Symfony, Docker, Nginx, OAuth, Traefik. 
+Testing · Ensured robust test coverage and API reliability. 
+Startups & Freelancing Hybrid [2010 – 2017] 
+2015 – 2017 · Seeland GmbH: Developed an e-commerce platform with Symfony and Docker. 2014 – 2015 · Japan School of Paris: Developed an e-learning platform with B2B e-commerce and payment APIs. 2013 – 2014 · Founder & CTO of Justmoov: Food, Theater, and Bar discovery service in Paris. 2012 – 2013 · Founder & CTO of Scolibri: Social platform for education in Germany. 2010 – 2013 · Founder & CTO of Poumtchi: Digital web agency. 
+Project Delivery Manager – Accenture – Universal Music Group Paris, France [2007 – 2010] 
+2008 - 2010 · Project Delivery manager on UMGI Project 
+· Team Leadership: Led project teams of over 120 professionals, overseeing music metadata and delivery systems. 
+· Project Management: Managed large-scale projects, ensuring timely delivery and adherence to quality standards. 
+· Innovation: Streamlined processes and improved system efficiencies. 
+· Head of Architecture & Facilitator Team, responsible of development & execution architecture (2 teams of 5 team members) 
+· Design and Build a development factory to provide a platform for the management all mu sic/metadatas/delivery and right holders for Universal 
+2007 - 2009 · Project manager on legacy supply chain, DRM team and new Core/Architecture Team for major project UMGI : Improve the way we develop, we deliver and we manage applications at Digiplug (teams of resp 12, 4 and 4 to 10) 
+Technical Leader – Capgemini Telecom & Media – SFR / Voadafone Paris, France [2004 2007] 
+· Technical Leader: Managed Vodafone Live! tracking and billing projects during FIFA World Cup 2006, handling over 30M daily page views.
+Education M 
+2003–2004 · Master’s Degree in Computer Science – Networks and Distributed Systems University Joseph Fourier (UJF) – Grenoble, France 
+2001–2002 · Bachelor’s Degree in Computer Science 
+University Joseph Fourier (UJF) – Grenoble, France 
+Technical Skills M 
+Programming Languages: 
+Proficient · PHP (Symfony, Laravel), Bash scripting, Python, JavaScript (Node.js, Vue.js, React) Familiar · Java (Spring Boot), TypeScript, Perl, SQL,Go, Rust 
+Web Development 
+Frontend · Vue.js, React.js, Angular.js, HTML5, CSS3, Sass/Less 
+Backend · Symfony, Node.js, Express.js, Laravel, Flask 
+DevOps & Infrastructure 
+Containerization · Docker 
+Orchestration · Kubernetes, OpenShift 
+CI/CD · Jenkins, GitLab CI/CD, GitHub Actions, Travis CI 
+Configuration Management · Ansible, Terraform 
+Cloud Platforms · AWS (EC2, S3, Lambda, RDS), Google Cloud Platform (GCP), Azure, DigitalOcean Monitoring & Logging · Prometheus, Grafana, ELK Stack 
+Data & AI/ML 
+Machine Learning · TensorFlow, Keras, PyTorch 
+Data Processing · Pandas, NumPy 
+Databases · MySQL, PostgreSQL, MongoDB, Redis 
+Methodologies 
+Agile · Scrum (Certified ScrumMaster), Kanban, LEAN 
+Testing · Test-Driven Development (TDD), Behavior-Driven Development: Cucumber, Behat/Mink 
+Other Tools & Technologies 
+APIs · RESTful APIs, GraphQL, OAuth, Payment Gateways (Stripe, PayPal) * · Third-party APIs (OpenAI, Facebook, Google, Wikipedia, Discogs) Messaging Queues · RabbitMQ, Kafka, Symfony Messenger 
+Scripting · Shell scripting (expert), Groovy, Perl, Python/Ansible 
+Version Control · Git, SVN 
+Operating Systems: 
+Expert in Linux · Debian, Ubuntu, CentOS 
+Other OS · Unix (*BSD, Solaris), Windows 
+Extracurricular activities M 
+Continuous Learning · AI, Blockchain, and emerging technologies 
+Cryptocurrency Enthusiast · Cryptomining and blockchain technologies 
+Sport · Badminton, Bouldering, Soccer, Snowboarding 
+Music · Guitar, Electronic music production (DJing/Producing)
+
