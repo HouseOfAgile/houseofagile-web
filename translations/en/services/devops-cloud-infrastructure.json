@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "title": "DevOps & Cloud Infrastructure Services — House of Agile • Switzerland • Germany",
+    "description": "Expert DevOps and cloud infrastructure services for family offices and private clients in Switzerland and Germany. Docker, Kubernetes, AWS, GCP, Azure, Linux administration, CI/CD pipelines, and infrastructure automation with Ansible and Terraform.",
+    "ogTitle": "DevOps & Cloud Infrastructure Services — House of Agile",
+    "ogDescription": "Expert DevOps and cloud infrastructure services for family offices and private clients. Kubernetes, Docker, AWS, GCP, Azure, Linux administration."
+  },
+  "content": {
+    "badge": "DevOps & Cloud Infrastructure",
+    "hero": {
+      "title": "Enterprise-Grade Infrastructure for",
+      "titleHighlight": "Discerning Clients",
+      "description": "Our expert collective delivers sophisticated DevOps and cloud infrastructure solutions for family offices and private clients in Switzerland and Germany. From Docker and Kubernetes orchestration to multi-cloud deployments and Linux system administration.",
+      "ctaConsultation": "Schedule Consultation",
+      "ctaExpertise": "View Expertise"
+    },
+    "sectionTitle": "Our DevOps & Infrastructure Expertise",
+    "services": {
+      "containerOrchestration": {
+        "title": "Container Orchestration",
+        "description": "Expert deployment and management of containerized applications at scale. Our team specializes in Docker and Kubernetes orchestration, ensuring high availability, scalability, and efficient resource utilization.",
+        "features": [
+          "Multi-container application architecture",
+          "Kubernetes cluster setup and management",
+          "Service mesh implementation (Istio, Linkerd)",
+          "Container security and best practices",
+          "Migration from monolith to microservices"
+        ]
+      },
+      "multiCloud": {
+        "title": "Multi-Cloud Infrastructure",
+        "description": "Comprehensive cloud infrastructure design and deployment across AWS, Google Cloud Platform, and Azure. We architect resilient, cost-optimized solutions tailored to your specific requirements.",
+        "features": [
+          "Cloud architecture design and migration",
+          "EC2, S3, Lambda, RDS (AWS)",
+          "Compute Engine, Cloud Storage, Cloud Functions (GCP)",
+          "Virtual Machines, Blob Storage, Functions (Azure)",
+          "Cost optimization and resource management"
+        ]
+      },
+      "linuxAdmin": {
+        "title": "Expert Linux Administration",
+        "description": "Deep expertise in Linux system administration with decades of experience managing production environments. We ensure your infrastructure is secure, performant, and reliable.",
+        "features": [
+          "Ubuntu, Debian, CentOS, RHEL administration",
+          "Server hardening and security configuration",
+          "Performance tuning and optimization",
+          "Monitoring and troubleshooting",
+          "Automated backup and disaster recovery"
+        ]
+      },
+      "cicdAutomation": {
+        "title": "CI/CD & Infrastructure Automation",
+        "description": "Streamline your development workflow with robust CI/CD pipelines and infrastructure as code. We implement automated testing, deployment, and configuration management to accelerate delivery and reduce errors.",
+        "features": [
+          "Automated build, test, and deployment pipelines",
+          "Infrastructure as Code (IaC) with Terraform",
+          "Configuration management with Ansible",
+          "GitOps workflows and best practices",
+          "Zero-downtime deployments"
+        ]
+      },
+      "monitoring": {
+        "title": "Monitoring & Observability",
+        "description": "Comprehensive monitoring and logging solutions to maintain visibility into your infrastructure. We implement alerting, metrics collection, and log aggregation for proactive issue detection.",
+        "features": [
+          "Real-time metrics and dashboards",
+          "Centralized logging with ELK Stack",
+          "Custom alerting and notification systems",
+          "Performance monitoring and APM",
+          "SLA tracking and reporting"
+        ]
+      },
+      "environmentManagement": {
+        "title": "Environment & Deployment Management",
+        "description": "Sophisticated management of development, staging, and production environments. We establish deployment strategies that ensure stability, traceability, and rapid rollback capabilities.",
+        "features": [
+          "Multi-environment architecture design",
+          "Blue-green and canary deployments",
+          "Load balancing and reverse proxy (Nginx, HAProxy)",
+          "SSL/TLS certificate management",
+          "Environment variable and secrets management"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Ready to Modernize Your Infrastructure?",
+      "description": "Schedule a confidential consultation to discuss your DevOps and infrastructure needs.",
+      "btnConsultation": "Schedule Consultation",
+      "btnAllServices": "View All Services"
+    }
+  }
+}

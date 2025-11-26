@@ -96,6 +96,11 @@
     /* Professional sections */
     .section-light { @apply bg-hoa-50; }
     .section-card { @apply bg-white border border-hoa-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200; }
+
+    /* Scroll offset for anchor links to prevent navbar overlap */
+    section[id] {
+      scroll-margin-top: 70px;
+    }
   </style>
 
   <script>
@@ -319,31 +324,32 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <!-- Nav -->
-  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-hoa-200 shadow-sm">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3">
-        <img src="./assets/hoa-logo-square.png" alt="House of Agile logo" class="h-10 w-auto">
-        <span class="font-extrabold tracking-tight text-xl text-hoa-800">House of Agile</span>
-      </a>
-      <!-- Language Switcher -->
-      <div class="hidden md:flex items-center gap-2 mr-6">
-        <button onclick="switchLanguage('en')" class="lang-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-hoa-100 hover:bg-hoa-200 text-hoa-800 active:bg-hoa-300">EN</button>
-        <button onclick="switchLanguage('de')" class="lang-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-hoa-100 hover:bg-hoa-200 text-hoa-800">DE</button>
-        <button onclick="switchLanguage('fr')" class="lang-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-hoa-100 hover:bg-hoa-200 text-hoa-800">FR</button>
+  <nav class="fixed w-full z-50 glass border-b border-hoa-100">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="/" class="flex items-center space-x-3">
+          <img src="./assets/hoa-logo-square.png" alt="House of Agile" class="h-10 w-auto">
+          <div class="font-black text-xl tracking-tight">House of Agile</div>
+        </a>
+        <div class="flex items-center gap-6">
+          <!-- Language Switcher -->
+          <div class="hidden md:flex items-center gap-2">
+            <button onclick="switchLanguage('en')" class="lang-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-hoa-100 hover:bg-hoa-200 text-hoa-800 active:bg-hoa-300">EN</button>
+            <button onclick="switchLanguage('de')" class="lang-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-hoa-100 hover:bg-hoa-200 text-hoa-800">DE</button>
+            <button onclick="switchLanguage('fr')" class="lang-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-hoa-100 hover:bg-hoa-200 text-hoa-800">FR</button>
+          </div>
+          <!-- Navigation -->
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="#services" class="hover:text-hoa-600 text-slate-700 transition-colors" data-i18n="nav_services">Services</a>
+            <a href="#projects" class="hover:text-hoa-600 text-slate-700 transition-colors" data-i18n="nav_projects">Projects</a>
+            <a href="#pricing" class="hover:text-hoa-600 text-slate-700 transition-colors" data-i18n="nav_pricing">Pricing</a>
+            <a href="#testimonials" class="hover:text-hoa-600 text-slate-700 transition-colors" data-i18n="nav_testimonials">Testimonials</a>
+            <a href="#consultation" class="btn-primary" data-i18n="nav_contact">Contact</a>
+          </div>
+        </div>
       </div>
-      
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="#services" class="hover:text-hoa-600 text-slate-700 transition-colors" data-i18n="nav_services">Services</a>
-        <a href="#projects" class="hover:text-hoa-600 text-slate-700 transition-colors" data-i18n="nav_projects">Projects</a>
-        <a href="#pricing" class="hover:text-hoa-600 text-slate-700 transition-colors" data-i18n="nav_pricing">Pricing</a>
-        <a href="#testimonials" class="hover:text-hoa-600 text-slate-700 transition-colors" data-i18n="nav_testimonials">Testimonials</a>
-        <a href="#consultation" class="hover:text-hoa-600 text-slate-700 transition-colors" data-i18n="nav_contact">Contact</a>
-      </nav>
-      <a href="#consultation" class="btn-primary text-sm" data-i18n="cta_consultation">
-        Request Consultation
-      </a>
     </div>
-  </header>
+  </nav>
 
   <!-- Hero -->
   <section class="relative overflow-hidden bg-white">
@@ -491,72 +497,78 @@
   <section id="services" class="max-w-6xl mx-auto px-4 py-16">
     <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-8">Premium Services for Discerning Clients</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-      <div class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow">
+
+      <a href="/services/technical-leadership-cto.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block">
         <div class="text-2xl mb-3">👨‍💼</div>
-        <h3 class="font-bold text-lg mb-2">Technical Leadership</h3>
+        <h3 class="font-bold text-lg mb-2">Technical Leadership & CTO Services</h3>
         <p class="text-slate-700 mb-3">Strategic CTO services and technology leadership for private ventures and family offices.</p>
         <ul class="text-sm text-slate-600 space-y-1">
           <li>• Fractional CTO services</li>
           <li>• Digital transformation strategy</li>
           <li>• Technology investment advisory</li>
         </ul>
-      </div>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">Learn more →</div>
+      </a>
 
-      <div class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow">
-        <div class="text-2xl mb-3">💎</div>
-        <h3 class="font-bold text-lg mb-2">Fintech & Trading Solutions</h3>
-        <p class="text-slate-700 mb-3">Sophisticated financial technology solutions for high-net-worth individuals and private investment firms.</p>
+      <a href="/services/full-stack-development.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block">
+        <div class="text-2xl mb-3">💻</div>
+        <h3 class="font-bold text-lg mb-2">Full-Stack Development</h3>
+        <p class="text-slate-700 mb-3">Expert web application development with modern frameworks and technologies.</p>
         <ul class="text-sm text-slate-600 space-y-1">
-          <li>• AI-powered trading platforms</li>
-          <li>• Portfolio management systems</li>
-          <li>• Risk analytics & compliance</li>
+          <li>• Symfony, Laravel, Vue.js, React</li>
+          <li>• Microservices architecture</li>
+          <li>• E-commerce platforms</li>
         </ul>
-      </div>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">Learn more →</div>
+      </a>
 
-      <div class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow">
-        <div class="text-2xl mb-3">🏰</div>
-        <h3 class="font-bold text-lg mb-2">Luxury Digital Experiences</h3>
-        <p class="text-slate-700 mb-3">Bespoke digital platforms for luxury brands, private clubs, and exclusive communities.</p>
+      <a href="/services/devops-cloud-infrastructure.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block">
+        <div class="text-2xl mb-3">☁️</div>
+        <h3 class="font-bold text-lg mb-2">DevOps & Cloud Infrastructure</h3>
+        <p class="text-slate-700 mb-3">Enterprise-grade infrastructure, automation, and cloud solutions.</p>
         <ul class="text-sm text-slate-600 space-y-1">
-          <li>• Private member platforms</li>
-          <li>• Exclusive event management</li>
-          <li>• Concierge service automation</li>
+          <li>• Docker, Kubernetes orchestration</li>
+          <li>• AWS, GCP, Azure deployment</li>
+          <li>• Linux administration & CI/CD</li>
         </ul>
-      </div>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">Learn more →</div>
+      </a>
 
-      <div class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow">
-        <div class="text-2xl mb-3">🛡️</div>
-        <h3 class="font-bold text-lg mb-2">Security & Privacy Solutions</h3>
-        <p class="text-slate-700 mb-3">Enterprise-grade security and privacy protection for high-profile clients and sensitive operations.</p>
+      <a href="/services/legacy-systems-maintenance.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block">
+        <div class="text-2xl mb-3">🔧</div>
+        <h3 class="font-bold text-lg mb-2">Legacy Systems & Maintenance</h3>
+        <p class="text-slate-700 mb-3">Expert care for legacy systems including modernization and rescue services.</p>
         <ul class="text-sm text-slate-600 space-y-1">
-          <li>• Private cloud infrastructure</li>
-          <li>• Zero-trust security architecture</li>
-          <li>• Data sovereignty compliance</li>
+          <li>• CodeIgniter, Typo3 support</li>
+          <li>• PHP version upgrades</li>
+          <li>• System rescue & modernization</li>
         </ul>
-      </div>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">Learn more →</div>
+      </a>
 
-      <div class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow">
-        <div class="text-2xl mb-3">🎯</div>
-        <h3 class="font-bold text-lg mb-2">Investment Technology Advisory</h3>
-        <p class="text-slate-700 mb-3">Technology due diligence and advisory for private equity, family offices, and strategic investments.</p>
+      <a href="/services/data-solutions-scraping.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block">
+        <div class="text-2xl mb-3">📊</div>
+        <h3 class="font-bold text-lg mb-2">Data Solutions & Web Scraping</h3>
+        <p class="text-slate-700 mb-3">Intelligent data extraction, analytics, and automated collection systems.</p>
         <ul class="text-sm text-slate-600 space-y-1">
-          <li>• Tech startup evaluation</li>
-          <li>• Investment thesis validation</li>
-          <li>• Post-acquisition integration</li>
+          <li>• Web scraping & automation</li>
+          <li>• Data analytics & processing</li>
+          <li>• Competitive intelligence</li>
         </ul>
-      </div>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">Learn more →</div>
+      </a>
 
-      <div class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow">
-        <div class="text-2xl mb-3">🌟</div>
-        <h3 class="font-bold text-lg mb-2">Innovation Consulting</h3>
-        <p class="text-slate-700 mb-3">Strategic innovation guidance for established businesses seeking digital transformation and competitive advantage.</p>
+      <a href="/services/prototyping-mvp.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block">
+        <div class="text-2xl mb-3">⚡</div>
+        <h3 class="font-bold text-lg mb-2">Rapid Prototyping & MVP Development</h3>
+        <p class="text-slate-700 mb-3">Quick validation of ideas with functional prototypes and minimum viable products.</p>
         <ul class="text-sm text-slate-600 space-y-1">
-          <li>• AI & automation strategy</li>
-          <li>• Digital business model design</li>
-          <li>• Technology ecosystem planning</li>
+          <li>• 4-8 week MVP development</li>
+          <li>• Proof of concept creation</li>
+          <li>• Iterative development</li>
         </ul>
-      </div>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">Learn more →</div>
+      </a>
     </div>
 
     <!-- Swiss/German Market Call-out -->

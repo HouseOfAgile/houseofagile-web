@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Legacy Systems & Code Maintenance — House of Agile • Switzerland • Germany",
+    "description": "Expert legacy system maintenance and modernization services for family offices and private clients in Switzerland and Germany. CodeIgniter, Typo3, PHP legacy code, system rescue, and technical debt reduction.",
+    "ogTitle": "Legacy Systems & Code Maintenance — House of Agile",
+    "ogDescription": "Expert legacy system maintenance, modernization, and rescue services. CodeIgniter, Typo3, PHP legacy code, and technical debt reduction."
+  },
+  "content": {
+    "badge": "Legacy Systems & Code Maintenance",
+    "hero": {
+      "title": "Expert Care for",
+      "titleHighlight": "Legacy Systems",
+      "description": "Our expert collective specializes in maintaining, rescuing, and modernizing legacy systems for family offices and private clients in Switzerland and Germany. From CodeIgniter and Typo3 to outdated PHP applications, we ensure your critical systems remain secure, stable, and maintainable.",
+      "ctaConsultation": "Schedule Consultation",
+      "ctaExpertise": "View Expertise"
+    },
+    "sectionTitle": "Our Legacy System Services",
+    "services": {
+      "maintenance": {
+        "title": "Legacy Code Maintenance",
+        "description": "Keep your legacy systems running smoothly with expert maintenance and bug fixes. Our team has deep experience with older codebases and frameworks that many developers no longer support.",
+        "features": [
+          "Bug fixes and security patches",
+          "Performance optimization",
+          "Dependency updates and compatibility",
+          "Documentation and knowledge transfer",
+          "Emergency support and troubleshooting"
+        ],
+        "badges": ["CodeIgniter", "Typo3", "Legacy PHP", "Old Symfony"]
+      },
+      "rescue": {
+        "title": "System Rescue & Recovery",
+        "description": "When legacy systems fail or become unmaintainable, we step in to rescue critical applications. Our team diagnoses issues, stabilizes systems, and restores functionality.",
+        "features": [
+          "Emergency system recovery",
+          "Critical bug diagnosis and fixes",
+          "Data recovery and migration",
+          "System stabilization",
+          "Reverse engineering undocumented systems"
+        ]
+      },
+      "modernization": {
+        "title": "Modernization & Migration",
+        "description": "Transform legacy systems into modern, maintainable applications. We plan and execute migrations to current frameworks and technologies while preserving business logic and data integrity.",
+        "features": [
+          "PHP version upgrades (5.x to 8.x)",
+          "Framework migration (CodeIgniter to Symfony/Laravel)",
+          "Database migration and optimization",
+          "Refactoring to modern patterns",
+          "Gradual strangler fig pattern migrations"
+        ],
+        "badges": ["PHP 5 → PHP 8", "Old Symfony → Symfony 6", "Framework Migration"]
+      },
+      "technicalDebt": {
+        "title": "Technical Debt Reduction",
+        "description": "Systematically reduce technical debt in legacy codebases. We refactor, add tests, improve documentation, and modernize infrastructure to make systems more maintainable.",
+        "features": [
+          "Code quality assessment and improvement",
+          "Adding automated tests to legacy code",
+          "Refactoring and code cleanup",
+          "Documentation creation",
+          "Dependency modernization"
+        ]
+      },
+      "security": {
+        "title": "Security Hardening",
+        "description": "Secure legacy systems against modern threats. We audit code for vulnerabilities, apply security patches, and implement protections to safeguard your data and operations.",
+        "features": [
+          "Security audits and vulnerability assessment",
+          "SQL injection and XSS protection",
+          "Authentication and authorization improvements",
+          "Dependency security updates",
+          "GDPR and compliance improvements"
+        ]
+      },
+      "cms": {
+        "title": "Legacy CMS Management",
+        "description": "Specialized support for legacy content management systems including Typo3, Drupal, and older WordPress installations. We maintain, secure, and modernize CMS platforms.",
+        "features": [
+          "Typo3 maintenance and upgrades",
+          "Custom extension development and fixes",
+          "Content migration and restructuring",
+          "Performance optimization",
+          "Security hardening and updates"
+        ],
+        "badges": ["Typo3", "Drupal", "Old WordPress"]
+      }
+    },
+    "cta": {
+      "title": "Need Help with Legacy Systems?",
+      "description": "Schedule a confidential consultation to discuss your legacy system maintenance or modernization needs.",
+      "btnConsultation": "Schedule Consultation",
+      "btnAllServices": "View All Services"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "title": "Rapid Prototyping & MVP Development — House of Agile • Switzerland • Germany",
+    "description": "Rapid prototyping and MVP development services for family offices and private clients in Switzerland and Germany. Quick validation of ideas, proof of concepts, and minimum viable products.",
+    "ogTitle": "Rapid Prototyping & MVP Development — House of Agile",
+    "ogDescription": "Rapid prototyping and MVP development for sophisticated ventures. Quick validation, proof of concepts, and minimum viable products."
+  },
+  "content": {
+    "badge": "Rapid Prototyping & MVP Development",
+    "hero": {
+      "title": "Validate Ideas Rapidly with",
+      "titleHighlight": "Expert Prototypes",
+      "description": "Our expert collective specializes in rapid prototyping and MVP development for family offices and private clients in Switzerland and Germany. From proof of concepts to minimum viable products, we help you validate ideas quickly and cost-effectively before committing to full-scale development.",
+      "ctaConsultation": "Schedule Consultation",
+      "ctaExpertise": "View Expertise"
+    },
+    "sectionTitle": "Our Prototyping Services",
+    "services": {
+      "mvpDevelopment": {
+        "title": "Rapid MVP Development",
+        "description": "Build functional minimum viable products in weeks, not months. We focus on core features that validate your concept and gather real user feedback quickly.",
+        "features": [
+          "4-8 week development cycles",
+          "Core feature prioritization",
+          "Modern, responsive interfaces",
+          "Cloud deployment ready",
+          "User feedback collection built-in"
+        ],
+        "badges": ["Laravel", "Vue.js", "Tailwind CSS"]
+      },
+      "proofOfConcept": {
+        "title": "Proof of Concept Development",
+        "description": "Validate technical feasibility and demonstrate core functionality. We build focused POCs that answer critical questions about your idea's viability.",
+        "features": [
+          "Technical feasibility assessment",
+          "Core algorithm validation",
+          "Integration proof-of-concept",
+          "Performance benchmarking",
+          "Technology stack evaluation"
+        ]
+      },
+      "interactivePrototypes": {
+        "title": "Interactive Prototypes",
+        "description": "Create clickable, interactive prototypes that look and feel like real applications. Perfect for stakeholder presentations and user testing.",
+        "features": [
+          "High-fidelity interactive mockups",
+          "User flow demonstration",
+          "Design validation",
+          "Stakeholder presentations",
+          "User testing preparation"
+        ]
+      },
+      "iterativeDevelopment": {
+        "title": "Iterative Development",
+        "description": "Start with a basic prototype and iterate based on feedback. We use agile methodologies to rapidly incorporate learnings and evolve the product.",
+        "features": [
+          "Sprint-based development (1-2 weeks)",
+          "Regular demo sessions",
+          "Continuous feedback integration",
+          "Feature pivoting capability",
+          "Incremental improvements"
+        ]
+      },
+      "launchReady": {
+        "title": "Launch-Ready MVPs",
+        "description": "Build MVPs that are ready for real users, not just demos. We include essential features like authentication, payments, and analytics from day one.",
+        "features": [
+          "User authentication and management",
+          "Payment integration (Stripe, PayPal)",
+          "Analytics and tracking",
+          "Email notifications",
+          "Admin dashboard"
+        ],
+        "badges": ["User Auth", "Payments", "Analytics"]
+      },
+      "marketValidation": {
+        "title": "Market Validation Support",
+        "description": "Go beyond building - we help you test and validate your MVP with real users, collect metrics, and make data-driven decisions.",
+        "features": [
+          "User testing setup",
+          "Analytics implementation",
+          "A/B testing capability",
+          "Conversion tracking",
+          "User behavior analysis"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Ready to Validate Your Idea?",
+      "description": "Schedule a confidential consultation to discuss your prototyping and MVP development needs.",
+      "btnConsultation": "Schedule Consultation",
+      "btnAllServices": "View All Services"
+    }
+  }
+}

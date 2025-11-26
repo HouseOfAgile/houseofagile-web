@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "title": "Technical Leadership & CTO Services — House of Agile • Switzerland • Germany",
+    "description": "Fractional CTO and technical leadership services for family offices and private clients in Switzerland and Germany. Strategic technology planning, architecture design, team building, and digital transformation.",
+    "ogTitle": "Technical Leadership & CTO Services — House of Agile",
+    "ogDescription": "Fractional CTO services for sophisticated ventures. Strategic technology leadership, architecture design, team building, and digital transformation."
+  },
+  "content": {
+    "badge": "Technical Leadership & CTO Services",
+    "hero": {
+      "title": "Strategic Technology Leadership for",
+      "titleHighlight": "Private Ventures",
+      "description": "Our expert collective provides fractional CTO and technical leadership services for family offices and private clients in Switzerland and Germany. From strategic technology planning to team building and architecture design, we guide your digital transformation with decades of enterprise experience.",
+      "ctaConsultation": "Schedule Consultation",
+      "ctaExpertise": "View Expertise"
+    },
+    "sectionTitle": "Leadership Services",
+    "services": {
+      "fractionalCTO": {
+        "title": "Fractional CTO Services",
+        "description": "Access seasoned CTO expertise without full-time commitment. Our collective provides strategic technology leadership tailored to your venture's specific needs and growth stage.",
+        "features": [
+          "Technology strategy and roadmap development",
+          "Architecture design and technical decisions",
+          "Vendor selection and technology evaluation",
+          "Technical due diligence for investments",
+          "Board-level technology reporting"
+        ]
+      },
+      "teamBuilding": {
+        "title": "Team Building & Management",
+        "description": "Build and lead high-performing technical teams. We recruit, mentor, and manage developers while establishing processes that foster innovation and productivity.",
+        "features": [
+          "Technical hiring and team assessment",
+          "Team structure and organization design",
+          "Agile methodology implementation",
+          "Development process optimization",
+          "Mentoring and skills development"
+        ]
+      },
+      "architecture": {
+        "title": "Architecture & System Design",
+        "description": "Design scalable, resilient system architectures that support your business objectives. From monoliths to microservices, we architect solutions for long-term success.",
+        "features": [
+          "System architecture design and review",
+          "Microservices and distributed systems",
+          "Cloud architecture (AWS, GCP, Azure)",
+          "API strategy and design patterns",
+          "Scalability and performance planning"
+        ]
+      },
+      "digitalTransformation": {
+        "title": "Digital Transformation",
+        "description": "Navigate complex technology transformations with confidence. We guide modernization efforts, legacy system migrations, and digital innovation initiatives.",
+        "features": [
+          "Digital strategy and transformation roadmaps",
+          "Legacy system modernization planning",
+          "Process automation and optimization",
+          "Technology stack modernization",
+          "Change management and adoption"
+        ]
+      },
+      "security": {
+        "title": "Security & Compliance",
+        "description": "Establish robust security postures and ensure compliance with relevant regulations. We implement security-first approaches that protect your assets and reputation.",
+        "features": [
+          "Security architecture and policies",
+          "GDPR and privacy compliance",
+          "Security audits and risk assessment",
+          "Incident response planning",
+          "DevSecOps implementation"
+        ]
+      },
+      "projectManagement": {
+        "title": "Project & Product Management",
+        "description": "Ensure successful delivery of technology initiatives with expert project and product management. We balance technical excellence with business objectives.",
+        "features": [
+          "Project planning and delivery management",
+          "Product strategy and roadmap",
+          "Agile/Scrum methodology implementation",
+          "Stakeholder communication and reporting",
+          "Budget and resource management"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Need Strategic Technology Leadership?",
+      "description": "Schedule a confidential consultation to discuss your technology leadership needs.",
+      "btnConsultation": "Schedule Consultation",
+      "btnAllServices": "View All Services"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "Data Solutions & Web Scraping Services — House of Agile • Switzerland • Germany",
+    "description": "Expert data extraction, web scraping, and analytics services for family offices and private clients in Switzerland and Germany. Python, Selenium, data processing, automation, and business intelligence.",
+    "ogTitle": "Data Solutions & Web Scraping — House of Agile",
+    "ogDescription": "Expert web scraping, data extraction, and analytics services. Python, Selenium, automated data collection, and business intelligence."
+  },
+  "content": {
+    "badge": "Data Solutions & Web Scraping",
+    "hero": {
+      "title": "Intelligent Data Extraction &",
+      "titleHighlight": "Analytics",
+      "description": "Our expert collective delivers sophisticated web scraping, data extraction, and analytics solutions for family offices and private clients in Switzerland and Germany. From automated market research to competitive intelligence and business analytics.",
+      "ctaConsultation": "Schedule Consultation",
+      "ctaExpertise": "View Expertise"
+    },
+    "sectionTitle": "Our Data Solutions Services",
+    "services": {
+      "webScraping": {
+        "title": "Web Scraping & Data Extraction",
+        "description": "Advanced web scraping solutions for extracting structured data from websites, APIs, and online sources. We handle complex JavaScript-heavy sites, anti-bot protection, and large-scale extraction.",
+        "features": [
+          "Custom web scraping applications",
+          "Automated browser interaction (Selenium, Puppeteer)",
+          "Dynamic JavaScript-heavy website scraping",
+          "API integration and data aggregation",
+          "Rate limiting and ethical scraping practices"
+        ],
+        "badges": ["Python", "Selenium", "Scrapy", "BeautifulSoup"]
+      },
+      "dataAnalytics": {
+        "title": "Data Analytics & Processing",
+        "description": "Transform raw data into actionable insights with sophisticated data processing and analytics pipelines. We handle data cleaning, transformation, and analysis at scale.",
+        "features": [
+          "Data cleaning and normalization",
+          "Statistical analysis and reporting",
+          "Data pipeline development",
+          "ETL (Extract, Transform, Load) processes",
+          "Business intelligence dashboards"
+        ],
+        "badges": ["Pandas", "NumPy", "Python", "SQL"]
+      },
+      "automation": {
+        "title": "Automated Data Collection",
+        "description": "Set up continuous automated data collection systems that run 24/7, monitoring sources, detecting changes, and alerting you to important updates.",
+        "features": [
+          "Scheduled scraping and monitoring",
+          "Real-time data feed integration",
+          "Change detection and alerting",
+          "Data quality monitoring",
+          "Automated report generation"
+        ]
+      },
+      "competitiveIntelligence": {
+        "title": "Competitive Intelligence",
+        "description": "Monitor competitors, track market trends, and gather intelligence from public sources. We create systems that continuously gather and analyze competitive data.",
+        "features": [
+          "Competitor website monitoring",
+          "Price tracking and comparison",
+          "Market research automation",
+          "Social media data collection",
+          "Trend analysis and reporting"
+        ]
+      },
+      "dataWarehousing": {
+        "title": "Data Warehousing & Storage",
+        "description": "Design and implement data storage solutions optimized for your analysis needs. From SQL databases to big data solutions.",
+        "features": [
+          "Data warehouse architecture",
+          "Time-series data storage",
+          "Search engine implementation",
+          "Data lake design",
+          "Backup and archival strategies"
+        ],
+        "badges": ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch"]
+      },
+      "aiMl": {
+        "title": "AI & Machine Learning Integration",
+        "description": "Enhance data solutions with machine learning for pattern recognition, classification, and predictive analytics.",
+        "features": [
+          "Natural language processing (NLP)",
+          "Sentiment analysis",
+          "Pattern recognition and classification",
+          "Predictive modeling",
+          "Automated data categorization"
+        ],
+        "badges": ["TensorFlow", "PyTorch", "Scikit-learn"]
+      }
+    },
+    "cta": {
+      "title": "Need Data Solutions?",
+      "description": "Schedule a confidential consultation to discuss your data extraction, scraping, and analytics needs.",
+      "btnConsultation": "Schedule Consultation",
+      "btnAllServices": "View All Services"
+    }
+  }
+}

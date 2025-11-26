@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "[DE] DevOps & Cloud Infrastructure Services — House of Agile • Switzerland • Germany",
+    "description": "[DE] Expert DevOps and cloud infrastructure services...",
+    "ogTitle": "[DE] DevOps & Cloud Infrastructure Services — House of Agile",
+    "ogDescription": "[DE] Expert DevOps and cloud infrastructure services..."
+  },
+  "content": {
+    "badge": "[DE] DevOps & Cloud Infrastructure",
+    "hero": {
+      "title": "[DE] Enterprise-Grade Infrastructure for",
+      "titleHighlight": "[DE] Discerning Clients",
+      "description": "[DE] Our expert collective delivers sophisticated DevOps and cloud infrastructure solutions...",
+      "ctaConsultation": "[DE] Schedule Consultation",
+      "ctaExpertise": "[DE] View Expertise"
+    }
+  },
+  "_comment": "This is a placeholder. Translate translations/en/services/devops-cloud-infrastructure.json using DeepL and paste the translated content here."
+}

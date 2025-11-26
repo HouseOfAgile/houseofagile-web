@@ -1,9 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
   <url>
     <loc>https://houseofagile.com/</loc>
-    <lastmod>2025-09-10</lastmod>
+    <lastmod>2025-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/"/>
   </url>
+
+  <!-- Service Pages - Full-Stack Development -->
+  <url>
+    <loc>https://houseofagile.com/services/full-stack-development.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/full-stack-development.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/full-stack-development.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/full-stack-development.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/full-stack-development.html"/>
+  </url>
+
+  <!-- Service Pages - DevOps & Cloud Infrastructure -->
+  <url>
+    <loc>https://houseofagile.com/services/devops-cloud-infrastructure.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/devops-cloud-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/devops-cloud-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/devops-cloud-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/devops-cloud-infrastructure.html"/>
+  </url>
+
+  <!-- Service Pages - Technical Leadership & CTO -->
+  <url>
+    <loc>https://houseofagile.com/services/technical-leadership-cto.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/technical-leadership-cto.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/technical-leadership-cto.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/technical-leadership-cto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/technical-leadership-cto.html"/>
+  </url>
+
+  <!-- Service Pages - Legacy Systems Maintenance -->
+  <url>
+    <loc>https://houseofagile.com/services/legacy-systems-maintenance.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/legacy-systems-maintenance.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/legacy-systems-maintenance.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/legacy-systems-maintenance.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/legacy-systems-maintenance.html"/>
+  </url>
+
+  <!-- Service Pages - Data Solutions & Scraping -->
+  <url>
+    <loc>https://houseofagile.com/services/data-solutions-scraping.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/data-solutions-scraping.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/data-solutions-scraping.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/data-solutions-scraping.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/data-solutions-scraping.html"/>
+  </url>
+
+  <!-- Service Pages - Prototyping & MVP -->
+  <url>
+    <loc>https://houseofagile.com/services/prototyping-mvp.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/prototyping-mvp.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/prototyping-mvp.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/prototyping-mvp.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/prototyping-mvp.html"/>
+  </url>
+
 </urlset>
