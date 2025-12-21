@@ -28,52 +28,20 @@
   <link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/prototyping-mvp.html" />
   <link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/prototyping-mvp.html" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'hoa': {50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac', 400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d'}
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="/assets/tailwind.css">
   <style>
     :root { --hoa-primary: #16a34a; }
     .glass { backdrop-filter: saturate(180%) blur(12px); background: rgba(240,253,244,0.85); }
-    .section-card {
-      @apply bg-white border border-hoa-100 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300;
-      transform: translateY(0);
-    }
-    .section-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--hoa-primary-light);
-    }
-    .btn-primary {
-      @apply px-6 py-3 bg-hoa-600 text-white font-semibold rounded-xl hover:bg-hoa-700 transition-all duration-200 shadow-lg hover:shadow-xl;
-      transform: translateY(0);
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-    }
-    .btn-secondary { @apply px-6 py-3 bg-white text-hoa-700 font-semibold rounded-xl border-2 border-hoa-200 hover:bg-hoa-50 hover:border-hoa-300 transition-all duration-200; }
-    .tech-badge {
-      @apply inline-block px-3 py-1.5 bg-hoa-100 text-hoa-800 rounded-lg text-sm font-medium mr-2 mb-2 transition-all duration-200;
-    }
-    .tech-badge:hover {
-      @apply bg-hoa-200 shadow-sm;
-      transform: translateY(-1px);
-    }
 
     /* Scroll offset for anchor links to prevent navbar overlap */
     section[id] {
       scroll-margin-top: 100px;
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="/assets/hoa-worldclass.css">
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-white text-slate-900 hoa-body service-page">
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M66S2HG2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <nav class="fixed w-full z-50 glass border-b border-hoa-100">
@@ -104,38 +72,38 @@
   <section class="relative overflow-hidden bg-gradient-to-br from-hoa-50 to-white pt-32 pb-20">
     <div class="max-w-6xl mx-auto px-4">
       <div class="max-w-3xl">
-        <div class="inline-block px-4 py-2 bg-hoa-100 text-hoa-800 rounded-full text-sm font-semibold mb-6">
+        <div class="inline-block px-4 py-2 bg-hoa-100 text-hoa-800 rounded-full text-sm font-semibold mb-6" data-i18n="content.badge">
           Rapid Prototyping & MVP Development
         </div>
         <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6">
-          Validate Ideas Rapidly with <span class="text-transparent bg-clip-text bg-gradient-to-r from-hoa-600 to-hoa-800">Expert Prototypes</span>
+          <span data-i18n="content.hero.title">Validate Ideas Rapidly with</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-hoa-600 to-hoa-800" data-i18n="content.hero.titleHighlight">Expert Prototypes</span>
         </h1>
-        <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+        <p class="text-xl text-slate-600 mb-8 leading-relaxed" data-i18n="content.hero.description">
           Our expert collective specializes in rapid prototyping and MVP development for family offices and private clients in Switzerland and Germany. From proof of concepts to minimum viable products, we help you validate ideas quickly and cost-effectively before committing to full-scale development.
         </p>
         <div class="flex flex-wrap gap-4">
-          <a href="#consultation" class="btn-primary">Schedule Consultation</a>
-          <a href="#expertise" class="btn-secondary">View Expertise</a>
+          <a href="#consultation" class="btn-primary" data-i18n="content.hero.ctaConsultation">Schedule Consultation</a>
+          <a href="#expertise" class="btn-secondary" data-i18n="content.hero.ctaExpertise">View Expertise</a>
         </div>
       </div>
     </div>
   </section>
 
   <section id="expertise" class="max-w-6xl mx-auto px-4 py-20">
-    <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-12">Our Prototyping Services</h2>
+    <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-12" data-i18n="content.sectionTitle">Our Prototyping Services</h2>
 
     <div class="grid md:grid-cols-2 gap-8 mb-16">
-      <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">⚡</span> Rapid MVP Development</h3>
-        <p class="text-slate-600 mb-4">
+      <div class="section-card icon-card">
+        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">⚡</span> <span data-i18n="content.services.mvpDevelopment.title">Rapid MVP Development</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.mvpDevelopment.description">
           Build functional minimum viable products in weeks, not months. We focus on core features that validate your concept and gather real user feedback quickly.
         </p>
-        <div class="mb-4">
+        <div class="mb-4" data-i18n-badges="content.services.mvpDevelopment.badges">
           <span class="tech-badge">Laravel</span>
           <span class="tech-badge">Vue.js</span>
           <span class="tech-badge">Tailwind CSS</span>
         </div>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.mvpDevelopment.features">
           <li>• 4-8 week development cycles</li>
           <li>• Core feature prioritization</li>
           <li>• Modern, responsive interfaces</li>
@@ -144,12 +112,12 @@
         </ul>
       </div>
 
-      <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">🔬</span> Proof of Concept Development</h3>
-        <p class="text-slate-600 mb-4">
+      <div class="section-card icon-card">
+        <h3 class="text-2xl font-bold mb-4 icon-title"><span class="icon-badge icon-badge--sm"><i class="fa-solid fa-flask" aria-hidden="true"></i></span><span data-i18n="content.services.proofOfConcept.title">Proof of Concept Development</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.proofOfConcept.description">
           Validate technical feasibility and demonstrate core functionality. We build focused POCs that answer critical questions about your idea's viability.
         </p>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.proofOfConcept.features">
           <li>• Technical feasibility assessment</li>
           <li>• Core algorithm validation</li>
           <li>• Integration proof-of-concept</li>
@@ -158,12 +126,12 @@
         </ul>
       </div>
 
-      <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">🎨</span> Interactive Prototypes</h3>
-        <p class="text-slate-600 mb-4">
+      <div class="section-card icon-card">
+        <h3 class="text-2xl font-bold mb-4 icon-title"><span class="icon-badge icon-badge--sm"><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i></span><span data-i18n="content.services.interactivePrototypes.title">Interactive Prototypes</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.interactivePrototypes.description">
           Create clickable, interactive prototypes that look and feel like real applications. Perfect for stakeholder presentations and user testing.
         </p>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.interactivePrototypes.features">
           <li>• High-fidelity interactive mockups</li>
           <li>• User flow demonstration</li>
           <li>• Design validation</li>
@@ -172,12 +140,12 @@
         </ul>
       </div>
 
-      <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">🔄</span> Iterative Development</h3>
-        <p class="text-slate-600 mb-4">
+      <div class="section-card icon-card">
+        <h3 class="text-2xl font-bold mb-4 icon-title"><span class="icon-badge icon-badge--sm"><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i></span><span data-i18n="content.services.iterativeDevelopment.title">Iterative Development</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.iterativeDevelopment.description">
           Start with a basic prototype and iterate based on feedback. We use agile methodologies to rapidly incorporate learnings and evolve the product.
         </p>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.iterativeDevelopment.features">
           <li>• Sprint-based development (1-2 weeks)</li>
           <li>• Regular demo sessions</li>
           <li>• Continuous feedback integration</li>
@@ -186,17 +154,17 @@
         </ul>
       </div>
 
-      <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">🚀</span> Launch-Ready MVPs</h3>
-        <p class="text-slate-600 mb-4">
+      <div class="section-card icon-card">
+        <h3 class="text-2xl font-bold mb-4 icon-title"><span class="icon-badge icon-badge--sm"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span><span data-i18n="content.services.launchReady.title">Launch-Ready MVPs</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.launchReady.description">
           Build MVPs that are ready for real users, not just demos. We include essential features like authentication, payments, and analytics from day one.
         </p>
-        <div class="mb-4">
+        <div class="mb-4" data-i18n-badges="content.services.launchReady.badges">
           <span class="tech-badge">User Auth</span>
           <span class="tech-badge">Payments</span>
           <span class="tech-badge">Analytics</span>
         </div>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.launchReady.features">
           <li>• User authentication and management</li>
           <li>• Payment integration (Stripe, PayPal)</li>
           <li>• Analytics and tracking</li>
@@ -205,12 +173,12 @@
         </ul>
       </div>
 
-      <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">📊</span> Market Validation Support</h3>
-        <p class="text-slate-600 mb-4">
+      <div class="section-card icon-card">
+        <h3 class="text-2xl font-bold mb-4 icon-title"><span class="icon-badge icon-badge--sm"><i class="fa-solid fa-chart-column" aria-hidden="true"></i></span><span data-i18n="content.services.marketValidation.title">Market Validation Support</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.marketValidation.description">
           Go beyond building - we help you test and validate your MVP with real users, collect metrics, and make data-driven decisions.
         </p>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.marketValidation.features">
           <li>• User testing setup</li>
           <li>• Analytics implementation</li>
           <li>• A/B testing capability</li>
@@ -267,28 +235,28 @@
   <section class="max-w-6xl mx-auto px-4 py-20">
     <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-12">Prototyping Process</h2>
     <div class="grid md:grid-cols-4 gap-6">
-      <div class="section-card text-center">
+      <div class="section-card text-center icon-card">
         <div class="text-4xl font-black text-hoa-600 mb-3">01</div>
         <h3 class="text-xl font-bold mb-3">Discovery</h3>
         <p class="text-slate-600">
           We discuss your idea, objectives, and target users to define the core features and success metrics.
         </p>
       </div>
-      <div class="section-card text-center">
+      <div class="section-card text-center icon-card">
         <div class="text-4xl font-black text-hoa-600 mb-3">02</div>
         <h3 class="text-xl font-bold mb-3">Design & Plan</h3>
         <p class="text-slate-600">
           Rapid wireframing and technical planning to establish the MVP scope and development approach.
         </p>
       </div>
-      <div class="section-card text-center">
+      <div class="section-card text-center icon-card">
         <div class="text-4xl font-black text-hoa-600 mb-3">03</div>
         <h3 class="text-xl font-bold mb-3">Build</h3>
         <p class="text-slate-600">
           Focused development sprints delivering working software incrementally with regular demos.
         </p>
       </div>
-      <div class="section-card text-center">
+      <div class="section-card text-center icon-card">
         <div class="text-4xl font-black text-hoa-600 mb-3">04</div>
         <h3 class="text-xl font-bold mb-3">Launch & Learn</h3>
         <p class="text-slate-600">
@@ -340,19 +308,19 @@
   <section class="max-w-6xl mx-auto px-4 py-20">
     <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-12">Why Prototype First?</h2>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="section-card">
+      <div class="section-card icon-card">
         <h3 class="text-xl font-bold mb-3">Reduce Risk</h3>
         <p class="text-slate-600">
           Test assumptions and validate concepts before investing in full-scale development. Find problems early when they're cheap to fix.
         </p>
       </div>
-      <div class="section-card">
+      <div class="section-card icon-card">
         <h3 class="text-xl font-bold mb-3">Speed to Market</h3>
         <p class="text-slate-600">
           Get to market faster with focused MVPs. Start learning from real users in weeks instead of waiting months for the "perfect" product.
         </p>
       </div>
-      <div class="section-card">
+      <div class="section-card icon-card">
         <h3 class="text-xl font-bold mb-3">Smart Investment</h3>
         <p class="text-slate-600">
           Invest development resources based on validated learnings rather than assumptions. Build what users actually need.
@@ -363,15 +331,15 @@
 
   <section id="consultation" class="max-w-6xl mx-auto px-4 py-20">
     <div class="bg-gradient-to-br from-hoa-600 to-hoa-800 rounded-3xl p-12 text-white text-center">
-      <h2 class="text-3xl md:text-4xl font-black mb-6">Ready to Validate Your Idea?</h2>
-      <p class="text-xl mb-8 text-hoa-100">
+      <h2 class="text-3xl md:text-4xl font-black mb-6" data-i18n="content.cta.title">Ready to Validate Your Idea?</h2>
+      <p class="text-xl mb-8 text-hoa-100" data-i18n="content.cta.description">
         Schedule a confidential consultation to discuss your prototyping and MVP development needs.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/#consultation" class="px-8 py-4 bg-white text-hoa-700 font-semibold rounded-xl hover:bg-hoa-50 transition-all duration-200 shadow-xl">
+        <a href="/#consultation" class="px-8 py-4 bg-white text-hoa-700 font-semibold rounded-xl hover:bg-hoa-50 transition-all duration-200 shadow-xl" data-i18n="content.cta.btnConsultation">
           Schedule Consultation
         </a>
-        <a href="/" class="px-8 py-4 bg-transparent text-white font-semibold rounded-xl border-2 border-white hover:bg-white hover:text-hoa-700 transition-all duration-200">
+        <a href="/" class="px-8 py-4 bg-transparent text-white font-semibold rounded-xl border-2 border-white hover:bg-white hover:text-hoa-700 transition-all duration-200" data-i18n="content.cta.btnAllServices">
           View All Services
         </a>
       </div>

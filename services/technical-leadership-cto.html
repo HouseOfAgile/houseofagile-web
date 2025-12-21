@@ -30,52 +30,20 @@
   <link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/technical-leadership-cto.html" />
   <link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/technical-leadership-cto.html" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'hoa': {50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac', 400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d'}
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="/assets/tailwind.css">
   <style>
     :root { --hoa-primary: #16a34a; --hoa-primary-dark: #15803d; }
     .glass { backdrop-filter: saturate(180%) blur(12px); background: rgba(240,253,244,0.85); }
-    .section-card {
-      @apply bg-white border border-hoa-100 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300;
-      transform: translateY(0);
-    }
-    .section-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--hoa-primary-light);
-    }
-    .btn-primary {
-      @apply px-6 py-3 bg-hoa-600 text-white font-semibold rounded-xl hover:bg-hoa-700 transition-all duration-200 shadow-lg hover:shadow-xl;
-      transform: translateY(0);
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-    }
-    .btn-secondary { @apply px-6 py-3 bg-white text-hoa-700 font-semibold rounded-xl border-2 border-hoa-200 hover:bg-hoa-50 hover:border-hoa-300 transition-all duration-200; }
-    .tech-badge {
-      @apply inline-block px-3 py-1.5 bg-hoa-100 text-hoa-800 rounded-lg text-sm font-medium mr-2 mb-2 transition-all duration-200;
-    }
-    .tech-badge:hover {
-      @apply bg-hoa-200 shadow-sm;
-      transform: translateY(-1px);
-    }
 
     /* Scroll offset for anchor links to prevent navbar overlap */
     section[id] {
       scroll-margin-top: 100px;
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="/assets/hoa-worldclass.css">
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-white text-slate-900 hoa-body service-page">
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M66S2HG2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <nav class="fixed w-full z-50 glass border-b border-hoa-100">
@@ -106,33 +74,33 @@
   <section class="relative overflow-hidden bg-gradient-to-br from-hoa-50 to-white pt-32 pb-20">
     <div class="max-w-6xl mx-auto px-4">
       <div class="max-w-3xl">
-        <div class="inline-block px-4 py-2 bg-hoa-100 text-hoa-800 rounded-full text-sm font-semibold mb-6">
+        <div class="inline-block px-4 py-2 bg-hoa-100 text-hoa-800 rounded-full text-sm font-semibold mb-6" data-i18n="content.badge">
           Technical Leadership & CTO Services
         </div>
         <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6">
-          Strategic Technology Leadership for <span class="text-transparent bg-clip-text bg-gradient-to-r from-hoa-600 to-hoa-800">Private Ventures</span>
+          <span data-i18n="content.hero.title">Strategic Technology Leadership for</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-hoa-600 to-hoa-800" data-i18n="content.hero.titleHighlight">Private Ventures</span>
         </h1>
-        <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+        <p class="text-xl text-slate-600 mb-8 leading-relaxed" data-i18n="content.hero.description">
           Our expert collective provides fractional CTO and technical leadership services for family offices and private clients in Switzerland and Germany. From strategic technology planning to team building and architecture design, we guide your digital transformation with decades of enterprise experience.
         </p>
         <div class="flex flex-wrap gap-4">
-          <a href="#consultation" class="btn-primary">Schedule Consultation</a>
-          <a href="#expertise" class="btn-secondary">View Expertise</a>
+          <a href="#consultation" class="btn-primary" data-i18n="content.hero.ctaConsultation">Schedule Consultation</a>
+          <a href="#expertise" class="btn-secondary" data-i18n="content.hero.ctaExpertise">View Expertise</a>
         </div>
       </div>
     </div>
   </section>
 
   <section id="expertise" class="max-w-6xl mx-auto px-4 py-20">
-    <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-12">Leadership Services</h2>
+    <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-12" data-i18n="content.sectionTitle">Leadership Services</h2>
 
     <div class="grid md:grid-cols-2 gap-8 mb-16">
-      <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">🎯</span> Fractional CTO Services</h3>
-        <p class="text-slate-600 mb-4">
+      <div class="section-card icon-card">
+        <h3 class="text-2xl font-bold mb-4 icon-title"><span class="icon-badge icon-badge--sm"><i class="fa-solid fa-user-tie" aria-hidden="true"></i></span><span data-i18n="content.services.fractionalCTO.title">Fractional CTO Services</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.fractionalCTO.description">
           Access seasoned CTO expertise without full-time commitment. Our collective provides strategic technology leadership tailored to your venture's specific needs and growth stage.
         </p>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.fractionalCTO.features">
           <li>• Technology strategy and roadmap development</li>
           <li>• Architecture design and technical decisions</li>
           <li>• Vendor selection and technology evaluation</li>
@@ -141,12 +109,12 @@
         </ul>
       </div>
 
-      <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">👥</span> Team Building & Management</h3>
-        <p class="text-slate-600 mb-4">
+      <div class="section-card icon-card">
+        <h3 class="text-2xl font-bold mb-4 icon-title"><span class="icon-badge icon-badge--sm"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span><span data-i18n="content.services.teamBuilding.title">Team Building & Management</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.teamBuilding.description">
           Build and lead high-performing technical teams. We recruit, mentor, and manage developers while establishing processes that foster innovation and productivity.
         </p>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.teamBuilding.features">
           <li>• Technical hiring and team assessment</li>
           <li>• Team structure and organization design</li>
           <li>• Agile methodology implementation</li>
@@ -155,12 +123,12 @@
         </ul>
       </div>
 
-      <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">🏛️</span> Architecture & System Design</h3>
-        <p class="text-slate-600 mb-4">
+      <div class="section-card icon-card">
+        <h3 class="text-2xl font-bold mb-4 icon-title"><span class="icon-badge icon-badge--sm"><i class="fa-solid fa-sitemap" aria-hidden="true"></i></span><span data-i18n="content.services.architecture.title">Architecture & System Design</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.architecture.description">
           Design scalable, resilient system architectures that support your business objectives. From monoliths to microservices, we architect solutions for long-term success.
         </p>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.architecture.features">
           <li>• System architecture design and review</li>
           <li>• Microservices and distributed systems</li>
           <li>• Cloud architecture (AWS, GCP, Azure)</li>
@@ -169,12 +137,12 @@
         </ul>
       </div>
 
-      <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">🚀</span> Digital Transformation</h3>
-        <p class="text-slate-600 mb-4">
+      <div class="section-card icon-card">
+        <h3 class="text-2xl font-bold mb-4 icon-title"><span class="icon-badge icon-badge--sm"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span><span data-i18n="content.services.digitalTransformation.title">Digital Transformation</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.digitalTransformation.description">
           Navigate complex technology transformations with confidence. We guide modernization efforts, legacy system migrations, and digital innovation initiatives.
         </p>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.digitalTransformation.features">
           <li>• Digital strategy and transformation roadmaps</li>
           <li>• Legacy system modernization planning</li>
           <li>• Process automation and optimization</li>
@@ -183,12 +151,12 @@
         </ul>
       </div>
 
-      <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">🔒</span> Security & Compliance</h3>
-        <p class="text-slate-600 mb-4">
+      <div class="section-card icon-card">
+        <h3 class="text-2xl font-bold mb-4 icon-title"><span class="icon-badge icon-badge--sm"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span><span data-i18n="content.services.security.title">Security & Compliance</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.security.description">
           Establish robust security postures and ensure compliance with relevant regulations. We implement security-first approaches that protect your assets and reputation.
         </p>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.security.features">
           <li>• Security architecture and policies</li>
           <li>• GDPR and privacy compliance</li>
           <li>• Security audits and risk assessment</li>
@@ -197,12 +165,12 @@
         </ul>
       </div>
 
-      <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">📈</span> Project & Product Management</h3>
-        <p class="text-slate-600 mb-4">
+      <div class="section-card icon-card">
+        <h3 class="text-2xl font-bold mb-4 icon-title"><span class="icon-badge icon-badge--sm"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></span><span data-i18n="content.services.projectManagement.title">Project & Product Management</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.projectManagement.description">
           Ensure successful delivery of technology initiatives with expert project and product management. We balance technical excellence with business objectives.
         </p>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.projectManagement.features">
           <li>• Project planning and delivery management</li>
           <li>• Product strategy and roadmap</li>
           <li>• Agile/Scrum methodology implementation</li>
@@ -241,15 +209,15 @@
 
   <section id="consultation" class="max-w-6xl mx-auto px-4 py-20">
     <div class="bg-gradient-to-br from-hoa-600 to-hoa-800 rounded-3xl p-12 text-white text-center">
-      <h2 class="text-3xl md:text-4xl font-black mb-6">Need Strategic Technology Leadership?</h2>
-      <p class="text-xl mb-8 text-hoa-100">
+      <h2 class="text-3xl md:text-4xl font-black mb-6" data-i18n="content.cta.title">Need Strategic Technology Leadership?</h2>
+      <p class="text-xl mb-8 text-hoa-100" data-i18n="content.cta.description">
         Schedule a confidential consultation to discuss your technology leadership needs.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/#consultation" class="px-8 py-4 bg-white text-hoa-700 font-semibold rounded-xl hover:bg-hoa-50 transition-all duration-200 shadow-xl">
+        <a href="/#consultation" class="px-8 py-4 bg-white text-hoa-700 font-semibold rounded-xl hover:bg-hoa-50 transition-all duration-200 shadow-xl" data-i18n="content.cta.btnConsultation">
           Schedule Consultation
         </a>
-        <a href="/" class="px-8 py-4 bg-transparent text-white font-semibold rounded-xl border-2 border-white hover:bg-white hover:text-hoa-700 transition-all duration-200">
+        <a href="/" class="px-8 py-4 bg-transparent text-white font-semibold rounded-xl border-2 border-white hover:bg-white hover:text-hoa-700 transition-all duration-200" data-i18n="content.cta.btnAllServices">
           View All Services
         </a>
       </div>

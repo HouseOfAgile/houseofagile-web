@@ -48,29 +48,7 @@
   }
   </script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'hoa': {
-              50: '#f0fdf4',
-              100: '#dcfce7',
-              200: '#bbf7d0',
-              300: '#86efac',
-              400: '#4ade80',
-              500: '#22c55e',
-              600: '#16a34a',
-              700: '#15803d',
-              800: '#166534',
-              900: '#14532d',
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="/assets/tailwind.css">
   <style>
     :root {
       --hoa-primary: #16a34a;
@@ -81,40 +59,16 @@
     }
 
     .glass { backdrop-filter: saturate(180%) blur(12px); background: rgba(240,253,244,0.85); }
-    .section-light { @apply bg-hoa-50; }
-    .section-card {
-      @apply bg-white border border-hoa-100 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300;
-      transform: translateY(0);
-    }
-    .section-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--hoa-primary-light);
-    }
-    .btn-primary {
-      @apply px-6 py-3 bg-hoa-600 text-white font-semibold rounded-xl hover:bg-hoa-700 transition-all duration-200 shadow-lg hover:shadow-xl;
-      transform: translateY(0);
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-    }
-    .btn-secondary {
-      @apply px-6 py-3 bg-white text-hoa-700 font-semibold rounded-xl border-2 border-hoa-200 hover:bg-hoa-50 hover:border-hoa-300 transition-all duration-200;
-    }
-    .tech-badge {
-      @apply inline-block px-3 py-1.5 bg-hoa-100 text-hoa-800 rounded-lg text-sm font-medium mr-2 mb-2 transition-all duration-200;
-    }
-    .tech-badge:hover {
-      @apply bg-hoa-200 shadow-sm;
-      transform: translateY(-1px);
-    }
 
     /* Scroll offset for anchor links to prevent navbar overlap */
     section[id] {
       scroll-margin-top: 100px;
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="/assets/hoa-worldclass.css">
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-white text-slate-900 hoa-body service-page">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M66S2HG2"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -150,18 +104,18 @@
   <section class="relative overflow-hidden bg-gradient-to-br from-hoa-50 to-white pt-32 pb-20">
     <div class="max-w-6xl mx-auto px-4">
       <div class="max-w-3xl">
-        <div class="inline-block px-4 py-2 bg-hoa-100 text-hoa-800 rounded-full text-sm font-semibold mb-6">
+        <div class="inline-block px-4 py-2 bg-hoa-100 text-hoa-800 rounded-full text-sm font-semibold mb-6" data-i18n="content.badge">
           DevOps & Cloud Infrastructure
         </div>
         <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6">
-          Enterprise-Grade Infrastructure for <span class="text-transparent bg-clip-text bg-gradient-to-r from-hoa-600 to-hoa-800">Discerning Clients</span>
+          <span data-i18n="content.hero.title">Enterprise-Grade Infrastructure for</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-hoa-600 to-hoa-800" data-i18n="content.hero.titleHighlight">Discerning Clients</span>
         </h1>
-        <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+        <p class="text-xl text-slate-600 mb-8 leading-relaxed" data-i18n="content.hero.description">
           Our expert collective delivers sophisticated DevOps and cloud infrastructure solutions for family offices and private clients in Switzerland and Germany. From Docker and Kubernetes orchestration to multi-cloud deployments and Linux system administration.
         </p>
         <div class="flex flex-wrap gap-4">
-          <a href="#consultation" class="btn-primary">Schedule Consultation</a>
-          <a href="#expertise" class="btn-secondary">View Expertise</a>
+          <a href="#consultation" class="btn-primary" data-i18n="content.hero.ctaConsultation">Schedule Consultation</a>
+          <a href="#expertise" class="btn-secondary" data-i18n="content.hero.ctaExpertise">View Expertise</a>
         </div>
       </div>
     </div>
@@ -169,22 +123,22 @@
 
   <!-- Core Services -->
   <section id="expertise" class="max-w-6xl mx-auto px-4 py-20">
-    <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-12">Our DevOps & Infrastructure Expertise</h2>
+    <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-12" data-i18n="content.sectionTitle">Our DevOps & Infrastructure Expertise</h2>
 
     <div class="grid md:grid-cols-2 gap-8 mb-16">
       <!-- Container Orchestration -->
-      <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">🐳</span> Container Orchestration</h3>
-        <p class="text-slate-600 mb-4">
+      <div class="section-card icon-card">
+        <h3 class="text-2xl font-bold mb-4 icon-title"><span class="icon-badge icon-badge--sm"><i class="fa-solid fa-cubes" aria-hidden="true"></i></span><span data-i18n="content.services.containerOrchestration.title">Container Orchestration</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.containerOrchestration.description">
           Expert deployment and management of containerized applications at scale. Our team specializes in Docker and Kubernetes orchestration, ensuring high availability, scalability, and efficient resource utilization.
         </p>
-        <div class="mb-4">
+        <div class="mb-4" data-i18n-badges="content.services.containerOrchestration.badges">
           <span class="tech-badge">Docker</span>
           <span class="tech-badge">Kubernetes</span>
           <span class="tech-badge">OpenShift</span>
           <span class="tech-badge">Helm</span>
         </div>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.containerOrchestration.features">
           <li>• Multi-container application architecture</li>
           <li>• Kubernetes cluster setup and management</li>
           <li>• Service mesh implementation (Istio, Linkerd)</li>
@@ -194,18 +148,18 @@
       </div>
 
       <!-- Cloud Platforms -->
-      <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">☁️</span> Multi-Cloud Infrastructure</h3>
-        <p class="text-slate-600 mb-4">
+      <div class="section-card icon-card">
+        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">☁️</span> <span data-i18n="content.services.multiCloud.title">Multi-Cloud Infrastructure</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.multiCloud.description">
           Comprehensive cloud infrastructure design and deployment across AWS, Google Cloud Platform, and Azure. We architect resilient, cost-optimized solutions tailored to your specific requirements.
         </p>
-        <div class="mb-4">
+        <div class="mb-4" data-i18n-badges="content.services.multiCloud.badges">
           <span class="tech-badge">AWS</span>
           <span class="tech-badge">GCP</span>
           <span class="tech-badge">Azure</span>
           <span class="tech-badge">DigitalOcean</span>
         </div>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.multiCloud.features">
           <li>• Cloud architecture design and migration</li>
           <li>• EC2, S3, Lambda, RDS (AWS)</li>
           <li>• Compute Engine, Cloud Storage, Cloud Functions (GCP)</li>
@@ -215,18 +169,18 @@
       </div>
 
       <!-- Linux Administration -->
-      <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">🐧</span> Expert Linux Administration</h3>
-        <p class="text-slate-600 mb-4">
+      <div class="section-card icon-card">
+        <h3 class="text-2xl font-bold mb-4 icon-title"><span class="icon-badge icon-badge--sm"><i class="fa-solid fa-terminal" aria-hidden="true"></i></span><span data-i18n="content.services.linuxAdmin.title">Expert Linux Administration</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.linuxAdmin.description">
           Deep expertise in Linux system administration with decades of experience managing production environments. We ensure your infrastructure is secure, performant, and reliable.
         </p>
-        <div class="mb-4">
+        <div class="mb-4" data-i18n-badges="content.services.linuxAdmin.badges">
           <span class="tech-badge">Debian</span>
           <span class="tech-badge">Ubuntu</span>
           <span class="tech-badge">CentOS</span>
           <span class="tech-badge">RHEL</span>
         </div>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.linuxAdmin.features">
           <li>• System hardening and security configuration</li>
           <li>• Performance tuning and optimization</li>
           <li>• Backup and disaster recovery planning</li>
@@ -236,19 +190,19 @@
       </div>
 
       <!-- CI/CD & Automation -->
-      <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">⚙️</span> CI/CD & Infrastructure Automation</h3>
-        <p class="text-slate-600 mb-4">
+      <div class="section-card icon-card">
+        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">⚙️</span> <span data-i18n="content.services.cicdAutomation.title">CI/CD & Infrastructure Automation</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.cicdAutomation.description">
           Streamline your development workflow with robust CI/CD pipelines and infrastructure as code. We implement automated testing, deployment, and configuration management to accelerate delivery and reduce errors.
         </p>
-        <div class="mb-4">
+        <div class="mb-4" data-i18n-badges="content.services.cicdAutomation.badges">
           <span class="tech-badge">GitLab CI/CD</span>
           <span class="tech-badge">GitHub Actions</span>
           <span class="tech-badge">Jenkins</span>
           <span class="tech-badge">Ansible</span>
           <span class="tech-badge">Terraform</span>
         </div>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.cicdAutomation.features">
           <li>• Automated build, test, and deployment pipelines</li>
           <li>• Infrastructure as Code (IaC) with Terraform</li>
           <li>• Configuration management with Ansible</li>
@@ -259,17 +213,17 @@
 
       <!-- Monitoring & Observability -->
       <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">📊</span> Monitoring & Observability</h3>
-        <p class="text-slate-600 mb-4">
+        <h3 class="text-2xl font-bold mb-4 icon-title"><span class="icon-badge icon-badge--sm"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span><span data-i18n="content.services.monitoring.title">Monitoring & Observability</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.monitoring.description">
           Comprehensive monitoring and logging solutions to maintain visibility into your infrastructure. We implement alerting, metrics collection, and log aggregation for proactive issue detection.
         </p>
-        <div class="mb-4">
+        <div class="mb-4" data-i18n-badges="content.services.monitoring.badges">
           <span class="tech-badge">Prometheus</span>
           <span class="tech-badge">Grafana</span>
           <span class="tech-badge">ELK Stack</span>
           <span class="tech-badge">Datadog</span>
         </div>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.monitoring.features">
           <li>• Real-time metrics and dashboards</li>
           <li>• Centralized logging with ELK Stack</li>
           <li>• Custom alerting and notification systems</li>
@@ -280,17 +234,17 @@
 
       <!-- High-Level Environment Management -->
       <div class="section-card">
-        <h3 class="text-2xl font-bold mb-4"><span class="text-3xl mr-3">🏗️</span> Environment & Deployment Management</h3>
-        <p class="text-slate-600 mb-4">
+        <h3 class="text-2xl font-bold mb-4 icon-title"><span class="icon-badge icon-badge--sm"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span><span data-i18n="content.services.environmentManagement.title">Environment & Deployment Management</span></h3>
+        <p class="text-slate-600 mb-4" data-i18n="content.services.environmentManagement.description">
           Sophisticated management of development, staging, and production environments. We establish deployment strategies that ensure stability, traceability, and rapid rollback capabilities.
         </p>
-        <div class="mb-4">
+        <div class="mb-4" data-i18n-badges="content.services.environmentManagement.badges">
           <span class="tech-badge">Nginx</span>
           <span class="tech-badge">Apache</span>
           <span class="tech-badge">Traefik</span>
           <span class="tech-badge">HAProxy</span>
         </div>
-        <ul class="text-slate-700 space-y-2">
+        <ul class="text-slate-700 space-y-2" data-i18n-list="content.services.environmentManagement.features">
           <li>• Multi-environment architecture design</li>
           <li>• Blue-green and canary deployments</li>
           <li>• Load balancing and high availability</li>
@@ -433,15 +387,15 @@
   <!-- CTA Section -->
   <section id="consultation" class="max-w-6xl mx-auto px-4 py-20">
     <div class="bg-gradient-to-br from-hoa-600 to-hoa-800 rounded-3xl p-12 text-white text-center">
-      <h2 class="text-3xl md:text-4xl font-black mb-6">Ready to Elevate Your Infrastructure?</h2>
-      <p class="text-xl mb-8 text-hoa-100">
+      <h2 class="text-3xl md:text-4xl font-black mb-6" data-i18n="content.cta.title">Ready to Elevate Your Infrastructure?</h2>
+      <p class="text-xl mb-8 text-hoa-100" data-i18n="content.cta.description">
         Schedule a confidential consultation to discuss your DevOps and cloud infrastructure needs.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/#consultation" class="px-8 py-4 bg-white text-hoa-700 font-semibold rounded-xl hover:bg-hoa-50 transition-all duration-200 shadow-xl">
+        <a href="/#consultation" class="px-8 py-4 bg-white text-hoa-700 font-semibold rounded-xl hover:bg-hoa-50 transition-all duration-200 shadow-xl" data-i18n="content.cta.btnConsultation">
           Schedule Consultation
         </a>
-        <a href="/" class="px-8 py-4 bg-transparent text-white font-semibold rounded-xl border-2 border-white hover:bg-white hover:text-hoa-700 transition-all duration-200">
+        <a href="/" class="px-8 py-4 bg-transparent text-white font-semibold rounded-xl border-2 border-white hover:bg-white hover:text-hoa-700 transition-all duration-200" data-i18n="content.cta.btnAllServices">
           View All Services
         </a>
       </div>
