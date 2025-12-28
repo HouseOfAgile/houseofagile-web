@@ -25,7 +25,8 @@
           "Service mesh implementation (Istio, Linkerd)",
           "Container security and best practices",
           "Migration from monolith to microservices"
-        ]
+        ],
+        "badges": ["Docker", "Kubernetes", "OpenShift", "Helm"]
       },
       "multiCloud": {
         "title": "Multi-Cloud Infrastructure",
@@ -36,18 +37,20 @@
           "Compute Engine, Cloud Storage, Cloud Functions (GCP)",
           "Virtual Machines, Blob Storage, Functions (Azure)",
           "Cost optimization and resource management"
-        ]
+        ],
+        "badges": ["AWS", "GCP", "Azure", "DigitalOcean"]
       },
       "linuxAdmin": {
         "title": "Expert Linux Administration",
         "description": "Deep expertise in Linux system administration with decades of experience managing production environments. We ensure your infrastructure is secure, performant, and reliable.",
         "features": [
-          "Ubuntu, Debian, CentOS, RHEL administration",
-          "Server hardening and security configuration",
+          "System hardening and security configuration",
           "Performance tuning and optimization",
-          "Monitoring and troubleshooting",
-          "Automated backup and disaster recovery"
-        ]
+          "Backup and disaster recovery planning",
+          "Server deployment and configuration",
+          "Shell scripting and automation"
+        ],
+        "badges": ["Debian", "Ubuntu", "CentOS", "RHEL"]
       },
       "cicdAutomation": {
         "title": "CI/CD & Infrastructure Automation",
@@ -58,7 +61,8 @@
           "Configuration management with Ansible",
           "GitOps workflows and best practices",
           "Zero-downtime deployments"
-        ]
+        ],
+        "badges": ["GitLab CI/CD", "GitHub Actions", "Jenkins", "Ansible", "Terraform"]
       },
       "monitoring": {
         "title": "Monitoring & Observability",
@@ -69,7 +73,8 @@
           "Custom alerting and notification systems",
           "Performance monitoring and APM",
           "SLA tracking and reporting"
-        ]
+        ],
+        "badges": ["Prometheus", "Grafana", "ELK Stack", "Datadog"]
       },
       "environmentManagement": {
         "title": "Environment & Deployment Management",
@@ -77,15 +82,16 @@
         "features": [
           "Multi-environment architecture design",
           "Blue-green and canary deployments",
-          "Load balancing and reverse proxy (Nginx, HAProxy)",
+          "Load balancing and high availability",
           "SSL/TLS certificate management",
-          "Environment variable and secrets management"
-        ]
+          "Reverse proxy configuration"
+        ],
+        "badges": ["Nginx", "Apache", "Traefik", "HAProxy"]
       }
     },
     "cta": {
-      "title": "Ready to Modernize Your Infrastructure?",
-      "description": "Schedule a confidential consultation to discuss your DevOps and infrastructure needs.",
+      "title": "Ready to Elevate Your Infrastructure?",
+      "description": "Schedule a confidential consultation to discuss your DevOps and cloud infrastructure needs.",
       "btnConsultation": "Schedule Consultation",
       "btnAllServices": "View All Services"
     }

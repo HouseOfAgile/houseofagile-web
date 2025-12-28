@@ -82,15 +82,15 @@ class I18n {
    */
   applyTranslations() {
     // If English, no need to replace content
-    if (this.currentLang === 'en' || !this.translations.content) {
+    if (this.currentLang === 'en' || !this.translations) {
       return;
     }
 
     // Replace content with data-i18n attributes
     document.querySelectorAll('[data-i18n]').forEach(element => {
       const key = element.getAttribute('data-i18n');
-      const translation = this.getNestedValue(this.translations.content, key);
-      
+      const translation = this.getNestedValue(this.translations, key);
+
       if (translation) {
         element.textContent = translation;
       }
@@ -99,10 +99,28 @@ class I18n {
     // Replace HTML content with data-i18n-html attributes
     document.querySelectorAll('[data-i18n-html]').forEach(element => {
       const key = element.getAttribute('data-i18n-html');
-      const translation = this.getNestedValue(this.translations.content, key);
-      
+      const translation = this.getNestedValue(this.translations, key);
+
       if (translation) {
         element.innerHTML = translation;
+      }
+    });
+
+    // Replace list content from arrays
+    document.querySelectorAll('[data-i18n-list]').forEach(element => {
+      const key = element.getAttribute('data-i18n-list');
+      const items = this.getNestedValue(this.translations, key);
+      if (Array.isArray(items)) {
+        element.innerHTML = items.map(item => `<li>${item}</li>`).join('');
+      }
+    });
+
+    // Replace badge groups from arrays
+    document.querySelectorAll('[data-i18n-badges]').forEach(element => {
+      const key = element.getAttribute('data-i18n-badges');
+      const items = this.getNestedValue(this.translations, key);
+      if (Array.isArray(items)) {
+        element.innerHTML = items.map(item => `<span class="tech-badge">${item}</span>`).join('');
       }
     });
 
@@ -190,7 +208,9 @@ class I18n {
       return 'home';
     }
     const match = path.match(/\/services\/(.+)\.html/);
-    return match ? match[1] : 'home';
+    if (match) return match[1];
+    const caseMatch = path.match(/\/case-studies\/(.+)\.html/);
+    return caseMatch ? caseMatch[1] : 'home';
   }
 
   /**

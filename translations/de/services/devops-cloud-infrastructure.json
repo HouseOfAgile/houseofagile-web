@@ -1,19 +1,99 @@
 {
   "meta": {
-    "title": "[DE] DevOps & Cloud Infrastructure Services — House of Agile • Switzerland • Germany",
-    "description": "[DE] Expert DevOps and cloud infrastructure services...",
-    "ogTitle": "[DE] DevOps & Cloud Infrastructure Services — House of Agile",
-    "ogDescription": "[DE] Expert DevOps and cloud infrastructure services..."
+    "title": "DevOps & Cloud-Infrastruktur — House of Agile • Schweiz • Deutschland",
+    "description": "Experten DevOps und Cloud-Infrastruktur-Services für Family Offices und Privatkunden in der Schweiz und Deutschland. Docker, Kubernetes, AWS, GCP, Azure, Linux-Administration, CI/CD-Pipelines und Infrastruktur-Automatisierung mit Ansible und Terraform.",
+    "ogTitle": "DevOps & Cloud-Infrastruktur — House of Agile",
+    "ogDescription": "Experten DevOps und Cloud-Infrastruktur-Services für Family Offices und Privatkunden. Kubernetes, Docker, AWS, GCP, Azure, Linux-Administration."
   },
   "content": {
-    "badge": "[DE] DevOps & Cloud Infrastructure",
+    "badge": "DevOps & Cloud-Infrastruktur",
     "hero": {
-      "title": "[DE] Enterprise-Grade Infrastructure for",
-      "titleHighlight": "[DE] Discerning Clients",
-      "description": "[DE] Our expert collective delivers sophisticated DevOps and cloud infrastructure solutions...",
-      "ctaConsultation": "[DE] Schedule Consultation",
-      "ctaExpertise": "[DE] View Expertise"
+      "title": "Enterprise-Grade Infrastruktur für",
+      "titleHighlight": "Anspruchsvolle Kunden",
+      "description": "Unser Expertenkollektiv liefert ausgefeilte DevOps- und Cloud-Infrastrukturlösungen für Family Offices und Privatkunden in der Schweiz und Deutschland. Von Docker- und Kubernetes-Orchestrierung bis hin zu Multi-Cloud-Deployments und Linux-Systemadministration.",
+      "ctaConsultation": "Beratung vereinbaren",
+      "ctaExpertise": "Expertise ansehen"
+    },
+    "sectionTitle": "Unsere DevOps & Infrastruktur-Expertise",
+    "services": {
+      "containerOrchestration": {
+        "title": "Container-Orchestrierung",
+        "description": "Experten-Deployment und -Management von containerisierten Anwendungen im großen Maßstab. Unser Team ist auf Docker- und Kubernetes-Orchestrierung spezialisiert und gewährleistet Hochverfügbarkeit, Skalierbarkeit und effiziente Ressourcennutzung.",
+        "features": [
+          "Multi-Container-Anwendungsarchitektur",
+          "Kubernetes-Cluster-Setup und -Management",
+          "Service-Mesh-Implementierung (Istio, Linkerd)",
+          "Container-Sicherheit und Best Practices",
+          "Migration von Monolith zu Microservices"
+        ],
+        "badges": ["Docker", "Kubernetes", "OpenShift", "Helm"]
+      },
+      "multiCloud": {
+        "title": "Multi-Cloud-Infrastruktur",
+        "description": "Umfassendes Cloud-Infrastruktur-Design und -Deployment über AWS, Google Cloud Platform und Azure. Wir entwerfen resiliente, kostenoptimierte Lösungen, die auf Ihre spezifischen Anforderungen zugeschnitten sind.",
+        "features": [
+          "Cloud-Architektur-Design und -Migration",
+          "EC2, S3, Lambda, RDS (AWS)",
+          "Compute Engine, Cloud Storage, Cloud Functions (GCP)",
+          "Virtual Machines, Blob Storage, Functions (Azure)",
+          "Kostenoptimierung und Ressourcenmanagement"
+        ],
+        "badges": ["AWS", "GCP", "Azure", "DigitalOcean"]
+      },
+      "linuxAdmin": {
+        "title": "Experten Linux-Administration",
+        "description": "Tiefgreifende Expertise in Linux-Systemadministration mit jahrzehntelanger Erfahrung im Management von Produktionsumgebungen. Wir stellen sicher, dass Ihre Infrastruktur sicher, leistungsfähig und zuverlässig ist.",
+        "features": [
+          "System-Härtung und Sicherheitskonfiguration",
+          "Performance-Tuning und Optimierung",
+          "Backup und Disaster-Recovery-Planung",
+          "Server-Deployment und -Konfiguration",
+          "Shell-Scripting und Automatisierung"
+        ],
+        "badges": ["Debian", "Ubuntu", "CentOS", "RHEL"]
+      },
+      "cicdAutomation": {
+        "title": "CI/CD & Infrastruktur-Automatisierung",
+        "description": "Optimieren Sie Ihren Entwicklungsworkflow mit robusten CI/CD-Pipelines und Infrastructure as Code. Wir implementieren automatisiertes Testen, Deployment und Konfigurationsmanagement, um die Lieferung zu beschleunigen und Fehler zu reduzieren.",
+        "features": [
+          "Automatisierte Build-, Test- und Deployment-Pipelines",
+          "Infrastructure as Code (IaC) mit Terraform",
+          "Konfigurationsmanagement mit Ansible",
+          "GitOps-Workflows und Best Practices",
+          "Zero-Downtime-Deployments"
+        ],
+        "badges": ["GitLab CI/CD", "GitHub Actions", "Jenkins", "Ansible", "Terraform"]
+      },
+      "monitoring": {
+        "title": "Monitoring & Observability",
+        "description": "Umfassende Monitoring- und Logging-Lösungen für Transparenz in Ihrer Infrastruktur. Wir implementieren Alerting, Metriken-Erfassung und Log-Aggregation für proaktive Problemerkennung.",
+        "features": [
+          "Echtzeit-Metriken und Dashboards",
+          "Zentralisiertes Logging mit ELK Stack",
+          "Benutzerdefinierte Alerting- und Benachrichtigungssysteme",
+          "Performance-Monitoring und APM",
+          "SLA-Tracking und Reporting"
+        ],
+        "badges": ["Prometheus", "Grafana", "ELK Stack", "Datadog"]
+      },
+      "environmentManagement": {
+        "title": "Umgebungs- & Deployment-Management",
+        "description": "Ausgefeiltes Management von Entwicklungs-, Staging- und Produktionsumgebungen. Wir etablieren Deployment-Strategien, die Stabilität, Nachverfolgbarkeit und schnelle Rollback-Fähigkeiten gewährleisten.",
+        "features": [
+          "Multi-Environment-Architektur-Design",
+          "Blue-Green- und Canary-Deployments",
+          "Load Balancing und Hochverfügbarkeit",
+          "SSL/TLS-Zertifikatsmanagement",
+          "Reverse-Proxy-Konfiguration"
+        ],
+        "badges": ["Nginx", "Apache", "Traefik", "HAProxy"]
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihre Infrastruktur zu modernisieren?",
+      "description": "Vereinbaren Sie eine vertrauliche Beratung, um Ihre DevOps- und Infrastrukturanforderungen zu besprechen.",
+      "btnConsultation": "Beratung vereinbaren",
+      "btnAllServices": "Alle Services ansehen"
     }
-  },
-  "_comment": "This is a placeholder. Translate translations/en/services/devops-cloud-infrastructure.json using DeepL and paste the translated content here."
+  }
 }
