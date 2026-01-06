@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "title": "Rapid Prototyping & MVP-Entwicklung — House of Agile • Schweiz • Deutschland",
+    "description": "Rapid Prototyping und MVP-Entwicklungsservices für Family Offices und Privatkunden in der Schweiz und Deutschland. Schnelle Validierung von Ideen, Proof of Concepts und Minimum Viable Products.",
+    "ogTitle": "Rapid Prototyping & MVP-Entwicklung — House of Agile",
+    "ogDescription": "Rapid Prototyping und MVP-Entwicklung für anspruchsvolle Unternehmen. Schnelle Validierung, Proof of Concepts und Minimum Viable Products."
+  },
+  "content": {
+    "badge": "Rapid Prototyping & MVP-Entwicklung",
+    "hero": {
+      "title": "Ideen schnell validieren mit",
+      "titleHighlight": "Experten-Prototypen",
+      "description": "Unser Expertenkollektiv ist auf Rapid Prototyping und MVP-Entwicklung für Family Offices und Privatkunden in der Schweiz und Deutschland spezialisiert. Von Proof of Concepts bis Minimum Viable Products helfen wir Ihnen, Ideen schnell und kosteneffizient zu validieren, bevor Sie sich zur vollständigen Entwicklung verpflichten.",
+      "ctaConsultation": "Beratung vereinbaren",
+      "ctaExpertise": "Expertise ansehen"
+    },
+    "sectionTitle": "Unsere Prototyping-Services",
+    "services": {
+      "mvpDevelopment": {
+        "title": "Rapid MVP-Entwicklung",
+        "description": "Erstellen Sie funktionale Minimum Viable Products in Wochen, nicht Monaten. Wir fokussieren uns auf Kernfunktionen, die Ihr Konzept validieren und schnell echtes Nutzerfeedback sammeln.",
+        "features": [
+          "4-8 Wochen Entwicklungszyklen",
+          "Priorisierung der Kernfunktionen",
+          "Moderne, responsive Oberflächen",
+          "Cloud-Deployment-bereit",
+          "Integrierte Nutzerfeedback-Sammlung"
+        ],
+        "badges": ["Laravel", "Vue.js", "Tailwind CSS"]
+      },
+      "proofOfConcept": {
+        "title": "Proof of Concept Entwicklung",
+        "description": "Validieren Sie technische Machbarkeit und demonstrieren Sie Kernfunktionalität. Wir bauen fokussierte POCs, die kritische Fragen zur Realisierbarkeit Ihrer Idee beantworten.",
+        "features": [
+          "Technische Machbarkeitsbewertung",
+          "Validierung des Kernalgorithmus",
+          "Integrations-Proof-of-Concept",
+          "Performance-Benchmarking",
+          "Evaluierung des Technologie-Stacks"
+        ]
+      },
+      "interactivePrototypes": {
+        "title": "Interaktive Prototypen",
+        "description": "Erstellen Sie klickbare, interaktive Prototypen, die wie echte Anwendungen aussehen und funktionieren. Perfekt für Stakeholder-Präsentationen und Nutzertests.",
+        "features": [
+          "High-Fidelity interaktive Mockups",
+          "Demonstration des User Flows",
+          "Design-Validierung",
+          "Stakeholder-Präsentationen",
+          "Vorbereitung für Nutzertests"
+        ]
+      },
+      "iterativeDevelopment": {
+        "title": "Iterative Entwicklung",
+        "description": "Beginnen Sie mit einem einfachen Prototyp und iterieren Sie basierend auf Feedback. Wir nutzen agile Methoden, um Erkenntnisse schnell einzuarbeiten und das Produkt weiterzuentwickeln.",
+        "features": [
+          "Sprint-basierte Entwicklung (1-2 Wochen)",
+          "Regelmäßige Demo-Sessions",
+          "Kontinuierliche Feedback-Integration",
+          "Feature-Pivoting-Fähigkeit",
+          "Inkrementelle Verbesserungen"
+        ]
+      },
+      "launchReady": {
+        "title": "Launch-bereite MVPs",
+        "description": "Bauen Sie MVPs, die für echte Nutzer bereit sind, nicht nur für Demos. Wir inkludieren wesentliche Features wie Authentifizierung, Zahlungen und Analytics von Anfang an.",
+        "features": [
+          "Benutzerauthentifizierung und -verwaltung",
+          "Zahlungsintegration (Stripe, PayPal)",
+          "Analytics und Tracking",
+          "E-Mail-Benachrichtigungen",
+          "Admin-Dashboard"
+        ],
+        "badges": ["User Auth", "Payments", "Analytics"]
+      },
+      "marketValidation": {
+        "title": "Marktvalidierungs-Unterstützung",
+        "description": "Mehr als nur Entwicklung - wir helfen Ihnen, Ihr MVP mit echten Nutzern zu testen und zu validieren, Metriken zu sammeln und datengetriebene Entscheidungen zu treffen.",
+        "features": [
+          "Nutzertest-Setup",
+          "Analytics-Implementierung",
+          "A/B-Test-Fähigkeit",
+          "Conversion-Tracking",
+          "Analyse des Nutzerverhaltens"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihre Idee zu validieren?",
+      "description": "Vereinbaren Sie eine vertrauliche Beratung, um Ihre Prototyping- und MVP-Entwicklungsbedürfnisse zu besprechen.",
+      "btnConsultation": "Beratung vereinbaren",
+      "btnAllServices": "Alle Services ansehen"
+    }
+  }
+}

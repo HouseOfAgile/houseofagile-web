@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "Solutions Data & Web Scraping — House of Agile • Suisse • Allemagne",
+    "description": "Services experts d'extraction de données, web scraping et analytics pour family offices et clients privés en Suisse et en Allemagne. Python, Selenium, traitement de données, automatisation et business intelligence.",
+    "ogTitle": "Solutions Data & Web Scraping — House of Agile",
+    "ogDescription": "Services experts de web scraping, extraction de données et analytics. Python, Selenium, collecte de données automatisée et business intelligence."
+  },
+  "content": {
+    "badge": "Solutions Data & Web Scraping",
+    "hero": {
+      "title": "Extraction Intelligente de Données &",
+      "titleHighlight": "Analytics",
+      "description": "Notre collectif d'experts fournit des solutions sophistiquées de web scraping, d'extraction de données et d'analytics pour les family offices et clients privés en Suisse et en Allemagne. De la recherche de marché automatisée à l'intelligence concurrentielle et au business analytics.",
+      "ctaConsultation": "Planifier une consultation",
+      "ctaExpertise": "Voir l'expertise"
+    },
+    "sectionTitle": "Nos Services de Solutions Data",
+    "services": {
+      "webScraping": {
+        "title": "Web Scraping & Extraction de Données",
+        "description": "Solutions avancées de web scraping pour extraire des données structurées de sites web, APIs et sources en ligne. Nous gérons les sites complexes riches en JavaScript, la protection anti-bot et l'extraction à grande échelle.",
+        "features": [
+          "Applications de web scraping personnalisées",
+          "Interaction navigateur automatisée (Selenium, Puppeteer)",
+          "Scraping de sites web dynamiques riches en JavaScript",
+          "Intégration d'API et agrégation de données",
+          "Rate limiting et pratiques de scraping éthiques"
+        ],
+        "badges": ["Python", "Selenium", "Scrapy", "BeautifulSoup"]
+      },
+      "dataAnalytics": {
+        "title": "Analyse & Traitement de Données",
+        "description": "Transformez les données brutes en insights actionnables avec des pipelines sophistiqués de traitement et d'analytics. Nous gérons le nettoyage, la transformation et l'analyse des données à grande échelle.",
+        "features": [
+          "Nettoyage et normalisation des données",
+          "Analyse statistique et reporting",
+          "Développement de pipelines de données",
+          "Processus ETL (Extract, Transform, Load)",
+          "Tableaux de bord Business Intelligence"
+        ],
+        "badges": ["Pandas", "NumPy", "Python", "SQL"]
+      },
+      "automation": {
+        "title": "Collecte Automatisée de Données",
+        "description": "Mettez en place des systèmes de collecte de données automatisés fonctionnant 24/7, surveillant les sources, détectant les changements et vous alertant des mises à jour importantes.",
+        "features": [
+          "Scraping et surveillance planifiés",
+          "Intégration de flux de données en temps réel",
+          "Détection de changements et alertes",
+          "Surveillance de la qualité des données",
+          "Génération automatisée de rapports"
+        ]
+      },
+      "competitiveIntelligence": {
+        "title": "Intelligence Concurrentielle",
+        "description": "Surveillez les concurrents, suivez les tendances du marché et collectez des informations à partir de sources publiques. Nous créons des systèmes qui collectent et analysent continuellement les données concurrentielles.",
+        "features": [
+          "Surveillance des sites concurrents",
+          "Suivi et comparaison des prix",
+          "Automatisation de la recherche de marché",
+          "Collecte de données sur les réseaux sociaux",
+          "Analyse des tendances et reporting"
+        ]
+      },
+      "dataWarehousing": {
+        "title": "Data Warehousing & Stockage",
+        "description": "Concevez et implémentez des solutions de stockage de données optimisées pour vos besoins d'analyse. Des bases de données SQL aux solutions Big Data.",
+        "features": [
+          "Architecture de data warehouse",
+          "Stockage de données temporelles",
+          "Implémentation de moteur de recherche",
+          "Conception de data lake",
+          "Stratégies de sauvegarde et d'archivage"
+        ],
+        "badges": ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch"]
+      },
+      "aiMl": {
+        "title": "Intégration IA & Machine Learning",
+        "description": "Enrichissez les solutions data avec le machine learning pour la reconnaissance de patterns, la classification et l'analytics prédictif.",
+        "features": [
+          "Traitement du langage naturel (NLP)",
+          "Analyse de sentiment",
+          "Reconnaissance de patterns et classification",
+          "Modélisation prédictive",
+          "Catégorisation automatisée des données"
+        ],
+        "badges": ["TensorFlow", "PyTorch", "Scikit-learn"]
+      }
+    },
+    "cta": {
+      "title": "Besoin de solutions data ?",
+      "description": "Planifiez une consultation confidentielle pour discuter de vos besoins en extraction de données, scraping et analytics.",
+      "btnConsultation": "Planifier une consultation",
+      "btnAllServices": "Voir tous les services"
+    }
+  }
+}

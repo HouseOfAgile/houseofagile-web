@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "Full-Stack Web-Entwicklung — House of Agile • Schweiz • Deutschland",
+    "description": "Experten Full-Stack Web-Entwicklung für Family Offices und Privatkunden in der Schweiz und Deutschland. Symfony, Laravel, Vue.js, React, Node.js, Python, Microservices-Architektur und RESTful APIs.",
+    "ogTitle": "Full-Stack Web-Entwicklung — House of Agile",
+    "ogDescription": "Experten Full-Stack-Entwicklung für anspruchsvolle Webanwendungen. Symfony, Laravel, Vue.js, React, Node.js, Python und moderne Microservices-Architektur."
+  },
+  "content": {
+    "badge": "Full-Stack Entwicklung",
+    "hero": {
+      "title": "Anspruchsvolle Webanwendungen für",
+      "titleHighlight": "Private Unternehmen",
+      "description": "Unser Expertenkollektiv entwickelt hochleistungsfähige, skalierbare Webanwendungen für Family Offices und Privatkunden in der Schweiz und Deutschland. Von PHP und Symfony bis Vue.js und React liefern wir Full-Stack-Lösungen, die technische Exzellenz mit raffinierten Benutzererlebnissen verbinden.",
+      "ctaConsultation": "Beratung vereinbaren",
+      "ctaExpertise": "Expertise ansehen"
+    },
+    "sectionTitle": "Unsere Full-Stack Entwicklungs-Expertise",
+    "services": {
+      "backendDevelopment": {
+        "title": "Moderne Backend-Entwicklung",
+        "description": "Experten-Backend-Entwicklung mit branchenführenden Frameworks und Sprachen. Unser Team baut robuste, skalierbare APIs und Server-Anwendungen, die anspruchsvolle Geschäftslogik antreiben.",
+        "features": [
+          "Symfony 6+ mit PHP 8 für Enterprise-Anwendungen",
+          "Laravel für schnelle Anwendungsentwicklung",
+          "Node.js/Express für Echtzeit-Anwendungen",
+          "Python/Flask für datenintensive Anwendungen",
+          "Go und Rust für Hochleistungsdienste"
+        ],
+        "badges": ["PHP", "Symfony", "Laravel", "Node.js", "Python", "Go"]
+      },
+      "frontendDevelopment": {
+        "title": "Moderne Frontend-Entwicklung",
+        "description": "Responsive, performante Benutzeroberflächen mit modernsten JavaScript-Frameworks. Wir schaffen intuitive Erlebnisse, die nahtlos auf allen Geräten und Browsern funktionieren.",
+        "features": [
+          "Vue.js 3 mit Composition API",
+          "React mit modernen Hooks und State Management",
+          "TypeScript für typsichere Anwendungen",
+          "Progressive Web Apps (PWA)",
+          "Responsives Design mit Tailwind CSS, Sass"
+        ],
+        "badges": ["Vue.js", "React", "TypeScript", "Tailwind CSS"]
+      },
+      "apiDevelopment": {
+        "title": "API-Design & Integration",
+        "description": "Umfassende API-Entwicklung und Integrationsservices. Wir entwerfen RESTful und GraphQL APIs, die sicher, gut dokumentiert und für Skalierung gebaut sind.",
+        "features": [
+          "RESTful API-Design nach Best Practices",
+          "GraphQL APIs mit Apollo oder Äquivalent",
+          "API Platform für schnelle API-Entwicklung",
+          "OAuth 2.0 und JWT-Authentifizierung",
+          "Drittanbieter-API-Integrationen (Stripe, PayPal, OpenAI)"
+        ],
+        "badges": ["REST", "GraphQL", "API Platform", "OAuth"]
+      },
+      "microservices": {
+        "title": "Microservices & Verteilte Systeme",
+        "description": "Architektur und Implementierung von Microservices-basierten Anwendungen. Wir entwerfen resiliente, unabhängig deploybare Services, die effizient skalieren.",
+        "features": [
+          "Domain-driven Design (DDD)",
+          "Event-driven Architektur",
+          "Message Queues (RabbitMQ, Kafka, Symfony Messenger)",
+          "Service Mesh und API Gateways",
+          "CQRS und Event Sourcing Patterns"
+        ],
+        "badges": ["Microservices", "RabbitMQ", "Kafka", "Redis"]
+      },
+      "database": {
+        "title": "Datenbank-Design & Management",
+        "description": "Experten-Datenbankdesign und -optimierung für SQL- und NoSQL-Systeme. Wir gewährleisten Datenintegrität, Performance und Skalierbarkeit für Ihre Anwendungen.",
+        "features": [
+          "Relationales Datenbankdesign (PostgreSQL, MySQL)",
+          "NoSQL-Datenbanken (MongoDB, Redis)",
+          "Datenbankoptimierung und Query-Tuning",
+          "Datenmigration und -synchronisation",
+          "Caching-Strategien mit Redis"
+        ],
+        "badges": ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
+      },
+      "ecommerce": {
+        "title": "E-Commerce & Zahlungslösungen",
+        "description": "Komplette E-Commerce-Plattformen und sichere Zahlungsintegrationen. Wir bauen maßgeschneiderte Shopping-Erlebnisse mit nahtlosen Checkout-Flows und mehreren Zahlungsmethoden.",
+        "features": [
+          "Maßgeschneiderte E-Commerce-Plattform-Entwicklung",
+          "Shopify Themes, Apps und API-Integration",
+          "WooCommerce-Anpassung und Erweiterungen",
+          "Sichere Zahlungs-Gateway-Integration (Stripe, PayPal)",
+          "Warenkorb- und Checkout-Optimierung"
+        ],
+        "badges": ["Shopify", "WooCommerce", "Stripe", "PayPal"]
+      }
+    },
+    "cta": {
+      "title": "Bereit für Ihre nächste Anwendung?",
+      "description": "Vereinbaren Sie eine vertrauliche Beratung, um Ihre Full-Stack-Entwicklungsanforderungen zu besprechen.",
+      "btnConsultation": "Beratung vereinbaren",
+      "btnAllServices": "Alle Services ansehen"
+    }
+  }
+}

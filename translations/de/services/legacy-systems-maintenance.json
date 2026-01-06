@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Legacy-Systeme & Code-Wartung — House of Agile • Schweiz • Deutschland",
+    "description": "Experten für Legacy-Systemwartung und Modernisierung für Family Offices und Privatkunden in der Schweiz und Deutschland. CodeIgniter, Typo3, PHP Legacy-Code, Systemrettung und technische Schuldenreduzierung.",
+    "ogTitle": "Legacy-Systeme & Code-Wartung — House of Agile",
+    "ogDescription": "Experten für Legacy-Systemwartung, Modernisierung und Rettungsdienste. CodeIgniter, Typo3, PHP Legacy-Code und technische Schuldenreduzierung."
+  },
+  "content": {
+    "badge": "Legacy-Systeme & Code-Wartung",
+    "hero": {
+      "title": "Expertenbetreuung für",
+      "titleHighlight": "Legacy-Systeme",
+      "description": "Unser Expertenkollektiv ist spezialisiert auf die Wartung, Rettung und Modernisierung von Legacy-Systemen für Family Offices und Privatkunden in der Schweiz und Deutschland. Von CodeIgniter und Typo3 bis hin zu veralteten PHP-Anwendungen sorgen wir dafür, dass Ihre kritischen Systeme sicher, stabil und wartbar bleiben.",
+      "ctaConsultation": "Beratung vereinbaren",
+      "ctaExpertise": "Expertise ansehen"
+    },
+    "sectionTitle": "Unsere Legacy-System-Dienstleistungen",
+    "services": {
+      "maintenance": {
+        "title": "Legacy-Code-Wartung",
+        "description": "Halten Sie Ihre Legacy-Systeme mit Expertenwartung und Fehlerbehebungen am Laufen. Unser Team verfügt über umfassende Erfahrung mit älteren Codebasen und Frameworks, die viele Entwickler nicht mehr unterstützen.",
+        "features": [
+          "Fehlerbehebungen und Sicherheits-Patches",
+          "Performance-Optimierung",
+          "Abhängigkeits-Updates und Kompatibilität",
+          "Dokumentation und Wissenstransfer",
+          "Notfall-Support und Fehlerbehebung"
+        ],
+        "badges": ["CodeIgniter", "Typo3", "Legacy PHP", "Altes Symfony"]
+      },
+      "rescue": {
+        "title": "Systemrettung & Wiederherstellung",
+        "description": "Wenn Legacy-Systeme ausfallen oder unwartbar werden, greifen wir ein, um kritische Anwendungen zu retten. Unser Team diagnostiziert Probleme, stabilisiert Systeme und stellt die Funktionalität wieder her.",
+        "features": [
+          "Notfall-Systemwiederherstellung",
+          "Kritische Fehlerdiagnose und -behebung",
+          "Datenwiederherstellung und -migration",
+          "Systemstabilisierung",
+          "Reverse Engineering undokumentierter Systeme"
+        ]
+      },
+      "modernization": {
+        "title": "Modernisierung & Migration",
+        "description": "Transformieren Sie Legacy-Systeme in moderne, wartbare Anwendungen. Wir planen und führen Migrationen zu aktuellen Frameworks und Technologien durch, während wir Geschäftslogik und Datenintegrität bewahren.",
+        "features": [
+          "PHP-Versions-Upgrades (5.x auf 8.x)",
+          "Framework-Migration (CodeIgniter zu Symfony/Laravel)",
+          "Datenbank-Migration und -Optimierung",
+          "Refactoring zu modernen Patterns",
+          "Schrittweise Strangler-Fig-Pattern-Migrationen"
+        ],
+        "badges": ["PHP 5 → PHP 8", "Altes Symfony → Symfony 6", "Framework-Migration"]
+      },
+      "technicalDebt": {
+        "title": "Technische Schuldenreduzierung",
+        "description": "Systematische Reduzierung technischer Schulden in Legacy-Codebasen. Wir refaktorisieren, fügen Tests hinzu, verbessern die Dokumentation und modernisieren die Infrastruktur für bessere Wartbarkeit.",
+        "features": [
+          "Code-Qualitätsbewertung und -verbesserung",
+          "Automatisierte Tests für Legacy-Code hinzufügen",
+          "Refactoring und Code-Bereinigung",
+          "Dokumentationserstellung",
+          "Abhängigkeitsmodernisierung"
+        ]
+      },
+      "security": {
+        "title": "Sicherheitshärtung",
+        "description": "Sichern Sie Legacy-Systeme gegen moderne Bedrohungen ab. Wir prüfen Code auf Schwachstellen, wenden Sicherheits-Patches an und implementieren Schutzmassnahmen für Ihre Daten und Betriebsabläufe.",
+        "features": [
+          "Sicherheitsaudits und Schwachstellenanalyse",
+          "SQL-Injection- und XSS-Schutz",
+          "Authentifizierungs- und Autorisierungsverbesserungen",
+          "Sicherheitsupdates für Abhängigkeiten",
+          "DSGVO- und Compliance-Verbesserungen"
+        ]
+      },
+      "cms": {
+        "title": "Legacy-CMS-Verwaltung",
+        "description": "Spezialisierter Support für Legacy-Content-Management-Systeme einschliesslich Typo3, Drupal und ältere WordPress-Installationen. Wir warten, sichern und modernisieren CMS-Plattformen.",
+        "features": [
+          "Typo3-Wartung und -Upgrades",
+          "Entwicklung und Fixes für benutzerdefinierte Erweiterungen",
+          "Content-Migration und -Umstrukturierung",
+          "Performance-Optimierung",
+          "Sicherheitshärtung und Updates"
+        ],
+        "badges": ["Typo3", "Drupal", "Altes WordPress"]
+      }
+    },
+    "cta": {
+      "title": "Brauchen Sie Hilfe mit Legacy-Systemen?",
+      "description": "Vereinbaren Sie eine vertrauliche Beratung, um Ihre Anforderungen für Legacy-Systemwartung oder -modernisierung zu besprechen.",
+      "btnConsultation": "Beratung vereinbaren",
+      "btnAllServices": "Alle Dienstleistungen"
+    }
+  }
+}

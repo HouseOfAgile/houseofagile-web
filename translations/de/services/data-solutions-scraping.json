@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "Datenlösungen & Web Scraping Services — House of Agile • Schweiz • Deutschland",
+    "description": "Experten Datenextraktion, Web Scraping und Analytics Services für Family Offices und Privatkunden in der Schweiz und Deutschland. Python, Selenium, Datenverarbeitung, Automatisierung und Business Intelligence.",
+    "ogTitle": "Datenlösungen & Web Scraping — House of Agile",
+    "ogDescription": "Experten Web Scraping, Datenextraktion und Analytics Services. Python, Selenium, automatisierte Datensammlung und Business Intelligence."
+  },
+  "content": {
+    "badge": "Datenlösungen & Web Scraping",
+    "hero": {
+      "title": "Intelligente Datenextraktion &",
+      "titleHighlight": "Analytics",
+      "description": "Unser Expertenkollektiv liefert anspruchsvolle Web Scraping-, Datenextraktions- und Analytics-Lösungen für Family Offices und Privatkunden in der Schweiz und Deutschland. Von automatisierter Marktforschung bis hin zu Wettbewerbsintelligenz und Business Analytics.",
+      "ctaConsultation": "Beratung vereinbaren",
+      "ctaExpertise": "Expertise ansehen"
+    },
+    "sectionTitle": "Unsere Datenlösungs-Services",
+    "services": {
+      "webScraping": {
+        "title": "Web Scraping & Datenextraktion",
+        "description": "Fortschrittliche Web Scraping-Lösungen zur Extraktion strukturierter Daten aus Websites, APIs und Online-Quellen. Wir bewältigen komplexe JavaScript-lastige Seiten, Anti-Bot-Schutz und großangelegte Extraktion.",
+        "features": [
+          "Maßgeschneiderte Web Scraping-Anwendungen",
+          "Automatisierte Browser-Interaktion (Selenium, Puppeteer)",
+          "Dynamisches JavaScript-lastiges Website-Scraping",
+          "API-Integration und Datenaggregation",
+          "Rate-Limiting und ethische Scraping-Praktiken"
+        ],
+        "badges": ["Python", "Selenium", "Scrapy", "BeautifulSoup"]
+      },
+      "dataAnalytics": {
+        "title": "Datenanalyse & -verarbeitung",
+        "description": "Transformieren Sie Rohdaten in umsetzbare Erkenntnisse mit ausgefeilten Datenverarbeitungs- und Analytics-Pipelines. Wir handhaben Datenbereinigung, -transformation und -analyse im großen Maßstab.",
+        "features": [
+          "Datenbereinigung und -normalisierung",
+          "Statistische Analyse und Reporting",
+          "Datenpipeline-Entwicklung",
+          "ETL-Prozesse (Extract, Transform, Load)",
+          "Business Intelligence Dashboards"
+        ],
+        "badges": ["Pandas", "NumPy", "Python", "SQL"]
+      },
+      "automation": {
+        "title": "Automatisierte Datensammlung",
+        "description": "Richten Sie kontinuierliche automatisierte Datensammlungssysteme ein, die 24/7 laufen, Quellen überwachen, Änderungen erkennen und Sie über wichtige Updates benachrichtigen.",
+        "features": [
+          "Geplantes Scraping und Monitoring",
+          "Echtzeit-Datenfeed-Integration",
+          "Änderungserkennung und Alerting",
+          "Datenqualitätsüberwachung",
+          "Automatisierte Berichtsgenerierung"
+        ]
+      },
+      "competitiveIntelligence": {
+        "title": "Wettbewerbsintelligenz",
+        "description": "Überwachen Sie Wettbewerber, verfolgen Sie Markttrends und sammeln Sie Informationen aus öffentlichen Quellen. Wir erstellen Systeme, die kontinuierlich Wettbewerbsdaten sammeln und analysieren.",
+        "features": [
+          "Wettbewerber-Website-Überwachung",
+          "Preisverfolgung und -vergleich",
+          "Automatisierung der Marktforschung",
+          "Social-Media-Datensammlung",
+          "Trendanalyse und Reporting"
+        ]
+      },
+      "dataWarehousing": {
+        "title": "Data Warehousing & Speicherung",
+        "description": "Entwerfen und implementieren Sie Datenspeicherlösungen, die für Ihre Analyseanforderungen optimiert sind. Von SQL-Datenbanken bis Big-Data-Lösungen.",
+        "features": [
+          "Data-Warehouse-Architektur",
+          "Zeitreihendaten-Speicherung",
+          "Suchmaschinen-Implementierung",
+          "Data-Lake-Design",
+          "Backup- und Archivierungsstrategien"
+        ],
+        "badges": ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch"]
+      },
+      "aiMl": {
+        "title": "KI & Machine Learning Integration",
+        "description": "Erweitern Sie Datenlösungen mit maschinellem Lernen für Mustererkennung, Klassifikation und prädiktive Analysen.",
+        "features": [
+          "Natural Language Processing (NLP)",
+          "Sentiment-Analyse",
+          "Mustererkennung und Klassifikation",
+          "Prädiktive Modellierung",
+          "Automatisierte Datenkategorisierung"
+        ],
+        "badges": ["TensorFlow", "PyTorch", "Scikit-learn"]
+      }
+    },
+    "cta": {
+      "title": "Brauchen Sie Datenlösungen?",
+      "description": "Vereinbaren Sie eine vertrauliche Beratung, um Ihre Anforderungen an Datenextraktion, Scraping und Analytics zu besprechen.",
+      "btnConsultation": "Beratung vereinbaren",
+      "btnAllServices": "Alle Services ansehen"
+    }
+  }
+}

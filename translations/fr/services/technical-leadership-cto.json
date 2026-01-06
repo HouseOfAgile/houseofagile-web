@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "title": "Leadership Technique & Services CTO — House of Agile • Suisse • Allemagne",
+    "description": "Services de CTO fractionnaire et de leadership technique pour family offices et clients privés en Suisse et en Allemagne. Planification stratégique de la technologie, conception d'architecture, constitution d'équipes et transformation digitale.",
+    "ogTitle": "Leadership Technique & Services CTO — House of Agile",
+    "ogDescription": "Services de CTO fractionnaire pour entreprises exigeantes. Leadership technologique stratégique, conception d'architecture, constitution d'équipes et transformation digitale."
+  },
+  "content": {
+    "badge": "Leadership Technique & Services CTO",
+    "hero": {
+      "title": "Leadership Technologique Stratégique pour",
+      "titleHighlight": "Entreprises Privées",
+      "description": "Notre collectif d'experts fournit des services de CTO fractionnaire et de leadership technique pour les family offices et clients privés en Suisse et en Allemagne. De la planification stratégique de la technologie à la constitution d'équipes et la conception d'architecture, nous guidons votre transformation digitale avec des décennies d'expérience en entreprise.",
+      "ctaConsultation": "Planifier une consultation",
+      "ctaExpertise": "Voir l'expertise"
+    },
+    "sectionTitle": "Services de Leadership",
+    "services": {
+      "fractionalCTO": {
+        "title": "Services de CTO Fractionnaire",
+        "description": "Accédez à une expertise CTO chevronnée sans engagement à temps plein. Notre collectif fournit un leadership technologique stratégique adapté aux besoins spécifiques et à la phase de croissance de votre entreprise.",
+        "features": [
+          "Stratégie technologique et développement de roadmap",
+          "Conception d'architecture et décisions techniques",
+          "Sélection de fournisseurs et évaluation technologique",
+          "Due diligence technique pour les investissements",
+          "Reporting technologique au niveau du conseil"
+        ]
+      },
+      "teamBuilding": {
+        "title": "Constitution & Management d'Équipe",
+        "description": "Constituez et dirigez des équipes techniques performantes. Nous recrutons, mentorons et gérons les développeurs tout en établissant des processus qui favorisent l'innovation et la productivité.",
+        "features": [
+          "Recrutement technique et évaluation d'équipe",
+          "Structure d'équipe et conception organisationnelle",
+          "Implémentation de méthodologies agiles",
+          "Optimisation des processus de développement",
+          "Mentorat et développement des compétences"
+        ]
+      },
+      "architecture": {
+        "title": "Architecture & Conception de Systèmes",
+        "description": "Concevez des architectures système évolutives et résilientes qui soutiennent vos objectifs commerciaux. Des monolithes aux microservices, nous architecturons des solutions pour un succès à long terme.",
+        "features": [
+          "Conception et revue d'architecture système",
+          "Microservices et systèmes distribués",
+          "Architecture cloud (AWS, GCP, Azure)",
+          "Stratégie API et patterns de conception",
+          "Planification de l'évolutivité et des performances"
+        ]
+      },
+      "digitalTransformation": {
+        "title": "Transformation Digitale",
+        "description": "Naviguez les transformations technologiques complexes en toute confiance. Nous guidons les efforts de modernisation, les migrations de systèmes legacy et les initiatives d'innovation digitale.",
+        "features": [
+          "Stratégie digitale et roadmaps de transformation",
+          "Planification de modernisation des systèmes legacy",
+          "Automatisation et optimisation des processus",
+          "Modernisation de la stack technologique",
+          "Gestion du changement et adoption"
+        ]
+      },
+      "security": {
+        "title": "Sécurité & Conformité",
+        "description": "Établissez des postures de sécurité robustes et assurez la conformité aux réglementations pertinentes. Nous implémentons des approches security-first qui protègent vos actifs et votre réputation.",
+        "features": [
+          "Architecture et politiques de sécurité",
+          "Conformité RGPD et protection des données",
+          "Audits de sécurité et évaluation des risques",
+          "Planification de réponse aux incidents",
+          "Implémentation DevSecOps"
+        ]
+      },
+      "projectManagement": {
+        "title": "Management de Projet & Produit",
+        "description": "Assurez la livraison réussie des initiatives technologiques avec une expertise en gestion de projet et de produit. Nous équilibrons l'excellence technique avec les objectifs commerciaux.",
+        "features": [
+          "Planification de projet et gestion de livraison",
+          "Stratégie produit et roadmap",
+          "Implémentation de méthodologies Agile/Scrum",
+          "Communication avec les parties prenantes et reporting",
+          "Gestion du budget et des ressources"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Besoin d'un leadership technologique stratégique ?",
+      "description": "Planifiez une consultation confidentielle pour discuter de vos besoins en leadership technique.",
+      "btnConsultation": "Planifier une consultation",
+      "btnAllServices": "Voir tous les services"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "title": "Technische Führung & CTO-Services — House of Agile • Schweiz • Deutschland",
+    "description": "Fractional CTO und technische Führungs-Services für Family Offices und Privatkunden in der Schweiz und Deutschland. Strategische Technologieplanung, Architekturdesign, Teamaufbau und digitale Transformation.",
+    "ogTitle": "Technische Führung & CTO-Services — House of Agile",
+    "ogDescription": "Fractional CTO-Services für anspruchsvolle Unternehmen. Strategische Technologieführung, Architekturdesign, Teamaufbau und digitale Transformation."
+  },
+  "content": {
+    "badge": "Technische Führung & CTO-Services",
+    "hero": {
+      "title": "Strategische Technologieführung für",
+      "titleHighlight": "Private Unternehmen",
+      "description": "Unser Expertenkollektiv bietet Fractional CTO und technische Führungs-Services für Family Offices und Privatkunden in der Schweiz und Deutschland. Von strategischer Technologieplanung bis hin zu Teamaufbau und Architekturdesign begleiten wir Ihre digitale Transformation mit jahrzehntelanger Enterprise-Erfahrung.",
+      "ctaConsultation": "Beratung vereinbaren",
+      "ctaExpertise": "Expertise ansehen"
+    },
+    "sectionTitle": "Leadership-Services",
+    "services": {
+      "fractionalCTO": {
+        "title": "Fractional CTO-Services",
+        "description": "Zugang zu erfahrener CTO-Expertise ohne Vollzeitverpflichtung. Unser Kollektiv bietet strategische Technologieführung, die auf die spezifischen Bedürfnisse und die Wachstumsphase Ihres Unternehmens zugeschnitten ist.",
+        "features": [
+          "Technologiestrategie und Roadmap-Entwicklung",
+          "Architekturdesign und technische Entscheidungen",
+          "Anbieterauswahl und Technologiebewertung",
+          "Technische Due Diligence für Investitionen",
+          "Technologie-Reporting auf Vorstandsebene"
+        ]
+      },
+      "teamBuilding": {
+        "title": "Teamaufbau & Management",
+        "description": "Aufbau und Führung von leistungsstarken technischen Teams. Wir rekrutieren, mentoren und managen Entwickler und etablieren Prozesse, die Innovation und Produktivität fördern.",
+        "features": [
+          "Technisches Recruiting und Team-Assessment",
+          "Teamstruktur und Organisationsdesign",
+          "Implementierung agiler Methoden",
+          "Optimierung von Entwicklungsprozessen",
+          "Mentoring und Kompetenzentwicklung"
+        ]
+      },
+      "architecture": {
+        "title": "Architektur & Systemdesign",
+        "description": "Design skalierbarer, resilienter Systemarchitekturen, die Ihre Geschäftsziele unterstützen. Von Monolithen bis Microservices entwickeln wir Lösungen für langfristigen Erfolg.",
+        "features": [
+          "Systemarchitektur-Design und -Review",
+          "Microservices und verteilte Systeme",
+          "Cloud-Architektur (AWS, GCP, Azure)",
+          "API-Strategie und Design Patterns",
+          "Skalierbarkeits- und Performance-Planung"
+        ]
+      },
+      "digitalTransformation": {
+        "title": "Digitale Transformation",
+        "description": "Navigieren Sie komplexe Technologie-Transformationen mit Vertrauen. Wir begleiten Modernisierungsvorhaben, Legacy-System-Migrationen und digitale Innovationsinitiativen.",
+        "features": [
+          "Digitale Strategie und Transformations-Roadmaps",
+          "Planung der Legacy-System-Modernisierung",
+          "Prozessautomatisierung und -optimierung",
+          "Modernisierung des Technologie-Stacks",
+          "Change Management und Adoption"
+        ]
+      },
+      "security": {
+        "title": "Sicherheit & Compliance",
+        "description": "Etablieren Sie robuste Sicherheitsstrukturen und stellen Sie die Einhaltung relevanter Vorschriften sicher. Wir implementieren Security-First-Ansätze, die Ihre Vermögenswerte und Ihren Ruf schützen.",
+        "features": [
+          "Sicherheitsarchitektur und -richtlinien",
+          "DSGVO und Datenschutz-Compliance",
+          "Sicherheitsaudits und Risikobewertung",
+          "Planung der Incident Response",
+          "DevSecOps-Implementierung"
+        ]
+      },
+      "projectManagement": {
+        "title": "Projekt- & Produktmanagement",
+        "description": "Sichern Sie die erfolgreiche Lieferung von Technologieinitiativen mit erfahrenem Projekt- und Produktmanagement. Wir balancieren technische Exzellenz mit Geschäftszielen.",
+        "features": [
+          "Projektplanung und Delivery-Management",
+          "Produktstrategie und Roadmap",
+          "Implementierung von Agile/Scrum-Methoden",
+          "Stakeholder-Kommunikation und Reporting",
+          "Budget- und Ressourcenmanagement"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Benötigen Sie strategische Technologieführung?",
+      "description": "Vereinbaren Sie eine vertrauliche Beratung, um Ihre Anforderungen an technische Führung zu besprechen.",
+      "btnConsultation": "Beratung vereinbaren",
+      "btnAllServices": "Alle Services ansehen"
+    }
+  }
+}
