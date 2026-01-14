@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Étude de cas Scanbots — House of Agile • Suisse • Allemagne",
+    "description": "Étude de cas Scanbots : Plateforme de drones autonomes pour la surveillance d'infrastructures avec détection de défauts par IA et €2M+ levés.",
+    "ogTitle": "Étude de cas Scanbots — House of Agile",
+    "ogDescription": "Plateforme de drones autonomes avec reconnaissance IA/ML et traitement de données en temps réel."
+  },
+  "content": {
+    "badge": "Étude de cas",
+    "dateRange": "2017 — 2018",
+    "hero": {
+      "title": "Scanbots",
+      "description": "Plateforme de drones autonomes pour la surveillance d'infrastructures avec reconnaissance d'images par IA, traitement en temps réel et détection automatisée des défauts.",
+      "backLink": "Retour aux études de cas"
+    },
+    "techStack": ["Python", "Node.js", "Vue.js", "C++", "Rust", "Go", "TensorFlow", "Docker", "Kubernetes"],
+    "metrics": {
+      "metric1": { "value": "€2M+", "label": "Financement" },
+      "metric2": { "value": "10+", "label": "Membres d'équipe" },
+      "metric3": { "value": "TB+", "label": "Données traitées" },
+      "metric4": { "value": "Temps réel", "label": "Analytique" }
+    },
+    "challenge": {
+      "title": "Le Défi",
+      "content": "Les inspections d'infrastructures à grande échelle étaient coûteuses et risquées, et les méthodes manuelles ne suivaient plus le volume d'actifs. Il fallait un système automatisé, sûr et fiable pour détecter rapidement les défauts."
+    },
+    "solution": {
+      "title": "La Solution",
+      "content": "Création d'une plateforme de drones autonomes combinant matériel, modèles IA et pipeline de données robuste. Les inspections ont été automatisées, les rapports accélérés et l'exploitation sécurisée à grande échelle."
+    },
+    "implementation": {
+      "title": "Implémentation Technique",
+      "backend": {
+        "title": "Architecture Backend",
+        "items": ["Pipeline Python pour données capteurs", "Modèles TensorFlow pour la détection", "Microservices Node.js", "Orchestration Kubernetes", "Services de streaming Go"]
+      },
+      "frontend": {
+        "title": "Stack Frontend",
+        "items": ["Dashboard Vue.js de supervision", "Cartes interactives & trajectoires", "Surcouches de défauts en temps réel", "Rapports exportables"]
+      },
+      "features": {
+        "title": "Fonctionnalités Clés",
+        "items": ["Planification de vol autonome", "Détection IA en temps réel", "Collecte embarquée", "Traitement Big Data", "Rapports automatisés"]
+      }
+    },
+    "gallery": {
+      "title": "Galerie du Projet"
+    },
+    "results": {
+      "title": "Résultats & Impact",
+      "content": "Plus de €2M levés et une plateforme prête pour la production livrée, réduisant les coûts d'inspection et améliorant la sécurité. Le système traite de grands volumes d'images avec détection en temps réel."
+    },
+    "cta": {
+      "title": "Vous avez un projet similaire en tête?",
+      "description": "Discutons de la façon dont nous pouvons donner vie à votre vision.",
+      "primaryButton": "Planifier une consultation",
+      "secondaryButton": "Voir plus d'études de cas"
+    }
+  }
+}

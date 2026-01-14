@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Étude de cas Plateforme de trading IA — House of Agile",
+    "description": "Étude de cas Plateforme de trading IA : Trading automatisé de cryptomonnaies avec prévisions ML atteignant 45% d'amélioration du ROI.",
+    "ogTitle": "Étude de cas Plateforme de trading IA — House of Agile",
+    "ogDescription": "Architecture AWS serverless avec modèles TensorFlow/PyTorch pour le trading automatisé de cryptomonnaies."
+  },
+  "content": {
+    "badge": "Étude de cas",
+    "dateRange": "2018 — 2021 | Remote",
+    "role": "Conception produit & Ingénierie",
+    "hero": {
+      "backLink": "Retour aux études de cas",
+      "title": "Plateforme de trading & analytics IA",
+      "description": "Plateforme de trading automatisée avec prévisions ML sur plusieurs échanges de cryptomonnaies, atteignant 45% d'amélioration du ROI."
+    },
+    "techStack": ["Python", "TensorFlow", "PyTorch", "AWS Lambda", "DynamoDB", "Binance API", "Docker"],
+    "metrics": {
+      "metric1": { "value": "45%", "label": "Amélioration du ROI" },
+      "metric2": { "value": "Multi", "label": "Support multi-échanges" },
+      "metric3": { "value": "24/7", "label": "Trading automatisé" },
+      "metric4": { "value": "Temps réel", "label": "Modèles ML" }
+    },
+    "challenge": {
+      "title": "Le Défi",
+      "content": "Construire une plateforme de trading automatisée avec prévisions ML sur plusieurs échanges de cryptomonnaies avec des exigences haute fréquence. Le système devait traiter les données de marché en temps réel, prendre des décisions de trading en une fraction de seconde et gérer les risques sur des marchés volatils."
+    },
+    "solution": {
+      "title": "La Solution",
+      "content": "Architecture AWS serverless avec modèles TensorFlow/PyTorch, traitement de données en temps réel et intégrations API d'échange. La plateforme entraînait et déployait continuellement des modèles ML pour la prédiction des prix tout en exécutant des stratégies de trading automatisées avec une gestion des risques sophistiquée."
+    },
+    "implementation": {
+      "title": "Implémentation Technique",
+      "mlPipeline": {
+        "title": "Pipeline ML",
+        "items": ["Prédiction de prix TensorFlow", "Analyse de sentiment PyTorch", "Réentraînement automatique des modèles", "Pipeline d'ingénierie des features"]
+      },
+      "serverless": {
+        "title": "Architecture Serverless",
+        "items": ["Fonctions AWS Lambda", "Séries temporelles DynamoDB", "File de messages SQS", "Monitoring CloudWatch"]
+      },
+      "trading": {
+        "title": "Moteur de Trading",
+        "items": ["Intégration multi-échanges", "Système de gestion des ordres", "Règles de gestion des risques", "Rééquilibrage de portefeuille"]
+      }
+    },
+    "results": {
+      "title": "Résultats & Impact",
+      "content": "La plateforme a atteint une amélioration du ROI de 45% grâce à des stratégies de trading intelligentes et une analyse de marché alimentée par le ML. Le trading entièrement automatisé 24/7 a éliminé la prise de décision émotionnelle tandis que l'architecture serverless maintenait les coûts opérationnels au minimum. Le support multi-échanges a permis des opportunités d'arbitrage et de diversification de portefeuille."
+    },
+    "cta": {
+      "title": "Vous avez un projet similaire en tête ?",
+      "description": "Discutons de la façon dont nous pouvons donner vie à votre vision.",
+      "primaryButton": "Planifier une consultation",
+      "secondaryButton": "Voir plus d'études de cas"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "AI Trading Platform Case Study — House of Agile",
+    "description": "AI Trading Platform case study: Automated cryptocurrency trading with ML forecasting, achieving 45% ROI improvement across multiple exchanges.",
+    "ogTitle": "AI Trading Platform Case Study — House of Agile",
+    "ogDescription": "Serverless AWS architecture with TensorFlow/PyTorch models for automated cryptocurrency trading."
+  },
+  "content": {
+    "badge": "Case Study",
+    "dateRange": "2018 — 2021 | Remote",
+    "role": "Product Design & Engineering",
+    "hero": {
+      "backLink": "Back to Case Studies",
+      "title": "AI Trading & Analytics Platform",
+      "description": "Automated trading platform with ML forecasting across multiple cryptocurrency exchanges, achieving 45% ROI improvement."
+    },
+    "techStack": ["Python", "TensorFlow", "PyTorch", "AWS Lambda", "DynamoDB", "Binance API", "Docker"],
+    "metrics": {
+      "metric1": { "value": "45%", "label": "ROI Improvement" },
+      "metric2": { "value": "Multi", "label": "Exchange Support" },
+      "metric3": { "value": "24/7", "label": "Automated Trading" },
+      "metric4": { "value": "Real-time", "label": "ML Models" }
+    },
+    "challenge": {
+      "title": "The Challenge",
+      "content": "Build automated trading platform with ML forecasting across multiple cryptocurrency exchanges with high-frequency demands. The system needed to process market data in real-time, make split-second trading decisions, and manage risk across volatile markets."
+    },
+    "solution": {
+      "title": "The Solution",
+      "content": "Serverless AWS architecture with TensorFlow/PyTorch models, real-time data processing, and exchange API integrations. The platform continuously trained and deployed ML models for price prediction while executing automated trading strategies with sophisticated risk management."
+    },
+    "implementation": {
+      "title": "Technical Implementation",
+      "mlPipeline": {
+        "title": "ML Pipeline",
+        "items": ["TensorFlow Price Prediction", "PyTorch Sentiment Analysis", "Automated Model Retraining", "Feature Engineering Pipeline"]
+      },
+      "serverless": {
+        "title": "Serverless Architecture",
+        "items": ["AWS Lambda Functions", "DynamoDB Time Series", "SQS Message Queuing", "CloudWatch Monitoring"]
+      },
+      "trading": {
+        "title": "Trading Engine",
+        "items": ["Multi-exchange Integration", "Order Management System", "Risk Management Rules", "Portfolio Rebalancing"]
+      }
+    },
+    "results": {
+      "title": "Results & Impact",
+      "content": "The platform achieved 45% ROI improvement through intelligent trading strategies and ML-powered market analysis. Fully automated 24/7 trading eliminated emotional decision-making while the serverless architecture kept operational costs minimal. Multi-exchange support enabled arbitrage opportunities and portfolio diversification."
+    },
+    "cta": {
+      "title": "Have a Similar Project in Mind?",
+      "description": "Let's discuss how we can help bring your vision to life.",
+      "primaryButton": "Schedule Consultation",
+      "secondaryButton": "View More Case Studies"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Universal Music Group Case Study — House of Agile",
+    "description": "Universal Music Group case study: Led the complete overhaul of music metadata and delivery systems, managing 120+ engineers across multiple teams.",
+    "ogTitle": "Universal Music Group Case Study — House of Agile",
+    "ogDescription": "Development factory platform managing all music, metadata, delivery and rights holders for Universal's global operations."
+  },
+  "content": {
+    "badge": "Case Study",
+    "dateRange": "2007 — 2010 | Paris",
+    "role": "Project Delivery Manager | Architecture Head",
+    "hero": {
+      "backLink": "Back to Case Studies",
+      "title": "Universal Music Group",
+      "description": "Development factory platform managing all music, metadata, delivery and rights holders for Universal's global operations."
+    },
+    "techStack": ["Java", "Oracle", "SOA", "Web Services", "XML/XSLT", "Enterprise Integration"],
+    "metrics": {
+      "metric1": { "value": "120+", "label": "Team Members" },
+      "metric2": { "value": "5", "label": "Development Teams" },
+      "metric3": { "value": "3", "label": "Years Duration" },
+      "metric4": { "value": "Global", "label": "Scale" }
+    },
+    "challenge": {
+      "title": "The Challenge",
+      "content": "Led the complete overhaul of Universal's music metadata and delivery systems, managing multiple teams across different functions. The project required coordinating 120+ engineers across 5 development teams to build a unified platform for the world's largest music company."
+    },
+    "solution": {
+      "title": "The Solution",
+      "content": "Architected and implemented a development factory platform managing all music/metadata/delivery and rights holders for Universal's global operations. The solution unified disparate systems into a cohesive platform serving Universal's worldwide distribution network."
+    },
+    "implementation": {
+      "title": "Technical Implementation",
+      "architecture": {
+        "title": "Enterprise Architecture",
+        "items": ["Service-Oriented Architecture (SOA)", "Enterprise Service Bus", "Oracle Database Cluster", "High-Availability Infrastructure"]
+      },
+      "data": {
+        "title": "Data Management",
+        "items": ["Music Metadata Standards", "Rights Management System", "Digital Asset Management", "Content Delivery Network"]
+      },
+      "leadership": {
+        "title": "Team Leadership",
+        "items": ["120+ Engineers Coordination", "5 Cross-functional Teams", "Agile Transformation", "Vendor Management"]
+      }
+    },
+    "results": {
+      "title": "Results & Impact",
+      "content": "Successfully delivered a global-scale platform that unified Universal Music Group's metadata and delivery systems. The platform enabled efficient management of music rights, streamlined content delivery to digital platforms worldwide, and established a foundation for Universal's digital transformation."
+    },
+    "cta": {
+      "title": "Have a Similar Project in Mind?",
+      "description": "Let's discuss how we can help bring your vision to life.",
+      "primaryButton": "Schedule Consultation",
+      "secondaryButton": "View More Case Studies"
+    }
+  }
+}

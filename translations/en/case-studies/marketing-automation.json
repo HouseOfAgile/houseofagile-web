@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Marketing Automation Platform Case Study — House of Agile",
+    "description": "Marketing Automation Platform case study: End-to-end Facebook marketing automation with €700k+ monthly budget optimization and 35% ROI improvement.",
+    "ogTitle": "Marketing Automation Platform Case Study — House of Agile",
+    "ogDescription": "Facebook marketing automation platform with AI creative generation and real-time performance dashboards."
+  },
+  "content": {
+    "badge": "Case Study",
+    "dateRange": "2019 — 2022 | Berlin",
+    "role": "Lead Developer & Architect",
+    "hero": {
+      "backLink": "Back to Case Studies",
+      "title": "Marketing Automation Platform",
+      "description": "End-to-end Facebook marketing automation with AI creative generation, Selenium pipelines, and real-time performance dashboards."
+    },
+    "techStack": ["Python", "Selenium", "Facebook API", "OpenAI", "PostgreSQL", "Docker", "AWS"],
+    "metrics": {
+      "metric1": { "value": "€700k+", "label": "Monthly Budget" },
+      "metric2": { "value": "35%", "label": "ROI Improvement" },
+      "metric3": { "value": "100%", "label": "Automated Ads" },
+      "metric4": { "value": "Real-time", "label": "Analytics" }
+    },
+    "challenge": {
+      "title": "The Challenge",
+      "content": "Event company needed to automate Facebook marketing for painting events across multiple cities with massive advertising spend efficiency. Manual ad creation and optimization was consuming significant resources while limiting scale and performance optimization."
+    },
+    "solution": {
+      "title": "The Solution",
+      "content": "Built end-to-end automation: Facebook Events sync, AI creative generation using OpenAI, Selenium pipelines for automated ad deployment, and real-time performance dashboards. The system automatically created, tested, and optimized thousands of ad variations."
+    },
+    "implementation": {
+      "title": "Technical Implementation",
+      "automation": {
+        "title": "Automation Pipeline",
+        "items": ["Selenium WebDriver Automation", "Facebook Graph API Integration", "Scheduled Job Processing", "Error Recovery & Retry Logic"]
+      },
+      "ai": {
+        "title": "AI Creative Generation",
+        "items": ["OpenAI GPT Integration", "Dynamic Ad Copy Generation", "Image Processing Pipeline", "A/B Testing Automation"]
+      },
+      "analytics": {
+        "title": "Analytics Dashboard",
+        "items": ["Real-time Performance Metrics", "ROI & ROAS Tracking", "Campaign Comparison Tools", "Automated Reporting"]
+      }
+    },
+    "results": {
+      "title": "Results & Impact",
+      "content": "The platform successfully managed over €700k in monthly advertising spend with a 35% improvement in ROI. Fully automated ad production eliminated manual work while enabling sophisticated optimization strategies that would be impossible to execute manually. The system scaled to handle campaigns across multiple cities and event types."
+    },
+    "cta": {
+      "title": "Have a Similar Project in Mind?",
+      "description": "Let's discuss how we can help bring your vision to life.",
+      "primaryButton": "Schedule Consultation",
+      "secondaryButton": "View More Case Studies"
+    }
+  }
+}

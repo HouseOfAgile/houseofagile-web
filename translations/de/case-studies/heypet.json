@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "HeyPet Fallstudie — House of Agile • Schweiz • Deutschland",
+    "description": "HeyPet Fallstudie: Soziales Netzwerk für Tierbesitzer, entwickelt von House of Agile. Full-Stack-Entwicklung, Echtzeit-Messaging und standortbasierte Dienste.",
+    "ogTitle": "HeyPet Fallstudie — House of Agile",
+    "ogDescription": "Soziales Netzwerk für Tierbesitzer mit Echtzeit-Messaging und standortbasierten Diensten."
+  },
+  "content": {
+    "badge": "Fallstudie",
+    "dateRange": "2012 — 2016",
+    "hero": {
+      "title": "HeyPet",
+      "description": "Soziales Netzwerk für Tierbesitzer mit Echtzeit-Messaging, standortbasierten Diensten und Community-Funktionen.",
+      "backLink": "Zurück zu Fallstudien"
+    },
+    "techStack": ["Angular.js", "TypeScript", "Symfony", "OAuth", "Docker", "PostgreSQL"],
+    "metrics": {
+      "metric1": { "value": "4", "label": "Jahre Entwicklung" },
+      "metric2": { "value": "—", "label": "Aktive Nutzer" },
+      "metric3": { "value": "—", "label": "Nachrichten/Tag" },
+      "metric4": { "value": "—", "label": "Verfügbarkeit" }
+    },
+    "challenge": {
+      "title": "Die Herausforderung",
+      "content": "Tierhalter hatten Schwierigkeiten, vertrauenswürdige Betreuer zu finden und die Betreuung zuverlässig zu koordinieren. Bestehende Lösungen boten weder Echtzeit-Kommunikation noch ausreichende Vertrauenssignale für sichere Vermittlungen."
+    },
+    "solution": {
+      "title": "Die Lösung",
+      "content": "Wir entwickelten eine Marktplatzplattform mit Echtzeit-Kommunikation, smartem Matching und einem schlanken Buchungsprozess. Profile, Bewertungen und Messaging bauten Vertrauen auf und beschleunigten die Vermittlung."
+    },
+    "implementation": {
+      "title": "Technische Umsetzung",
+      "backend": {
+        "title": "Backend-Architektur",
+        "items": ["Symfony REST API", "PostgreSQL Datenbank", "OAuth 2.0 Authentifizierung", "Docker Containerisierung"]
+      },
+      "frontend": {
+        "title": "Frontend-Stack",
+        "items": ["Angular.js SPA", "TypeScript", "Responsives Design", "Echtzeit-Updates"]
+      },
+      "features": {
+        "title": "Hauptfunktionen",
+        "items": ["Echtzeit-Messaging", "Standortbasiertes Matching", "Betreuerprofile", "Buchungen und Zahlungen"]
+      }
+    },
+    "gallery": {
+      "title": "Projektgalerie"
+    },
+    "results": {
+      "title": "Ergebnisse & Auswirkungen",
+      "content": "Ein verlässlicher zweiseitiger Marktplatz, der schnelle, vertrauensbasierte Vermittlungen und reibungslose Buchungen ermöglicht. Die Plattform bot eine konsistente Nutzererfahrung und skalierte Kommunikation sowie Terminierung zuverlässig."
+    },
+    "cta": {
+      "title": "Haben Sie ein ähnliches Projekt im Sinn?",
+      "description": "Lassen Sie uns besprechen, wie wir Ihre Vision verwirklichen können.",
+      "primaryButton": "Beratung vereinbaren",
+      "secondaryButton": "Mehr Fallstudien ansehen"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Vodafone Live! Case Study — House of Agile",
+    "description": "Vodafone Live! case study: Scalable infrastructure for 30M+ daily users during FIFA World Cup 2006 with real-time billing systems.",
+    "ogTitle": "Vodafone Live! Case Study — House of Agile",
+    "ogDescription": "High-traffic mobile platform serving 30M+ daily page views during FIFA World Cup 2006."
+  },
+  "content": {
+    "badge": "Case Study",
+    "dateRange": "2004 — 2007 | Paris",
+    "role": "Technical Leader",
+    "hero": {
+      "backLink": "Back to Case Studies",
+      "title": "Vodafone Live!",
+      "description": "High-traffic mobile platforssm serving 30M+ daily page views with real-time billing systems during FIFA World Cup 2006."
+    },
+    "techStack": ["Java", "J2EE", "Oracle", "WebLogic", "Load Balancing", "High Availability"],
+    "metrics": {
+      "metric1": { "value": "30M+", "label": "Daily Page Views" },
+      "metric2": { "value": "99.9%", "label": "Uptime" },
+      "metric3": { "value": "FIFA 2006", "label": "Peak Event" },
+      "metric4": { "value": "Real-time", "label": "Billing" }
+    },
+    "challenge": {
+      "title": "The Challenge",
+      "content": "Handle massive traffic spikes during FIFA World Cup 2006, managing tracking and billing for Vodafone Live! mobile platform. The system needed to maintain 99.9% uptime while processing millions of real-time billing transactions during peak sporting events."
+    },
+    "solution": {
+      "title": "The Solution",
+      "content": "Architected scalable infrastructure and real-time billing systems to handle unprecedented mobile traffic during major sporting events. Implemented load balancing, database optimization, and caching strategies to ensure consistent performance under extreme load."
+    },
+    "implementation": {
+      "title": "Technical Implementation",
+      "infrastructure": {
+        "title": "Scalable Infrastructure",
+        "items": ["WebLogic Cluster Architecture", "Hardware Load Balancing", "Oracle RAC Database", "Distributed Caching Layer"]
+      },
+      "billing": {
+        "title": "Billing System",
+        "items": ["Real-time Transaction Processing", "Carrier Integration APIs", "Fraud Detection", "Revenue Reconciliation"]
+      },
+      "availability": {
+        "title": "High Availability",
+        "items": ["Multi-datacenter Failover", "Automated Health Monitoring", "Zero-downtime Deployments", "Disaster Recovery Planning"]
+      }
+    },
+    "results": {
+      "title": "Results & Impact",
+      "content": "Successfully maintained 99.9% uptime during FIFA World Cup 2006, one of the highest-traffic events in mobile history at the time. The platform handled 30M+ daily page views while processing real-time billing transactions without degradation. The architecture established patterns still used in modern high-traffic systems."
+    },
+    "cta": {
+      "title": "Have a Similar Project in Mind?",
+      "description": "Let's discuss how we can help bring your vision to life.",
+      "primaryButton": "Schedule Consultation",
+      "secondaryButton": "View More Case Studies"
+    }
+  }
+}

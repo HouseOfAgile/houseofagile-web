@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Vodafone Live! Fallstudie — House of Agile",
+    "description": "Vodafone Live! Fallstudie: Skalierbare Infrastruktur für 30M+ tägliche Nutzer während der FIFA-WM 2006 mit Echtzeit-Abrechnungssystemen.",
+    "ogTitle": "Vodafone Live! Fallstudie — House of Agile",
+    "ogDescription": "Hochfrequentierte mobile Plattform mit 30M+ täglichen Seitenaufrufen während der FIFA-WM 2006."
+  },
+  "content": {
+    "badge": "Fallstudie",
+    "dateRange": "2004 — 2007 | Paris",
+    "role": "Technischer Leiter",
+    "hero": {
+      "backLink": "Zurück zu Fallstudien",
+      "title": "Vodafone Live!",
+      "description": "Hochfrequentierte mobile Plattform mit 30M+ täglichen Seitenaufrufen und Echtzeit-Abrechnungssystemen während der FIFA-WM 2006."
+    },
+    "techStack": ["Java", "J2EE", "Oracle", "WebLogic", "Load Balancing", "High Availability"],
+    "metrics": {
+      "metric1": { "value": "30M+", "label": "Tägliche Seitenaufrufe" },
+      "metric2": { "value": "99,9%", "label": "Verfügbarkeit" },
+      "metric3": { "value": "FIFA 2006", "label": "Spitzenereignis" },
+      "metric4": { "value": "Echtzeit", "label": "Abrechnung" }
+    },
+    "challenge": {
+      "title": "Die Herausforderung",
+      "content": "Bewältigung massiver Traffic-Spitzen während der FIFA-WM 2006, Verwaltung von Tracking und Abrechnung für die Vodafone Live! Mobile-Plattform. Das System musste 99,9% Verfügbarkeit aufrechterhalten und gleichzeitig Millionen von Echtzeit-Abrechnungstransaktionen während Spitzensportereignissen verarbeiten."
+    },
+    "solution": {
+      "title": "Die Lösung",
+      "content": "Entwarf skalierbare Infrastruktur und Echtzeit-Abrechnungssysteme für beispiellosen mobilen Traffic während großer Sportereignisse. Implementierte Load Balancing, Datenbankoptimierung und Caching-Strategien für konstante Leistung unter extremer Last."
+    },
+    "implementation": {
+      "title": "Technische Umsetzung",
+      "infrastructure": {
+        "title": "Skalierbare Infrastruktur",
+        "items": ["WebLogic Cluster-Architektur", "Hardware Load Balancing", "Oracle RAC Datenbank", "Verteilte Caching-Schicht"]
+      },
+      "billing": {
+        "title": "Abrechnungssystem",
+        "items": ["Echtzeit-Transaktionsverarbeitung", "Carrier-Integrations-APIs", "Betrugserkennung", "Umsatzabstimmung"]
+      },
+      "availability": {
+        "title": "Hochverfügbarkeit",
+        "items": ["Multi-Datacenter Failover", "Automatisierte Gesundheitsüberwachung", "Zero-Downtime Deployments", "Disaster Recovery Planung"]
+      }
+    },
+    "results": {
+      "title": "Ergebnisse & Auswirkungen",
+      "content": "Erfolgreich 99,9% Verfügbarkeit während der FIFA-WM 2006 aufrechterhalten, eines der verkehrsreichsten Ereignisse in der Mobilgeschichte zu dieser Zeit. Die Plattform bewältigte 30M+ tägliche Seitenaufrufe bei gleichzeitiger Verarbeitung von Echtzeit-Abrechnungstransaktionen ohne Leistungseinbußen. Die Architektur etablierte Muster, die noch heute in modernen Hochlast-Systemen verwendet werden."
+    },
+    "cta": {
+      "title": "Haben Sie ein ähnliches Projekt im Sinn?",
+      "description": "Lassen Sie uns besprechen, wie wir Ihre Vision verwirklichen können.",
+      "primaryButton": "Beratung vereinbaren",
+      "secondaryButton": "Mehr Fallstudien ansehen"
+    }
+  }
+}

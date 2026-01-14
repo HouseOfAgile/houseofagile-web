@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Étude de cas Vodafone Live! — House of Agile",
+    "description": "Étude de cas Vodafone Live! : Infrastructure évolutive pour 30M+ utilisateurs quotidiens pendant la Coupe du Monde FIFA 2006 avec systèmes de facturation en temps réel.",
+    "ogTitle": "Étude de cas Vodafone Live! — House of Agile",
+    "ogDescription": "Plateforme mobile à fort trafic servant 30M+ de pages vues quotidiennes pendant la Coupe du Monde FIFA 2006."
+  },
+  "content": {
+    "badge": "Étude de cas",
+    "dateRange": "2004 — 2007 | Paris",
+    "role": "Responsable technique",
+    "hero": {
+      "backLink": "Retour aux études de cas",
+      "title": "Vodafone Live!",
+      "description": "Plateforme mobile à fort trafic servant 30M+ de pages vues quotidiennes avec des systèmes de facturation en temps réel pendant la Coupe du Monde FIFA 2006."
+    },
+    "techStack": ["Java", "J2EE", "Oracle", "WebLogic", "Load Balancing", "High Availability"],
+    "metrics": {
+      "metric1": { "value": "30M+", "label": "Pages vues/jour" },
+      "metric2": { "value": "99,9%", "label": "Disponibilité" },
+      "metric3": { "value": "FIFA 2006", "label": "Événement pic" },
+      "metric4": { "value": "Temps réel", "label": "Facturation" }
+    },
+    "challenge": {
+      "title": "Le Défi",
+      "content": "Gérer les pics de trafic massifs pendant la Coupe du Monde FIFA 2006, gérant le suivi et la facturation pour la plateforme mobile Vodafone Live! Le système devait maintenir 99,9% de disponibilité tout en traitant des millions de transactions de facturation en temps réel pendant les événements sportifs de pointe."
+    },
+    "solution": {
+      "title": "La Solution",
+      "content": "A conçu une infrastructure évolutive et des systèmes de facturation en temps réel pour gérer un trafic mobile sans précédent lors d'événements sportifs majeurs. Mise en œuvre de l'équilibrage de charge, de l'optimisation des bases de données et de stratégies de mise en cache pour garantir des performances constantes sous charge extrême."
+    },
+    "implementation": {
+      "title": "Implémentation Technique",
+      "infrastructure": {
+        "title": "Infrastructure Évolutive",
+        "items": ["Architecture Cluster WebLogic", "Équilibrage de charge matériel", "Base de données Oracle RAC", "Couche de cache distribuée"]
+      },
+      "billing": {
+        "title": "Système de Facturation",
+        "items": ["Traitement des transactions en temps réel", "APIs d'intégration opérateur", "Détection de fraude", "Réconciliation des revenus"]
+      },
+      "availability": {
+        "title": "Haute Disponibilité",
+        "items": ["Basculement multi-datacenter", "Surveillance automatisée de la santé", "Déploiements sans interruption", "Planification de reprise après sinistre"]
+      }
+    },
+    "results": {
+      "title": "Résultats & Impact",
+      "content": "Maintien réussi d'une disponibilité de 99,9% pendant la Coupe du Monde FIFA 2006, l'un des événements à plus fort trafic de l'histoire mobile à cette époque. La plateforme a géré 30M+ de pages vues quotidiennes tout en traitant les transactions de facturation en temps réel sans dégradation. L'architecture a établi des modèles encore utilisés dans les systèmes modernes à fort trafic."
+    },
+    "cta": {
+      "title": "Vous avez un projet similaire en tête ?",
+      "description": "Discutons de la façon dont nous pouvons donner vie à votre vision.",
+      "primaryButton": "Planifier une consultation",
+      "secondaryButton": "Voir plus d'études de cas"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Étude de cas Plateforme d'automatisation marketing — House of Agile",
+    "description": "Étude de cas Plateforme d'automatisation marketing : Automatisation Facebook de bout en bout avec optimisation de budget de €700k+ par mois.",
+    "ogTitle": "Étude de cas Plateforme d'automatisation marketing — House of Agile",
+    "ogDescription": "Plateforme d'automatisation marketing Facebook avec génération créative IA et tableaux de bord de performance en temps réel."
+  },
+  "content": {
+    "badge": "Étude de cas",
+    "dateRange": "2019 — 2022 | Berlin",
+    "role": "Développeur principal & Architecte",
+    "hero": {
+      "backLink": "Retour aux études de cas",
+      "title": "Plateforme d'automatisation marketing",
+      "description": "Automatisation marketing Facebook de bout en bout avec génération créative IA, pipelines Selenium et tableaux de bord de performance en temps réel."
+    },
+    "techStack": ["Python", "Selenium", "Facebook API", "OpenAI", "PostgreSQL", "Docker", "AWS"],
+    "metrics": {
+      "metric1": { "value": "€700k+", "label": "Budget mensuel" },
+      "metric2": { "value": "35%", "label": "Amélioration du ROI" },
+      "metric3": { "value": "100%", "label": "Publicités automatisées" },
+      "metric4": { "value": "Temps réel", "label": "Analyses" }
+    },
+    "challenge": {
+      "title": "Le Défi",
+      "content": "L'entreprise d'événements devait automatiser le marketing Facebook pour les événements de peinture dans plusieurs villes avec une efficacité massive des dépenses publicitaires. La création et l'optimisation manuelles des publicités consommaient des ressources importantes tout en limitant l'échelle et l'optimisation des performances."
+    },
+    "solution": {
+      "title": "La Solution",
+      "content": "A construit une automatisation de bout en bout : synchronisation Facebook Events, génération créative IA utilisant OpenAI, pipelines Selenium pour le déploiement automatisé des publicités et tableaux de bord de performance en temps réel. Le système créait, testait et optimisait automatiquement des milliers de variations publicitaires."
+    },
+    "implementation": {
+      "title": "Implémentation Technique",
+      "automation": {
+        "title": "Pipeline d'automatisation",
+        "items": ["Automatisation Selenium WebDriver", "Intégration API Facebook Graph", "Traitement des tâches planifiées", "Récupération d'erreurs & logique de retry"]
+      },
+      "ai": {
+        "title": "Génération créative IA",
+        "items": ["Intégration OpenAI GPT", "Génération dynamique de texte publicitaire", "Pipeline de traitement d'images", "Automatisation des tests A/B"]
+      },
+      "analytics": {
+        "title": "Tableau de bord Analytics",
+        "items": ["Métriques de performance en temps réel", "Suivi ROI & ROAS", "Outils de comparaison de campagnes", "Reporting automatisé"]
+      }
+    },
+    "results": {
+      "title": "Résultats & Impact",
+      "content": "La plateforme a géré avec succès plus de €700k de dépenses publicitaires mensuelles avec une amélioration du ROI de 35%. La production publicitaire entièrement automatisée a éliminé le travail manuel tout en permettant des stratégies d'optimisation sophistiquées impossibles à exécuter manuellement. Le système s'est adapté pour gérer des campagnes dans plusieurs villes et types d'événements."
+    },
+    "cta": {
+      "title": "Vous avez un projet similaire en tête ?",
+      "description": "Discutons de la façon dont nous pouvons donner vie à votre vision.",
+      "primaryButton": "Planifier une consultation",
+      "secondaryButton": "Voir plus d'études de cas"
+    }
+  }
+}

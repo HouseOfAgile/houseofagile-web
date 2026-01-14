@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Universal Music Group Fallstudie — House of Agile",
+    "description": "Universal Music Group Fallstudie: Leitete die komplette Überholung der Musik-Metadaten- und Liefersysteme mit über 120 Ingenieuren.",
+    "ogTitle": "Universal Music Group Fallstudie — House of Agile",
+    "ogDescription": "Entwicklungsfabrik-Plattform zur Verwaltung aller Musik, Metadaten, Lieferung und Rechteinhaber für Universals globale Operationen."
+  },
+  "content": {
+    "badge": "Fallstudie",
+    "dateRange": "2007 — 2010 | Paris",
+    "role": "Projektlieferungsmanager | Architekturleiter",
+    "hero": {
+      "backLink": "Zurück zu Fallstudien",
+      "title": "Universal Music Group",
+      "description": "Entwicklungsfabrik-Plattform zur Verwaltung aller Musik, Metadaten, Lieferung und Rechteinhaber für Universals globale Operationen."
+    },
+    "techStack": ["Java", "Oracle", "SOA", "Web Services", "XML/XSLT", "Enterprise Integration"],
+    "metrics": {
+      "metric1": { "value": "120+", "label": "Teammitglieder" },
+      "metric2": { "value": "5", "label": "Entwicklungsteams" },
+      "metric3": { "value": "3", "label": "Jahre Dauer" },
+      "metric4": { "value": "Global", "label": "Maßstab" }
+    },
+    "challenge": {
+      "title": "Die Herausforderung",
+      "content": "Leitete die komplette Überholung von Universals Musik-Metadaten- und Liefersystemen und verwaltete mehrere Teams verschiedener Funktionen. Das Projekt erforderte die Koordination von über 120 Ingenieuren in 5 Entwicklungsteams, um eine einheitliche Plattform für das weltweit größte Musikunternehmen zu bauen."
+    },
+    "solution": {
+      "title": "Die Lösung",
+      "content": "Entwarf und implementierte eine Entwicklungsfabrik-Plattform zur Verwaltung aller Musik-/Metadaten-/Lieferungs- und Rechteinhaber für Universals globale Operationen. Die Lösung vereinte unterschiedliche Systeme zu einer zusammenhängenden Plattform für Universals weltweites Vertriebsnetz."
+    },
+    "implementation": {
+      "title": "Technische Umsetzung",
+      "architecture": {
+        "title": "Unternehmensarchitektur",
+        "items": ["Service-Oriented Architecture (SOA)", "Enterprise Service Bus", "Oracle Datenbank-Cluster", "Hochverfügbarkeits-Infrastruktur"]
+      },
+      "data": {
+        "title": "Datenverwaltung",
+        "items": ["Musik-Metadaten-Standards", "Rechtemanagement-System", "Digital Asset Management", "Content Delivery Network"]
+      },
+      "leadership": {
+        "title": "Teamführung",
+        "items": ["120+ Ingenieure Koordination", "5 funktionsübergreifende Teams", "Agile Transformation", "Lieferantenmanagement"]
+      }
+    },
+    "results": {
+      "title": "Ergebnisse & Auswirkungen",
+      "content": "Erfolgreich eine globale Plattform geliefert, die Universal Music Groups Metadaten- und Liefersysteme vereinte. Die Plattform ermöglichte effizientes Management von Musikrechten, optimierte Content-Lieferung an digitale Plattformen weltweit und legte den Grundstein für Universals digitale Transformation."
+    },
+    "cta": {
+      "title": "Haben Sie ein ähnliches Projekt im Sinn?",
+      "description": "Lassen Sie uns besprechen, wie wir Ihre Vision verwirklichen können.",
+      "primaryButton": "Beratung vereinbaren",
+      "secondaryButton": "Mehr Fallstudien ansehen"
+    }
+  }
+}

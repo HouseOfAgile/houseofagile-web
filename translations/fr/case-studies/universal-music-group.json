@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Étude de cas Universal Music Group — House of Agile",
+    "description": "Étude de cas Universal Music Group : Direction de la refonte complète des systèmes de métadonnées musicales et de livraison avec plus de 120 ingénieurs.",
+    "ogTitle": "Étude de cas Universal Music Group — House of Agile",
+    "ogDescription": "Plateforme d'usine de développement gérant toute la musique, les métadonnées, la livraison et les détenteurs de droits pour les opérations mondiales d'Universal."
+  },
+  "content": {
+    "badge": "Étude de cas",
+    "dateRange": "2007 — 2010 | Paris",
+    "role": "Chef de projet | Responsable architecture",
+    "hero": {
+      "backLink": "Retour aux études de cas",
+      "title": "Universal Music Group",
+      "description": "Plateforme d'usine de développement gérant toute la musique, les métadonnées, la livraison et les détenteurs de droits pour les opérations mondiales d'Universal."
+    },
+    "techStack": ["Java", "Oracle", "SOA", "Web Services", "XML/XSLT", "Enterprise Integration"],
+    "metrics": {
+      "metric1": { "value": "120+", "label": "Membres de l'équipe" },
+      "metric2": { "value": "5", "label": "Équipes de développement" },
+      "metric3": { "value": "3", "label": "Années de durée" },
+      "metric4": { "value": "Global", "label": "Échelle" }
+    },
+    "challenge": {
+      "title": "Le Défi",
+      "content": "A dirigé la refonte complète des systèmes de métadonnées musicales et de livraison d'Universal, gérant plusieurs équipes de différentes fonctions. Le projet nécessitait la coordination de plus de 120 ingénieurs répartis en 5 équipes de développement pour construire une plateforme unifiée pour la plus grande entreprise musicale au monde."
+    },
+    "solution": {
+      "title": "La Solution",
+      "content": "A conçu et implémenté une plateforme d'usine de développement gérant toute la musique/métadonnées/livraison et détenteurs de droits pour les opérations mondiales d'Universal. La solution a unifié des systèmes disparates en une plateforme cohérente servant le réseau de distribution mondial d'Universal."
+    },
+    "implementation": {
+      "title": "Implémentation Technique",
+      "architecture": {
+        "title": "Architecture d'entreprise",
+        "items": ["Architecture orientée services (SOA)", "Enterprise Service Bus", "Cluster de base de données Oracle", "Infrastructure haute disponibilité"]
+      },
+      "data": {
+        "title": "Gestion des données",
+        "items": ["Standards de métadonnées musicales", "Système de gestion des droits", "Gestion des actifs numériques", "Réseau de diffusion de contenu"]
+      },
+      "leadership": {
+        "title": "Direction d'équipe",
+        "items": ["Coordination de 120+ ingénieurs", "5 équipes transversales", "Transformation Agile", "Gestion des fournisseurs"]
+      }
+    },
+    "results": {
+      "title": "Résultats & Impact",
+      "content": "Livraison réussie d'une plateforme à l'échelle mondiale qui a unifié les systèmes de métadonnées et de livraison d'Universal Music Group. La plateforme a permis une gestion efficace des droits musicaux, une livraison de contenu optimisée aux plateformes numériques du monde entier et a établi les bases de la transformation numérique d'Universal."
+    },
+    "cta": {
+      "title": "Vous avez un projet similaire en tête ?",
+      "description": "Discutons de la façon dont nous pouvons donner vie à votre vision.",
+      "primaryButton": "Planifier une consultation",
+      "secondaryButton": "Voir plus d'études de cas"
+    }
+  }
+}

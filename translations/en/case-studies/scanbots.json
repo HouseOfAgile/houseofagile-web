@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Scanbots Case Study — House of Agile • Switzerland • Germany",
+    "description": "Scanbots case study: Autonomous drone platform for infrastructure monitoring with AI-powered defect detection and €2M+ funding secured.",
+    "ogTitle": "Scanbots Case Study — House of Agile",
+    "ogDescription": "Autonomous drone infrastructure monitoring platform with AI/ML image recognition and real-time data processing."
+  },
+  "content": {
+    "badge": "Case Study",
+    "dateRange": "2017 — 2018",
+    "hero": {
+      "title": "Scanbots",
+      "description": "Autonomous drone platform for infrastructure monitoring with AI-powered image recognition, real-time processing, and automated defect detection.",
+      "backLink": "Back to Case Studies"
+    },
+    "techStack": ["Python", "Node.js", "Vue.js", "C++", "Rust", "Go", "TensorFlow", "Docker", "Kubernetes"],
+    "metrics": {
+      "metric1": { "value": "€2M+", "label": "Funding Raised" },
+      "metric2": { "value": "10+", "label": "Team Members" },
+      "metric3": { "value": "TB+", "label": "Data Processed" },
+      "metric4": { "value": "Real-time", "label": "Analytics" }
+    },
+    "challenge": {
+      "title": "The Challenge",
+      "content": "Large-scale infrastructure inspections were costly and risky, and manual methods could not keep up with asset volume. The industry needed a safe, automated system to detect defects quickly and reliably."
+    },
+    "solution": {
+      "title": "The Solution",
+      "content": "Built an autonomous drone platform combining hardware, AI models, and a robust data pipeline to detect defects in real time. The system automated inspections, accelerated reporting, and scaled safely across assets."
+    },
+    "implementation": {
+      "title": "Technical Implementation",
+      "backend": {
+        "title": "Backend Architecture",
+        "items": ["Python data pipeline for sensor data", "TensorFlow models for defect detection", "Node.js microservices", "Kubernetes orchestration", "Go streaming services"]
+      },
+      "frontend": {
+        "title": "Frontend Stack",
+        "items": ["Vue.js monitoring dashboard", "Interactive maps and flight paths", "Real-time defect overlays", "Exportable reports"]
+      },
+      "features": {
+        "title": "Key Features",
+        "items": ["Autonomous flight planning", "Real-time AI detection", "Onboard data capture", "Big data processing", "Automated reporting"]
+      }
+    },
+    "gallery": {
+      "title": "Project Gallery"
+    },
+    "results": {
+      "title": "Results & Impact",
+      "content": "Secured €2M+ in funding and delivered a production-ready platform that reduced inspection costs while improving safety. The system processed massive imagery volumes with real-time defect detection for clients."
+    },
+    "cta": {
+      "title": "Have a Similar Project in Mind?",
+      "description": "Let's discuss how we can help bring your vision to life.",
+      "primaryButton": "Schedule Consultation",
+      "secondaryButton": "View More Case Studies"
+    }
+  }
+}

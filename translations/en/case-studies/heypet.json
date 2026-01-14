@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "HeyPet Case Study — House of Agile • Switzerland • Germany",
+    "description": "HeyPet case study: Pet sitting marketplace platform connecting pet owners with trusted carers through real-time communication.",
+    "ogTitle": "HeyPet Case Study — House of Agile",
+    "ogDescription": "Pet sitting marketplace platform with real-time messaging and trusted carer matching."
+  },
+  "content": {
+    "badge": "Case Study",
+    "dateRange": "2012 — 2016",
+    "hero": {
+      "title": "HeyPet",
+      "description": "Social network for pet owners with real-time messaging, location-based services, and community features.",
+      "backLink": "Back to Case Studies"
+    },
+    "techStack": ["Angular.js", "TypeScript", "Symfony", "OAuth", "Docker", "PostgreSQL"],
+    "metrics": {
+      "metric1": { "value": "4", "label": "Years Development" },
+      "metric2": { "value": "—", "label": "Active Users" },
+      "metric3": { "value": "—", "label": "Messages/Day" },
+      "metric4": { "value": "—", "label": "Uptime" }
+    },
+    "challenge": {
+      "title": "The Challenge",
+      "content": "Pet owners struggled to find trusted sitters and coordinate care reliably. Existing solutions lacked real-time communication and trust signals needed to build confidence between owners and carers."
+    },
+    "solution": {
+      "title": "The Solution",
+      "content": "Built a marketplace platform focused on real-time communication, smart matching, and a streamlined booking flow. Implemented robust profiles, reviews, and messaging to establish trust and accelerate conversions."
+    },
+    "implementation": {
+      "title": "Technical Implementation",
+      "backend": {
+        "title": "Backend Architecture",
+        "items": ["Symfony REST API", "PostgreSQL Database", "OAuth 2.0 Authentication", "Docker Containerization"]
+      },
+      "frontend": {
+        "title": "Frontend Stack",
+        "items": ["Angular.js SPA", "TypeScript", "Responsive Design", "Real-time Updates"]
+      },
+      "features": {
+        "title": "Key Features",
+        "items": ["Real-time messaging", "Location-based matching", "Pet sitter profiles", "Bookings and payments"]
+      }
+    },
+    "gallery": {
+      "title": "Project Gallery"
+    },
+    "results": {
+      "title": "Results & Impact",
+      "content": "Launched a reliable two-sided marketplace that enabled fast, trust-driven matches and seamless bookings. The platform delivered a consistent user experience while scaling communications and scheduling flows."
+    },
+    "cta": {
+      "title": "Have a Similar Project in Mind?",
+      "description": "Let's discuss how we can help bring your vision to life.",
+      "primaryButton": "Schedule Consultation",
+      "secondaryButton": "View More Case Studies"
+    }
+  }
+}

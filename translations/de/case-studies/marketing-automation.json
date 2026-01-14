@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Marketing-Automatisierungsplattform Fallstudie — House of Agile",
+    "description": "Marketing-Automatisierungsplattform Fallstudie: End-to-End-Facebook-Marketing-Automatisierung mit €700k+ monatlicher Budgetoptimierung.",
+    "ogTitle": "Marketing-Automatisierungsplattform Fallstudie — House of Agile",
+    "ogDescription": "Facebook-Marketing-Automatisierungsplattform mit KI-Creative-Generierung und Echtzeit-Performance-Dashboards."
+  },
+  "content": {
+    "badge": "Fallstudie",
+    "dateRange": "2019 — 2022 | Berlin",
+    "role": "Lead-Entwickler & Architekt",
+    "hero": {
+      "backLink": "Zurück zu Fallstudien",
+      "title": "Marketing-Automatisierungsplattform",
+      "description": "End-to-End-Facebook-Marketing-Automatisierung mit KI-Creative-Generierung, Selenium-Pipelines und Echtzeit-Performance-Dashboards."
+    },
+    "techStack": ["Python", "Selenium", "Facebook API", "OpenAI", "PostgreSQL", "Docker", "AWS"],
+    "metrics": {
+      "metric1": { "value": "€700k+", "label": "Monatliches Budget" },
+      "metric2": { "value": "35%", "label": "ROI-Verbesserung" },
+      "metric3": { "value": "100%", "label": "Automatisierte Anzeigen" },
+      "metric4": { "value": "Echtzeit", "label": "Analysen" }
+    },
+    "challenge": {
+      "title": "Die Herausforderung",
+      "content": "Eventunternehmen musste Facebook-Marketing für Malevents in mehreren Städten mit massiver Werbeausgaben-Effizienz automatisieren. Manuelle Anzeigenerstellung und -optimierung verbrauchte erhebliche Ressourcen und begrenzte Skalierung und Performance-Optimierung."
+    },
+    "solution": {
+      "title": "Die Lösung",
+      "content": "Baute End-zu-End-Automatisierung: Facebook Events Sync, KI-Creative-Generierung mit OpenAI, Selenium-Pipelines für automatisierte Anzeigenbereitstellung und Echtzeit-Performance-Dashboards. Das System erstellte, testete und optimierte automatisch tausende Anzeigenvarianten."
+    },
+    "implementation": {
+      "title": "Technische Umsetzung",
+      "automation": {
+        "title": "Automatisierungs-Pipeline",
+        "items": ["Selenium WebDriver Automatisierung", "Facebook Graph API Integration", "Geplante Job-Verarbeitung", "Fehlerwiederherstellung & Retry-Logik"]
+      },
+      "ai": {
+        "title": "KI-Creative-Generierung",
+        "items": ["OpenAI GPT Integration", "Dynamische Anzeigentext-Generierung", "Bildverarbeitungs-Pipeline", "A/B-Test-Automatisierung"]
+      },
+      "analytics": {
+        "title": "Analytics Dashboard",
+        "items": ["Echtzeit-Performance-Metriken", "ROI & ROAS Tracking", "Kampagnen-Vergleichstools", "Automatisierte Berichterstattung"]
+      }
+    },
+    "results": {
+      "title": "Ergebnisse & Auswirkungen",
+      "content": "Die Plattform verwaltete erfolgreich über €700k an monatlichen Werbeausgaben mit einer 35%igen ROI-Verbesserung. Vollautomatisierte Anzeigenproduktion eliminierte manuelle Arbeit und ermöglichte ausgefeilte Optimierungsstrategien, die manuell nicht umsetzbar wären. Das System skalierte für Kampagnen über mehrere Städte und Event-Typen."
+    },
+    "cta": {
+      "title": "Haben Sie ein ähnliches Projekt im Sinn?",
+      "description": "Lassen Sie uns besprechen, wie wir Ihre Vision verwirklichen können.",
+      "primaryButton": "Beratung vereinbaren",
+      "secondaryButton": "Mehr Fallstudien ansehen"
+    }
+  }
+}

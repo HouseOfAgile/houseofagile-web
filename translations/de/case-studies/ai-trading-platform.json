@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "KI-Trading-Plattform Fallstudie — House of Agile",
+    "description": "KI-Trading-Plattform Fallstudie: Automatisierter Kryptowährungshandel mit ML-Prognosen und 45% ROI-Verbesserung.",
+    "ogTitle": "KI-Trading-Plattform Fallstudie — House of Agile",
+    "ogDescription": "Serverlose AWS-Architektur mit TensorFlow/PyTorch-Modellen für automatisierten Kryptowährungshandel."
+  },
+  "content": {
+    "badge": "Fallstudie",
+    "dateRange": "2018 — 2021 | Remote",
+    "role": "Produktdesign & Engineering",
+    "hero": {
+      "backLink": "Zurück zu Fallstudien",
+      "title": "KI-Trading- & Analytics-Plattform",
+      "description": "Automatisierte Trading-Plattform mit ML-Prognosen über mehrere Kryptowährungsbörsen mit 45% ROI-Verbesserung."
+    },
+    "techStack": ["Python", "TensorFlow", "PyTorch", "AWS Lambda", "DynamoDB", "Binance API", "Docker"],
+    "metrics": {
+      "metric1": { "value": "45%", "label": "ROI-Verbesserung" },
+      "metric2": { "value": "Multi", "label": "Börsen-Unterstützung" },
+      "metric3": { "value": "24/7", "label": "Automatisierter Handel" },
+      "metric4": { "value": "Echtzeit", "label": "ML-Modelle" }
+    },
+    "challenge": {
+      "title": "Die Herausforderung",
+      "content": "Aufbau einer automatisierten Trading-Plattform mit ML-Prognosen über mehrere Kryptowährungsbörsen mit Hochfrequenz-Anforderungen. Das System musste Marktdaten in Echtzeit verarbeiten, blitzschnelle Trading-Entscheidungen treffen und Risiken über volatile Märkte hinweg managen."
+    },
+    "solution": {
+      "title": "Die Lösung",
+      "content": "Serverlose AWS-Architektur mit TensorFlow/PyTorch-Modellen, Echtzeit-Datenverarbeitung und Exchange-API-Integrationen. Die Plattform trainierte und implementierte kontinuierlich ML-Modelle für Preisprognosen bei gleichzeitiger Ausführung automatisierter Trading-Strategien mit ausgefeiltem Risikomanagement."
+    },
+    "implementation": {
+      "title": "Technische Umsetzung",
+      "mlPipeline": {
+        "title": "ML-Pipeline",
+        "items": ["TensorFlow Preisprognose", "PyTorch Sentiment-Analyse", "Automatisches Modell-Retraining", "Feature Engineering Pipeline"]
+      },
+      "serverless": {
+        "title": "Serverlose Architektur",
+        "items": ["AWS Lambda Funktionen", "DynamoDB Zeitreihen", "SQS Message Queuing", "CloudWatch Monitoring"]
+      },
+      "trading": {
+        "title": "Trading Engine",
+        "items": ["Multi-Exchange Integration", "Order Management System", "Risikomanagement-Regeln", "Portfolio-Rebalancing"]
+      }
+    },
+    "results": {
+      "title": "Ergebnisse & Auswirkungen",
+      "content": "Die Plattform erzielte eine 45%ige ROI-Verbesserung durch intelligente Trading-Strategien und ML-gestützte Marktanalyse. Vollautomatisierter 24/7-Handel eliminierte emotionale Entscheidungsfindung, während die serverlose Architektur die Betriebskosten minimal hielt. Multi-Exchange-Unterstützung ermöglichte Arbitrage-Möglichkeiten und Portfolio-Diversifikation."
+    },
+    "cta": {
+      "title": "Haben Sie ein ähnliches Projekt im Sinn?",
+      "description": "Lassen Sie uns besprechen, wie wir Ihre Vision verwirklichen können.",
+      "primaryButton": "Beratung vereinbaren",
+      "secondaryButton": "Mehr Fallstudien ansehen"
+    }
+  }
+}

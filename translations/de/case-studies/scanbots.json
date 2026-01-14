@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Scanbots Fallstudie — House of Agile • Schweiz • Deutschland",
+    "description": "Scanbots Fallstudie: Autonome Drohnenplattform für Infrastruktur-Monitoring mit KI-gestützter Fehlererkennung und €2M+ Finanzierung.",
+    "ogTitle": "Scanbots Fallstudie — House of Agile",
+    "ogDescription": "Autonome Drohnenplattform mit KI/ML-Bilderkennung und Echtzeit-Datenverarbeitung."
+  },
+  "content": {
+    "badge": "Fallstudie",
+    "dateRange": "2017 — 2018",
+    "hero": {
+      "title": "Scanbots",
+      "description": "Autonome Drohnenplattform für Infrastruktur-Monitoring mit KI-gestützter Bilderkennung, Echtzeit-Verarbeitung und automatisierter Fehlererkennung.",
+      "backLink": "Zurück zu Fallstudien"
+    },
+    "techStack": ["Python", "Node.js", "Vue.js", "C++", "Rust", "Go", "TensorFlow", "Docker", "Kubernetes"],
+    "metrics": {
+      "metric1": { "value": "€2M+", "label": "Finanzierung" },
+      "metric2": { "value": "10+", "label": "Teammitglieder" },
+      "metric3": { "value": "TB+", "label": "Daten verarbeitet" },
+      "metric4": { "value": "Echtzeit", "label": "Analysen" }
+    },
+    "challenge": {
+      "title": "Die Herausforderung",
+      "content": "Großflächige Infrastruktur-Inspektionen waren teuer und riskant, während manuelle Verfahren die Asset-Mengen nicht mehr abbilden konnten. Die Branche benötigte ein sicheres, automatisiertes System zur schnellen und zuverlässigen Fehlererkennung."
+    },
+    "solution": {
+      "title": "Die Lösung",
+      "content": "Aufbau einer autonomen Drohnenplattform, die Hardware, KI-Modelle und eine robuste Datenpipeline kombiniert. So wurden Inspektionen automatisiert, Berichte beschleunigt und der Betrieb sicher skaliert."
+    },
+    "implementation": {
+      "title": "Technische Umsetzung",
+      "backend": {
+        "title": "Backend-Architektur",
+        "items": ["Python-Datenpipeline für Sensordaten", "TensorFlow-Modelle für Fehlererkennung", "Node.js Microservices", "Kubernetes-Orchestrierung", "Go Streaming-Services"]
+      },
+      "frontend": {
+        "title": "Frontend-Stack",
+        "items": ["Vue.js Monitoring-Dashboard", "Interaktive Karten & Flugrouten", "Echtzeit-Defekt-Overlays", "Exportierbare Reports"]
+      },
+      "features": {
+        "title": "Hauptfunktionen",
+        "items": ["Autonome Flugplanung", "Echtzeit-KI-Erkennung", "Onboard Datenerfassung", "Big-Data-Verarbeitung", "Automatisierte Berichte"]
+      }
+    },
+    "gallery": {
+      "title": "Projektgalerie"
+    },
+    "results": {
+      "title": "Ergebnisse & Auswirkungen",
+      "content": "€2M+ Finanzierung gesichert und eine produktionsreife Plattform geliefert, die Inspektionskosten senkt und die Sicherheit erhöht. Das System verarbeitet große Bildmengen mit Echtzeit-Fehlererkennung."
+    },
+    "cta": {
+      "title": "Haben Sie ein ähnliches Projekt im Sinn?",
+      "description": "Lassen Sie uns besprechen, wie wir Ihre Vision verwirklichen können.",
+      "primaryButton": "Beratung vereinbaren",
+      "secondaryButton": "Mehr Fallstudien ansehen"
+    }
+  }
+}

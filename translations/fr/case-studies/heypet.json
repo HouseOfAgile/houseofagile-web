@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Étude de cas HeyPet — House of Agile • Suisse • Allemagne",
+    "description": "Étude de cas HeyPet : Réseau social pour propriétaires d'animaux développé par House of Agile. Développement full-stack, messagerie en temps réel et services géolocalisés.",
+    "ogTitle": "Étude de cas HeyPet — House of Agile",
+    "ogDescription": "Réseau social pour propriétaires d'animaux avec messagerie en temps réel et services géolocalisés."
+  },
+  "content": {
+    "badge": "Étude de cas",
+    "dateRange": "2012 — 2016",
+    "hero": {
+      "title": "HeyPet",
+      "description": "Réseau social pour propriétaires d'animaux avec messagerie en temps réel, services géolocalisés et fonctionnalités communautaires.",
+      "backLink": "Retour aux études de cas"
+    },
+    "techStack": ["Angular.js", "TypeScript", "Symfony", "OAuth", "Docker", "PostgreSQL"],
+    "metrics": {
+      "metric1": { "value": "4", "label": "Années de développement" },
+      "metric2": { "value": "—", "label": "Utilisateurs actifs" },
+      "metric3": { "value": "—", "label": "Messages/Jour" },
+      "metric4": { "value": "—", "label": "Disponibilité" }
+    },
+    "challenge": {
+      "title": "Le Défi",
+      "content": "Les propriétaires d'animaux avaient du mal à trouver des gardiens fiables et à coordonner la prise en charge. Les solutions existantes manquaient de communication en temps réel et de signaux de confiance pour faciliter des mises en relation sûres."
+    },
+    "solution": {
+      "title": "La Solution",
+      "content": "Nous avons conçu une plateforme marketplace axée sur la communication en temps réel, le matching intelligent et un parcours de réservation fluide. Profils, avis et messagerie ont renforcé la confiance et accéléré les mises en relation."
+    },
+    "implementation": {
+      "title": "Implémentation Technique",
+      "backend": {
+        "title": "Architecture Backend",
+        "items": ["API REST Symfony", "Base de données PostgreSQL", "Authentification OAuth 2.0", "Containerisation Docker"]
+      },
+      "frontend": {
+        "title": "Stack Frontend",
+        "items": ["SPA Angular.js", "TypeScript", "Design responsive", "Mises à jour en temps réel"]
+      },
+      "features": {
+        "title": "Fonctionnalités Clés",
+        "items": ["Messagerie en temps réel", "Matching géolocalisé", "Profils de gardiens", "Réservations et paiements"]
+      }
+    },
+    "gallery": {
+      "title": "Galerie du Projet"
+    },
+    "results": {
+      "title": "Résultats & Impact",
+      "content": "Un marketplace bi‑face fiable permettant des mises en relation rapides et une réservation fluide. La plateforme a offert une expérience cohérente tout en faisant évoluer la communication et la planification."
+    },
+    "cta": {
+      "title": "Vous avez un projet similaire en tête?",
+      "description": "Discutons de la façon dont nous pouvons donner vie à votre vision.",
+      "primaryButton": "Planifier une consultation",
+      "secondaryButton": "Voir plus d'études de cas"
+    }
+  }
+}
