@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Homepage -->
+  <!-- Homepage - English (default) -->
   <url>
     <loc>https://houseofagile.com/</loc>
     <lastmod>2025-01-26</lastmod>
@@ -14,7 +14,31 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/"/>
   </url>
 
-  <!-- Service Pages - Full-Stack Development -->
+  <!-- Homepage - German -->
+  <url>
+    <loc>https://houseofagile.com/de/</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/"/>
+  </url>
+
+  <!-- Homepage - French -->
+  <url>
+    <loc>https://houseofagile.com/fr/</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/"/>
+  </url>
+
+  <!-- Full-Stack Development - English -->
   <url>
     <loc>https://houseofagile.com/services/full-stack-development.html</loc>
     <lastmod>2025-01-26</lastmod>
@@ -26,7 +50,31 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/full-stack-development.html"/>
   </url>
 
-  <!-- Service Pages - DevOps & Cloud Infrastructure -->
+  <!-- Full-Stack Development - German -->
+  <url>
+    <loc>https://houseofagile.com/de/services/full-stack-development.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/full-stack-development.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/full-stack-development.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/full-stack-development.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/full-stack-development.html"/>
+  </url>
+
+  <!-- Full-Stack Development - French -->
+  <url>
+    <loc>https://houseofagile.com/fr/services/full-stack-development.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/full-stack-development.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/full-stack-development.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/full-stack-development.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/full-stack-development.html"/>
+  </url>
+
+  <!-- DevOps & Cloud Infrastructure - English -->
   <url>
     <loc>https://houseofagile.com/services/devops-cloud-infrastructure.html</loc>
     <lastmod>2025-01-26</lastmod>
@@ -38,7 +86,31 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/devops-cloud-infrastructure.html"/>
   </url>
 
-  <!-- Service Pages - Technical Leadership & CTO -->
+  <!-- DevOps & Cloud Infrastructure - German -->
+  <url>
+    <loc>https://houseofagile.com/de/services/devops-cloud-infrastructure.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/devops-cloud-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/devops-cloud-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/devops-cloud-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/devops-cloud-infrastructure.html"/>
+  </url>
+
+  <!-- DevOps & Cloud Infrastructure - French -->
+  <url>
+    <loc>https://houseofagile.com/fr/services/devops-cloud-infrastructure.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/devops-cloud-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/devops-cloud-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/devops-cloud-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/devops-cloud-infrastructure.html"/>
+  </url>
+
+  <!-- Technical Leadership & CTO - English -->
   <url>
     <loc>https://houseofagile.com/services/technical-leadership-cto.html</loc>
     <lastmod>2025-01-26</lastmod>
@@ -50,7 +122,31 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/technical-leadership-cto.html"/>
   </url>
 
-  <!-- Service Pages - Legacy Systems Maintenance -->
+  <!-- Technical Leadership & CTO - German -->
+  <url>
+    <loc>https://houseofagile.com/de/services/technical-leadership-cto.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/technical-leadership-cto.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/technical-leadership-cto.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/technical-leadership-cto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/technical-leadership-cto.html"/>
+  </url>
+
+  <!-- Technical Leadership & CTO - French -->
+  <url>
+    <loc>https://houseofagile.com/fr/services/technical-leadership-cto.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/technical-leadership-cto.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/technical-leadership-cto.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/technical-leadership-cto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/technical-leadership-cto.html"/>
+  </url>
+
+  <!-- Legacy Systems Maintenance - English -->
   <url>
     <loc>https://houseofagile.com/services/legacy-systems-maintenance.html</loc>
     <lastmod>2025-01-26</lastmod>
@@ -62,7 +158,31 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/legacy-systems-maintenance.html"/>
   </url>
 
-  <!-- Service Pages - Data Solutions & Scraping -->
+  <!-- Legacy Systems Maintenance - German -->
+  <url>
+    <loc>https://houseofagile.com/de/services/legacy-systems-maintenance.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/legacy-systems-maintenance.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/legacy-systems-maintenance.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/legacy-systems-maintenance.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/legacy-systems-maintenance.html"/>
+  </url>
+
+  <!-- Legacy Systems Maintenance - French -->
+  <url>
+    <loc>https://houseofagile.com/fr/services/legacy-systems-maintenance.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/legacy-systems-maintenance.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/legacy-systems-maintenance.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/legacy-systems-maintenance.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/legacy-systems-maintenance.html"/>
+  </url>
+
+  <!-- Data Solutions & Scraping - English -->
   <url>
     <loc>https://houseofagile.com/services/data-solutions-scraping.html</loc>
     <lastmod>2025-01-26</lastmod>
@@ -74,7 +194,31 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/data-solutions-scraping.html"/>
   </url>
 
-  <!-- Service Pages - Prototyping & MVP -->
+  <!-- Data Solutions & Scraping - German -->
+  <url>
+    <loc>https://houseofagile.com/de/services/data-solutions-scraping.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/data-solutions-scraping.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/data-solutions-scraping.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/data-solutions-scraping.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/data-solutions-scraping.html"/>
+  </url>
+
+  <!-- Data Solutions & Scraping - French -->
+  <url>
+    <loc>https://houseofagile.com/fr/services/data-solutions-scraping.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/data-solutions-scraping.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/data-solutions-scraping.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/data-solutions-scraping.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/data-solutions-scraping.html"/>
+  </url>
+
+  <!-- Prototyping & MVP - English -->
   <url>
     <loc>https://houseofagile.com/services/prototyping-mvp.html</loc>
     <lastmod>2025-01-26</lastmod>
@@ -84,6 +228,246 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/prototyping-mvp.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/prototyping-mvp.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/prototyping-mvp.html"/>
+  </url>
+
+  <!-- Prototyping & MVP - German -->
+  <url>
+    <loc>https://houseofagile.com/de/services/prototyping-mvp.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/prototyping-mvp.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/prototyping-mvp.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/prototyping-mvp.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/prototyping-mvp.html"/>
+  </url>
+
+  <!-- Prototyping & MVP - French -->
+  <url>
+    <loc>https://houseofagile.com/fr/services/prototyping-mvp.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/services/prototyping-mvp.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/services/prototyping-mvp.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/services/prototyping-mvp.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/services/prototyping-mvp.html"/>
+  </url>
+
+  <!-- Universal Music Group - English -->
+  <url>
+    <loc>https://houseofagile.com/case-studies/universal-music-group.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/universal-music-group.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/universal-music-group.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/universal-music-group.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/universal-music-group.html"/>
+  </url>
+
+  <!-- Universal Music Group - German -->
+  <url>
+    <loc>https://houseofagile.com/de/case-studies/universal-music-group.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/universal-music-group.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/universal-music-group.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/universal-music-group.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/universal-music-group.html"/>
+  </url>
+
+  <!-- Universal Music Group - French -->
+  <url>
+    <loc>https://houseofagile.com/fr/case-studies/universal-music-group.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/universal-music-group.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/universal-music-group.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/universal-music-group.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/universal-music-group.html"/>
+  </url>
+
+  <!-- Marketing Automation - English -->
+  <url>
+    <loc>https://houseofagile.com/case-studies/marketing-automation.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/marketing-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/marketing-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/marketing-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/marketing-automation.html"/>
+  </url>
+
+  <!-- Marketing Automation - German -->
+  <url>
+    <loc>https://houseofagile.com/de/case-studies/marketing-automation.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/marketing-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/marketing-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/marketing-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/marketing-automation.html"/>
+  </url>
+
+  <!-- Marketing Automation - French -->
+  <url>
+    <loc>https://houseofagile.com/fr/case-studies/marketing-automation.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/marketing-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/marketing-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/marketing-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/marketing-automation.html"/>
+  </url>
+
+  <!-- Vodafone Live - English -->
+  <url>
+    <loc>https://houseofagile.com/case-studies/vodafone-live.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/vodafone-live.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/vodafone-live.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/vodafone-live.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/vodafone-live.html"/>
+  </url>
+
+  <!-- Vodafone Live - German -->
+  <url>
+    <loc>https://houseofagile.com/de/case-studies/vodafone-live.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/vodafone-live.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/vodafone-live.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/vodafone-live.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/vodafone-live.html"/>
+  </url>
+
+  <!-- Vodafone Live - French -->
+  <url>
+    <loc>https://houseofagile.com/fr/case-studies/vodafone-live.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/vodafone-live.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/vodafone-live.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/vodafone-live.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/vodafone-live.html"/>
+  </url>
+
+  <!-- AI Trading Platform - English -->
+  <url>
+    <loc>https://houseofagile.com/case-studies/ai-trading-platform.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/ai-trading-platform.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/ai-trading-platform.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/ai-trading-platform.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/ai-trading-platform.html"/>
+  </url>
+
+  <!-- AI Trading Platform - German -->
+  <url>
+    <loc>https://houseofagile.com/de/case-studies/ai-trading-platform.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/ai-trading-platform.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/ai-trading-platform.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/ai-trading-platform.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/ai-trading-platform.html"/>
+  </url>
+
+  <!-- AI Trading Platform - French -->
+  <url>
+    <loc>https://houseofagile.com/fr/case-studies/ai-trading-platform.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/ai-trading-platform.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/ai-trading-platform.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/ai-trading-platform.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/ai-trading-platform.html"/>
+  </url>
+
+  <!-- HeyPet - English -->
+  <url>
+    <loc>https://houseofagile.com/case-studies/heypet.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/heypet.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/heypet.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/heypet.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/heypet.html"/>
+  </url>
+
+  <!-- HeyPet - German -->
+  <url>
+    <loc>https://houseofagile.com/de/case-studies/heypet.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/heypet.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/heypet.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/heypet.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/heypet.html"/>
+  </url>
+
+  <!-- HeyPet - French -->
+  <url>
+    <loc>https://houseofagile.com/fr/case-studies/heypet.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/heypet.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/heypet.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/heypet.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/heypet.html"/>
+  </url>
+
+  <!-- Scanbots - English -->
+  <url>
+    <loc>https://houseofagile.com/case-studies/scanbots.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/scanbots.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/scanbots.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/scanbots.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/scanbots.html"/>
+  </url>
+
+  <!-- Scanbots - German -->
+  <url>
+    <loc>https://houseofagile.com/de/case-studies/scanbots.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/scanbots.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/scanbots.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/scanbots.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/scanbots.html"/>
+  </url>
+
+  <!-- Scanbots - French -->
+  <url>
+    <loc>https://houseofagile.com/fr/case-studies/scanbots.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofagile.com/case-studies/scanbots.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://houseofagile.com/de/case-studies/scanbots.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://houseofagile.com/fr/case-studies/scanbots.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://houseofagile.com/case-studies/scanbots.html"/>
   </url>
 
 </urlset>

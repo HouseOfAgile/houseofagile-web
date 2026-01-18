@@ -33,29 +33,7 @@
   {"@context": "https://schema.org", "@type": "Organization", "name": "House of Agile", "url": "https://houseofagile.com", "logo": "https://houseofagile.com/assets/hoa-logo.svg", "description": "Premium technology services for private clients in Switzerland and Germany", "areaServed": ["Switzerland", "Germany"], "founder": {"@type": "Person", "name": "Jean-Christophe Meillaud"}, "email": "mailto:jc@houseofagile.com"}
   </script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'hoa': {
-              50: '#f0fdf4',
-              100: '#dcfce7',
-              200: '#bbf7d0',
-              300: '#86efac',
-              400: '#4ade80',
-              500: '#22c55e',
-              600: '#16a34a',
-              700: '#15803d',
-              800: '#166534',
-              900: '#14532d',
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="/assets/tailwind.css">
   <style>
     /* Professional green color scheme */
     :root {
@@ -72,36 +50,14 @@
     /* Language switcher */
     .lang-content { display: none; }
     .lang-content.active { display: block; }
-    
-    /* Form styles */
-    .form-input {
-      @apply w-full px-4 py-3 rounded-xl border border-hoa-200 bg-white text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-hoa-500 focus:border-transparent transition-all;
-    }
-    .form-textarea {
-      @apply w-full px-4 py-3 rounded-xl border border-hoa-200 bg-white text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-hoa-500 focus:border-transparent min-h-[120px] resize-y transition-all;
-    }
-    .form-select {
-      @apply w-full px-4 py-3 rounded-xl border border-hoa-200 bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-hoa-500 focus:border-transparent transition-all;
-    }
-    .pricing-card {
-      @apply p-6 rounded-2xl bg-white border border-hoa-100 shadow-sm hover:shadow-lg hover:border-hoa-200 transition-all duration-300;
-    }
-    .btn-primary {
-      @apply px-6 py-3 bg-hoa-600 text-white font-semibold rounded-xl hover:bg-hoa-700 transition-all duration-200 shadow-lg hover:shadow-xl;
-    }
-    .btn-secondary {
-      @apply px-6 py-3 bg-white text-hoa-700 font-semibold rounded-xl border-2 border-hoa-200 hover:bg-hoa-50 hover:border-hoa-300 transition-all duration-200;
-    }
-    
-    /* Professional sections */
-    .section-light { @apply bg-hoa-50; }
-    .section-card { @apply bg-white border border-hoa-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200; }
 
     /* Scroll offset for anchor links to prevent navbar overlap */
     section[id] {
       scroll-margin-top: 70px;
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="/assets/hoa-worldclass.css">
 
   <script>
     // Simple multilingual support
@@ -135,7 +91,7 @@
         timeline_flexible: "Flexible",
         select_location: "Select location...",
         location_germany: "🇩🇪 Germany",
-        location_switzerland: "🇨🇭 Switzerland (+20% rate)",
+        location_switzerland: "🇨🇭 Switzerland",
         location_france: "🇫🇷 France",
         location_remote: "Remote/Other"
       },
@@ -168,7 +124,7 @@
         timeline_flexible: "Flexibel",
         select_location: "Standort auswählen...",
         location_germany: "🇩🇪 Deutschland",
-        location_switzerland: "🇨🇭 Schweiz (+20% Aufschlag)",
+        location_switzerland: "🇨🇭 Schweiz",
         location_france: "🇫🇷 Frankreich",
         location_remote: "Remote/Andere"
       },
@@ -201,16 +157,23 @@
         timeline_flexible: "Flexible",
         select_location: "Sélectionnez l'emplacement...",
         location_germany: "🇩🇪 Allemagne",
-        location_switzerland: "🇨🇭 Suisse (+20% de majoration)",
+        location_switzerland: "🇨🇭 Suisse",
         location_france: "🇫🇷 France",
         location_remote: "À distance/Autre"
       }
     };
 
     function switchLanguage(lang) {
-      // Update active language button
-      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-      document.querySelector(`[onclick="switchLanguage('${lang}')"]`).classList.add('active');
+      // Update active language button styling (match service pages)
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('bg-hoa-200', 'text-hoa-900');
+        btn.classList.add('bg-hoa-100', 'text-hoa-800');
+      });
+      const activeBtn = document.querySelector(`[onclick="switchLanguage('${lang}')"]`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-hoa-100', 'text-hoa-800');
+        activeBtn.classList.add('bg-hoa-200', 'text-hoa-900');
+      }
 
       // Update content
       Object.keys(translations[lang]).forEach(key => {
@@ -318,7 +281,7 @@
     }
   </script>
 </head>
-<body class="bg-hoa-50 text-slate-800">
+<body class="bg-hoa-50 text-slate-800 hoa-body">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M66S2HG2"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -334,7 +297,7 @@
         <div class="flex items-center gap-6">
           <!-- Language Switcher -->
           <div class="hidden md:flex items-center gap-2">
-            <button onclick="switchLanguage('en')" class="lang-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-hoa-100 hover:bg-hoa-200 text-hoa-800 active:bg-hoa-300">EN</button>
+            <button onclick="switchLanguage('en')" class="lang-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-hoa-200 text-hoa-900">EN</button>
             <button onclick="switchLanguage('de')" class="lang-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-hoa-100 hover:bg-hoa-200 text-hoa-800">DE</button>
             <button onclick="switchLanguage('fr')" class="lang-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-hoa-100 hover:bg-hoa-200 text-hoa-800">FR</button>
           </div>
@@ -375,16 +338,18 @@
           </div>
           <div class="mt-8 flex flex-wrap gap-2 text-sm">
             <!-- skill badges -->
-            <span class="px-3 py-1.5 rounded-full bg-hoa-100 text-hoa-800 border border-hoa-200 font-medium">Symfony 6</span>
-            <span class="px-3 py-1.5 rounded-full bg-hoa-100 text-hoa-800 border border-hoa-200 font-medium">API Platform</span>
-            <span class="px-3 py-1.5 rounded-full bg-hoa-100 text-hoa-800 border border-hoa-200 font-medium">PHP 8</span>
-            <span class="px-3 py-1.5 rounded-full bg-hoa-100 text-hoa-800 border border-hoa-200 font-medium">Vue.js</span>
-            <span class="px-3 py-1.5 rounded-full bg-hoa-100 text-hoa-800 border border-hoa-200 font-medium">Node.js</span>
-            <span class="px-3 py-1.5 rounded-full bg-hoa-100 text-hoa-800 border border-hoa-200 font-medium">Docker · K8s</span>
-            <span class="px-3 py-1.5 rounded-full bg-hoa-100 text-hoa-800 border border-hoa-200 font-medium">AWS · Ansible</span>
-            <span class="px-3 py-1.5 rounded-full bg-hoa-100 text-hoa-800 border border-hoa-200 font-medium">Postgres · Redis</span>
-            <span class="px-3 py-1.5 rounded-full bg-hoa-100 text-hoa-800 border border-hoa-200 font-medium">CI/CD · DevOps</span>
-            <span class="px-3 py-1.5 rounded-full bg-hoa-100 text-hoa-800 border border-hoa-200 font-medium">Data/ML</span>
+            <span class="tech-badge">Symfony</span>
+            <span class="tech-badge">API Platform</span>
+            <span class="tech-badge">PHP 8</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Bash</span>
+            <span class="tech-badge">AI Mastery</span>
+            <span class="tech-badge">API Integrations (AWS · GCP · Azure)</span>
+            <span class="tech-badge">Rapid Prototyping (Small Apps)</span>
+            <span class="tech-badge">Web Scraping & Data Pipelines</span>
+            <span class="tech-badge">Docker · K8s</span>
+            <span class="tech-badge">Postgres · Redis</span>
+            <span class="tech-badge">CI/CD · DevOps</span>
           </div>
         </div>
         <div class="glass rounded-3xl p-8 shadow-lg border border-hoa-200">
@@ -395,6 +360,9 @@
             <li class="flex items-center gap-2"><span class="text-hoa-600">✓</span> <strong>30M+ users</strong> platforms built and scaled</li>
             <li class="flex items-center gap-2"><span class="text-hoa-600">✓</span> <strong>Private Client Focus</strong> with discreet, premium service</li>
             <li class="flex items-center gap-2"><span class="text-hoa-600">✓</span> <strong>Innovation Leaders</strong> in AI, fintech, and automation</li>
+            <li class="flex items-center gap-2"><span class="text-hoa-600">✓</span> <strong>Rapid Prototyping</strong> for small apps and MVPs</li>
+            <li class="flex items-center gap-2"><span class="text-hoa-600">✓</span> <strong>Advanced Scraping</strong> & data extraction expertise</li>
+            <li class="flex items-center gap-2"><span class="text-hoa-600">✓</span> <strong>API Integrations</strong> with major platforms and providers</li>
             <li class="flex items-center gap-2"><span class="text-hoa-600">✓</span> <strong>Proven Track Record</strong> across multiple successful exits</li>
           </ul>
         </div>
@@ -420,9 +388,9 @@
     <div class="grid md:grid-cols-3 gap-8">
 
       <!-- Jean-Christophe Meillaud -->
-      <div class="bg-white rounded-3xl p-8 shadow-lg border border-hoa-100 text-center">
-        <div class="w-20 h-20 bg-hoa-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <span class="text-2xl">👨‍💼</span>
+      <div class="bg-white rounded-3xl p-8 shadow-lg border border-hoa-100 text-center icon-card">
+        <div class="icon-badge icon-badge--lg mx-auto mb-4">
+          <i class="fa-solid fa-user-tie" aria-hidden="true"></i>
         </div>
         <h3 class="font-bold text-xl mb-2">Jean-Christophe Meillaud</h3>
         <p class="text-hoa-600 font-semibold mb-3">
@@ -445,9 +413,9 @@
       </div>
 
       <!-- Mateusz Kowalski -->
-      <div class="bg-white rounded-3xl p-8 shadow-lg border border-hoa-100 text-center">
-        <div class="w-20 h-20 bg-hoa-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <span class="text-2xl">⚛️</span>
+      <div class="bg-white rounded-3xl p-8 shadow-lg border border-hoa-100 text-center icon-card">
+        <div class="icon-badge icon-badge--lg mx-auto mb-4">
+          <i class="fa-solid fa-atom" aria-hidden="true"></i>
         </div>
         <h3 class="font-bold text-xl mb-2">Mateusz Kowalski</h3>
         <p class="text-hoa-600 font-semibold mb-3">
@@ -468,9 +436,9 @@
       </div>
 
       <!-- Ryan MacLaughlin -->
-      <div class="bg-white rounded-3xl p-8 shadow-lg border border-hoa-100 text-center">
-        <div class="w-20 h-20 bg-hoa-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <span class="text-2xl">🤖</span>
+      <div class="bg-white rounded-3xl p-8 shadow-lg border border-hoa-100 text-center icon-card">
+        <div class="icon-badge icon-badge--lg mx-auto mb-4">
+          <i class="fa-solid fa-brain" aria-hidden="true"></i>
         </div>
         <h3 class="font-bold text-xl mb-2">Ryan MacLaughlin</h3>
         <p class="text-hoa-600 font-semibold mb-3">
@@ -495,89 +463,218 @@
 
   <!-- Services -->
   <section id="services" class="max-w-6xl mx-auto px-4 py-16">
-    <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-8">Premium Services for Discerning Clients</h2>
+    <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-8">
+      <span class="lang-content lang-en active">Premium Services for Discerning Clients</span>
+      <span class="lang-content lang-de">Premium-Dienstleistungen für anspruchsvolle Kunden</span>
+      <span class="lang-content lang-fr">Services premium pour clients exigeants</span>
+    </h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <a href="/services/technical-leadership-cto.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block">
-        <div class="text-2xl mb-3">👨‍💼</div>
-        <h3 class="font-bold text-lg mb-2">Technical Leadership & CTO Services</h3>
-        <p class="text-slate-700 mb-3">Strategic CTO services and technology leadership for private ventures and family offices.</p>
+      <a href="/services/technical-leadership-cto.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-user-tie" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-lg mb-2">
+          <span class="lang-content lang-en active">Technical Leadership & CTO Services</span>
+          <span class="lang-content lang-de">Technische Führung & CTO-Services</span>
+          <span class="lang-content lang-fr">Leadership technique & Services CTO</span>
+        </h3>
+        <p class="text-slate-700 mb-3">
+          <span class="lang-content lang-en active">Strategic CTO services and technology leadership for private ventures and family offices.</span>
+          <span class="lang-content lang-de">Strategische CTO-Services und Technologieführung für private Unternehmen und Family Offices.</span>
+          <span class="lang-content lang-fr">Services CTO stratégiques et leadership technologique pour entreprises privées et family offices.</span>
+        </p>
         <ul class="text-sm text-slate-600 space-y-1">
-          <li>• Fractional CTO services</li>
-          <li>• Digital transformation strategy</li>
-          <li>• Technology investment advisory</li>
+          <li class="lang-content lang-en active">• Fractional CTO services</li>
+          <li class="lang-content lang-en active">• Digital transformation strategy</li>
+          <li class="lang-content lang-en active">• Technology investment advisory</li>
+          <li class="lang-content lang-de">• Fractional CTO-Services</li>
+          <li class="lang-content lang-de">• Strategie für digitale Transformation</li>
+          <li class="lang-content lang-de">• Technologie-Investitionsberatung</li>
+          <li class="lang-content lang-fr">• Services CTO fractionnés</li>
+          <li class="lang-content lang-fr">• Stratégie de transformation digitale</li>
+          <li class="lang-content lang-fr">• Conseil en investissement technologique</li>
         </ul>
-        <div class="text-hoa-600 font-semibold text-sm mt-3">Learn more →</div>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">
+          <span class="lang-content lang-en active">Learn more →</span>
+          <span class="lang-content lang-de">Mehr erfahren →</span>
+          <span class="lang-content lang-fr">En savoir plus →</span>
+        </div>
       </a>
 
-      <a href="/services/full-stack-development.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block">
-        <div class="text-2xl mb-3">💻</div>
-        <h3 class="font-bold text-lg mb-2">Full-Stack Development</h3>
-        <p class="text-slate-700 mb-3">Expert web application development with modern frameworks and technologies.</p>
+      <a href="/services/full-stack-development.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-code" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-lg mb-2">
+          <span class="lang-content lang-en active">Full-Stack Development</span>
+          <span class="lang-content lang-de">Full-Stack-Entwicklung</span>
+          <span class="lang-content lang-fr">Développement Full-Stack</span>
+        </h3>
+        <p class="text-slate-700 mb-3">
+          <span class="lang-content lang-en active">Expert web application development with modern frameworks and technologies.</span>
+          <span class="lang-content lang-de">Experten-Webanwendungsentwicklung mit modernen Frameworks und Technologien.</span>
+          <span class="lang-content lang-fr">Développement d'applications web expertes avec des frameworks et technologies modernes.</span>
+        </p>
         <ul class="text-sm text-slate-600 space-y-1">
-          <li>• Symfony, Laravel, Vue.js, React</li>
-          <li>• Microservices architecture</li>
-          <li>• E-commerce platforms</li>
+          <li class="lang-content lang-en active">• Symfony, Laravel, Vue.js, React</li>
+          <li class="lang-content lang-en active">• Microservices architecture</li>
+          <li class="lang-content lang-en active">• E-commerce platforms</li>
+          <li class="lang-content lang-de">• Symfony, Laravel, Vue.js, React</li>
+          <li class="lang-content lang-de">• Microservices-Architektur</li>
+          <li class="lang-content lang-de">• E-Commerce-Plattformen</li>
+          <li class="lang-content lang-fr">• Symfony, Laravel, Vue.js, React</li>
+          <li class="lang-content lang-fr">• Architecture microservices</li>
+          <li class="lang-content lang-fr">• Plateformes e-commerce</li>
         </ul>
-        <div class="text-hoa-600 font-semibold text-sm mt-3">Learn more →</div>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">
+          <span class="lang-content lang-en active">Learn more →</span>
+          <span class="lang-content lang-de">Mehr erfahren →</span>
+          <span class="lang-content lang-fr">En savoir plus →</span>
+        </div>
       </a>
 
-      <a href="/services/devops-cloud-infrastructure.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block">
-        <div class="text-2xl mb-3">☁️</div>
-        <h3 class="font-bold text-lg mb-2">DevOps & Cloud Infrastructure</h3>
-        <p class="text-slate-700 mb-3">Enterprise-grade infrastructure, automation, and cloud solutions.</p>
+      <a href="/services/devops-cloud-infrastructure.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-lg mb-2">
+          <span class="lang-content lang-en active">DevOps & Cloud Infrastructure</span>
+          <span class="lang-content lang-de">DevOps & Cloud-Infrastruktur</span>
+          <span class="lang-content lang-fr">DevOps & Infrastructure Cloud</span>
+        </h3>
+        <p class="text-slate-700 mb-3">
+          <span class="lang-content lang-en active">Enterprise-grade infrastructure, automation, and cloud solutions.</span>
+          <span class="lang-content lang-de">Unternehmenstaugliche Infrastruktur, Automatisierung und Cloud-Lösungen.</span>
+          <span class="lang-content lang-fr">Infrastructure de niveau entreprise, automatisation et solutions cloud.</span>
+        </p>
         <ul class="text-sm text-slate-600 space-y-1">
-          <li>• Docker, Kubernetes orchestration</li>
-          <li>• AWS, GCP, Azure deployment</li>
-          <li>• Linux administration & CI/CD</li>
+          <li class="lang-content lang-en active">• Docker, Kubernetes orchestration</li>
+          <li class="lang-content lang-en active">• AWS, GCP, Azure deployment</li>
+          <li class="lang-content lang-en active">• Linux administration & CI/CD</li>
+          <li class="lang-content lang-de">• Docker, Kubernetes-Orchestrierung</li>
+          <li class="lang-content lang-de">• AWS, GCP, Azure-Deployment</li>
+          <li class="lang-content lang-de">• Linux-Administration & CI/CD</li>
+          <li class="lang-content lang-fr">• Orchestration Docker, Kubernetes</li>
+          <li class="lang-content lang-fr">• Déploiement AWS, GCP, Azure</li>
+          <li class="lang-content lang-fr">• Administration Linux & CI/CD</li>
         </ul>
-        <div class="text-hoa-600 font-semibold text-sm mt-3">Learn more →</div>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">
+          <span class="lang-content lang-en active">Learn more →</span>
+          <span class="lang-content lang-de">Mehr erfahren →</span>
+          <span class="lang-content lang-fr">En savoir plus →</span>
+        </div>
       </a>
 
-      <a href="/services/legacy-systems-maintenance.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block">
-        <div class="text-2xl mb-3">🔧</div>
-        <h3 class="font-bold text-lg mb-2">Legacy Systems & Maintenance</h3>
-        <p class="text-slate-700 mb-3">Expert care for legacy systems including modernization and rescue services.</p>
+      <a href="/services/legacy-systems-maintenance.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-lg mb-2">
+          <span class="lang-content lang-en active">Legacy Systems & Maintenance</span>
+          <span class="lang-content lang-de">Legacy-Systeme & Wartung</span>
+          <span class="lang-content lang-fr">Systèmes Legacy & Maintenance</span>
+        </h3>
+        <p class="text-slate-700 mb-3">
+          <span class="lang-content lang-en active">Expert care for legacy systems including modernization and rescue services.</span>
+          <span class="lang-content lang-de">Expertenbetreuung für Legacy-Systeme inkl. Modernisierung und Rettungsdienste.</span>
+          <span class="lang-content lang-fr">Expertise pour les systèmes legacy, modernisation et services de sauvetage.</span>
+        </p>
         <ul class="text-sm text-slate-600 space-y-1">
-          <li>• CodeIgniter, Typo3 support</li>
-          <li>• PHP version upgrades</li>
-          <li>• System rescue & modernization</li>
+          <li class="lang-content lang-en active">• CodeIgniter, Typo3 support</li>
+          <li class="lang-content lang-en active">• PHP version upgrades</li>
+          <li class="lang-content lang-en active">• System rescue & modernization</li>
+          <li class="lang-content lang-de">• CodeIgniter, Typo3-Support</li>
+          <li class="lang-content lang-de">• PHP-Versions-Upgrades</li>
+          <li class="lang-content lang-de">• Systemrettung & Modernisierung</li>
+          <li class="lang-content lang-fr">• Support CodeIgniter, Typo3</li>
+          <li class="lang-content lang-fr">• Mises à niveau PHP</li>
+          <li class="lang-content lang-fr">• Sauvetage & modernisation</li>
         </ul>
-        <div class="text-hoa-600 font-semibold text-sm mt-3">Learn more →</div>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">
+          <span class="lang-content lang-en active">Learn more →</span>
+          <span class="lang-content lang-de">Mehr erfahren →</span>
+          <span class="lang-content lang-fr">En savoir plus →</span>
+        </div>
       </a>
 
-      <a href="/services/data-solutions-scraping.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block">
-        <div class="text-2xl mb-3">📊</div>
-        <h3 class="font-bold text-lg mb-2">Data Solutions & Web Scraping</h3>
-        <p class="text-slate-700 mb-3">Intelligent data extraction, analytics, and automated collection systems.</p>
+      <a href="/services/data-solutions-scraping.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-lg mb-2">
+          <span class="lang-content lang-en active">Data Solutions & Web Scraping</span>
+          <span class="lang-content lang-de">Datenlösungen & Web Scraping</span>
+          <span class="lang-content lang-fr">Solutions Data & Web Scraping</span>
+        </h3>
+        <p class="text-slate-700 mb-3">
+          <span class="lang-content lang-en active">Intelligent data extraction, analytics, and automated collection systems.</span>
+          <span class="lang-content lang-de">Intelligente Datenextraktion, Analytik und automatisierte Sammelsysteme.</span>
+          <span class="lang-content lang-fr">Extraction intelligente de données, analytique et systèmes de collecte automatisés.</span>
+        </p>
         <ul class="text-sm text-slate-600 space-y-1">
-          <li>• Web scraping & automation</li>
-          <li>• Data analytics & processing</li>
-          <li>• Competitive intelligence</li>
+          <li class="lang-content lang-en active">• Web scraping & automation</li>
+          <li class="lang-content lang-en active">• Data analytics & processing</li>
+          <li class="lang-content lang-en active">• Competitive intelligence</li>
+          <li class="lang-content lang-de">• Web Scraping & Automatisierung</li>
+          <li class="lang-content lang-de">• Datenanalytik & -verarbeitung</li>
+          <li class="lang-content lang-de">• Wettbewerbsanalyse</li>
+          <li class="lang-content lang-fr">• Web scraping & automatisation</li>
+          <li class="lang-content lang-fr">• Analytique & traitement de données</li>
+          <li class="lang-content lang-fr">• Veille concurrentielle</li>
         </ul>
-        <div class="text-hoa-600 font-semibold text-sm mt-3">Learn more →</div>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">
+          <span class="lang-content lang-en active">Learn more →</span>
+          <span class="lang-content lang-de">Mehr erfahren →</span>
+          <span class="lang-content lang-fr">En savoir plus →</span>
+        </div>
       </a>
 
-      <a href="/services/prototyping-mvp.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block">
-        <div class="text-2xl mb-3">⚡</div>
-        <h3 class="font-bold text-lg mb-2">Rapid Prototyping & MVP Development</h3>
-        <p class="text-slate-700 mb-3">Quick validation of ideas with functional prototypes and minimum viable products.</p>
+      <a href="/services/prototyping-mvp.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-lg mb-2">
+          <span class="lang-content lang-en active">Rapid Prototyping & MVP Development</span>
+          <span class="lang-content lang-de">Rapid Prototyping & MVP-Entwicklung</span>
+          <span class="lang-content lang-fr">Prototypage Rapide & Développement MVP</span>
+        </h3>
+        <p class="text-slate-700 mb-3">
+          <span class="lang-content lang-en active">Quick validation of ideas with functional prototypes and minimum viable products.</span>
+          <span class="lang-content lang-de">Schnelle Validierung von Ideen mit funktionalen Prototypen und Minimum Viable Products.</span>
+          <span class="lang-content lang-fr">Validation rapide d'idées avec des prototypes fonctionnels et produits minimum viables.</span>
+        </p>
         <ul class="text-sm text-slate-600 space-y-1">
-          <li>• 4-8 week MVP development</li>
-          <li>• Proof of concept creation</li>
-          <li>• Iterative development</li>
+          <li class="lang-content lang-en active">• 4-8 week MVP development</li>
+          <li class="lang-content lang-en active">• Proof of concept creation</li>
+          <li class="lang-content lang-en active">• Iterative development</li>
+          <li class="lang-content lang-de">• 4-8 Wochen MVP-Entwicklung</li>
+          <li class="lang-content lang-de">• Proof of Concept-Erstellung</li>
+          <li class="lang-content lang-de">• Iterative Entwicklung</li>
+          <li class="lang-content lang-fr">• Développement MVP en 4-8 semaines</li>
+          <li class="lang-content lang-fr">• Création de preuve de concept</li>
+          <li class="lang-content lang-fr">• Développement itératif</li>
         </ul>
-        <div class="text-hoa-600 font-semibold text-sm mt-3">Learn more →</div>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">
+          <span class="lang-content lang-en active">Learn more →</span>
+          <span class="lang-content lang-de">Mehr erfahren →</span>
+          <span class="lang-content lang-fr">En savoir plus →</span>
+        </div>
       </a>
     </div>
 
     <!-- Swiss/German Market Call-out -->
     <div class="mt-12 p-6 bg-gradient-to-r from-slate-50 to-cyan-50 rounded-2xl border border-slate-200">
       <div class="text-center">
-        <h3 class="font-bold text-xl mb-2">🇨🇭 🇩🇪 Switzerland & Germany Focus</h3>
+        <h3 class="font-bold text-xl mb-2">
+          <span class="lang-content lang-en active">🇨🇭 🇩🇪 Switzerland & Germany Focus</span>
+          <span class="lang-content lang-de">🇨🇭 🇩🇪 Fokus Schweiz & Deutschland</span>
+          <span class="lang-content lang-fr">🇨🇭 🇩🇪 Focus Suisse & Allemagne</span>
+        </h3>
         <p class="text-slate-700 max-w-3xl mx-auto">
-          We specifically serve high-net-worth individuals, family offices, and private enterprises in the German-speaking markets. 
-          Our team understands local regulatory requirements, cultural nuances, and maintains the discretion expected by our clientele.
+          <span class="lang-content lang-en active">We specifically serve high-net-worth individuals, family offices, and private enterprises in the German-speaking markets. Our team understands local regulatory requirements, cultural nuances, and maintains the discretion expected by our clientele.</span>
+          <span class="lang-content lang-de">Wir bedienen gezielt vermögende Privatpersonen, Family Offices und private Unternehmen im deutschsprachigen Raum. Unser Team versteht lokale regulatorische Anforderungen, kulturelle Besonderheiten und wahrt die von unserer Klientel erwartete Diskretion.</span>
+          <span class="lang-content lang-fr">Nous servons spécifiquement les particuliers fortunés, family offices et entreprises privées sur les marchés germanophones. Notre équipe comprend les exigences réglementaires locales, les nuances culturelles et maintient la discrétion attendue par notre clientèle.</span>
         </p>
       </div>
     </div>
@@ -601,8 +698,10 @@
     <div class="grid md:grid-cols-3 gap-6">
       
       <!-- Simple Website -->
-      <div class="p-6 rounded-2xl bg-slate-50 border hover:shadow-md transition-shadow">
-        <div class="text-2xl mb-3">🌐</div>
+      <div class="p-6 rounded-2xl bg-slate-50 border hover:shadow-md transition-shadow icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-globe" aria-hidden="true"></i>
+        </div>
         <h3 class="font-bold text-lg mb-2">
           <span class="lang-content lang-en active">Professional Website</span>
           <span class="lang-content lang-de">Professionelle Website</span>
@@ -643,8 +742,10 @@
       </div>
 
       <!-- E-commerce -->
-      <div class="p-6 rounded-2xl bg-slate-50 border hover:shadow-md transition-shadow">
-        <div class="text-2xl mb-3">🛒</div>
+      <div class="p-6 rounded-2xl bg-slate-50 border hover:shadow-md transition-shadow icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+        </div>
         <h3 class="font-bold text-lg mb-2">
           <span class="lang-content lang-en active">E-commerce Store</span>
           <span class="lang-content lang-de">E-Commerce Shop</span>
@@ -685,8 +786,10 @@
       </div>
 
       <!-- Custom Web App -->
-      <div class="p-6 rounded-2xl bg-slate-50 border hover:shadow-md transition-shadow">
-        <div class="text-2xl mb-3">⚡</div>
+      <div class="p-6 rounded-2xl bg-slate-50 border hover:shadow-md transition-shadow icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+        </div>
         <h3 class="font-bold text-lg mb-2">
           <span class="lang-content lang-en active">Custom Web App</span>
           <span class="lang-content lang-de">Individuelle Web-App</span>
@@ -728,52 +831,6 @@
 
     </div>
 
-    <!-- Popular Add-ons -->
-    <div class="mt-12 p-6 bg-gradient-to-r from-indigo-50 to-cyan-50 rounded-2xl border">
-      <div class="text-center mb-6">
-        <h3 class="font-bold text-xl mb-2">
-          <span class="lang-content lang-en active">🚀 Popular Add-ons</span>
-          <span class="lang-content lang-de">🚀 Beliebte Add-ons</span>
-          <span class="lang-content lang-fr">🚀 Modules populaires</span>
-        </h3>
-        <p class="text-slate-600">
-          <span class="lang-content lang-en active">Extend your project with these premium features</span>
-          <span class="lang-content lang-de">Erweitern Sie Ihr Projekt mit diesen Premium-Features</span>
-          <span class="lang-content lang-fr">Étendez votre projet avec ces fonctionnalités premium</span>
-        </p>
-      </div>
-      
-      <div class="grid md:grid-cols-4 gap-4 text-sm">
-        <div class="text-center p-3 bg-white rounded-xl">
-          <div class="font-semibold">📱 Mobile App</div>
-          <div class="text-slate-600">+€1,800</div>
-        </div>
-        <div class="text-center p-3 bg-white rounded-xl">
-          <div class="font-semibold">
-            <span class="lang-content lang-en active">🔍 Advanced SEO</span>
-            <span class="lang-content lang-de">🔍 Erweiterte SEO</span>
-            <span class="lang-content lang-fr">🔍 SEO avancé</span>
-          </div>
-          <div class="text-slate-600">+€450</div>
-        </div>
-        <div class="text-center p-3 bg-white rounded-xl">
-          <div class="font-semibold">
-            <span class="lang-content lang-en active">📊 Analytics Dashboard</span>
-            <span class="lang-content lang-de">📊 Analytics Dashboard</span>
-            <span class="lang-content lang-fr">📊 Tableau analytique</span>
-          </div>
-          <div class="text-slate-600">+€680</div>
-        </div>
-        <div class="text-center p-3 bg-white rounded-xl">
-          <div class="font-semibold">
-            <span class="lang-content lang-en active">🔒 Premium Security</span>
-            <span class="lang-content lang-de">🔒 Premium-Sicherheit</span>
-            <span class="lang-content lang-fr">🔒 Sécurité premium</span>
-          </div>
-          <div class="text-slate-600">+€380</div>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- Pricing & Packages -->
@@ -794,8 +851,10 @@
     <div class="grid md:grid-cols-3 gap-8">
       
       <!-- Hourly Rate -->
-      <div class="pricing-card text-center">
-        <div class="text-2xl mb-3">⏱️</div>
+      <div class="pricing-card text-center icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-clock" aria-hidden="true"></i>
+        </div>
         <h3 class="font-bold text-xl mb-2">
           <span class="lang-content lang-en active">Hourly Rate</span>
           <span class="lang-content lang-de">Stundensatz</span>
@@ -821,13 +880,10 @@
       </div>
 
       <!-- Project-based -->
-      <div class="pricing-card text-center border-2 border-hoa-200 relative">
-        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-hoa-600 text-white px-4 py-1 rounded-full text-xs font-semibold">
-          <span class="lang-content lang-en active">POPULAR</span>
-          <span class="lang-content lang-de">BELIEBT</span>
-          <span class="lang-content lang-fr">POPULAIRE</span>
+      <div class="pricing-card text-center border-2 border-hoa-200 relative icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-box" aria-hidden="true"></i>
         </div>
-        <div class="text-2xl mb-3">📦</div>
         <h3 class="font-bold text-xl mb-2">
           <span class="lang-content lang-en active">Fixed Projects</span>
           <span class="lang-content lang-de">Fixpreis-Projekte</span>
@@ -857,8 +913,10 @@
       </div>
 
       <!-- Retainer -->
-      <div class="pricing-card text-center">
-        <div class="text-2xl mb-3">🤝</div>
+      <div class="pricing-card text-center icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+        </div>
         <h3 class="font-bold text-xl mb-2">
           <span class="lang-content lang-en active">Monthly Retainer</span>
           <span class="lang-content lang-de">Monatlicher Retainer</span>
@@ -892,9 +950,9 @@
     <div class="mt-12 grid md:grid-cols-2 gap-8">
       <div class="bg-white rounded-xl p-6 border border-hoa-100">
         <h4 class="font-bold text-lg mb-3 text-hoa-800">
-          <span class="lang-content lang-en active">🏢 Small Business Packages</span>
-          <span class="lang-content lang-de">🏢 Kleinunternehmen-Pakete</span>
-          <span class="lang-content lang-fr">🏢 Packages PME</span>
+          <span class="lang-content lang-en active"><span class="icon-inline"><i class="fa-solid fa-building" aria-hidden="true"></i></span>Small Business Packages</span>
+          <span class="lang-content lang-de"><span class="icon-inline"><i class="fa-solid fa-building" aria-hidden="true"></i></span>Kleinunternehmen-Pakete</span>
+          <span class="lang-content lang-fr"><span class="icon-inline"><i class="fa-solid fa-building" aria-hidden="true"></i></span>Packages PME</span>
         </h4>
         <div class="space-y-2 text-sm text-slate-600">
           <div class="flex justify-between">
@@ -919,9 +977,9 @@
       </div>
       <div class="bg-white rounded-xl p-6 border border-hoa-100">
         <h4 class="font-bold text-lg mb-3 text-hoa-800">
-          <span class="lang-content lang-en active">🚀 Premium Enterprise</span>
-          <span class="lang-content lang-de">🚀 Premium Enterprise</span>
-          <span class="lang-content lang-fr">🚀 Enterprise Premium</span>
+          <span class="lang-content lang-en active"><span class="icon-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span>Premium Enterprise</span>
+          <span class="lang-content lang-de"><span class="icon-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span>Premium Enterprise</span>
+          <span class="lang-content lang-fr"><span class="icon-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span>Enterprise Premium</span>
         </h4>
         <div class="space-y-2 text-sm text-slate-600">
           <div class="flex justify-between">
@@ -949,9 +1007,9 @@
     <!-- Regional Note -->
     <div class="mt-8 p-4 bg-white rounded-xl border border-hoa-100 text-center">
       <p class="text-sm text-slate-600">
-        <span class="lang-content lang-en active">🇩🇪 Based on German freelance market rates | 🇨🇭 Swiss projects: +20% due to local market conditions | All prices exclude VAT</span>
-        <span class="lang-content lang-de">🇩🇪 Basierend auf deutschen Freelance-Marktpreisen | 🇨🇭 Schweizer Projekte: +20% aufgrund lokaler Marktbedingungen | Alle Preise exkl. MwSt.</span>
-        <span class="lang-content lang-fr">🇩🇪 Basé sur les tarifs du marché freelance allemand | 🇨🇭 Projets suisses: +20% en raison des conditions du marché local | Tous prix HT</span>
+        <span class="lang-content lang-en active">🇩🇪 Based on German freelance market rates | 🇨🇭 Swiss projects welcome | All prices exclude VAT</span>
+        <span class="lang-content lang-de">🇩🇪 Basierend auf deutschen Freelance-Marktpreisen | 🇨🇭 Schweizer Projekte willkommen | Alle Preise exkl. MwSt.</span>
+        <span class="lang-content lang-fr">🇩🇪 Basé sur les tarifs du marché freelance allemand | 🇨🇭 Projets suisses bienvenus | Tous prix HT</span>
       </p>
     </div>
   </section>
@@ -966,236 +1024,332 @@
     <div class="space-y-8">
       
       <!-- Universal Music Group -->
-      <article class="bg-white rounded-3xl p-8 shadow-lg border">
-        <div class="flex items-start justify-between mb-4">
-          <div>
-            <h3 class="font-black text-2xl text-slate-900">Universal Music Group</h3>
-            <p class="text-slate-600 font-semibold">Project Delivery Manager • 2007–2010 • Paris</p>
+      <a href="/case-studies/universal-music-group.html" class="block group">
+        <article class="bg-white rounded-3xl p-8 shadow-lg border group-hover:border-hoa-400 group-hover:shadow-xl transition-all duration-300">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h3 class="font-black text-2xl text-slate-900 group-hover:text-hoa-600 transition-colors">Universal Music Group</h3>
+              <p class="text-slate-600 font-semibold">Project Delivery Manager • 2007–2010 • Paris</p>
+            </div>
+            <div class="text-right">
+              <div class="text-3xl font-black text-indigo-600">120+</div>
+              <div class="text-sm text-slate-600">Team Members</div>
+            </div>
           </div>
-          <div class="text-right">
-            <div class="text-3xl font-black text-indigo-600">120+</div>
-            <div class="text-sm text-slate-600">Team Members</div>
+          <p class="text-slate-700 mb-4">
+            <span class="lang-content lang-en active">Led the complete overhaul of Universal's music metadata and delivery systems. Architected a development factory platform for global operations.</span>
+            <span class="lang-content lang-de">Leitete die komplette Überholung von Universals Musik-Metadaten- und Liefersystemen. Entwickelte eine Entwicklungsfabrik-Plattform für globale Operationen.</span>
+            <span class="lang-content lang-fr">A dirigé la refonte complète des systèmes de métadonnées musicales et de livraison d'Universal. A conçu une plateforme d'usine de développement pour les opérations mondiales.</span>
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+            <div class="text-center p-3 bg-indigo-50 rounded-xl">
+              <div class="font-bold text-lg">120+ Engineers</div>
+              <div class="text-sm text-slate-600">Team Leadership</div>
+            </div>
+            <div class="text-center p-3 bg-indigo-50 rounded-xl">
+              <div class="font-bold text-lg">5 Teams</div>
+              <div class="text-sm text-slate-600">Architecture Head</div>
+            </div>
+            <div class="text-center p-3 bg-indigo-50 rounded-xl">
+              <div class="font-bold text-lg">Global Scale</div>
+              <div class="text-sm text-slate-600">Music Platform</div>
+            </div>
+            <div class="text-center p-3 bg-indigo-50 rounded-xl">
+              <div class="font-bold text-lg">3 Years</div>
+              <div class="text-sm text-slate-600">Project Duration</div>
+            </div>
           </div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div>
-            <h4 class="font-bold text-lg mb-2">
-              <span class="lang-content lang-en active">Challenge</span>
-              <span class="lang-content lang-de">Herausforderung</span>
-              <span class="lang-content lang-fr">Défi</span>
-            </h4>
-            <p class="text-slate-700">
-              <span class="lang-content lang-en active">Led the complete overhaul of Universal's music metadata and delivery systems, managing multiple teams across different functions.</span>
-              <span class="lang-content lang-de">Leitete die komplette Überholung von Universals Musik-Metadaten- und Liefersystemen und verwaltete mehrere Teams verschiedener Funktionen.</span>
-              <span class="lang-content lang-fr">A dirigé la refonte complète des systèmes de métadonnées musicales et de livraison d'Universal, gérant plusieurs équipes de différentes fonctions.</span>
-            </p>
+          <div class="text-hoa-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+            <span class="lang-content lang-en active">View Full Case Study</span>
+            <span class="lang-content lang-de">Vollständige Fallstudie ansehen</span>
+            <span class="lang-content lang-fr">Voir l'étude de cas complète</span>
+            <span>&rarr;</span>
           </div>
-          <div>
-            <h4 class="font-bold text-lg mb-2">
-              <span class="lang-content lang-en active">Solution</span>
-              <span class="lang-content lang-de">Lösung</span>
-              <span class="lang-content lang-fr">Solution</span>
-            </h4>
-            <p class="text-slate-700">
-              <span class="lang-content lang-en active">Architected and implemented a development factory platform managing all music/metadata/delivery and right holders for Universal's global operations.</span>
-              <span class="lang-content lang-de">Entwarf und implementierte eine Entwicklungsfabrik-Plattform zur Verwaltung aller Musik-/Metadaten-/Lieferungs- und Rechteinhaber für Universals globale Operationen.</span>
-              <span class="lang-content lang-fr">A conçu et implémenté une plateforme d'usine de développement gérant toute la musique/métadonnées/livraison et détenteurs de droits pour les opérations mondiales d'Universal.</span>
-            </p>
-          </div>
-        </div>
-        <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="text-center p-3 bg-slate-50 rounded-xl">
-            <div class="font-bold text-lg">120+ Engineers</div>
-            <div class="text-sm text-slate-600">Team Leadership</div>
-          </div>
-          <div class="text-center p-3 bg-slate-50 rounded-xl">
-            <div class="font-bold text-lg">5 Teams</div>
-            <div class="text-sm text-slate-600">Architecture Head</div>
-          </div>
-          <div class="text-center p-3 bg-slate-50 rounded-xl">
-            <div class="font-bold text-lg">Global Scale</div>
-            <div class="text-sm text-slate-600">Music Platform</div>
-          </div>
-          <div class="text-center p-3 bg-slate-50 rounded-xl">
-            <div class="font-bold text-lg">3 Years</div>
-            <div class="text-sm text-slate-600">Project Duration</div>
-          </div>
-        </div>
-      </article>
+        </article>
+      </a>
 
       <!-- Marketing Automation -->
-      <article class="bg-white rounded-3xl p-8 shadow-lg border">
-        <div class="flex items-start justify-between mb-4">
-          <div>
-            <h3 class="font-black text-2xl text-slate-900">Marketing Automation Platform</h3>
-            <p class="text-slate-600 font-semibold">Lead Dev & Architect • 2019–2022 • Berlin</p>
+      <a href="/case-studies/marketing-automation.html" class="block group">
+        <article class="bg-white rounded-3xl p-8 shadow-lg border group-hover:border-hoa-400 group-hover:shadow-xl transition-all duration-300">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h3 class="font-black text-2xl text-slate-900 group-hover:text-hoa-600 transition-colors">
+                <span class="lang-content lang-en active">Marketing Automation Platform</span>
+                <span class="lang-content lang-de">Marketing-Automatisierungsplattform</span>
+                <span class="lang-content lang-fr">Plateforme d'automatisation marketing</span>
+              </h3>
+              <p class="text-slate-600 font-semibold">Lead Dev & Architect • 2019–2022 • Berlin</p>
+            </div>
+            <div class="text-right">
+              <div class="text-3xl font-black text-green-600">€700k+</div>
+              <div class="text-sm text-slate-600">Monthly Budget</div>
+            </div>
           </div>
-          <div class="text-right">
-            <div class="text-3xl font-black text-green-600">€700k+</div>
-            <div class="text-sm text-slate-600">Monthly Budget</div>
+          <p class="text-slate-700 mb-4">
+            <span class="lang-content lang-en active">End-to-end Facebook marketing automation with AI creative generation, Selenium pipelines, and real-time performance dashboards. 35% ROI improvement.</span>
+            <span class="lang-content lang-de">End-to-End-Facebook-Marketing-Automatisierung mit KI-Creative-Generierung, Selenium-Pipelines und Echtzeit-Performance-Dashboards. 35% ROI-Verbesserung.</span>
+            <span class="lang-content lang-fr">Automatisation marketing Facebook de bout en bout avec génération créative IA, pipelines Selenium et tableaux de bord de performance en temps réel. 35% d'amélioration du ROI.</span>
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+            <div class="text-center p-3 bg-green-50 rounded-xl">
+              <div class="font-bold text-lg">€700k+/mo</div>
+              <div class="text-sm text-slate-600">Budget Optimized</div>
+            </div>
+            <div class="text-center p-3 bg-green-50 rounded-xl">
+              <div class="font-bold text-lg">35% ROI</div>
+              <div class="text-sm text-slate-600">Improvement</div>
+            </div>
+            <div class="text-center p-3 bg-green-50 rounded-xl">
+              <div class="font-bold text-lg">Automated</div>
+              <div class="text-sm text-slate-600">Ad Production</div>
+            </div>
+            <div class="text-center p-3 bg-green-50 rounded-xl">
+              <div class="font-bold text-lg">Real-time</div>
+              <div class="text-sm text-slate-600">Analytics</div>
+            </div>
           </div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div>
-            <h4 class="font-bold text-lg mb-2">
-              <span class="lang-content lang-en active">Challenge</span>
-              <span class="lang-content lang-de">Herausforderung</span>
-              <span class="lang-content lang-fr">Défi</span>
-            </h4>
-            <p class="text-slate-700">
-              <span class="lang-content lang-en active">Event company needed to automate Facebook marketing for painting events across multiple cities with massive advertising spend efficiency.</span>
-              <span class="lang-content lang-de">Eventunternehmen musste Facebook-Marketing für Malevents in mehreren Städten mit massiver Werbeausgaben-Effizienz automatisieren.</span>
-              <span class="lang-content lang-fr">L'entreprise d'événements devait automatiser le marketing Facebook pour les événements de peinture dans plusieurs villes avec une efficacité massive des dépenses publicitaires.</span>
-            </p>
+          <div class="text-hoa-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+            <span class="lang-content lang-en active">View Full Case Study</span>
+            <span class="lang-content lang-de">Vollständige Fallstudie ansehen</span>
+            <span class="lang-content lang-fr">Voir l'étude de cas complète</span>
+            <span>&rarr;</span>
           </div>
-          <div>
-            <h4 class="font-bold text-lg mb-2">
-              <span class="lang-content lang-en active">Solution</span>
-              <span class="lang-content lang-de">Lösung</span>
-              <span class="lang-content lang-fr">Solution</span>
-            </h4>
-            <p class="text-slate-700">
-              <span class="lang-content lang-en active">Built end-to-end automation: Facebook Events sync, AI creative generation, Selenium pipelines, and real-time performance dashboards.</span>
-              <span class="lang-content lang-de">Baute End-zu-End-Automatisierung: Facebook Events Sync, KI-Creative-Generierung, Selenium-Pipelines und Echtzeit-Performance-Dashboards.</span>
-              <span class="lang-content lang-fr">A construit une automatisation de bout en bout : synchronisation Facebook Events, génération créative IA, pipelines Selenium et tableaux de bord de performance en temps réel.</span>
-            </p>
-          </div>
-        </div>
-        <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="text-center p-3 bg-green-50 rounded-xl">
-            <div class="font-bold text-lg">€700k+/mo</div>
-            <div class="text-sm text-slate-600">Budget Optimized</div>
-          </div>
-          <div class="text-center p-3 bg-green-50 rounded-xl">
-            <div class="font-bold text-lg">35% ROI</div>
-            <div class="text-sm text-slate-600">Improvement</div>
-          </div>
-          <div class="text-center p-3 bg-green-50 rounded-xl">
-            <div class="font-bold text-lg">Automated</div>
-            <div class="text-sm text-slate-600">Ad Production</div>
-          </div>
-          <div class="text-center p-3 bg-green-50 rounded-xl">
-            <div class="font-bold text-lg">Real-time</div>
-            <div class="text-sm text-slate-600">Analytics</div>
-          </div>
-        </div>
-      </article>
+        </article>
+      </a>
 
       <!-- Vodafone Live -->
-      <article class="bg-white rounded-3xl p-8 shadow-lg border">
-        <div class="flex items-start justify-between mb-4">
-          <div>
-            <h3 class="font-black text-2xl text-slate-900">Vodafone Live! Platform</h3>
-            <p class="text-slate-600 font-semibold">Technical Leader • 2004–2007 • Paris</p>
+      <a href="/case-studies/vodafone-live.html" class="block group">
+        <article class="bg-white rounded-3xl p-8 shadow-lg border group-hover:border-hoa-400 group-hover:shadow-xl transition-all duration-300">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h3 class="font-black text-2xl text-slate-900 group-hover:text-hoa-600 transition-colors">Vodafone Live!</h3>
+              <p class="text-slate-600 font-semibold">Technical Leader • 2004–2007 • Paris</p>
+            </div>
+            <div class="text-right">
+              <div class="text-3xl font-black text-blue-600">30M+</div>
+              <div class="text-sm text-slate-600">Daily Users</div>
+            </div>
           </div>
-          <div class="text-right">
-            <div class="text-3xl font-black text-blue-600">30M+</div>
-            <div class="text-sm text-slate-600">Daily Users</div>
+          <p class="text-slate-700 mb-4">
+            <span class="lang-content lang-en active">Scalable infrastructure for FIFA World Cup 2006 with real-time billing systems. Maintained 99.9% uptime handling 30M+ daily page views.</span>
+            <span class="lang-content lang-de">Skalierbare Infrastruktur für die FIFA-WM 2006 mit Echtzeit-Abrechnungssystemen. 99,9% Verfügbarkeit bei 30M+ täglichen Seitenaufrufen.</span>
+            <span class="lang-content lang-fr">Infrastructure évolutive pour la Coupe du Monde FIFA 2006 avec systèmes de facturation en temps réel. 99,9% de disponibilité avec 30M+ de pages vues quotidiennes.</span>
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+            <div class="text-center p-3 bg-blue-50 rounded-xl">
+              <div class="font-bold text-lg">30M+</div>
+              <div class="text-sm text-slate-600">Daily Page Views</div>
+            </div>
+            <div class="text-center p-3 bg-blue-50 rounded-xl">
+              <div class="font-bold text-lg">FIFA 2006</div>
+              <div class="text-sm text-slate-600">High-Traffic Event</div>
+            </div>
+            <div class="text-center p-3 bg-blue-50 rounded-xl">
+              <div class="font-bold text-lg">99.9%</div>
+              <div class="text-sm text-slate-600">Uptime</div>
+            </div>
+            <div class="text-center p-3 bg-blue-50 rounded-xl">
+              <div class="font-bold text-lg">Real-time</div>
+              <div class="text-sm text-slate-600">Billing</div>
+            </div>
           </div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div>
-            <h4 class="font-bold text-lg mb-2">
-              <span class="lang-content lang-en active">Challenge</span>
-              <span class="lang-content lang-de">Herausforderung</span>
-              <span class="lang-content lang-fr">Défi</span>
-            </h4>
-            <p class="text-slate-700">
-              <span class="lang-content lang-en active">Handle massive traffic spikes during FIFA World Cup 2006, managing tracking and billing for Vodafone Live! mobile platform.</span>
-              <span class="lang-content lang-de">Bewältigung massiver Traffic-Spitzen während der FIFA-WM 2006, Verwaltung von Tracking und Abrechnung für die Vodafone Live! Mobile-Plattform.</span>
-              <span class="lang-content lang-fr">Gérer les pics de trafic massifs pendant la Coupe du Monde FIFA 2006, gérant le suivi et la facturation pour la plateforme mobile Vodafone Live!</span>
-            </p>
+          <div class="text-hoa-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+            <span class="lang-content lang-en active">View Full Case Study</span>
+            <span class="lang-content lang-de">Vollständige Fallstudie ansehen</span>
+            <span class="lang-content lang-fr">Voir l'étude de cas complète</span>
+            <span>&rarr;</span>
           </div>
-          <div>
-            <h4 class="font-bold text-lg mb-2">
-              <span class="lang-content lang-en active">Solution</span>
-              <span class="lang-content lang-de">Lösung</span>
-              <span class="lang-content lang-fr">Solution</span>
-            </h4>
-            <p class="text-slate-700">
-              <span class="lang-content lang-en active">Architected scalable infrastructure and real-time billing systems to handle unprecedented mobile traffic during major sporting events.</span>
-              <span class="lang-content lang-de">Entwarf skalierbare Infrastruktur und Echtzeit-Abrechnungssysteme für beispiellosen mobilen Traffic während großer Sportereignisse.</span>
-              <span class="lang-content lang-fr">A conçu une infrastructure évolutive et des systèmes de facturation en temps réel pour gérer un trafic mobile sans précédent lors d'événements sportifs majeurs.</span>
-            </p>
-          </div>
-        </div>
-        <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="text-center p-3 bg-blue-50 rounded-xl">
-            <div class="font-bold text-lg">30M+</div>
-            <div class="text-sm text-slate-600">Daily Page Views</div>
-          </div>
-          <div class="text-center p-3 bg-blue-50 rounded-xl">
-            <div class="font-bold text-lg">FIFA 2006</div>
-            <div class="text-sm text-slate-600">High-Traffic Event</div>
-          </div>
-          <div class="text-center p-3 bg-blue-50 rounded-xl">
-            <div class="font-bold text-lg">99.9%</div>
-            <div class="text-sm text-slate-600">Uptime</div>
-          </div>
-          <div class="text-center p-3 bg-blue-50 rounded-xl">
-            <div class="font-bold text-lg">Real-time</div>
-            <div class="text-sm text-slate-600">Billing</div>
-          </div>
-        </div>
-      </article>
+        </article>
+      </a>
 
       <!-- AI Trading Platform -->
-      <article class="bg-white rounded-3xl p-8 shadow-lg border">
-        <div class="flex items-start justify-between mb-4">
-          <div>
-            <h3 class="font-black text-2xl text-slate-900">AI Trading & Analytics Platform</h3>
-            <p class="text-slate-600 font-semibold">Product Design & Engineering • 2018–2021 • Remote</p>
+      <a href="/case-studies/ai-trading-platform.html" class="block group">
+        <article class="bg-white rounded-3xl p-8 shadow-lg border group-hover:border-hoa-400 group-hover:shadow-xl transition-all duration-300">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h3 class="font-black text-2xl text-slate-900 group-hover:text-hoa-600 transition-colors">
+                <span class="lang-content lang-en active">AI Trading & Analytics Platform</span>
+                <span class="lang-content lang-de">KI-Trading- & Analytics-Plattform</span>
+                <span class="lang-content lang-fr">Plateforme de trading & analytics IA</span>
+              </h3>
+              <p class="text-slate-600 font-semibold">Product Design & Engineering • 2018–2021 • Remote</p>
+            </div>
+            <div class="text-right">
+              <div class="text-3xl font-black text-purple-600">45%</div>
+              <div class="text-sm text-slate-600">ROI Increase</div>
+            </div>
           </div>
-          <div class="text-right">
-            <div class="text-3xl font-black text-purple-600">45%</div>
-            <div class="text-sm text-slate-600">ROI Increase</div>
+          <p class="text-slate-700 mb-4">
+            <span class="lang-content lang-en active">Serverless AWS architecture with TensorFlow/PyTorch models for automated cryptocurrency trading across multiple exchanges.</span>
+            <span class="lang-content lang-de">Serverlose AWS-Architektur mit TensorFlow/PyTorch-Modellen für automatisierten Kryptowährungshandel über mehrere Börsen.</span>
+            <span class="lang-content lang-fr">Architecture AWS serverless avec modèles TensorFlow/PyTorch pour le trading automatisé de cryptomonnaies sur plusieurs échanges.</span>
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+            <div class="text-center p-3 bg-purple-50 rounded-xl">
+              <div class="font-bold text-lg">45% ROI</div>
+              <div class="text-sm text-slate-600">Trading Efficiency</div>
+            </div>
+            <div class="text-center p-3 bg-purple-50 rounded-xl">
+              <div class="font-bold text-lg">AWS Lambda</div>
+              <div class="text-sm text-slate-600">Serverless</div>
+            </div>
+            <div class="text-center p-3 bg-purple-50 rounded-xl">
+              <div class="font-bold text-lg">Multi-Exchange</div>
+              <div class="text-sm text-slate-600">Integrations</div>
+            </div>
+            <div class="text-center p-3 bg-purple-50 rounded-xl">
+              <div class="font-bold text-lg">Real-time</div>
+              <div class="text-sm text-slate-600">ML Models</div>
+            </div>
           </div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div>
-            <h4 class="font-bold text-lg mb-2">
-              <span class="lang-content lang-en active">Challenge</span>
-              <span class="lang-content lang-de">Herausforderung</span>
-              <span class="lang-content lang-fr">Défi</span>
-            </h4>
-            <p class="text-slate-700">
-              <span class="lang-content lang-en active">Build automated trading platform with ML forecasting across multiple cryptocurrency exchanges with high-frequency demands.</span>
-              <span class="lang-content lang-de">Aufbau einer automatisierten Trading-Plattform mit ML-Prognosen über mehrere Kryptowährungsbörsen mit Hochfrequenz-Anforderungen.</span>
-              <span class="lang-content lang-fr">Construire une plateforme de trading automatisée avec prévisions ML sur plusieurs échanges de cryptomonnaies avec des exigences haute fréquence.</span>
-            </p>
+          <div class="text-hoa-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+            <span class="lang-content lang-en active">View Full Case Study</span>
+            <span class="lang-content lang-de">Vollständige Fallstudie ansehen</span>
+            <span class="lang-content lang-fr">Voir l'étude de cas complète</span>
+            <span>&rarr;</span>
           </div>
-          <div>
-            <h4 class="font-bold text-lg mb-2">
-              <span class="lang-content lang-en active">Solution</span>
-              <span class="lang-content lang-de">Lösung</span>
-              <span class="lang-content lang-fr">Solution</span>
-            </h4>
-            <p class="text-slate-700">
-              <span class="lang-content lang-en active">Serverless AWS architecture with TensorFlow/PyTorch models, real-time data processing, and exchange API integrations.</span>
-              <span class="lang-content lang-de">Serverlose AWS-Architektur mit TensorFlow/PyTorch-Modellen, Echtzeit-Datenverarbeitung und Exchange-API-Integrationen.</span>
-              <span class="lang-content lang-fr">Architecture AWS serverless avec modèles TensorFlow/PyTorch, traitement de données en temps réel et intégrations API d'échange.</span>
-            </p>
+        </article>
+      </a>
+
+      <!-- HeyPet -->
+      <a href="/case-studies/heypet.html" class="block group">
+        <article class="bg-white rounded-3xl p-8 shadow-lg border group-hover:border-hoa-400 group-hover:shadow-xl transition-all duration-300">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h3 class="font-black text-2xl text-slate-900 group-hover:text-hoa-600 transition-colors">HeyPet</h3>
+              <p class="text-slate-600 font-semibold">Co-founder & CTO • 2012–2016 • Paris</p>
+            </div>
+            <div class="text-right">
+              <div class="text-3xl font-black text-orange-600">4</div>
+              <div class="text-sm text-slate-600">
+                <span class="lang-content lang-en active">Years</span>
+                <span class="lang-content lang-de">Jahre</span>
+                <span class="lang-content lang-fr">Années</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="text-center p-3 bg-purple-50 rounded-xl">
-            <div class="font-bold text-lg">45% ROI</div>
-            <div class="text-sm text-slate-600">Trading Efficiency</div>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-bold text-lg mb-2">
+                <span class="lang-content lang-en active">Challenge</span>
+                <span class="lang-content lang-de">Herausforderung</span>
+                <span class="lang-content lang-fr">Défi</span>
+              </h4>
+              <p class="text-slate-700">
+                <span class="lang-content lang-en active">Build a social network connecting pet owners with pet carers, featuring real-time messaging and location-based services.</span>
+                <span class="lang-content lang-de">Aufbau eines sozialen Netzwerks, das Tierbesitzer mit Tierpflegern verbindet, mit Echtzeit-Messaging und standortbasierten Diensten.</span>
+                <span class="lang-content lang-fr">Créer un réseau social connectant les propriétaires d'animaux avec les gardiens, avec messagerie en temps réel et services géolocalisés.</span>
+              </p>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-2">
+                <span class="lang-content lang-en active">Solution</span>
+                <span class="lang-content lang-de">Lösung</span>
+                <span class="lang-content lang-fr">Solution</span>
+              </h4>
+              <p class="text-slate-700">
+                <span class="lang-content lang-en active">Full-featured social platform with responsive API-based backend, real-time messaging, OAuth authentication, and Docker deployment.</span>
+                <span class="lang-content lang-de">Voll ausgestattete Social-Plattform mit responsivem API-basiertem Backend, Echtzeit-Messaging, OAuth-Authentifizierung und Docker-Deployment.</span>
+                <span class="lang-content lang-fr">Plateforme sociale complète avec backend API responsive, messagerie en temps réel, authentification OAuth et déploiement Docker.</span>
+              </p>
+            </div>
           </div>
-          <div class="text-center p-3 bg-purple-50 rounded-xl">
-            <div class="font-bold text-lg">AWS Lambda</div>
-            <div class="text-sm text-slate-600">Serverless</div>
+          <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="text-center p-3 bg-orange-50 rounded-xl">
+              <div class="font-bold text-lg">Angular.js</div>
+              <div class="text-sm text-slate-600">Frontend</div>
+            </div>
+            <div class="text-center p-3 bg-orange-50 rounded-xl">
+              <div class="font-bold text-lg">Symfony</div>
+              <div class="text-sm text-slate-600">Backend</div>
+            </div>
+            <div class="text-center p-3 bg-orange-50 rounded-xl">
+              <div class="font-bold text-lg">OAuth 2.0</div>
+              <div class="text-sm text-slate-600">Authentication</div>
+            </div>
+            <div class="text-center p-3 bg-orange-50 rounded-xl">
+              <div class="font-bold text-lg">Docker</div>
+              <div class="text-sm text-slate-600">Infrastructure</div>
+            </div>
           </div>
-          <div class="text-center p-3 bg-purple-50 rounded-xl">
-            <div class="font-bold text-lg">Multi-Exchange</div>
-            <div class="text-sm text-slate-600">Integrations</div>
+          <div class="mt-4 text-hoa-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+            <span class="lang-content lang-en active">View Full Case Study</span>
+            <span class="lang-content lang-de">Vollständige Fallstudie ansehen</span>
+            <span class="lang-content lang-fr">Voir l'étude de cas complète</span>
+            <span>&rarr;</span>
           </div>
-          <div class="text-center p-3 bg-purple-50 rounded-xl">
-            <div class="font-bold text-lg">Real-time</div>
-            <div class="text-sm text-slate-600">ML Models</div>
+        </article>
+      </a>
+
+      <!-- Scanbots -->
+      <a href="/case-studies/scanbots.html" class="block group">
+        <article class="bg-white rounded-3xl p-8 shadow-lg border group-hover:border-hoa-400 group-hover:shadow-xl transition-all duration-300">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h3 class="font-black text-2xl text-slate-900 group-hover:text-hoa-600 transition-colors">Scanbots</h3>
+              <p class="text-slate-600 font-semibold">[Role to be provided] • [Date range to be provided]</p>
+            </div>
+            <div class="text-right">
+              <div class="text-3xl font-black text-cyan-600">—</div>
+              <div class="text-sm text-slate-600">
+                <span class="lang-content lang-en active">[Metric]</span>
+                <span class="lang-content lang-de">[Metrik]</span>
+                <span class="lang-content lang-fr">[Métrique]</span>
+              </div>
+            </div>
           </div>
-        </div>
-      </article>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-bold text-lg mb-2">
+                <span class="lang-content lang-en active">Challenge</span>
+                <span class="lang-content lang-de">Herausforderung</span>
+                <span class="lang-content lang-fr">Défi</span>
+              </h4>
+              <p class="text-slate-700">
+                <span class="lang-content lang-en active">[Challenge description to be provided]</span>
+                <span class="lang-content lang-de">[Herausforderungsbeschreibung wird bereitgestellt]</span>
+                <span class="lang-content lang-fr">[Description du défi à fournir]</span>
+              </p>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-2">
+                <span class="lang-content lang-en active">Solution</span>
+                <span class="lang-content lang-de">Lösung</span>
+                <span class="lang-content lang-fr">Solution</span>
+              </h4>
+              <p class="text-slate-700">
+                <span class="lang-content lang-en active">[Solution description to be provided]</span>
+                <span class="lang-content lang-de">[Lösungsbeschreibung wird bereitgestellt]</span>
+                <span class="lang-content lang-fr">[Description de la solution à fournir]</span>
+              </p>
+            </div>
+          </div>
+          <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="text-center p-3 bg-cyan-50 rounded-xl">
+              <div class="font-bold text-lg">[Tech 1]</div>
+              <div class="text-sm text-slate-600">[Category]</div>
+            </div>
+            <div class="text-center p-3 bg-cyan-50 rounded-xl">
+              <div class="font-bold text-lg">[Tech 2]</div>
+              <div class="text-sm text-slate-600">[Category]</div>
+            </div>
+            <div class="text-center p-3 bg-cyan-50 rounded-xl">
+              <div class="font-bold text-lg">[Tech 3]</div>
+              <div class="text-sm text-slate-600">[Category]</div>
+            </div>
+            <div class="text-center p-3 bg-cyan-50 rounded-xl">
+              <div class="font-bold text-lg">[Tech 4]</div>
+              <div class="text-sm text-slate-600">[Category]</div>
+            </div>
+          </div>
+          <div class="mt-4 text-hoa-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+            <span class="lang-content lang-en active">View Full Case Study</span>
+            <span class="lang-content lang-de">Vollständige Fallstudie ansehen</span>
+            <span class="lang-content lang-fr">Voir l'étude de cas complète</span>
+            <span>&rarr;</span>
+          </div>
+        </article>
+      </a>
     </div>
   </section>
 
@@ -1211,8 +1365,8 @@
       <!-- Swiss Family Office -->
       <blockquote class="bg-white rounded-3xl p-8 shadow-lg border">
         <div class="flex items-start gap-4">
-          <div class="w-12 h-12 bg-hoa-100 rounded-full flex items-center justify-center flex-shrink-0">
-            <span class="text-xl">🏦</span>
+          <div class="icon-badge icon-badge--sm flex-shrink-0">
+            <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
           </div>
           <div class="flex-1">
             <p class="text-slate-700 text-lg italic mb-4">
@@ -1237,8 +1391,8 @@
       <!-- German Private Equity -->
       <blockquote class="bg-white rounded-3xl p-8 shadow-lg border">
         <div class="flex items-start gap-4">
-          <div class="w-12 h-12 bg-hoa-100 rounded-full flex items-center justify-center flex-shrink-0">
-            <span class="text-xl">💎</span>
+          <div class="icon-badge icon-badge--sm flex-shrink-0">
+            <i class="fa-solid fa-gem" aria-hidden="true"></i>
           </div>
           <div class="flex-1">
             <p class="text-slate-700 text-lg italic mb-4">
@@ -1263,8 +1417,8 @@
       <!-- Luxury Brand Platform -->
       <blockquote class="bg-white rounded-3xl p-8 shadow-lg border">
         <div class="flex items-start gap-4">
-          <div class="w-12 h-12 bg-hoa-100 rounded-full flex items-center justify-center flex-shrink-0">
-            <span class="text-xl">🏰</span>
+          <div class="icon-badge icon-badge--sm flex-shrink-0">
+            <i class="fa-solid fa-crown" aria-hidden="true"></i>
           </div>
           <div class="flex-1">
             <p class="text-slate-700 text-lg italic mb-4">
@@ -1289,8 +1443,8 @@
       <!-- Innovation Consulting -->
       <blockquote class="bg-white rounded-3xl p-8 shadow-lg border">
         <div class="flex items-start gap-4">
-          <div class="w-12 h-12 bg-hoa-100 rounded-full flex items-center justify-center flex-shrink-0">
-            <span class="text-xl">🌟</span>
+          <div class="icon-badge icon-badge--sm flex-shrink-0">
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
           </div>
           <div class="flex-1">
             <p class="text-slate-700 text-lg italic mb-4">
@@ -1436,7 +1590,7 @@
             <select name="location" class="form-input">
               <option value="" data-i18n="select_location">Select location...</option>
               <option value="germany" data-i18n="location_germany">🇩🇪 Germany</option>
-              <option value="switzerland" data-i18n="location_switzerland">🇨🇭 Switzerland (+20% rate)</option>
+              <option value="switzerland" data-i18n="location_switzerland">🇨🇭 Switzerland</option>
               <option value="france" data-i18n="location_france">🇫🇷 France</option>
               <option value="remote" data-i18n="location_remote">Remote/Other</option>
             </select>
@@ -1455,9 +1609,9 @@
 
           <!-- Submit Button -->
           <button type="submit" class="w-full px-6 py-4 bg-hoa-600 text-white font-semibold rounded-xl hover:bg-hoa-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-            <span class="lang-content lang-en active">🚀 Get Free Quote & Timeline</span>
-            <span class="lang-content lang-de">🚀 Kostenloses Angebot & Zeitplan erhalten</span>
-            <span class="lang-content lang-fr">🚀 Obtenir un devis gratuit et un calendrier</span>
+            <span class="lang-content lang-en active"><span class="icon-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span>Get Free Quote & Timeline</span>
+            <span class="lang-content lang-de"><span class="icon-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span>Kostenloses Angebot & Zeitplan erhalten</span>
+            <span class="lang-content lang-fr"><span class="icon-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span>Obtenir un devis gratuit et un calendrier</span>
           </button>
           
           <div class="text-center text-sm text-slate-500">
@@ -1479,11 +1633,11 @@
           </h3>
           <div class="space-y-3">
             <div class="flex items-center gap-3">
-              <span class="text-hoa-600">📧</span>
+              <span class="text-hoa-600 icon-inline"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
               <a href="mailto:jc@houseofagile.com" class="text-hoa-700 font-semibold hover:underline">jc@houseofagile.com</a>
             </div>
             <div class="flex items-center gap-3">
-              <span class="text-hoa-600">💬</span>
+              <span class="text-hoa-600 icon-inline"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i></span>
               <span class="text-slate-700">
                 <span class="lang-content lang-en active">24h response guarantee</span>
                 <span class="lang-content lang-de">24h Antwort-Garantie</span>
@@ -1491,7 +1645,7 @@
               </span>
             </div>
             <div class="flex items-center gap-3">
-              <span class="text-hoa-600">🔗</span>
+              <span class="text-hoa-600 icon-inline"><i class="fa-solid fa-link" aria-hidden="true"></i></span>
               <a href="https://www.linkedin.com/in/jeanchristophemeillaud/" class="text-hoa-700 font-semibold hover:underline">LinkedIn</a>
             </div>
           </div>
@@ -1500,9 +1654,9 @@
         <!-- What Happens Next -->
         <div class="p-6 rounded-2xl bg-slate-50 border">
           <h3 class="font-bold text-xl mb-4">
-            <span class="lang-content lang-en active">📋 What Happens Next?</span>
-            <span class="lang-content lang-de">📋 Wie geht es weiter?</span>
-            <span class="lang-content lang-fr">📋 Que se passe-t-il ensuite?</span>
+            <span class="lang-content lang-en active"><span class="icon-inline"><i class="fa-solid fa-list-check" aria-hidden="true"></i></span>What Happens Next?</span>
+            <span class="lang-content lang-de"><span class="icon-inline"><i class="fa-solid fa-list-check" aria-hidden="true"></i></span>Wie geht es weiter?</span>
+            <span class="lang-content lang-fr"><span class="icon-inline"><i class="fa-solid fa-list-check" aria-hidden="true"></i></span>Que se passe-t-il ensuite?</span>
           </h3>
           <ol class="space-y-3 text-sm text-slate-700">
             <li class="flex gap-3">
