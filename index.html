@@ -26,11 +26,43 @@
   <meta property="og:description" content="House of Agile delivers premium technology services to private clients in Switzerland and Germany. Our expert collective specializes in digital transformation, technical leadership, and innovative solutions for discerning clients seeking excellence.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://houseofagile.com/">
-  <meta property="og:image" content="https://houseofagile.com/favicon.svg">
+  <meta property="og:image" content="https://houseofagile.com/assets/images/og-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://houseofagile.com/assets/images/og-preview.png">
+
+  <link rel="canonical" href="https://houseofagile.com/">
 
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "Organization", "name": "House of Agile", "url": "https://houseofagile.com", "logo": "https://houseofagile.com/assets/hoa-logo.svg", "description": "Premium technology services for private clients in Switzerland and Germany", "areaServed": ["Switzerland", "Germany"], "founder": {"@type": "Person", "name": "Jean-Christophe Meillaud"}, "email": "mailto:jc@houseofagile.com"}
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "House of Agile",
+    "image": "https://houseofagile.com/assets/hoa-logo.svg",
+    "url": "https://houseofagile.com",
+    "telephone": "",
+    "email": "jc@houseofagile.com",
+    "description": "Premium technology consulting and software development services for private clients in Switzerland and Germany. Specializing in full-stack development, DevOps, CTO services, and digital transformation.",
+    "priceRange": "€€€",
+    "areaServed": [
+      {"@type": "Country", "name": "Switzerland"},
+      {"@type": "Country", "name": "Germany"}
+    ],
+    "serviceType": ["Software Development", "DevOps Consulting", "CTO Services", "Technical Leadership", "Web Application Development"],
+    "founder": {
+      "@type": "Person",
+      "name": "Jean-Christophe Meillaud",
+      "jobTitle": "Founder & Lead Consultant"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/house-of-agile"
+    ]
+  }
   </script>
 
   <link rel="stylesheet" href="/assets/tailwind.css">
@@ -68,11 +100,14 @@
         nav_pricing: "Pricing",
         nav_testimonials: "Testimonials",
         nav_contact: "Contact",
+        nav_cta: "Free Audit →",
+        nav_cta_prefix: "Free ",
+        nav_cta_short: "Audit →",
         hero_title: "Premium",
         hero_subtitle: " technology services",
         hero_description: "House of Agile is a collective of expert technology professionals serving discerning private clients across Switzerland and Germany. Led by Jean‑Christophe Meillaud with 20+ years of enterprise experience, we deliver exceptional results through our curated network of specialists.",
         hero_tagline: "Exclusivity through excellence.",
-        cta_consultation: "Request Consultation",
+        cta_consultation: "Get Your Free Technical Audit →",
         cta_expertise: "Our Expertise",
         // Form translations
         select_project_type: "Select project type...",
@@ -101,11 +136,14 @@
         nav_pricing: "Preise",
         nav_testimonials: "Referenzen",
         nav_contact: "Kontakt",
+        nav_cta: "Gratis-Audit →",
+        nav_cta_prefix: "Gratis-",
+        nav_cta_short: "Audit →",
         hero_title: "Premium",
         hero_subtitle: " Technologie-Dienstleistungen",
         hero_description: "House of Agile ist ein Kollektiv von Technologie-Experten, das anspruchsvolle Privatkunden in der Schweiz und Deutschland bedient. Unter der Leitung von Jean‑Christophe Meillaud mit über 20 Jahren Unternehmenserfahrung liefern wir außergewöhnliche Ergebnisse durch unser kuratiertes Netzwerk von Spezialisten.",
         hero_tagline: "Exklusivität durch Exzellenz.",
-        cta_consultation: "Beratung anfragen",
+        cta_consultation: "Kostenloses Technik-Audit anfragen →",
         cta_expertise: "Unsere Expertise",
         // Form translations
         select_project_type: "Projekttyp auswählen...",
@@ -134,11 +172,14 @@
         nav_pricing: "Tarifs",
         nav_testimonials: "Témoignages",
         nav_contact: "Contact",
+        nav_cta: "Audit Gratuit →",
+        nav_cta_prefix: "Audit ",
+        nav_cta_short: "Gratuit →",
         hero_title: "Services",
         hero_subtitle: " technologiques premium",
         hero_description: "House of Agile est un collectif de professionnels technologiques experts au service de clients privés exigeants en Suisse et en Allemagne. Dirigé par Jean‑Christophe Meillaud avec plus de 20 ans d'expérience en entreprise, nous obtenons des résultats exceptionnels grâce à notre réseau sélectionné de spécialistes.",
         hero_tagline: "L'exclusivité par l'excellence.",
-        cta_consultation: "Demander une consultation",
+        cta_consultation: "Obtenez votre audit technique gratuit →",
         cta_expertise: "Notre expertise",
         // Form translations
         select_project_type: "Sélectionnez le type de projet...",
@@ -164,6 +205,9 @@
     };
 
     function switchLanguage(lang) {
+      // Save to localStorage for persistence across pages
+      localStorage.setItem('hoaLang', lang);
+
       // Update active language button styling (match service pages)
       document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.remove('bg-hoa-200', 'text-hoa-900');
@@ -196,11 +240,78 @@
       document.querySelectorAll(`.lang-${lang}`).forEach(content => {
         content.classList.add('active');
       });
+
+      // Update internal links to preserve language across navigation
+      updateInternalLinks(lang);
     }
 
-    // Initialize with English
+    function updateInternalLinks(lang) {
+      // For English (default), remove any lang params for clean URLs
+      // For other languages, add ?lang= param to internal links
+      document.querySelectorAll('a[href]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href) return;
+
+        // Skip external links, anchors-only, and javascript/mailto links
+        if (href.startsWith('http') || href.startsWith('javascript:') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+
+        // Handle anchor-only links (e.g., #services)
+        if (href.startsWith('#')) return;
+
+        // Parse the URL to handle existing params
+        let url;
+        try {
+          // Handle relative URLs
+          if (href.startsWith('/') || href.includes('.html')) {
+            url = new URL(href, window.location.origin);
+          } else {
+            return; // Skip other relative paths like assets
+          }
+        } catch (e) {
+          return;
+        }
+
+        // Update or remove lang parameter
+        if (lang === 'en') {
+          url.searchParams.delete('lang');
+        } else {
+          url.searchParams.set('lang', lang);
+        }
+
+        // Reconstruct the href (keep it relative if it was)
+        let newHref = url.pathname + url.search + url.hash;
+        if (href.startsWith('./')) {
+          newHref = '.' + newHref;
+        }
+        link.setAttribute('href', newHref);
+      });
+    }
+
+    // Detect initial language: URL param > localStorage > default (English)
+    function getInitialLanguage() {
+      const validLanguages = ['en', 'de', 'fr'];
+
+      // 1. Check URL parameter first (highest priority)
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlLang = urlParams.get('lang');
+      if (urlLang && validLanguages.includes(urlLang)) {
+        return urlLang;
+      }
+
+      // 2. Check localStorage (saved from previous session)
+      const storedLang = localStorage.getItem('hoaLang');
+      if (storedLang && validLanguages.includes(storedLang)) {
+        return storedLang;
+      }
+
+      // 3. Default to English
+      return 'en';
+    }
+
+    // Initialize with detected language
     document.addEventListener('DOMContentLoaded', () => {
-      switchLanguage('en');
+      const initialLang = getInitialLanguage();
+      switchLanguage(initialLang);
       setupFormSubmission();
     });
 
@@ -301,14 +412,17 @@
             <button onclick="switchLanguage('de')" class="lang-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-hoa-100 hover:bg-hoa-200 text-hoa-800">DE</button>
             <button onclick="switchLanguage('fr')" class="lang-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-hoa-100 hover:bg-hoa-200 text-hoa-800">FR</button>
           </div>
-          <!-- Navigation -->
+          <!-- Navigation Links (desktop only) -->
           <div class="hidden md:flex items-center space-x-6">
             <a href="#services" class="hover:text-hoa-600 text-slate-700 transition-colors" data-i18n="nav_services">Services</a>
             <a href="#projects" class="hover:text-hoa-600 text-slate-700 transition-colors" data-i18n="nav_projects">Projects</a>
             <a href="#pricing" class="hover:text-hoa-600 text-slate-700 transition-colors" data-i18n="nav_pricing">Pricing</a>
             <a href="#testimonials" class="hover:text-hoa-600 text-slate-700 transition-colors" data-i18n="nav_testimonials">Testimonials</a>
-            <a href="#consultation" class="btn-primary" data-i18n="nav_contact">Contact</a>
           </div>
+          <!-- CTA Button (always visible, adapts to screen size) -->
+          <a href="#consultation" class="btn-primary text-sm md:text-base px-3 py-2 md:px-5 md:py-2.5 font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all" data-i18n="nav_cta">
+            <span class="hidden sm:inline" data-i18n="nav_cta_prefix">Free </span><span data-i18n="nav_cta_short">Audit →</span>
+          </a>
         </div>
       </div>
     </div>
@@ -329,8 +443,8 @@
             <span class="inline-block font-semibold text-hoa-700" data-i18n="hero_tagline">Exclusivity through excellence.</span>
           </p>
           <div class="mt-8 flex flex-wrap gap-4">
-            <a href="#consultation" class="btn-primary" data-i18n="cta_consultation">
-              Request Consultation
+            <a href="#consultation" class="btn-primary text-lg px-8 py-4 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all" data-i18n="cta_consultation">
+              Get Your Free Technical Audit →
             </a>
             <a href="/Jean-Christophe-Meillaud-CV.pdf" class="btn-secondary" data-i18n="cta_expertise">
               Our Expertise
@@ -1287,14 +1401,14 @@
           <div class="flex items-start justify-between mb-4">
             <div>
               <h3 class="font-black text-2xl text-slate-900 group-hover:text-hoa-600 transition-colors">Scanbots</h3>
-              <p class="text-slate-600 font-semibold">[Role to be provided] • [Date range to be provided]</p>
+              <p class="text-slate-600 font-semibold">Co-founder & CTO • 2017–2018 • Warsaw</p>
             </div>
             <div class="text-right">
-              <div class="text-3xl font-black text-cyan-600">—</div>
+              <div class="text-3xl font-black text-cyan-600">€2M+</div>
               <div class="text-sm text-slate-600">
-                <span class="lang-content lang-en active">[Metric]</span>
-                <span class="lang-content lang-de">[Metrik]</span>
-                <span class="lang-content lang-fr">[Métrique]</span>
+                <span class="lang-content lang-en active">Funding Raised</span>
+                <span class="lang-content lang-de">Finanzierung</span>
+                <span class="lang-content lang-fr">Financement</span>
               </div>
             </div>
           </div>
@@ -1306,11 +1420,18 @@
                 <span class="lang-content lang-fr">Défi</span>
               </h4>
               <p class="text-slate-700">
-                <span class="lang-content lang-en active">[Challenge description to be provided]</span>
-                <span class="lang-content lang-de">[Herausforderungsbeschreibung wird bereitgestellt]</span>
-                <span class="lang-content lang-fr">[Description du défi à fournir]</span>
+                <span class="lang-content lang-en active">
+                  Large-scale infrastructure inspections were costly, risky and too slow. Manual methods couldn't handle growing asset volumes. (128 characters)
+                </span>
+                <span class="lang-content lang-de">
+                  Inspektionen großer Infrastruktur waren teuer, riskant und zu langsam. Manuelle Methoden hielten mit dem Anlagenwachstum nicht mit. (129 Zeichen)
+                </span>
+                <span class="lang-content lang-fr">
+                  Les inspections d'infrastructures étaient coûteuses, risquées et trop lentes. Les méthodes manuelles ne suivaient plus le volume d'actifs. (132 caractères)
+                </span>
               </p>
             </div>
+
             <div>
               <h4 class="font-bold text-lg mb-2">
                 <span class="lang-content lang-en active">Solution</span>
@@ -1318,28 +1439,34 @@
                 <span class="lang-content lang-fr">Solution</span>
               </h4>
               <p class="text-slate-700">
-                <span class="lang-content lang-en active">[Solution description to be provided]</span>
-                <span class="lang-content lang-de">[Lösungsbeschreibung wird bereitgestellt]</span>
-                <span class="lang-content lang-fr">[Description de la solution à fournir]</span>
+                <span class="lang-content lang-en active">
+                  Built an autonomous drone system with AI and real-time defect detection. It automated inspections, sped up reports and scaled safely. (132 characters)
+                </span>
+                <span class="lang-content lang-de">
+                  Autonome Drohnenplattform mit KI und Echtzeit-Fehlererkennung entwickelt. Automatisierte Inspektionen, beschleunigte Berichte, sicher skalierbar. (137 Zeichen)
+                </span>
+                <span class="lang-content lang-fr">
+                  Plateforme de drones autonomes avec IA et détection de défauts en temps réel. Inspections automatisées, rapports rapides, déploiement sécurisé. (136 caractères)
+                </span>
               </p>
             </div>
           </div>
           <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="text-center p-3 bg-cyan-50 rounded-xl">
-              <div class="font-bold text-lg">[Tech 1]</div>
-              <div class="text-sm text-slate-600">[Category]</div>
+              <div class="font-bold text-lg">International</div>
+              <div class="text-sm text-slate-600">Projects in PL, TR, BY, MA, EG</div>
             </div>
             <div class="text-center p-3 bg-cyan-50 rounded-xl">
-              <div class="font-bold text-lg">[Tech 2]</div>
-              <div class="text-sm text-slate-600">[Category]</div>
+              <div class="font-bold text-lg">20+</div>
+              <div class="text-sm text-slate-600">Team Members</div>
             </div>
             <div class="text-center p-3 bg-cyan-50 rounded-xl">
-              <div class="font-bold text-lg">[Tech 3]</div>
-              <div class="text-sm text-slate-600">[Category]</div>
+              <div class="font-bold text-lg">200 TB+</div>
+              <div class="text-sm text-slate-600">Data Processed</div>
             </div>
             <div class="text-center p-3 bg-cyan-50 rounded-xl">
-              <div class="font-bold text-lg">[Tech 4]</div>
-              <div class="text-sm text-slate-600">[Category]</div>
+              <div class="font-bold text-lg">Custom UAV</div>
+              <div class="text-sm text-slate-600">Plane & helicopter</div>
             </div>
           </div>
           <div class="mt-4 text-hoa-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">

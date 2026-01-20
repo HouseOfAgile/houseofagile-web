@@ -9,6 +9,43 @@ class I18n {
     this.translations = {};
     this.defaultLang = 'en';
     this.supportedLangs = ['en', 'de', 'fr'];
+
+    // Common navbar translations (used across all pages)
+    this.navTranslations = {
+      en: {
+        nav_services: "Services",
+        nav_case_studies: "Case Studies",
+        nav_projects: "Projects",
+        nav_pricing: "Pricing",
+        nav_testimonials: "Testimonials",
+        nav_contact: "Contact",
+        nav_cta: "Free Audit →",
+        nav_cta_prefix: "Free ",
+        nav_cta_short: "Audit →"
+      },
+      de: {
+        nav_services: "Dienstleistungen",
+        nav_case_studies: "Fallstudien",
+        nav_projects: "Projekte",
+        nav_pricing: "Preise",
+        nav_testimonials: "Referenzen",
+        nav_contact: "Kontakt",
+        nav_cta: "Gratis-Audit →",
+        nav_cta_prefix: "Gratis-",
+        nav_cta_short: "Audit →"
+      },
+      fr: {
+        nav_services: "Services",
+        nav_case_studies: "Études de cas",
+        nav_projects: "Projets",
+        nav_pricing: "Tarifs",
+        nav_testimonials: "Témoignages",
+        nav_contact: "Contact",
+        nav_cta: "Audit Gratuit →",
+        nav_cta_prefix: "Audit ",
+        nav_cta_short: "Gratuit →"
+      }
+    };
   }
 
   /**
@@ -18,16 +55,20 @@ class I18n {
   async init(translationFile) {
     // Detect language from URL or localStorage
     this.currentLang = this.detectLanguage();
-    
+
     // Load translations
     try {
       await this.loadTranslations(translationFile);
       this.applyTranslations();
+      this.applyNavbarTranslations();
       this.updateLanguageSwitcher();
+      this.updateInternalLinks();
     } catch (error) {
       console.warn('Translation loading failed, using default content:', error);
-      // Fallback to English (HTML content already in page)
-      this.currentLang = 'en';
+      // Still apply navbar translations and update links even if page translations fail
+      this.applyNavbarTranslations();
+      this.updateLanguageSwitcher();
+      this.updateInternalLinks();
     }
   }
 
@@ -69,11 +110,11 @@ class I18n {
 
     const langFile = translationFile.replace('/en/', `/${this.currentLang}/`);
     const response = await fetch(langFile);
-    
+
     if (!response.ok) {
       throw new Error(`Translation file not found: ${langFile}`);
     }
-    
+
     this.translations = await response.json();
   }
 
@@ -129,6 +170,21 @@ class I18n {
   }
 
   /**
+   * Apply navbar translations (works on all pages)
+   */
+  applyNavbarTranslations() {
+    const navTrans = this.navTranslations[this.currentLang] || this.navTranslations.en;
+
+    // Apply navbar-specific translations
+    document.querySelectorAll('[data-i18n-nav]').forEach(element => {
+      const key = element.getAttribute('data-i18n-nav');
+      if (navTrans[key]) {
+        element.textContent = navTrans[key];
+      }
+    });
+  }
+
+  /**
    * Get nested value from object using dot notation
    */
   getNestedValue(obj, path) {
@@ -142,7 +198,7 @@ class I18n {
     if (!this.translations.meta) return;
 
     const meta = this.translations.meta;
-    
+
     // Update title
     if (meta.title) {
       document.title = meta.title;
@@ -170,12 +226,45 @@ class I18n {
   }
 
   /**
+   * Update all internal links to preserve language
+   */
+  updateInternalLinks() {
+    if (this.currentLang === 'en') return; // No need for English (default)
+
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+
+      // Skip external links, anchors, mailto, tel, and already parameterized links
+      if (!href ||
+          href.startsWith('http') ||
+          href.startsWith('mailto:') ||
+          href.startsWith('tel:') ||
+          href.startsWith('#') ||
+          href.includes('?lang=')) {
+        return;
+      }
+
+      // Handle internal links
+      if (href.startsWith('/') || href.endsWith('.html')) {
+        const separator = href.includes('?') ? '&' : '?';
+        // For anchor links on other pages (like /#services), preserve them
+        if (href.includes('#')) {
+          const [path, hash] = href.split('#');
+          if (path) {
+            const sep = path.includes('?') ? '&' : '?';
+            link.setAttribute('href', `${path}${sep}lang=${this.currentLang}#${hash}`);
+          }
+        } else {
+          link.setAttribute('href', `${href}${separator}lang=${this.currentLang}`);
+        }
+      }
+    });
+  }
+
+  /**
    * Update language switcher UI
    */
   updateLanguageSwitcher() {
-    const currentPath = window.location.pathname;
-    const currentPage = this.getCurrentPageName();
-
     this.supportedLangs.forEach(lang => {
       const button = document.querySelector(`[data-lang="${lang}"]`);
       if (!button) return;
@@ -218,10 +307,10 @@ class I18n {
    */
   async switchLanguage(lang) {
     if (!this.supportedLangs.includes(lang)) return;
-    
+
     localStorage.setItem('hoaLang', lang);
-    
-    // Reload page with lang parameter
+
+    // Reload page with lang parameter (remove existing lang param first)
     const url = new URL(window.location.href);
     url.searchParams.set('lang', lang);
     window.location.href = url.toString();

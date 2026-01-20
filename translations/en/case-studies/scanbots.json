@@ -16,8 +16,8 @@
     "techStack": ["Python", "Node.js", "Vue.js", "C++", "Rust", "Go", "TensorFlow", "Docker", "Kubernetes"],
     "metrics": {
       "metric1": { "value": "€2M+", "label": "Funding Raised" },
-      "metric2": { "value": "10+", "label": "Team Members" },
-      "metric3": { "value": "TB+", "label": "Data Processed" },
+      "metric2": { "value": "20+", "label": "Team Members" },
+      "metric3": { "value": "200 TB+", "label": "Data Processed" },
       "metric4": { "value": "Real-time", "label": "Analytics" }
     },
     "challenge": {

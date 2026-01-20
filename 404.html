@@ -14,28 +14,66 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-CZ92MVYJE8');
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
   <title>Page not found — House of Agile</title>
   <link rel="icon" href="/favicon.svg">
   <link rel="stylesheet" href="/assets/tailwind.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="/assets/hoa-worldclass.css">
+  <style>
+    :root {
+      --hoa-primary: #16a34a;
+      --hoa-primary-dark: #15803d;
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-slate-50 text-slate-800 flex items-center justify-center p-8 hoa-body">
+<body class="min-h-screen bg-gradient-to-br from-hoa-50 to-white text-slate-800 flex flex-col hoa-body">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M66S2HG2"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <main class="max-w-xl text-center">
-    <h1 class="text-5xl font-black tracking-tight mb-4">404</h1>
-    <p class="text-lg mb-6">Sorry, we couldn’t find that page.</p>
-    <a href="/" class="inline-block px-5 py-3 rounded-xl bg-indigo-600 text-white font-semibold">
-      Back to Home
-    </a>
+
+  <main class="flex-grow flex items-center justify-center p-8">
+    <div class="max-w-2xl text-center">
+      <div class="mb-8">
+        <a href="/" class="inline-flex items-center space-x-3">
+          <img src="/assets/hoa-logo-square.png" alt="House of Agile" class="h-12 w-auto">
+          <span class="font-black text-xl tracking-tight">House of Agile</span>
+        </a>
+      </div>
+
+      <h1 class="text-7xl font-black tracking-tight mb-4 text-hoa-600">404</h1>
+      <p class="text-2xl font-semibold mb-2">Page not found</p>
+      <p class="text-lg text-slate-600 mb-8">The page you're looking for doesn't exist or has been moved.</p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <a href="/" class="btn-primary text-lg px-8 py-4 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all">
+          Back to Home
+        </a>
+        <a href="/#consultation" class="btn-secondary text-lg px-8 py-4">
+          Get Free Audit
+        </a>
+      </div>
+
+      <div class="border-t border-slate-200 pt-8">
+        <p class="text-sm text-slate-500 mb-4">Or explore our services:</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="/services/full-stack-development.html" class="text-hoa-600 hover:text-hoa-700 text-sm font-medium">Full-Stack Development</a>
+          <span class="text-slate-300">•</span>
+          <a href="/services/devops-cloud-infrastructure.html" class="text-hoa-600 hover:text-hoa-700 text-sm font-medium">DevOps & Cloud</a>
+          <span class="text-slate-300">•</span>
+          <a href="/services/technical-leadership-cto.html" class="text-hoa-600 hover:text-hoa-700 text-sm font-medium">CTO Services</a>
+        </div>
+      </div>
+    </div>
   </main>
+
+  <footer class="py-6 text-center text-sm text-slate-500">
+    <p>&copy; 2025 House of Agile. <a href="mailto:jc@houseofagile.com" class="text-hoa-600 hover:text-hoa-700">jc@houseofagile.com</a></p>
+  </footer>
 </body>
 </html>
