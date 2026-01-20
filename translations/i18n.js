@@ -9,6 +9,7 @@ class I18n {
     this.translations = {};
     this.defaultLang = 'en';
     this.supportedLangs = ['en', 'de', 'fr'];
+    this.useLangPrefix = true;
 
     // Common navbar translations (used across all pages)
     this.navTranslations = {
@@ -82,6 +83,13 @@ class I18n {
     if (urlLang && this.supportedLangs.includes(urlLang)) {
       localStorage.setItem('hoaLang', urlLang);
       return urlLang;
+    }
+
+    // Check URL path prefix (/de/, /fr/, /en/)
+    const pathLang = this.getLangFromPath(window.location.pathname);
+    if (pathLang && this.supportedLangs.includes(pathLang)) {
+      localStorage.setItem('hoaLang', pathLang);
+      return pathLang;
     }
 
     // Check localStorage
@@ -229,8 +237,6 @@ class I18n {
    * Update all internal links to preserve language
    */
   updateInternalLinks() {
-    if (this.currentLang === 'en') return; // No need for English (default)
-
     document.querySelectorAll('a[href]').forEach(link => {
       const href = link.getAttribute('href');
 
@@ -239,24 +245,31 @@ class I18n {
           href.startsWith('http') ||
           href.startsWith('mailto:') ||
           href.startsWith('tel:') ||
-          href.startsWith('#') ||
-          href.includes('?lang=')) {
+          href.startsWith('#')) {
         return;
       }
 
       // Handle internal links
       if (href.startsWith('/') || href.endsWith('.html')) {
-        const separator = href.includes('?') ? '&' : '?';
-        // For anchor links on other pages (like /#services), preserve them
-        if (href.includes('#')) {
-          const [path, hash] = href.split('#');
-          if (path) {
-            const sep = path.includes('?') ? '&' : '?';
-            link.setAttribute('href', `${path}${sep}lang=${this.currentLang}#${hash}`);
-          }
-        } else {
-          link.setAttribute('href', `${href}${separator}lang=${this.currentLang}`);
+        const [pathAndQuery, hash] = href.split('#');
+        const [path, query] = pathAndQuery.split('?');
+        const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+        const extMatch = normalizedPath.match(/\.[a-zA-Z0-9]+$/);
+        if (extMatch && extMatch[0] !== '.html') {
+          return;
         }
+        const langPath = this.useLangPrefix
+          ? this.buildLangPath(normalizedPath, this.currentLang)
+          : normalizedPath;
+        let querySuffix = '';
+        if (query) {
+          const params = new URLSearchParams(query);
+          params.delete('lang');
+          const cleaned = params.toString();
+          querySuffix = cleaned ? `?${cleaned}` : '';
+        }
+        const hashSuffix = hash ? `#${hash}` : '';
+        link.setAttribute('href', `${langPath}${querySuffix}${hashSuffix}`);
       }
     });
   }
@@ -292,7 +305,7 @@ class I18n {
    * Get current page name for translation file path
    */
   getCurrentPageName() {
-    const path = window.location.pathname;
+    const path = this.stripLangPrefix(window.location.pathname);
     if (path === '/' || path === '/index.html') {
       return 'home';
     }
@@ -310,9 +323,14 @@ class I18n {
 
     localStorage.setItem('hoaLang', lang);
 
-    // Reload page with lang parameter (remove existing lang param first)
+    // Reload page with lang prefix (remove existing lang param first)
     const url = new URL(window.location.href);
-    url.searchParams.set('lang', lang);
+    url.searchParams.delete('lang');
+    if (this.useLangPrefix) {
+      url.pathname = this.buildLangPath(url.pathname, lang);
+    } else {
+      url.searchParams.set('lang', lang);
+    }
     window.location.href = url.toString();
   }
 
@@ -321,6 +339,33 @@ class I18n {
    */
   getCurrentLanguage() {
     return this.currentLang;
+  }
+
+  /**
+   * Extract language prefix from path
+   */
+  getLangFromPath(pathname) {
+    const match = pathname.match(/^\/(en|de|fr)(?=\/|$)/);
+    return match ? match[1] : null;
+  }
+
+  /**
+   * Remove language prefix from path
+   */
+  stripLangPrefix(pathname) {
+    const cleaned = pathname.replace(/^\/(en|de|fr)(?=\/|$)/, '');
+    return cleaned === '' ? '/' : cleaned.startsWith('/') ? cleaned : `/${cleaned}`;
+  }
+
+  /**
+   * Build language-prefixed path
+   */
+  buildLangPath(pathname, lang) {
+    const basePath = this.stripLangPrefix(pathname);
+    if (this.useLangPrefix) {
+      return `/${lang}${basePath === '/' ? '/' : basePath}`;
+    }
+    return basePath;
   }
 }
 

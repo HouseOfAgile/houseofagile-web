@@ -1,0 +1,1881 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-M66S2HG2');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CZ92MVYJE8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CZ92MVYJE8');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>House of Agile — Premium Technology Services • Switzerland • Germany</title>
+  <meta name="description" content="House of Agile delivers premium technology services to private clients in Switzerland and Germany. Our expert collective specializes in digital transformation, technical leadership, and innovative solutions for discerning clients seeking excellence.">
+  <link rel="icon" href="/favicon.svg">
+  <meta property="og:title" content="House of Agile — Premium Technology Services • Switzerland • Germany">
+  <meta property="og:description" content="House of Agile delivers premium technology services to private clients in Switzerland and Germany. Our expert collective specializes in digital transformation, technical leadership, and innovative solutions for discerning clients seeking excellence.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://houseofagile.com/">
+  <meta property="og:image" content="https://houseofagile.com/assets/images/og-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://houseofagile.com/assets/images/og-preview.png">
+
+  <link rel="canonical" href="https://houseofagile.com/">
+
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "Organization", "name": "House of Agile", "url": "https://houseofagile.com", "logo": "https://houseofagile.com/assets/hoa-logo.svg", "description": "Premium technology services for private clients in Switzerland and Germany", "areaServed": ["Switzerland", "Germany"], "founder": {"@type": "Person", "name": "Jean-Christophe Meillaud"}, "email": "mailto:jc@houseofagile.com"}
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "House of Agile",
+    "image": "https://houseofagile.com/assets/hoa-logo.svg",
+    "url": "https://houseofagile.com",
+    "telephone": "",
+    "email": "jc@houseofagile.com",
+    "description": "Premium technology consulting and software development services for private clients in Switzerland and Germany. Specializing in full-stack development, DevOps, CTO services, and digital transformation.",
+    "priceRange": "€€€",
+    "areaServed": [
+      {"@type": "Country", "name": "Switzerland"},
+      {"@type": "Country", "name": "Germany"}
+    ],
+    "serviceType": ["Software Development", "DevOps Consulting", "CTO Services", "Technical Leadership", "Web Application Development"],
+    "founder": {
+      "@type": "Person",
+      "name": "Jean-Christophe Meillaud",
+      "jobTitle": "Founder & Lead Consultant"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/house-of-agile"
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/tailwind.css">
+  <style>
+    /* Professional green color scheme */
+    :root {
+      --hoa-primary: #16a34a;
+      --hoa-primary-dark: #15803d;
+      --hoa-primary-light: #22c55e;
+      --hoa-accent: #86efac;
+      --hoa-bg: #f0fdf4;
+    }
+    
+    .prose p { margin-bottom: 0.8rem; }
+    .glass { backdrop-filter: saturate(180%) blur(12px); background: rgba(240,253,244,0.85); }
+    
+    /* Language switcher */
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+
+    /* Scroll offset for anchor links to prevent navbar overlap */
+    section[id] {
+      scroll-margin-top: 70px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="/assets/hoa-worldclass.css">
+
+  <script>
+    // Simple multilingual support
+    const translations = {
+      en: {
+        nav_services: "Services",
+        nav_projects: "Projects",
+        nav_pricing: "Pricing",
+        nav_testimonials: "Testimonials",
+        nav_contact: "Contact",
+        nav_cta: "Free Audit →",
+        nav_cta_prefix: "Free ",
+        nav_cta_short: "Audit →",
+        hero_title: "Premium",
+        hero_subtitle: " technology services",
+        hero_description: "House of Agile is a collective of expert technology professionals serving discerning private clients across Switzerland and Germany. Led by Jean‑Christophe Meillaud with 20+ years of enterprise experience, we deliver exceptional results through our curated network of specialists.",
+        hero_tagline: "Exclusivity through excellence.",
+        cta_consultation: "Get Your Free Technical Audit →",
+        cta_expertise: "Our Expertise",
+        // Form translations
+        select_project_type: "Select project type...",
+        project_website: "Professional Website (€1,200+)",
+        project_ecommerce: "E-commerce Store (€2,800+)",
+        project_webapp: "Custom Web App (€4,500+)",
+        project_premium: "Premium Enterprise Solution (€10k+)",
+        project_consultation: "Consultation Only (€75/hour)",
+        project_other: "Other",
+        select_budget: "Select budget range...",
+        select_timeline: "Select timeline...",
+        timeline_asap: "ASAP (Rush job +25%)",
+        timeline_1month: "Within 1 month",
+        timeline_2_3months: "2-3 months",
+        timeline_3_6months: "3-6 months",
+        timeline_flexible: "Flexible",
+        select_location: "Select location...",
+        location_germany: "🇩🇪 Germany",
+        location_switzerland: "🇨🇭 Switzerland",
+        location_france: "🇫🇷 France",
+        location_remote: "Remote/Other"
+      },
+      de: {
+        nav_services: "Dienstleistungen",
+        nav_projects: "Projekte",
+        nav_pricing: "Preise",
+        nav_testimonials: "Referenzen",
+        nav_contact: "Kontakt",
+        nav_cta: "Gratis-Audit →",
+        nav_cta_prefix: "Gratis-",
+        nav_cta_short: "Audit →",
+        hero_title: "Premium",
+        hero_subtitle: " Technologie-Dienstleistungen",
+        hero_description: "House of Agile ist ein Kollektiv von Technologie-Experten, das anspruchsvolle Privatkunden in der Schweiz und Deutschland bedient. Unter der Leitung von Jean‑Christophe Meillaud mit über 20 Jahren Unternehmenserfahrung liefern wir außergewöhnliche Ergebnisse durch unser kuratiertes Netzwerk von Spezialisten.",
+        hero_tagline: "Exklusivität durch Exzellenz.",
+        cta_consultation: "Kostenloses Technik-Audit anfragen →",
+        cta_expertise: "Unsere Expertise",
+        // Form translations
+        select_project_type: "Projekttyp auswählen...",
+        project_website: "Professionelle Website (€1.200+)",
+        project_ecommerce: "E-Commerce Shop (€2.800+)",
+        project_webapp: "Individuelle Web-App (€4.500+)",
+        project_premium: "Premium-Unternehmenslösung (€10k+)",
+        project_consultation: "Nur Beratung (€75/Stunde)",
+        project_other: "Andere",
+        select_budget: "Budget-Bereich auswählen...",
+        select_timeline: "Zeitplan auswählen...",
+        timeline_asap: "So schnell wie möglich (Eilauftrag +25%)",
+        timeline_1month: "Innerhalb 1 Monat",
+        timeline_2_3months: "2-3 Monate",
+        timeline_3_6months: "3-6 Monate",
+        timeline_flexible: "Flexibel",
+        select_location: "Standort auswählen...",
+        location_germany: "🇩🇪 Deutschland",
+        location_switzerland: "🇨🇭 Schweiz",
+        location_france: "🇫🇷 Frankreich",
+        location_remote: "Remote/Andere"
+      },
+      fr: {
+        nav_services: "Services",
+        nav_projects: "Projets",
+        nav_pricing: "Tarifs",
+        nav_testimonials: "Témoignages",
+        nav_contact: "Contact",
+        nav_cta: "Audit Gratuit →",
+        nav_cta_prefix: "Audit ",
+        nav_cta_short: "Gratuit →",
+        hero_title: "Services",
+        hero_subtitle: " technologiques premium",
+        hero_description: "House of Agile est un collectif de professionnels technologiques experts au service de clients privés exigeants en Suisse et en Allemagne. Dirigé par Jean‑Christophe Meillaud avec plus de 20 ans d'expérience en entreprise, nous obtenons des résultats exceptionnels grâce à notre réseau sélectionné de spécialistes.",
+        hero_tagline: "L'exclusivité par l'excellence.",
+        cta_consultation: "Obtenez votre audit technique gratuit →",
+        cta_expertise: "Notre expertise",
+        // Form translations
+        select_project_type: "Sélectionnez le type de projet...",
+        project_website: "Site web professionnel (€1.200+)",
+        project_ecommerce: "Boutique e-commerce (€2.800+)",
+        project_webapp: "Application web sur mesure (€4.500+)",
+        project_premium: "Solution d'entreprise premium (€10k+)",
+        project_consultation: "Consultation uniquement (€75/heure)",
+        project_other: "Autre",
+        select_budget: "Sélectionnez la fourchette budgétaire...",
+        select_timeline: "Sélectionnez le calendrier...",
+        timeline_asap: "Dès que possible (travail urgent +25%)",
+        timeline_1month: "Dans le mois",
+        timeline_2_3months: "2-3 mois",
+        timeline_3_6months: "3-6 mois",
+        timeline_flexible: "Flexible",
+        select_location: "Sélectionnez l'emplacement...",
+        location_germany: "🇩🇪 Allemagne",
+        location_switzerland: "🇨🇭 Suisse",
+        location_france: "🇫🇷 France",
+        location_remote: "À distance/Autre"
+      }
+    };
+
+    function switchLanguage(lang) {
+      // Save to localStorage for persistence across pages
+      localStorage.setItem('hoaLang', lang);
+
+      // Update active language button styling (match service pages)
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('bg-hoa-200', 'text-hoa-900');
+        btn.classList.add('bg-hoa-100', 'text-hoa-800');
+      });
+      const activeBtn = document.querySelector(`[onclick="switchLanguage('${lang}')"]`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-hoa-100', 'text-hoa-800');
+        activeBtn.classList.add('bg-hoa-200', 'text-hoa-900');
+      }
+
+      // Update content
+      Object.keys(translations[lang]).forEach(key => {
+        const elements = document.querySelectorAll(`[data-i18n="${key}"]`);
+        elements.forEach(el => {
+          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+            el.placeholder = translations[lang][key];
+          } else if (el.tagName === 'OPTION') {
+            el.textContent = translations[lang][key];
+          } else {
+            el.textContent = translations[lang][key];
+          }
+        });
+      });
+
+      // Show/hide language-specific content
+      document.querySelectorAll('.lang-content').forEach(content => {
+        content.classList.remove('active');
+      });
+      document.querySelectorAll(`.lang-${lang}`).forEach(content => {
+        content.classList.add('active');
+      });
+
+      // Update internal links to preserve language across navigation
+      updateInternalLinks(lang);
+    }
+
+    function updateInternalLinks(lang) {
+      // For English (default), remove any lang params for clean URLs
+      // For other languages, add ?lang= param to internal links
+      document.querySelectorAll('a[href]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href) return;
+
+        // Skip external links, anchors-only, and javascript/mailto links
+        if (href.startsWith('http') || href.startsWith('javascript:') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+
+        // Handle anchor-only links (e.g., #services)
+        if (href.startsWith('#')) return;
+
+        // Parse the URL to handle existing params
+        let url;
+        try {
+          // Handle relative URLs
+          if (href.startsWith('/') || href.includes('.html')) {
+            url = new URL(href, window.location.origin);
+          } else {
+            return; // Skip other relative paths like assets
+          }
+        } catch (e) {
+          return;
+        }
+
+        // Update or remove lang parameter
+        if (lang === 'en') {
+          url.searchParams.delete('lang');
+        } else {
+          url.searchParams.set('lang', lang);
+        }
+
+        // Reconstruct the href (keep it relative if it was)
+        let newHref = url.pathname + url.search + url.hash;
+        if (href.startsWith('./')) {
+          newHref = '.' + newHref;
+        }
+        link.setAttribute('href', newHref);
+      });
+    }
+
+    // Detect initial language: URL param > localStorage > default (English)
+    function getInitialLanguage() {
+      const validLanguages = ['en', 'de', 'fr'];
+
+      // 1. Check URL parameter first (highest priority)
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlLang = urlParams.get('lang');
+      if (urlLang && validLanguages.includes(urlLang)) {
+        return urlLang;
+      }
+
+      // 2. Check localStorage (saved from previous session)
+      const storedLang = localStorage.getItem('hoaLang');
+      if (storedLang && validLanguages.includes(storedLang)) {
+        return storedLang;
+      }
+
+      // 3. Default to English
+      return 'en';
+    }
+
+    // Initialize with detected language
+    document.addEventListener('DOMContentLoaded', () => {
+      const initialLang = getInitialLanguage();
+      switchLanguage(initialLang);
+      setupFormSubmission();
+    });
+
+    // Form submission handling
+    function setupFormSubmission() {
+      const form = document.getElementById('contact-form');
+      if (!form) return;
+
+      // Detect environment
+      const isGitHubPages = window.location.hostname.includes('github.io') ||
+                           window.location.hostname.includes('houseofagile.com');
+
+      // Set form action based on environment
+      if (isGitHubPages) {
+        // Use Formspree for GitHub Pages deployment
+        form.action = 'https://formspree.io/f/mwpnzjel';
+        form.method = 'POST';
+        return; // Use default form submission for Formspree
+      }
+
+      // Use local email server for development
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '⏳ Sending...';
+
+        try {
+          const formData = new FormData(form);
+          const response = await fetch('/submit-form', {
+            method: 'POST',
+            body: new URLSearchParams(formData).toString(),
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+            }
+          });
+
+          const result = await response.json();
+
+          if (result.success) {
+            // Show success message
+            showMessage(result.message, 'success');
+            form.reset();
+          } else {
+            showMessage(result.message, 'error');
+          }
+        } catch (error) {
+          showMessage('Network error. Please try again or contact us directly at jc@houseofagile.com', 'error');
+        } finally {
+          // Restore button
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+      });
+    }
+
+    function showMessage(message, type) {
+      // Create message element
+      const messageEl = document.createElement('div');
+      messageEl.className = `fixed top-4 right-4 p-4 rounded-lg shadow-lg z-50 max-w-md ${
+        type === 'success' ? 'bg-green-100 text-green-800 border border-green-200' : 'bg-red-100 text-red-800 border border-red-200'
+      }`;
+      messageEl.textContent = message;
+
+      // Add to page
+      document.body.appendChild(messageEl);
+
+      // Auto remove after 5 seconds
+      setTimeout(() => {
+        if (messageEl.parentNode) {
+          messageEl.remove();
+        }
+      }, 5000);
+    }
+  </script>
+</head>
+<body class="bg-hoa-50 text-slate-800 hoa-body">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M66S2HG2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- Nav -->
+  <nav class="fixed w-full z-50 glass border-b border-hoa-100">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="/" class="flex items-center space-x-3">
+          <img src="/assets/hoa-logo-square.png" alt="House of Agile" class="h-10 w-auto">
+          <div class="font-black text-xl tracking-tight">House of Agile</div>
+        </a>
+        <div class="flex items-center gap-6">
+          <!-- Language Switcher -->
+          <div class="hidden md:flex items-center gap-2">
+            <button onclick="switchLanguage('en')" class="lang-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-hoa-200 text-hoa-900">EN</button>
+            <button onclick="switchLanguage('de')" class="lang-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-hoa-100 hover:bg-hoa-200 text-hoa-800">DE</button>
+            <button onclick="switchLanguage('fr')" class="lang-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-hoa-100 hover:bg-hoa-200 text-hoa-800">FR</button>
+          </div>
+          <!-- Navigation Links (desktop only) -->
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="#services" class="hover:text-hoa-600 text-slate-700 transition-colors" data-i18n="nav_services">Services</a>
+            <a href="#projects" class="hover:text-hoa-600 text-slate-700 transition-colors" data-i18n="nav_projects">Projects</a>
+            <a href="#pricing" class="hover:text-hoa-600 text-slate-700 transition-colors" data-i18n="nav_pricing">Pricing</a>
+            <a href="#testimonials" class="hover:text-hoa-600 text-slate-700 transition-colors" data-i18n="nav_testimonials">Testimonials</a>
+          </div>
+          <!-- CTA Button (always visible, adapts to screen size) -->
+          <a href="#consultation" class="btn-primary text-sm md:text-base px-3 py-2 md:px-5 md:py-2.5 font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all" data-i18n="nav_cta">
+            <span class="hidden sm:inline" data-i18n="nav_cta_prefix">Free </span><span data-i18n="nav_cta_short">Audit →</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-white">
+    <div class="absolute inset-0 bg-gradient-to-br from-hoa-50 via-white to-hoa-100"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-20 md:py-28">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-[1.05]">
+            <span data-i18n="hero_title">Premium</span><strong class="block text-transparent bg-clip-text bg-gradient-to-r from-hoa-600 to-hoa-800" data-i18n="hero_subtitle"> technology services</strong>
+          </h1>
+          <p class="mt-5 text-lg text-slate-700 max-w-prose">
+            <span data-i18n="hero_description"><em>House of Agile</em> is a collective of expert technology professionals serving discerning private clients across <strong>Switzerland and Germany</strong>. 
+            Led by <strong>Jean‑Christophe Meillaud</strong> with 20+ years of enterprise experience, we deliver exceptional results through our curated network of specialists.</span>
+            <span class="inline-block font-semibold text-hoa-700" data-i18n="hero_tagline">Exclusivity through excellence.</span>
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#consultation" class="btn-primary text-lg px-8 py-4 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all" data-i18n="cta_consultation">
+              Get Your Free Technical Audit →
+            </a>
+            <a href="/Jean-Christophe-Meillaud-CV.pdf" class="btn-secondary" data-i18n="cta_expertise">
+              Our Expertise
+            </a>
+          </div>
+          <div class="mt-8 flex flex-wrap gap-2 text-sm">
+            <!-- skill badges -->
+            <span class="tech-badge">Symfony</span>
+            <span class="tech-badge">API Platform</span>
+            <span class="tech-badge">PHP 8</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Bash</span>
+            <span class="tech-badge">AI Mastery</span>
+            <span class="tech-badge">API Integrations (AWS · GCP · Azure)</span>
+            <span class="tech-badge">Rapid Prototyping (Small Apps)</span>
+            <span class="tech-badge">Web Scraping & Data Pipelines</span>
+            <span class="tech-badge">Docker · K8s</span>
+            <span class="tech-badge">Postgres · Redis</span>
+            <span class="tech-badge">CI/CD · DevOps</span>
+          </div>
+        </div>
+        <div class="glass rounded-3xl p-8 shadow-lg border border-hoa-200">
+          <h2 class="text-xl font-extrabold mb-4 text-hoa-800">Our Collective Expertise</h2>
+          <ul class="space-y-3 text-slate-700">
+            <li class="flex items-center gap-2"><span class="text-hoa-600">✓</span> <strong>Expert Network</strong> of Swiss & German specialists</li>
+            <li class="flex items-center gap-2"><span class="text-hoa-600">✓</span> <strong>€700k+/month</strong> project budgets successfully managed</li>
+            <li class="flex items-center gap-2"><span class="text-hoa-600">✓</span> <strong>30M+ users</strong> platforms built and scaled</li>
+            <li class="flex items-center gap-2"><span class="text-hoa-600">✓</span> <strong>Private Client Focus</strong> with discreet, premium service</li>
+            <li class="flex items-center gap-2"><span class="text-hoa-600">✓</span> <strong>Innovation Leaders</strong> in AI, fintech, and automation</li>
+            <li class="flex items-center gap-2"><span class="text-hoa-600">✓</span> <strong>Rapid Prototyping</strong> for small apps and MVPs</li>
+            <li class="flex items-center gap-2"><span class="text-hoa-600">✓</span> <strong>Advanced Scraping</strong> & data extraction expertise</li>
+            <li class="flex items-center gap-2"><span class="text-hoa-600">✓</span> <strong>API Integrations</strong> with major platforms and providers</li>
+            <li class="flex items-center gap-2"><span class="text-hoa-600">✓</span> <strong>Proven Track Record</strong> across multiple successful exits</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="max-w-6xl mx-auto px-4 py-16 bg-white">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">
+        <span class="lang-content lang-en active">Our Expert Collective</span>
+        <span class="lang-content lang-de">Unser Experten-Kollektiv</span>
+        <span class="lang-content lang-fr">Notre collectif d'experts</span>
+      </h2>
+      <p class="text-slate-600 max-w-2xl mx-auto">
+        <span class="lang-content lang-en active">Meet the specialists behind House of Agile's premium technology services</span>
+        <span class="lang-content lang-de">Lernen Sie die Spezialisten hinter den Premium-Technologieservices von House of Agile kennen</span>
+        <span class="lang-content lang-fr">Rencontrez les spécialistes derrière les services technologiques premium de House of Agile</span>
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Jean-Christophe Meillaud -->
+      <div class="bg-white rounded-3xl p-8 shadow-lg border border-hoa-100 text-center icon-card">
+        <div class="icon-badge icon-badge--lg mx-auto mb-4">
+          <i class="fa-solid fa-user-tie" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-xl mb-2">Jean-Christophe Meillaud</h3>
+        <p class="text-hoa-600 font-semibold mb-3">
+          <span class="lang-content lang-en active">Founder & Lead Architect</span>
+          <span class="lang-content lang-de">Gründer & Lead Architect</span>
+          <span class="lang-content lang-fr">Fondateur & Architecte Principal</span>
+        </p>
+        <p class="text-slate-600 text-sm mb-4">
+          <span class="lang-content lang-en active">20+ years enterprise experience. Former Universal Music, Vodafone. Expert in scaling platforms to 30M+ users.</span>
+          <span class="lang-content lang-de">20+ Jahre Unternehmenserfahrung. Ehemals Universal Music, Vodafone. Experte für die Skalierung von Plattformen auf 30M+ Nutzer.</span>
+          <span class="lang-content lang-fr">20+ ans d'expérience en entreprise. Ancien Universal Music, Vodafone. Expert en mise à l'échelle de plateformes pour 30M+ utilisateurs.</span>
+        </p>
+        <div class="flex justify-center space-x-3">
+          <a href="https://www.linkedin.com/in/jeanchristophemeillaud/" class="text-hoa-600 hover:text-hoa-700 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mateusz Kowalski -->
+      <div class="bg-white rounded-3xl p-8 shadow-lg border border-hoa-100 text-center icon-card">
+        <div class="icon-badge icon-badge--lg mx-auto mb-4">
+          <i class="fa-solid fa-atom" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-xl mb-2">Mateusz Kowalski</h3>
+        <p class="text-hoa-600 font-semibold mb-3">
+          <span class="lang-content lang-en active">DevOps & React Expert</span>
+          <span class="lang-content lang-de">DevOps & React Experte</span>
+          <span class="lang-content lang-fr">Expert DevOps & React</span>
+        </p>
+        <p class="text-slate-600 text-sm mb-4">
+          <span class="lang-content lang-en active">Specialized in modern frontend architectures, CI/CD pipelines, and cloud infrastructure automation.</span>
+          <span class="lang-content lang-de">Spezialisiert auf moderne Frontend-Architekturen, CI/CD-Pipelines und Cloud-Infrastruktur-Automatisierung.</span>
+          <span class="lang-content lang-fr">Spécialisé dans les architectures frontend modernes, les pipelines CI/CD et l'automatisation d'infrastructure cloud.</span>
+        </p>
+        <div class="flex justify-center space-x-2">
+          <span class="px-2 py-1 bg-hoa-100 text-hoa-800 rounded text-xs">React</span>
+          <span class="px-2 py-1 bg-hoa-100 text-hoa-800 rounded text-xs">DevOps</span>
+          <span class="px-2 py-1 bg-hoa-100 text-hoa-800 rounded text-xs">K8s</span>
+        </div>
+      </div>
+
+      <!-- Ryan MacLaughlin -->
+      <div class="bg-white rounded-3xl p-8 shadow-lg border border-hoa-100 text-center icon-card">
+        <div class="icon-badge icon-badge--lg mx-auto mb-4">
+          <i class="fa-solid fa-brain" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-xl mb-2">Ryan MacLaughlin</h3>
+        <p class="text-hoa-600 font-semibold mb-3">
+          <span class="lang-content lang-en active">AI & Machine Learning Expert</span>
+          <span class="lang-content lang-de">KI & Machine Learning Experte</span>
+          <span class="lang-content lang-fr">Expert IA & Machine Learning</span>
+        </p>
+        <p class="text-slate-600 text-sm mb-4">
+          <span class="lang-content lang-en active">Leading AI implementations, neural networks, and intelligent automation solutions for enterprise clients.</span>
+          <span class="lang-content lang-de">Führende KI-Implementierungen, neuronale Netzwerke und intelligente Automatisierungslösungen für Unternehmenskunden.</span>
+          <span class="lang-content lang-fr">Implémentations IA de pointe, réseaux de neurones et solutions d'automatisation intelligente pour clients entreprise.</span>
+        </p>
+        <div class="flex justify-center space-x-2">
+          <span class="px-2 py-1 bg-hoa-100 text-hoa-800 rounded text-xs">AI/ML</span>
+          <span class="px-2 py-1 bg-hoa-100 text-hoa-800 rounded text-xs">TensorFlow</span>
+          <span class="px-2 py-1 bg-hoa-100 text-hoa-800 rounded text-xs">PyTorch</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-8">
+      <span class="lang-content lang-en active">Premium Services for Discerning Clients</span>
+      <span class="lang-content lang-de">Premium-Dienstleistungen für anspruchsvolle Kunden</span>
+      <span class="lang-content lang-fr">Services premium pour clients exigeants</span>
+    </h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <a href="/services/technical-leadership-cto.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-user-tie" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-lg mb-2">
+          <span class="lang-content lang-en active">Technical Leadership & CTO Services</span>
+          <span class="lang-content lang-de">Technische Führung & CTO-Services</span>
+          <span class="lang-content lang-fr">Leadership technique & Services CTO</span>
+        </h3>
+        <p class="text-slate-700 mb-3">
+          <span class="lang-content lang-en active">Strategic CTO services and technology leadership for private ventures and family offices.</span>
+          <span class="lang-content lang-de">Strategische CTO-Services und Technologieführung für private Unternehmen und Family Offices.</span>
+          <span class="lang-content lang-fr">Services CTO stratégiques et leadership technologique pour entreprises privées et family offices.</span>
+        </p>
+        <ul class="text-sm text-slate-600 space-y-1">
+          <li class="lang-content lang-en active">• Fractional CTO services</li>
+          <li class="lang-content lang-en active">• Digital transformation strategy</li>
+          <li class="lang-content lang-en active">• Technology investment advisory</li>
+          <li class="lang-content lang-de">• Fractional CTO-Services</li>
+          <li class="lang-content lang-de">• Strategie für digitale Transformation</li>
+          <li class="lang-content lang-de">• Technologie-Investitionsberatung</li>
+          <li class="lang-content lang-fr">• Services CTO fractionnés</li>
+          <li class="lang-content lang-fr">• Stratégie de transformation digitale</li>
+          <li class="lang-content lang-fr">• Conseil en investissement technologique</li>
+        </ul>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">
+          <span class="lang-content lang-en active">Learn more →</span>
+          <span class="lang-content lang-de">Mehr erfahren →</span>
+          <span class="lang-content lang-fr">En savoir plus →</span>
+        </div>
+      </a>
+
+      <a href="/services/full-stack-development.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-code" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-lg mb-2">
+          <span class="lang-content lang-en active">Full-Stack Development</span>
+          <span class="lang-content lang-de">Full-Stack-Entwicklung</span>
+          <span class="lang-content lang-fr">Développement Full-Stack</span>
+        </h3>
+        <p class="text-slate-700 mb-3">
+          <span class="lang-content lang-en active">Expert web application development with modern frameworks and technologies.</span>
+          <span class="lang-content lang-de">Experten-Webanwendungsentwicklung mit modernen Frameworks und Technologien.</span>
+          <span class="lang-content lang-fr">Développement d'applications web expertes avec des frameworks et technologies modernes.</span>
+        </p>
+        <ul class="text-sm text-slate-600 space-y-1">
+          <li class="lang-content lang-en active">• Symfony, Laravel, Vue.js, React</li>
+          <li class="lang-content lang-en active">• Microservices architecture</li>
+          <li class="lang-content lang-en active">• E-commerce platforms</li>
+          <li class="lang-content lang-de">• Symfony, Laravel, Vue.js, React</li>
+          <li class="lang-content lang-de">• Microservices-Architektur</li>
+          <li class="lang-content lang-de">• E-Commerce-Plattformen</li>
+          <li class="lang-content lang-fr">• Symfony, Laravel, Vue.js, React</li>
+          <li class="lang-content lang-fr">• Architecture microservices</li>
+          <li class="lang-content lang-fr">• Plateformes e-commerce</li>
+        </ul>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">
+          <span class="lang-content lang-en active">Learn more →</span>
+          <span class="lang-content lang-de">Mehr erfahren →</span>
+          <span class="lang-content lang-fr">En savoir plus →</span>
+        </div>
+      </a>
+
+      <a href="/services/devops-cloud-infrastructure.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-lg mb-2">
+          <span class="lang-content lang-en active">DevOps & Cloud Infrastructure</span>
+          <span class="lang-content lang-de">DevOps & Cloud-Infrastruktur</span>
+          <span class="lang-content lang-fr">DevOps & Infrastructure Cloud</span>
+        </h3>
+        <p class="text-slate-700 mb-3">
+          <span class="lang-content lang-en active">Enterprise-grade infrastructure, automation, and cloud solutions.</span>
+          <span class="lang-content lang-de">Unternehmenstaugliche Infrastruktur, Automatisierung und Cloud-Lösungen.</span>
+          <span class="lang-content lang-fr">Infrastructure de niveau entreprise, automatisation et solutions cloud.</span>
+        </p>
+        <ul class="text-sm text-slate-600 space-y-1">
+          <li class="lang-content lang-en active">• Docker, Kubernetes orchestration</li>
+          <li class="lang-content lang-en active">• AWS, GCP, Azure deployment</li>
+          <li class="lang-content lang-en active">• Linux administration & CI/CD</li>
+          <li class="lang-content lang-de">• Docker, Kubernetes-Orchestrierung</li>
+          <li class="lang-content lang-de">• AWS, GCP, Azure-Deployment</li>
+          <li class="lang-content lang-de">• Linux-Administration & CI/CD</li>
+          <li class="lang-content lang-fr">• Orchestration Docker, Kubernetes</li>
+          <li class="lang-content lang-fr">• Déploiement AWS, GCP, Azure</li>
+          <li class="lang-content lang-fr">• Administration Linux & CI/CD</li>
+        </ul>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">
+          <span class="lang-content lang-en active">Learn more →</span>
+          <span class="lang-content lang-de">Mehr erfahren →</span>
+          <span class="lang-content lang-fr">En savoir plus →</span>
+        </div>
+      </a>
+
+      <a href="/services/legacy-systems-maintenance.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-lg mb-2">
+          <span class="lang-content lang-en active">Legacy Systems & Maintenance</span>
+          <span class="lang-content lang-de">Legacy-Systeme & Wartung</span>
+          <span class="lang-content lang-fr">Systèmes Legacy & Maintenance</span>
+        </h3>
+        <p class="text-slate-700 mb-3">
+          <span class="lang-content lang-en active">Expert care for legacy systems including modernization and rescue services.</span>
+          <span class="lang-content lang-de">Expertenbetreuung für Legacy-Systeme inkl. Modernisierung und Rettungsdienste.</span>
+          <span class="lang-content lang-fr">Expertise pour les systèmes legacy, modernisation et services de sauvetage.</span>
+        </p>
+        <ul class="text-sm text-slate-600 space-y-1">
+          <li class="lang-content lang-en active">• CodeIgniter, Typo3 support</li>
+          <li class="lang-content lang-en active">• PHP version upgrades</li>
+          <li class="lang-content lang-en active">• System rescue & modernization</li>
+          <li class="lang-content lang-de">• CodeIgniter, Typo3-Support</li>
+          <li class="lang-content lang-de">• PHP-Versions-Upgrades</li>
+          <li class="lang-content lang-de">• Systemrettung & Modernisierung</li>
+          <li class="lang-content lang-fr">• Support CodeIgniter, Typo3</li>
+          <li class="lang-content lang-fr">• Mises à niveau PHP</li>
+          <li class="lang-content lang-fr">• Sauvetage & modernisation</li>
+        </ul>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">
+          <span class="lang-content lang-en active">Learn more →</span>
+          <span class="lang-content lang-de">Mehr erfahren →</span>
+          <span class="lang-content lang-fr">En savoir plus →</span>
+        </div>
+      </a>
+
+      <a href="/services/data-solutions-scraping.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-lg mb-2">
+          <span class="lang-content lang-en active">Data Solutions & Web Scraping</span>
+          <span class="lang-content lang-de">Datenlösungen & Web Scraping</span>
+          <span class="lang-content lang-fr">Solutions Data & Web Scraping</span>
+        </h3>
+        <p class="text-slate-700 mb-3">
+          <span class="lang-content lang-en active">Intelligent data extraction, analytics, and automated collection systems.</span>
+          <span class="lang-content lang-de">Intelligente Datenextraktion, Analytik und automatisierte Sammelsysteme.</span>
+          <span class="lang-content lang-fr">Extraction intelligente de données, analytique et systèmes de collecte automatisés.</span>
+        </p>
+        <ul class="text-sm text-slate-600 space-y-1">
+          <li class="lang-content lang-en active">• Web scraping & automation</li>
+          <li class="lang-content lang-en active">• Data analytics & processing</li>
+          <li class="lang-content lang-en active">• Competitive intelligence</li>
+          <li class="lang-content lang-de">• Web Scraping & Automatisierung</li>
+          <li class="lang-content lang-de">• Datenanalytik & -verarbeitung</li>
+          <li class="lang-content lang-de">• Wettbewerbsanalyse</li>
+          <li class="lang-content lang-fr">• Web scraping & automatisation</li>
+          <li class="lang-content lang-fr">• Analytique & traitement de données</li>
+          <li class="lang-content lang-fr">• Veille concurrentielle</li>
+        </ul>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">
+          <span class="lang-content lang-en active">Learn more →</span>
+          <span class="lang-content lang-de">Mehr erfahren →</span>
+          <span class="lang-content lang-fr">En savoir plus →</span>
+        </div>
+      </a>
+
+      <a href="/services/prototyping-mvp.html" class="p-6 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-shadow block icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-lg mb-2">
+          <span class="lang-content lang-en active">Rapid Prototyping & MVP Development</span>
+          <span class="lang-content lang-de">Rapid Prototyping & MVP-Entwicklung</span>
+          <span class="lang-content lang-fr">Prototypage Rapide & Développement MVP</span>
+        </h3>
+        <p class="text-slate-700 mb-3">
+          <span class="lang-content lang-en active">Quick validation of ideas with functional prototypes and minimum viable products.</span>
+          <span class="lang-content lang-de">Schnelle Validierung von Ideen mit funktionalen Prototypen und Minimum Viable Products.</span>
+          <span class="lang-content lang-fr">Validation rapide d'idées avec des prototypes fonctionnels et produits minimum viables.</span>
+        </p>
+        <ul class="text-sm text-slate-600 space-y-1">
+          <li class="lang-content lang-en active">• 4-8 week MVP development</li>
+          <li class="lang-content lang-en active">• Proof of concept creation</li>
+          <li class="lang-content lang-en active">• Iterative development</li>
+          <li class="lang-content lang-de">• 4-8 Wochen MVP-Entwicklung</li>
+          <li class="lang-content lang-de">• Proof of Concept-Erstellung</li>
+          <li class="lang-content lang-de">• Iterative Entwicklung</li>
+          <li class="lang-content lang-fr">• Développement MVP en 4-8 semaines</li>
+          <li class="lang-content lang-fr">• Création de preuve de concept</li>
+          <li class="lang-content lang-fr">• Développement itératif</li>
+        </ul>
+        <div class="text-hoa-600 font-semibold text-sm mt-3">
+          <span class="lang-content lang-en active">Learn more →</span>
+          <span class="lang-content lang-de">Mehr erfahren →</span>
+          <span class="lang-content lang-fr">En savoir plus →</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Swiss/German Market Call-out -->
+    <div class="mt-12 p-6 bg-gradient-to-r from-slate-50 to-cyan-50 rounded-2xl border border-slate-200">
+      <div class="text-center">
+        <h3 class="font-bold text-xl mb-2">
+          <span class="lang-content lang-en active">🇨🇭 🇩🇪 Switzerland & Germany Focus</span>
+          <span class="lang-content lang-de">🇨🇭 🇩🇪 Fokus Schweiz & Deutschland</span>
+          <span class="lang-content lang-fr">🇨🇭 🇩🇪 Focus Suisse & Allemagne</span>
+        </h3>
+        <p class="text-slate-700 max-w-3xl mx-auto">
+          <span class="lang-content lang-en active">We specifically serve high-net-worth individuals, family offices, and private enterprises in the German-speaking markets. Our team understands local regulatory requirements, cultural nuances, and maintains the discretion expected by our clientele.</span>
+          <span class="lang-content lang-de">Wir bedienen gezielt vermögende Privatpersonen, Family Offices und private Unternehmen im deutschsprachigen Raum. Unser Team versteht lokale regulatorische Anforderungen, kulturelle Besonderheiten und wahrt die von unserer Klientel erwartete Diskretion.</span>
+          <span class="lang-content lang-fr">Nous servons spécifiquement les particuliers fortunés, family offices et entreprises privées sur les marchés germanophones. Notre équipe comprend les exigences réglementaires locales, les nuances culturelles et maintient la discrétion attendue par notre clientèle.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Small Projects for German Private Clients -->
+  <section id="projects" class="max-w-6xl mx-auto px-4 py-16 bg-white">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">
+        <span class="lang-content lang-en active">Quick Projects for German Small Businesses</span>
+        <span class="lang-content lang-de">Schnelle Projekte für deutsche Kleinunternehmen</span>
+        <span class="lang-content lang-fr">Projets rapides pour les petites entreprises allemandes</span>
+      </h2>
+      <p class="text-slate-600 max-w-2xl mx-auto">
+        <span class="lang-content lang-en active">Perfect for local businesses, startups, and private clients needing professional web solutions</span>
+        <span class="lang-content lang-de">Perfekt für lokale Unternehmen, Startups und Privatkunden, die professionelle Web-Lösungen benötigen</span>
+        <span class="lang-content lang-fr">Parfait pour les entreprises locales, startups et clients privés ayant besoin de solutions web professionnelles</span>
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      
+      <!-- Simple Website -->
+      <div class="p-6 rounded-2xl bg-slate-50 border hover:shadow-md transition-shadow icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-globe" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-lg mb-2">
+          <span class="lang-content lang-en active">Professional Website</span>
+          <span class="lang-content lang-de">Professionelle Website</span>
+          <span class="lang-content lang-fr">Site web professionnel</span>
+        </h3>
+        <p class="text-slate-700 mb-3 text-sm">
+          <span class="lang-content lang-en active">Modern, responsive website for your business. Perfect for restaurants, shops, services, consultants.</span>
+          <span class="lang-content lang-de">Moderne, responsive Website für Ihr Unternehmen. Perfekt für Restaurants, Geschäfte, Dienstleister, Berater.</span>
+          <span class="lang-content lang-fr">Site web moderne et responsive pour votre entreprise. Parfait pour restaurants, magasins, services, consultants.</span>
+        </p>
+        <ul class="text-xs text-slate-600 space-y-1 mb-4">
+          <li class="lang-content lang-en active">• 5-10 pages with custom design</li>
+          <li class="lang-content lang-en active">• Mobile-first responsive layout</li>
+          <li class="lang-content lang-en active">• Contact forms & Google Maps</li>
+          <li class="lang-content lang-en active">• SEO optimization</li>
+          <li class="lang-content lang-en active">• GDPR compliant</li>
+          
+          <li class="lang-content lang-de">• 5-10 Seiten mit individuellem Design</li>
+          <li class="lang-content lang-de">• Mobile-first responsive Layout</li>
+          <li class="lang-content lang-de">• Kontaktformulare & Google Maps</li>
+          <li class="lang-content lang-de">• SEO-Optimierung</li>
+          <li class="lang-content lang-de">• DSGVO-konform</li>
+
+          <li class="lang-content lang-fr">• 5-10 pages avec design personnalisé</li>
+          <li class="lang-content lang-fr">• Layout responsive mobile-first</li>
+          <li class="lang-content lang-fr">• Formulaires de contact & Google Maps</li>
+          <li class="lang-content lang-fr">• Optimisation SEO</li>
+          <li class="lang-content lang-fr">• Conforme RGPD</li>
+        </ul>
+        <div class="text-center">
+          <div class="text-sm text-slate-500 mb-1">
+            <span class="lang-content lang-en active">Starting from</span>
+            <span class="lang-content lang-de">Ab</span>
+            <span class="lang-content lang-fr">À partir de</span>
+          </div>
+          <div class="text-xl font-bold text-indigo-600">€1,200</div>
+        </div>
+      </div>
+
+      <!-- E-commerce -->
+      <div class="p-6 rounded-2xl bg-slate-50 border hover:shadow-md transition-shadow icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-lg mb-2">
+          <span class="lang-content lang-en active">E-commerce Store</span>
+          <span class="lang-content lang-de">E-Commerce Shop</span>
+          <span class="lang-content lang-fr">Boutique e-commerce</span>
+        </h3>
+        <p class="text-slate-700 mb-3 text-sm">
+          <span class="lang-content lang-en active">Complete online shop with payments, inventory management. Perfect for retailers going digital.</span>
+          <span class="lang-content lang-de">Kompletter Online-Shop mit Zahlungen, Lagerverwaltung. Perfekt für Händler, die digital werden.</span>
+          <span class="lang-content lang-fr">Boutique en ligne complète avec paiements, gestion des stocks. Parfait pour les détaillants qui se digitalisent.</span>
+        </p>
+        <ul class="text-xs text-slate-600 space-y-1 mb-4">
+          <li class="lang-content lang-en active">• Product catalog & shopping cart</li>
+          <li class="lang-content lang-en active">• PayPal, Stripe, SEPA payments</li>
+          <li class="lang-content lang-en active">• Inventory & order management</li>
+          <li class="lang-content lang-en active">• German tax compliance</li>
+          <li class="lang-content lang-en active">• Customer accounts & wishlists</li>
+
+          <li class="lang-content lang-de">• Produktkatalog & Warenkorb</li>
+          <li class="lang-content lang-de">• PayPal, Stripe, SEPA Zahlungen</li>
+          <li class="lang-content lang-de">• Lager- & Bestellverwaltung</li>
+          <li class="lang-content lang-de">• Deutsche Steuer-Konformität</li>
+          <li class="lang-content lang-de">• Kundenkonten & Wunschlisten</li>
+
+          <li class="lang-content lang-fr">• Catalogue produits & panier</li>
+          <li class="lang-content lang-fr">• Paiements PayPal, Stripe, SEPA</li>
+          <li class="lang-content lang-fr">• Gestion stock & commandes</li>
+          <li class="lang-content lang-fr">• Conformité fiscale allemande</li>
+          <li class="lang-content lang-fr">• Comptes clients & listes de souhaits</li>
+        </ul>
+        <div class="text-center">
+          <div class="text-sm text-slate-500 mb-1">
+            <span class="lang-content lang-en active">Starting from</span>
+            <span class="lang-content lang-de">Ab</span>
+            <span class="lang-content lang-fr">À partir de</span>
+          </div>
+          <div class="text-xl font-bold text-indigo-600">€2,800</div>
+        </div>
+      </div>
+
+      <!-- Custom Web App -->
+      <div class="p-6 rounded-2xl bg-slate-50 border hover:shadow-md transition-shadow icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-lg mb-2">
+          <span class="lang-content lang-en active">Custom Web App</span>
+          <span class="lang-content lang-de">Individuelle Web-App</span>
+          <span class="lang-content lang-fr">Application web sur mesure</span>
+        </h3>
+        <p class="text-slate-700 mb-3 text-sm">
+          <span class="lang-content lang-en active">Tailored web application for your specific business needs. CRM, booking systems, dashboards.</span>
+          <span class="lang-content lang-de">Maßgeschneiderte Web-Anwendung für Ihre spezifischen Geschäftsanforderungen. CRM, Buchungssysteme, Dashboards.</span>
+          <span class="lang-content lang-fr">Application web sur mesure pour vos besoins d'entreprise spécifiques. CRM, systèmes de réservation, tableaux de bord.</span>
+        </p>
+        <ul class="text-xs text-slate-600 space-y-1 mb-4">
+          <li class="lang-content lang-en active">• Custom functionality & workflows</li>
+          <li class="lang-content lang-en active">• User authentication & roles</li>
+          <li class="lang-content lang-en active">• Database integration</li>
+          <li class="lang-content lang-en active">• API integrations</li>
+          <li class="lang-content lang-en active">• Admin panel & reporting</li>
+
+          <li class="lang-content lang-de">• Individuelle Funktionen & Workflows</li>
+          <li class="lang-content lang-de">• Benutzer-Authentifizierung & Rollen</li>
+          <li class="lang-content lang-de">• Datenbank-Integration</li>
+          <li class="lang-content lang-de">• API-Integrationen</li>
+          <li class="lang-content lang-de">• Admin-Panel & Reporting</li>
+
+          <li class="lang-content lang-fr">• Fonctionnalités & workflows personnalisés</li>
+          <li class="lang-content lang-fr">• Authentification & rôles utilisateurs</li>
+          <li class="lang-content lang-fr">• Intégration base de données</li>
+          <li class="lang-content lang-fr">• Intégrations API</li>
+          <li class="lang-content lang-fr">• Panel admin & reporting</li>
+        </ul>
+        <div class="text-center">
+          <div class="text-sm text-slate-500 mb-1">
+            <span class="lang-content lang-en active">Starting from</span>
+            <span class="lang-content lang-de">Ab</span>
+            <span class="lang-content lang-fr">À partir de</span>
+          </div>
+          <div class="text-xl font-bold text-indigo-600">€4,500</div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Pricing & Packages -->
+  <section id="pricing" class="max-w-6xl mx-auto px-4 py-16 bg-slate-50">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">
+        <span class="lang-content lang-en active">Transparent German & French Market Pricing</span>
+        <span class="lang-content lang-de">Transparente Preise für den deutschen & französischen Markt</span>
+        <span class="lang-content lang-fr">Tarification transparente pour les marchés allemand et français</span>
+      </h2>
+      <p class="text-slate-600 max-w-3xl mx-auto">
+        <span class="lang-content lang-en active">Our rates are based on current German freelance market standards (€65-85/hour) with transparent project estimates</span>
+        <span class="lang-content lang-de">Unsere Preise basieren auf aktuellen deutschen Freelance-Marktstandards (65-85€/Stunde) mit transparenten Projektschätzungen</span>
+        <span class="lang-content lang-fr">Nos tarifs sont basés sur les standards actuels du marché freelance allemand (65-85€/heure) avec des estimations de projet transparentes</span>
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- Hourly Rate -->
+      <div class="pricing-card text-center icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-clock" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-xl mb-2">
+          <span class="lang-content lang-en active">Hourly Rate</span>
+          <span class="lang-content lang-de">Stundensatz</span>
+          <span class="lang-content lang-fr">Tarif horaire</span>
+        </h3>
+        <div class="text-3xl font-black text-hoa-600 mb-4">€75<span class="text-lg text-slate-500">/hour</span></div>
+        <ul class="text-sm text-slate-600 space-y-2 text-left">
+          <li class="lang-content lang-en active">• Perfect for consultations & small fixes</li>
+          <li class="lang-content lang-en active">• Minimum 2 hours per session</li>
+          <li class="lang-content lang-en active">• Remote or on-site (Germany/Switzerland)</li>
+          <li class="lang-content lang-en active">• Same-day response</li>
+
+          <li class="lang-content lang-de">• Perfekt für Beratungen & kleine Korrekturen</li>
+          <li class="lang-content lang-de">• Mindestens 2 Stunden pro Sitzung</li>
+          <li class="lang-content lang-de">• Remote oder vor Ort (Deutschland/Schweiz)</li>
+          <li class="lang-content lang-de">• Antwort am selben Tag</li>
+
+          <li class="lang-content lang-fr">• Parfait pour consultations & petites corrections</li>
+          <li class="lang-content lang-fr">• Minimum 2 heures par session</li>
+          <li class="lang-content lang-fr">• À distance ou sur site (Allemagne/Suisse)</li>
+          <li class="lang-content lang-fr">• Réponse le jour même</li>
+        </ul>
+      </div>
+
+      <!-- Project-based -->
+      <div class="pricing-card text-center border-2 border-hoa-200 relative icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-box" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-xl mb-2">
+          <span class="lang-content lang-en active">Fixed Projects</span>
+          <span class="lang-content lang-de">Fixpreis-Projekte</span>
+          <span class="lang-content lang-fr">Projets à prix fixe</span>
+        </h3>
+        <div class="text-3xl font-black text-hoa-600 mb-4">
+          <span class="lang-content lang-en active">€1.2k - €15k</span>
+          <span class="lang-content lang-de">1,2k - 15k€</span>
+          <span class="lang-content lang-fr">1,2k€ - 15k€</span>
+        </div>
+        <ul class="text-sm text-slate-600 space-y-2 text-left">
+          <li class="lang-content lang-en active">• Complete websites & web applications</li>
+          <li class="lang-content lang-en active">• Fixed scope with clear deliverables</li>
+          <li class="lang-content lang-en active">• 30-day warranty included</li>
+          <li class="lang-content lang-en active">• Payment in 3 installments</li>
+
+          <li class="lang-content lang-de">• Komplette Websites & Web-Anwendungen</li>
+          <li class="lang-content lang-de">• Fester Umfang mit klaren Lieferungen</li>
+          <li class="lang-content lang-de">• 30-Tage-Garantie inklusive</li>
+          <li class="lang-content lang-de">• Zahlung in 3 Raten</li>
+
+          <li class="lang-content lang-fr">• Sites web complets & applications web</li>
+          <li class="lang-content lang-fr">• Portée fixe avec livrables clairs</li>
+          <li class="lang-content lang-fr">• Garantie 30 jours incluse</li>
+          <li class="lang-content lang-fr">• Paiement en 3 versements</li>
+        </ul>
+      </div>
+
+      <!-- Retainer -->
+      <div class="pricing-card text-center icon-card">
+        <div class="icon-badge mb-3">
+          <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+        </div>
+        <h3 class="font-bold text-xl mb-2">
+          <span class="lang-content lang-en active">Monthly Retainer</span>
+          <span class="lang-content lang-de">Monatlicher Retainer</span>
+          <span class="lang-content lang-fr">Retainer mensuel</span>
+        </h3>
+        <div class="text-3xl font-black text-hoa-600 mb-4">
+          <span class="lang-content lang-en active">€2.5k/mo</span>
+          <span class="lang-content lang-de">2,5k€/Monat</span>
+          <span class="lang-content lang-fr">2,5k€/mois</span>
+        </div>
+        <ul class="text-sm text-slate-600 space-y-2 text-left">
+          <li class="lang-content lang-en active">• 35 hours of work per month</li>
+          <li class="lang-content lang-en active">• Priority support & maintenance</li>
+          <li class="lang-content lang-en active">• Strategic technology consulting</li>
+          <li class="lang-content lang-en active">• Cancel anytime with 30-day notice</li>
+
+          <li class="lang-content lang-de">• 35 Arbeitsstunden pro Monat</li>
+          <li class="lang-content lang-de">• Prioritäts-Support & Wartung</li>
+          <li class="lang-content lang-de">• Strategische Technologie-Beratung</li>
+          <li class="lang-content lang-de">• Kündbar jederzeit mit 30-Tage-Frist</li>
+
+          <li class="lang-content lang-fr">• 35 heures de travail par mois</li>
+          <li class="lang-content lang-fr">• Support prioritaire & maintenance</li>
+          <li class="lang-content lang-fr">• Conseil technologique stratégique</li>
+          <li class="lang-content lang-fr">• Résiliable avec préavis de 30 jours</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Additional Services -->
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-xl p-6 border border-hoa-100">
+        <h4 class="font-bold text-lg mb-3 text-hoa-800">
+          <span class="lang-content lang-en active"><span class="icon-inline"><i class="fa-solid fa-building" aria-hidden="true"></i></span>Small Business Packages</span>
+          <span class="lang-content lang-de"><span class="icon-inline"><i class="fa-solid fa-building" aria-hidden="true"></i></span>Kleinunternehmen-Pakete</span>
+          <span class="lang-content lang-fr"><span class="icon-inline"><i class="fa-solid fa-building" aria-hidden="true"></i></span>Packages PME</span>
+        </h4>
+        <div class="space-y-2 text-sm text-slate-600">
+          <div class="flex justify-between">
+            <span class="lang-content lang-en active">Professional Website</span>
+            <span class="lang-content lang-de">Professionelle Website</span>
+            <span class="lang-content lang-fr">Site web professionnel</span>
+            <strong class="text-hoa-600">€1,200</strong>
+          </div>
+          <div class="flex justify-between">
+            <span class="lang-content lang-en active">E-commerce Store</span>
+            <span class="lang-content lang-de">E-Commerce-Shop</span>
+            <span class="lang-content lang-fr">Boutique e-commerce</span>
+            <strong class="text-hoa-600">€2,800</strong>
+          </div>
+          <div class="flex justify-between">
+            <span class="lang-content lang-en active">Custom Web App</span>
+            <span class="lang-content lang-de">Benutzerdefinierte Web-App</span>
+            <span class="lang-content lang-fr">Application web sur mesure</span>
+            <strong class="text-hoa-600">€4,500+</strong>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl p-6 border border-hoa-100">
+        <h4 class="font-bold text-lg mb-3 text-hoa-800">
+          <span class="lang-content lang-en active"><span class="icon-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span>Premium Enterprise</span>
+          <span class="lang-content lang-de"><span class="icon-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span>Premium Enterprise</span>
+          <span class="lang-content lang-fr"><span class="icon-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span>Enterprise Premium</span>
+        </h4>
+        <div class="space-y-2 text-sm text-slate-600">
+          <div class="flex justify-between">
+            <span class="lang-content lang-en active">Enterprise Solution</span>
+            <span class="lang-content lang-de">Unternehmenslösung</span>
+            <span class="lang-content lang-fr">Solution d'entreprise</span>
+            <strong class="text-hoa-600">€10k+</strong>
+          </div>
+          <div class="flex justify-between">
+            <span class="lang-content lang-en active">AI/ML Integration</span>
+            <span class="lang-content lang-de">KI/ML-Integration</span>
+            <span class="lang-content lang-fr">Intégration IA/ML</span>
+            <strong class="text-hoa-600">€15k+</strong>
+          </div>
+          <div class="flex justify-between">
+            <span class="lang-content lang-en active">Strategic Consulting</span>
+            <span class="lang-content lang-de">Strategische Beratung</span>
+            <span class="lang-content lang-fr">Conseil stratégique</span>
+            <strong class="text-hoa-600">Custom</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Regional Note -->
+    <div class="mt-8 p-4 bg-white rounded-xl border border-hoa-100 text-center">
+      <p class="text-sm text-slate-600">
+        <span class="lang-content lang-en active">🇩🇪 Based on German freelance market rates | 🇨🇭 Swiss projects welcome | All prices exclude VAT</span>
+        <span class="lang-content lang-de">🇩🇪 Basierend auf deutschen Freelance-Marktpreisen | 🇨🇭 Schweizer Projekte willkommen | Alle Preise exkl. MwSt.</span>
+        <span class="lang-content lang-fr">🇩🇪 Basé sur les tarifs du marché freelance allemand | 🇨🇭 Projets suisses bienvenus | Tous prix HT</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section id="case-studies" class="max-w-6xl mx-auto px-4 py-16 bg-slate-50">
+    <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-10">
+      <span class="lang-content lang-en active">Case Studies</span>
+      <span class="lang-content lang-de">Fallstudien</span>
+      <span class="lang-content lang-fr">Études de cas</span>
+    </h2>
+    <div class="space-y-8">
+      
+      <!-- Universal Music Group -->
+      <a href="/case-studies/universal-music-group.html" class="block group">
+        <article class="bg-white rounded-3xl p-8 shadow-lg border group-hover:border-hoa-400 group-hover:shadow-xl transition-all duration-300">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h3 class="font-black text-2xl text-slate-900 group-hover:text-hoa-600 transition-colors">Universal Music Group</h3>
+              <p class="text-slate-600 font-semibold">Project Delivery Manager • 2007–2010 • Paris</p>
+            </div>
+            <div class="text-right">
+              <div class="text-3xl font-black text-indigo-600">120+</div>
+              <div class="text-sm text-slate-600">Team Members</div>
+            </div>
+          </div>
+          <p class="text-slate-700 mb-4">
+            <span class="lang-content lang-en active">Led the complete overhaul of Universal's music metadata and delivery systems. Architected a development factory platform for global operations.</span>
+            <span class="lang-content lang-de">Leitete die komplette Überholung von Universals Musik-Metadaten- und Liefersystemen. Entwickelte eine Entwicklungsfabrik-Plattform für globale Operationen.</span>
+            <span class="lang-content lang-fr">A dirigé la refonte complète des systèmes de métadonnées musicales et de livraison d'Universal. A conçu une plateforme d'usine de développement pour les opérations mondiales.</span>
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+            <div class="text-center p-3 bg-indigo-50 rounded-xl">
+              <div class="font-bold text-lg">120+ Engineers</div>
+              <div class="text-sm text-slate-600">Team Leadership</div>
+            </div>
+            <div class="text-center p-3 bg-indigo-50 rounded-xl">
+              <div class="font-bold text-lg">5 Teams</div>
+              <div class="text-sm text-slate-600">Architecture Head</div>
+            </div>
+            <div class="text-center p-3 bg-indigo-50 rounded-xl">
+              <div class="font-bold text-lg">Global Scale</div>
+              <div class="text-sm text-slate-600">Music Platform</div>
+            </div>
+            <div class="text-center p-3 bg-indigo-50 rounded-xl">
+              <div class="font-bold text-lg">3 Years</div>
+              <div class="text-sm text-slate-600">Project Duration</div>
+            </div>
+          </div>
+          <div class="text-hoa-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+            <span class="lang-content lang-en active">View Full Case Study</span>
+            <span class="lang-content lang-de">Vollständige Fallstudie ansehen</span>
+            <span class="lang-content lang-fr">Voir l'étude de cas complète</span>
+            <span>&rarr;</span>
+          </div>
+        </article>
+      </a>
+
+      <!-- Marketing Automation -->
+      <a href="/case-studies/marketing-automation.html" class="block group">
+        <article class="bg-white rounded-3xl p-8 shadow-lg border group-hover:border-hoa-400 group-hover:shadow-xl transition-all duration-300">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h3 class="font-black text-2xl text-slate-900 group-hover:text-hoa-600 transition-colors">
+                <span class="lang-content lang-en active">Marketing Automation Platform</span>
+                <span class="lang-content lang-de">Marketing-Automatisierungsplattform</span>
+                <span class="lang-content lang-fr">Plateforme d'automatisation marketing</span>
+              </h3>
+              <p class="text-slate-600 font-semibold">Lead Dev & Architect • 2019–2022 • Berlin</p>
+            </div>
+            <div class="text-right">
+              <div class="text-3xl font-black text-green-600">€700k+</div>
+              <div class="text-sm text-slate-600">Monthly Budget</div>
+            </div>
+          </div>
+          <p class="text-slate-700 mb-4">
+            <span class="lang-content lang-en active">End-to-end Facebook marketing automation with AI creative generation, Selenium pipelines, and real-time performance dashboards. 35% ROI improvement.</span>
+            <span class="lang-content lang-de">End-to-End-Facebook-Marketing-Automatisierung mit KI-Creative-Generierung, Selenium-Pipelines und Echtzeit-Performance-Dashboards. 35% ROI-Verbesserung.</span>
+            <span class="lang-content lang-fr">Automatisation marketing Facebook de bout en bout avec génération créative IA, pipelines Selenium et tableaux de bord de performance en temps réel. 35% d'amélioration du ROI.</span>
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+            <div class="text-center p-3 bg-green-50 rounded-xl">
+              <div class="font-bold text-lg">€700k+/mo</div>
+              <div class="text-sm text-slate-600">Budget Optimized</div>
+            </div>
+            <div class="text-center p-3 bg-green-50 rounded-xl">
+              <div class="font-bold text-lg">35% ROI</div>
+              <div class="text-sm text-slate-600">Improvement</div>
+            </div>
+            <div class="text-center p-3 bg-green-50 rounded-xl">
+              <div class="font-bold text-lg">Automated</div>
+              <div class="text-sm text-slate-600">Ad Production</div>
+            </div>
+            <div class="text-center p-3 bg-green-50 rounded-xl">
+              <div class="font-bold text-lg">Real-time</div>
+              <div class="text-sm text-slate-600">Analytics</div>
+            </div>
+          </div>
+          <div class="text-hoa-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+            <span class="lang-content lang-en active">View Full Case Study</span>
+            <span class="lang-content lang-de">Vollständige Fallstudie ansehen</span>
+            <span class="lang-content lang-fr">Voir l'étude de cas complète</span>
+            <span>&rarr;</span>
+          </div>
+        </article>
+      </a>
+
+      <!-- Vodafone Live -->
+      <a href="/case-studies/vodafone-live.html" class="block group">
+        <article class="bg-white rounded-3xl p-8 shadow-lg border group-hover:border-hoa-400 group-hover:shadow-xl transition-all duration-300">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h3 class="font-black text-2xl text-slate-900 group-hover:text-hoa-600 transition-colors">Vodafone Live!</h3>
+              <p class="text-slate-600 font-semibold">Technical Leader • 2004–2007 • Paris</p>
+            </div>
+            <div class="text-right">
+              <div class="text-3xl font-black text-blue-600">30M+</div>
+              <div class="text-sm text-slate-600">Daily Users</div>
+            </div>
+          </div>
+          <p class="text-slate-700 mb-4">
+            <span class="lang-content lang-en active">Scalable infrastructure for FIFA World Cup 2006 with real-time billing systems. Maintained 99.9% uptime handling 30M+ daily page views.</span>
+            <span class="lang-content lang-de">Skalierbare Infrastruktur für die FIFA-WM 2006 mit Echtzeit-Abrechnungssystemen. 99,9% Verfügbarkeit bei 30M+ täglichen Seitenaufrufen.</span>
+            <span class="lang-content lang-fr">Infrastructure évolutive pour la Coupe du Monde FIFA 2006 avec systèmes de facturation en temps réel. 99,9% de disponibilité avec 30M+ de pages vues quotidiennes.</span>
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+            <div class="text-center p-3 bg-blue-50 rounded-xl">
+              <div class="font-bold text-lg">30M+</div>
+              <div class="text-sm text-slate-600">Daily Page Views</div>
+            </div>
+            <div class="text-center p-3 bg-blue-50 rounded-xl">
+              <div class="font-bold text-lg">FIFA 2006</div>
+              <div class="text-sm text-slate-600">High-Traffic Event</div>
+            </div>
+            <div class="text-center p-3 bg-blue-50 rounded-xl">
+              <div class="font-bold text-lg">99.9%</div>
+              <div class="text-sm text-slate-600">Uptime</div>
+            </div>
+            <div class="text-center p-3 bg-blue-50 rounded-xl">
+              <div class="font-bold text-lg">Real-time</div>
+              <div class="text-sm text-slate-600">Billing</div>
+            </div>
+          </div>
+          <div class="text-hoa-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+            <span class="lang-content lang-en active">View Full Case Study</span>
+            <span class="lang-content lang-de">Vollständige Fallstudie ansehen</span>
+            <span class="lang-content lang-fr">Voir l'étude de cas complète</span>
+            <span>&rarr;</span>
+          </div>
+        </article>
+      </a>
+
+      <!-- AI Trading Platform -->
+      <a href="/case-studies/ai-trading-platform.html" class="block group">
+        <article class="bg-white rounded-3xl p-8 shadow-lg border group-hover:border-hoa-400 group-hover:shadow-xl transition-all duration-300">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h3 class="font-black text-2xl text-slate-900 group-hover:text-hoa-600 transition-colors">
+                <span class="lang-content lang-en active">AI Trading & Analytics Platform</span>
+                <span class="lang-content lang-de">KI-Trading- & Analytics-Plattform</span>
+                <span class="lang-content lang-fr">Plateforme de trading & analytics IA</span>
+              </h3>
+              <p class="text-slate-600 font-semibold">Product Design & Engineering • 2018–2021 • Remote</p>
+            </div>
+            <div class="text-right">
+              <div class="text-3xl font-black text-purple-600">45%</div>
+              <div class="text-sm text-slate-600">ROI Increase</div>
+            </div>
+          </div>
+          <p class="text-slate-700 mb-4">
+            <span class="lang-content lang-en active">Serverless AWS architecture with TensorFlow/PyTorch models for automated cryptocurrency trading across multiple exchanges.</span>
+            <span class="lang-content lang-de">Serverlose AWS-Architektur mit TensorFlow/PyTorch-Modellen für automatisierten Kryptowährungshandel über mehrere Börsen.</span>
+            <span class="lang-content lang-fr">Architecture AWS serverless avec modèles TensorFlow/PyTorch pour le trading automatisé de cryptomonnaies sur plusieurs échanges.</span>
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+            <div class="text-center p-3 bg-purple-50 rounded-xl">
+              <div class="font-bold text-lg">45% ROI</div>
+              <div class="text-sm text-slate-600">Trading Efficiency</div>
+            </div>
+            <div class="text-center p-3 bg-purple-50 rounded-xl">
+              <div class="font-bold text-lg">AWS Lambda</div>
+              <div class="text-sm text-slate-600">Serverless</div>
+            </div>
+            <div class="text-center p-3 bg-purple-50 rounded-xl">
+              <div class="font-bold text-lg">Multi-Exchange</div>
+              <div class="text-sm text-slate-600">Integrations</div>
+            </div>
+            <div class="text-center p-3 bg-purple-50 rounded-xl">
+              <div class="font-bold text-lg">Real-time</div>
+              <div class="text-sm text-slate-600">ML Models</div>
+            </div>
+          </div>
+          <div class="text-hoa-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+            <span class="lang-content lang-en active">View Full Case Study</span>
+            <span class="lang-content lang-de">Vollständige Fallstudie ansehen</span>
+            <span class="lang-content lang-fr">Voir l'étude de cas complète</span>
+            <span>&rarr;</span>
+          </div>
+        </article>
+      </a>
+
+      <!-- HeyPet -->
+      <a href="/case-studies/heypet.html" class="block group">
+        <article class="bg-white rounded-3xl p-8 shadow-lg border group-hover:border-hoa-400 group-hover:shadow-xl transition-all duration-300">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h3 class="font-black text-2xl text-slate-900 group-hover:text-hoa-600 transition-colors">HeyPet</h3>
+              <p class="text-slate-600 font-semibold">Co-founder & CTO • 2012–2016 • Paris</p>
+            </div>
+            <div class="text-right">
+              <div class="text-3xl font-black text-orange-600">4</div>
+              <div class="text-sm text-slate-600">
+                <span class="lang-content lang-en active">Years</span>
+                <span class="lang-content lang-de">Jahre</span>
+                <span class="lang-content lang-fr">Années</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-bold text-lg mb-2">
+                <span class="lang-content lang-en active">Challenge</span>
+                <span class="lang-content lang-de">Herausforderung</span>
+                <span class="lang-content lang-fr">Défi</span>
+              </h4>
+              <p class="text-slate-700">
+                <span class="lang-content lang-en active">Build a social network connecting pet owners with pet carers, featuring real-time messaging and location-based services.</span>
+                <span class="lang-content lang-de">Aufbau eines sozialen Netzwerks, das Tierbesitzer mit Tierpflegern verbindet, mit Echtzeit-Messaging und standortbasierten Diensten.</span>
+                <span class="lang-content lang-fr">Créer un réseau social connectant les propriétaires d'animaux avec les gardiens, avec messagerie en temps réel et services géolocalisés.</span>
+              </p>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-2">
+                <span class="lang-content lang-en active">Solution</span>
+                <span class="lang-content lang-de">Lösung</span>
+                <span class="lang-content lang-fr">Solution</span>
+              </h4>
+              <p class="text-slate-700">
+                <span class="lang-content lang-en active">Full-featured social platform with responsive API-based backend, real-time messaging, OAuth authentication, and Docker deployment.</span>
+                <span class="lang-content lang-de">Voll ausgestattete Social-Plattform mit responsivem API-basiertem Backend, Echtzeit-Messaging, OAuth-Authentifizierung und Docker-Deployment.</span>
+                <span class="lang-content lang-fr">Plateforme sociale complète avec backend API responsive, messagerie en temps réel, authentification OAuth et déploiement Docker.</span>
+              </p>
+            </div>
+          </div>
+          <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="text-center p-3 bg-orange-50 rounded-xl">
+              <div class="font-bold text-lg">Angular.js</div>
+              <div class="text-sm text-slate-600">Frontend</div>
+            </div>
+            <div class="text-center p-3 bg-orange-50 rounded-xl">
+              <div class="font-bold text-lg">Symfony</div>
+              <div class="text-sm text-slate-600">Backend</div>
+            </div>
+            <div class="text-center p-3 bg-orange-50 rounded-xl">
+              <div class="font-bold text-lg">OAuth 2.0</div>
+              <div class="text-sm text-slate-600">Authentication</div>
+            </div>
+            <div class="text-center p-3 bg-orange-50 rounded-xl">
+              <div class="font-bold text-lg">Docker</div>
+              <div class="text-sm text-slate-600">Infrastructure</div>
+            </div>
+          </div>
+          <div class="mt-4 text-hoa-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+            <span class="lang-content lang-en active">View Full Case Study</span>
+            <span class="lang-content lang-de">Vollständige Fallstudie ansehen</span>
+            <span class="lang-content lang-fr">Voir l'étude de cas complète</span>
+            <span>&rarr;</span>
+          </div>
+        </article>
+      </a>
+
+      <!-- Scanbots -->
+      <a href="/case-studies/scanbots.html" class="block group">
+        <article class="bg-white rounded-3xl p-8 shadow-lg border group-hover:border-hoa-400 group-hover:shadow-xl transition-all duration-300">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h3 class="font-black text-2xl text-slate-900 group-hover:text-hoa-600 transition-colors">Scanbots</h3>
+              <p class="text-slate-600 font-semibold">Co-founder & CTO • 2017–2018 • Warsaw</p>
+            </div>
+            <div class="text-right">
+              <div class="text-3xl font-black text-cyan-600">€2M+</div>
+              <div class="text-sm text-slate-600">
+                <span class="lang-content lang-en active">Funding Raised</span>
+                <span class="lang-content lang-de">Finanzierung</span>
+                <span class="lang-content lang-fr">Financement</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-bold text-lg mb-2">
+                <span class="lang-content lang-en active">Challenge</span>
+                <span class="lang-content lang-de">Herausforderung</span>
+                <span class="lang-content lang-fr">Défi</span>
+              </h4>
+              <p class="text-slate-700">
+                <span class="lang-content lang-en active">
+                  Large-scale infrastructure inspections were costly, risky and too slow. Manual methods couldn't handle growing asset volumes. (128 characters)
+                </span>
+                <span class="lang-content lang-de">
+                  Inspektionen großer Infrastruktur waren teuer, riskant und zu langsam. Manuelle Methoden hielten mit dem Anlagenwachstum nicht mit. (129 Zeichen)
+                </span>
+                <span class="lang-content lang-fr">
+                  Les inspections d'infrastructures étaient coûteuses, risquées et trop lentes. Les méthodes manuelles ne suivaient plus le volume d'actifs. (132 caractères)
+                </span>
+              </p>
+            </div>
+
+            <div>
+              <h4 class="font-bold text-lg mb-2">
+                <span class="lang-content lang-en active">Solution</span>
+                <span class="lang-content lang-de">Lösung</span>
+                <span class="lang-content lang-fr">Solution</span>
+              </h4>
+              <p class="text-slate-700">
+                <span class="lang-content lang-en active">
+                  Built an autonomous drone system with AI and real-time defect detection. It automated inspections, sped up reports and scaled safely. (132 characters)
+                </span>
+                <span class="lang-content lang-de">
+                  Autonome Drohnenplattform mit KI und Echtzeit-Fehlererkennung entwickelt. Automatisierte Inspektionen, beschleunigte Berichte, sicher skalierbar. (137 Zeichen)
+                </span>
+                <span class="lang-content lang-fr">
+                  Plateforme de drones autonomes avec IA et détection de défauts en temps réel. Inspections automatisées, rapports rapides, déploiement sécurisé. (136 caractères)
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="text-center p-3 bg-cyan-50 rounded-xl">
+              <div class="font-bold text-lg">International</div>
+              <div class="text-sm text-slate-600">Projects in PL, TR, BY, MA, EG</div>
+            </div>
+            <div class="text-center p-3 bg-cyan-50 rounded-xl">
+              <div class="font-bold text-lg">20+</div>
+              <div class="text-sm text-slate-600">Team Members</div>
+            </div>
+            <div class="text-center p-3 bg-cyan-50 rounded-xl">
+              <div class="font-bold text-lg">200 TB+</div>
+              <div class="text-sm text-slate-600">Data Processed</div>
+            </div>
+            <div class="text-center p-3 bg-cyan-50 rounded-xl">
+              <div class="font-bold text-lg">Custom UAV</div>
+              <div class="text-sm text-slate-600">Plane & helicopter</div>
+            </div>
+          </div>
+          <div class="mt-4 text-hoa-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+            <span class="lang-content lang-en active">View Full Case Study</span>
+            <span class="lang-content lang-de">Vollständige Fallstudie ansehen</span>
+            <span class="lang-content lang-fr">Voir l'étude de cas complète</span>
+            <span>&rarr;</span>
+          </div>
+        </article>
+      </a>
+    </div>
+  </section>
+
+  <!-- Client Testimonials -->
+  <section id="testimonials" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-8">
+      <span class="lang-content lang-en active">What Our Clients Say</span>
+      <span class="lang-content lang-de">Was unsere Kunden sagen</span>
+      <span class="lang-content lang-fr">Ce que disent nos clients</span>
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      
+      <!-- Swiss Family Office -->
+      <blockquote class="bg-white rounded-3xl p-8 shadow-lg border">
+        <div class="flex items-start gap-4">
+          <div class="icon-badge icon-badge--sm flex-shrink-0">
+            <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+          </div>
+          <div class="flex-1">
+            <p class="text-slate-700 text-lg italic mb-4">
+              <span class="lang-content lang-en active">"House of Agile transformed our private investment platform with exceptional discretion and expertise. Their team understood our unique Swiss regulatory requirements and delivered a world-class fintech solution. The level of professionalism and technical excellence exceeded our expectations."</span>
+              <span class="lang-content lang-de">"House of Agile hat unsere private Investmentplattform mit außergewöhnlicher Diskretion und Expertise transformiert. Ihr Team verstand unsere einzigartigen Schweizer regulatorischen Anforderungen und lieferte eine erstklassige Fintech-Lösung. Das Niveau der Professionalität und technischen Exzellenz übertraf unsere Erwartungen."</span>
+              <span class="lang-content lang-fr">"House of Agile a transformé notre plateforme d'investissement privée avec une discrétion et une expertise exceptionnelles. Leur équipe a compris nos exigences réglementaires suisses uniques et a livré une solution fintech de classe mondiale. Le niveau de professionnalisme et d'excellence technique a dépassé nos attentes."</span>
+            </p>
+            <footer class="flex items-center gap-3">
+              <div>
+                <div class="font-semibold text-slate-900">Dr. Klaus Weber</div>
+                <div class="text-sm text-slate-600">
+                  <span class="lang-content lang-en active">Managing Director, Weber Family Office, Zurich</span>
+                  <span class="lang-content lang-de">Geschäftsführer, Weber Family Office, Zürich</span>
+                  <span class="lang-content lang-fr">Directeur Général, Weber Family Office, Zurich</span>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </blockquote>
+
+      <!-- German Private Equity -->
+      <blockquote class="bg-white rounded-3xl p-8 shadow-lg border">
+        <div class="flex items-start gap-4">
+          <div class="icon-badge icon-badge--sm flex-shrink-0">
+            <i class="fa-solid fa-gem" aria-hidden="true"></i>
+          </div>
+          <div class="flex-1">
+            <p class="text-slate-700 text-lg italic mb-4">
+              <span class="lang-content lang-en active">"Working with House of Agile on our portfolio company's digital transformation was exceptional. Their collective expertise in AI and automation helped us increase valuation by 40% pre-exit. The quality of their network and execution capabilities is truly premium."</span>
+              <span class="lang-content lang-de">"Die Zusammenarbeit mit House of Agile bei der digitalen Transformation unseres Portfoliounternehmens war außergewöhnlich. Ihre kollektive Expertise in KI und Automatisierung half uns, die Bewertung um 40% vor dem Exit zu steigern. Die Qualität ihres Netzwerks und ihrer Ausführungskapazitäten ist wirklich premium."</span>
+              <span class="lang-content lang-fr">"Travailler avec House of Agile sur la transformation numérique de notre société de portefeuille était exceptionnel. Leur expertise collective en IA et automatisation nous a aidés à augmenter la valorisation de 40% avant la sortie. La qualité de leur réseau et de leurs capacités d'exécution est vraiment premium."</span>
+            </p>
+            <footer class="flex items-center gap-3">
+              <div>
+                <div class="font-semibold text-slate-900">Maximilian Richter</div>
+                <div class="text-sm text-slate-600">
+                  <span class="lang-content lang-en active">Partner, Munich Private Equity</span>
+                  <span class="lang-content lang-de">Partner, München Private Equity</span>
+                  <span class="lang-content lang-fr">Associé, Munich Private Equity</span>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </blockquote>
+
+      <!-- Luxury Brand Platform -->
+      <blockquote class="bg-white rounded-3xl p-8 shadow-lg border">
+        <div class="flex items-start gap-4">
+          <div class="icon-badge icon-badge--sm flex-shrink-0">
+            <i class="fa-solid fa-crown" aria-hidden="true"></i>
+          </div>
+          <div class="flex-1">
+            <p class="text-slate-700 text-lg italic mb-4">
+              <span class="lang-content lang-en active">"House of Agile delivered an exquisite private member platform for our exclusive Swiss clientele. Their attention to detail, understanding of luxury market dynamics, and technical sophistication created an experience that truly reflects our brand values. Discretion and excellence throughout."</span>
+              <span class="lang-content lang-de">"House of Agile lieferte eine exquisite private Mitgliederplattform für unsere exklusive Schweizer Kundschaft. Ihre Aufmerksamkeit für Details, das Verständnis der Luxusmarktdynamik und technische Raffinesse schufen eine Erfahrung, die unsere Markenwerte wirklich widerspiegelt. Diskretion und Exzellenz durchgehend."</span>
+              <span class="lang-content lang-fr">"House of Agile a livré une plateforme de membres privés exquise pour notre clientèle suisse exclusive. Leur attention aux détails, leur compréhension de la dynamique du marché du luxe et leur sophistication technique ont créé une expérience qui reflète véritablement nos valeurs de marque. Discrétion et excellence partout."</span>
+            </p>
+            <footer class="flex items-center gap-3">
+              <div>
+                <div class="font-semibold text-slate-900">Charlotte von Habsburg</div>
+                <div class="text-sm text-slate-600">
+                  <span class="lang-content lang-en active">Director, Exclusive Members Club, Geneva</span>
+                  <span class="lang-content lang-de">Direktorin, Exklusiver Mitgliederclub, Genf</span>
+                  <span class="lang-content lang-fr">Directrice, Club de Membres Exclusif, Genève</span>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </blockquote>
+
+      <!-- Innovation Consulting -->
+      <blockquote class="bg-white rounded-3xl p-8 shadow-lg border">
+        <div class="flex items-start gap-4">
+          <div class="icon-badge icon-badge--sm flex-shrink-0">
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+          </div>
+          <div class="flex-1">
+            <p class="text-slate-700 text-lg italic mb-4">
+              <span class="lang-content lang-en active">"The House of Agile team provided strategic innovation consulting that revolutionized our approach to digital transformation. Their collective expertise across AI, fintech, and automation helped us identify and execute on opportunities we hadn't even considered. Results exceeded all projections."</span>
+              <span class="lang-content lang-de">"Das House of Agile Team bot strategische Innovationsberatung, die unseren Ansatz zur digitalen Transformation revolutionierte. Ihre kollektive Expertise in KI, Fintech und Automatisierung half uns, Chancen zu identifizieren und zu nutzen, die wir nicht einmal in Betracht gezogen hatten. Die Ergebnisse übertrafen alle Projektionen."</span>
+              <span class="lang-content lang-fr">"L'équipe House of Agile a fourni un conseil en innovation stratégique qui a révolutionné notre approche de la transformation numérique. Leur expertise collective en IA, fintech et automatisation nous a aidés à identifier et exécuter des opportunités que nous n'avions même pas envisagées. Les résultats ont dépassé toutes les projections."</span>
+            </p>
+            <footer class="flex items-center gap-3">
+              <div>
+                <div class="font-semibold text-slate-900">Friedrich Zimmermann</div>
+                <div class="text-sm text-slate-600">
+                  <span class="lang-content lang-en active">Chairman, Stuttgart Technology Group</span>
+                  <span class="lang-content lang-de">Vorstandsvorsitzender, Stuttgart Technology Group</span>
+                  <span class="lang-content lang-fr">Président, Stuttgart Technology Group</span>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Consultation Form -->
+  <section id="consultation" class="max-w-6xl mx-auto px-4 py-16 bg-white">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">
+        <span class="lang-content lang-en active">Request Your Free Consultation</span>
+        <span class="lang-content lang-de">Kostenlose Beratung anfragen</span>
+        <span class="lang-content lang-fr">Demander votre consultation gratuite</span>
+      </h2>
+      <p class="text-slate-600 max-w-2xl mx-auto">
+        <span class="lang-content lang-en active">Get a personalized quote and timeline for your project. We typically respond within 24 hours.</span>
+        <span class="lang-content lang-de">Erhalten Sie ein persönliches Angebot und einen Zeitplan für Ihr Projekt. Wir antworten normalerweise innerhalb von 24 Stunden.</span>
+        <span class="lang-content lang-fr">Obtenez un devis personnalisé et un calendrier pour votre projet. Nous répondons généralement dans les 24 heures.</span>
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12">
+      <!-- Form -->
+      <div class="bg-white rounded-3xl p-8 shadow-xl border border-hoa-100">
+        <div class="mb-6">
+          <h3 class="text-2xl font-bold text-hoa-800 mb-2">
+            <span class="lang-content lang-en active">Get Your Quote</span>
+            <span class="lang-content lang-de">Angebot erhalten</span>
+            <span class="lang-content lang-fr">Obtenez votre devis</span>
+          </h3>
+          <p class="text-slate-600">
+            <span class="lang-content lang-en active">Fill out the form below and we'll get back to you within 24 hours with a detailed proposal.</span>
+            <span class="lang-content lang-de">Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden mit einem detaillierten Angebot.</span>
+            <span class="lang-content lang-fr">Remplissez le formulaire ci-dessous et nous vous recontacterons dans les 24 heures avec une proposition détaillée.</span>
+          </p>
+        </div>
+        <form id="contact-form" method="POST" class="space-y-6">
+          <!-- Contact Info -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold text-hoa-800 mb-2">
+                <span class="lang-content lang-en active">Full Name*</span>
+                <span class="lang-content lang-de">Vollständiger Name*</span>
+                <span class="lang-content lang-fr">Nom complet*</span>
+              </label>
+              <input type="text" name="name" required class="form-input" placeholder="John Smith">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-hoa-800 mb-2">
+                <span class="lang-content lang-en active">Company</span>
+                <span class="lang-content lang-de">Unternehmen</span>
+                <span class="lang-content lang-fr">Entreprise</span>
+              </label>
+              <input type="text" name="company" class="form-input" placeholder="Your Company GmbH">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-hoa-800 mb-2">
+              <span class="lang-content lang-en active">Email Address*</span>
+              <span class="lang-content lang-de">E-Mail-Adresse*</span>
+              <span class="lang-content lang-fr">Adresse email*</span>
+            </label>
+            <input type="email" name="email" required class="form-input" placeholder="your@email.com">
+          </div>
+
+          <!-- Project Type -->
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-2">
+              <span class="lang-content lang-en active">Project Type*</span>
+              <span class="lang-content lang-de">Projekttyp*</span>
+              <span class="lang-content lang-fr">Type de projet*</span>
+            </label>
+            <select name="project_type" required class="form-select">
+              <option value="" data-i18n="select_project_type">Select project type...</option>
+              <option value="website" data-i18n="project_website">Professional Website (€1,200+)</option>
+              <option value="ecommerce" data-i18n="project_ecommerce">E-commerce Store (€2,800+)</option>
+              <option value="webapp" data-i18n="project_webapp">Custom Web App (€4,500+)</option>
+              <option value="premium" data-i18n="project_premium">Premium Enterprise Solution (€10k+)</option>
+              <option value="consultation" data-i18n="project_consultation">Consultation Only (€75/hour)</option>
+              <option value="other" data-i18n="project_other">Other</option>
+            </select>
+          </div>
+
+          <!-- Budget Range -->
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-2">
+              <span class="lang-content lang-en active">Budget Range*</span>
+              <span class="lang-content lang-de">Budget-Bereich*</span>
+              <span class="lang-content lang-fr">Fourchette budgétaire*</span>
+            </label>
+            <select name="budget" required class="form-input">
+              <option value="" data-i18n="select_budget">Select budget range...</option>
+              <option value="1k-3k">€1,000 - €3,000</option>
+              <option value="3k-7k">€3,000 - €7,000</option>
+              <option value="7k-15k">€7,000 - €15,000</option>
+              <option value="15k-30k">€15,000 - €30,000</option>
+              <option value="30k+">€30,000+</option>
+            </select>
+          </div>
+
+          <!-- Timeline -->
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-2">
+              <span class="lang-content lang-en active">Desired Timeline</span>
+              <span class="lang-content lang-de">Gewünschter Zeitrahmen</span>
+              <span class="lang-content lang-fr">Calendrier souhaité</span>
+            </label>
+            <select name="timeline" class="form-input">
+              <option value="" data-i18n="select_timeline">Select timeline...</option>
+              <option value="asap" data-i18n="timeline_asap">ASAP (Rush job +25%)</option>
+              <option value="1month" data-i18n="timeline_1month">Within 1 month</option>
+              <option value="2-3months" data-i18n="timeline_2_3months">2-3 months</option>
+              <option value="3-6months" data-i18n="timeline_3_6months">3-6 months</option>
+              <option value="flexible" data-i18n="timeline_flexible">Flexible</option>
+            </select>
+          </div>
+
+          <!-- Location -->
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-2">
+              <span class="lang-content lang-en active">Location</span>
+              <span class="lang-content lang-de">Standort</span>
+              <span class="lang-content lang-fr">Localisation</span>
+            </label>
+            <select name="location" class="form-input">
+              <option value="" data-i18n="select_location">Select location...</option>
+              <option value="germany" data-i18n="location_germany">🇩🇪 Germany</option>
+              <option value="switzerland" data-i18n="location_switzerland">🇨🇭 Switzerland</option>
+              <option value="france" data-i18n="location_france">🇫🇷 France</option>
+              <option value="remote" data-i18n="location_remote">Remote/Other</option>
+            </select>
+          </div>
+
+          <!-- Project Description -->
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-2">
+              <span class="lang-content lang-en active">Project Description*</span>
+              <span class="lang-content lang-de">Projektbeschreibung*</span>
+              <span class="lang-content lang-fr">Description du projet*</span>
+            </label>
+            <textarea name="description" required class="form-textarea" 
+              placeholder="Tell us about your project, goals, and any specific requirements..."></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="w-full px-6 py-4 bg-hoa-600 text-white font-semibold rounded-xl hover:bg-hoa-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            <span class="lang-content lang-en active"><span class="icon-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span>Get Free Quote & Timeline</span>
+            <span class="lang-content lang-de"><span class="icon-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span>Kostenloses Angebot & Zeitplan erhalten</span>
+            <span class="lang-content lang-fr"><span class="icon-inline"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span>Obtenir un devis gratuit et un calendrier</span>
+          </button>
+          
+          <div class="text-center text-sm text-slate-500">
+            <span class="lang-content lang-en active">✓ No spam • ✓ GDPR compliant • ✓ 24h response guarantee</span>
+            <span class="lang-content lang-de">✓ Kein Spam • ✓ DSGVO-konform • ✓ 24h Antwort-Garantie</span>
+            <span class="lang-content lang-fr">✓ Pas de spam • ✓ Conforme RGPD • ✓ Garantie réponse 24h</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- Quick Contact & Info -->
+      <div class="space-y-8">
+        <!-- Direct Contact -->
+        <div class="p-6 rounded-2xl bg-indigo-50 border border-indigo-200">
+          <h3 class="font-bold text-xl mb-4">
+            <span class="lang-content lang-en active">⚡ Need Quick Help?</span>
+            <span class="lang-content lang-de">⚡ Schnelle Hilfe benötigt?</span>
+            <span class="lang-content lang-fr">⚡ Besoin d'aide rapide?</span>
+          </h3>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <span class="text-hoa-600 icon-inline"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+              <a href="mailto:jc@houseofagile.com" class="text-hoa-700 font-semibold hover:underline">jc@houseofagile.com</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-hoa-600 icon-inline"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i></span>
+              <span class="text-slate-700">
+                <span class="lang-content lang-en active">24h response guarantee</span>
+                <span class="lang-content lang-de">24h Antwort-Garantie</span>
+                <span class="lang-content lang-fr">Garantie de réponse 24h</span>
+              </span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-hoa-600 icon-inline"><i class="fa-solid fa-link" aria-hidden="true"></i></span>
+              <a href="https://www.linkedin.com/in/jeanchristophemeillaud/" class="text-hoa-700 font-semibold hover:underline">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- What Happens Next -->
+        <div class="p-6 rounded-2xl bg-slate-50 border">
+          <h3 class="font-bold text-xl mb-4">
+            <span class="lang-content lang-en active"><span class="icon-inline"><i class="fa-solid fa-list-check" aria-hidden="true"></i></span>What Happens Next?</span>
+            <span class="lang-content lang-de"><span class="icon-inline"><i class="fa-solid fa-list-check" aria-hidden="true"></i></span>Wie geht es weiter?</span>
+            <span class="lang-content lang-fr"><span class="icon-inline"><i class="fa-solid fa-list-check" aria-hidden="true"></i></span>Que se passe-t-il ensuite?</span>
+          </h3>
+          <ol class="space-y-3 text-sm text-slate-700">
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-6 h-6 bg-indigo-600 text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
+              <span>
+                <span class="lang-content lang-en active">We review your request within 24 hours</span>
+                <span class="lang-content lang-de">Wir prüfen Ihre Anfrage innerhalb von 24 Stunden</span>
+                <span class="lang-content lang-fr">Nous examinons votre demande dans les 24 heures</span>
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-6 h-6 bg-indigo-600 text-white rounded-full flex items-center justify-center text-xs font-bold">2</span>
+              <span>
+                <span class="lang-content lang-en active">15-30 min video call to discuss your needs</span>
+                <span class="lang-content lang-de">15-30 Min Videoanruf um Ihre Bedürfnisse zu besprechen</span>
+                <span class="lang-content lang-fr">Appel vidéo de 15-30 min pour discuter de vos besoins</span>
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-6 h-6 bg-indigo-600 text-white rounded-full flex items-center justify-center text-xs font-bold">3</span>
+              <span>
+                <span class="lang-content lang-en active">Detailed proposal with fixed pricing & timeline</span>
+                <span class="lang-content lang-de">Detailliertes Angebot mit Festpreis & Zeitplan</span>
+                <span class="lang-content lang-fr">Proposition détaillée avec prix fixe et calendrier</span>
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-6 h-6 bg-indigo-600 text-white rounded-full flex items-center justify-center text-xs font-bold">4</span>
+              <span>
+                <span class="lang-content lang-en active">Project kickoff within 1-2 weeks</span>
+                <span class="lang-content lang-de">Projektstart innerhalb von 1-2 Wochen</span>
+                <span class="lang-content lang-fr">Lancement du projet dans 1-2 semaines</span>
+              </span>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Guarantees -->
+        <div class="p-6 rounded-2xl bg-green-50 border border-green-200">
+          <h3 class="font-bold text-xl mb-4">
+            <span class="lang-content lang-en active">✅ Our Guarantees</span>
+            <span class="lang-content lang-de">✅ Unsere Garantien</span>
+            <span class="lang-content lang-fr">✅ Nos garanties</span>
+          </h3>
+          <ul class="space-y-2 text-sm text-slate-700">
+            <li class="flex items-center gap-2">
+              <span class="text-green-600">✓</span>
+              <span>
+                <span class="lang-content lang-en active">30-day warranty on all projects</span>
+                <span class="lang-content lang-de">30-Tage-Garantie auf alle Projekte</span>
+                <span class="lang-content lang-fr">Garantie de 30 jours sur tous les projets</span>
+              </span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-green-600">✓</span>
+              <span>
+                <span class="lang-content lang-en active">GDPR/DSGVO compliant</span>
+                <span class="lang-content lang-de">DSGVO-konform</span>
+                <span class="lang-content lang-fr">Conforme RGPD</span>
+              </span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-green-600">✓</span>
+              <span>
+                <span class="lang-content lang-en active">German/Swiss tax & legal compliance</span>
+                <span class="lang-content lang-de">Deutsche/Schweizer Steuer- & Rechtskonformität</span>
+                <span class="lang-content lang-fr">Conformité fiscale et légale allemande/suisse</span>
+              </span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-green-600">✓</span>
+              <span>
+                <span class="lang-content lang-en active">Source code & full ownership</span>
+                <span class="lang-content lang-de">Quellcode & vollständiges Eigentum</span>
+                <span class="lang-content lang-fr">Code source et propriété complète</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© 2025 House of Agile — Switzerland · Germany · Berlin</p>
+      <div class="flex items-center gap-4">
+        <a href="mailto:jc@houseofagile.com" class="hover:text-indigo-600">Email</a>
+        <a href="https://www.linkedin.com/in/jeanchristophemeillaud/" class="hover:text-indigo-600">LinkedIn</a>
+        <a href="https://github.com/houseofagile" aria-label="GitHub profile" class="hover:text-indigo-600">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

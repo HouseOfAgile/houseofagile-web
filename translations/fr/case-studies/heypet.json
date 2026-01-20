@@ -16,9 +16,9 @@
     "techStack": ["Angular.js", "TypeScript", "Symfony", "OAuth", "Docker", "PostgreSQL"],
     "metrics": {
       "metric1": { "value": "4", "label": "Années de développement" },
-      "metric2": { "value": "—", "label": "Utilisateurs actifs" },
-      "metric3": { "value": "—", "label": "Messages/Jour" },
-      "metric4": { "value": "—", "label": "Disponibilité" }
+      "metric2": { "value": "300", "label": "Utilisateurs actifs" },
+      "metric3": { "value": "50", "label": "Messages/Jour" },
+      "metric4": { "value": "BDD", "label": "100% behavior driven development" }
     },
     "challenge": {
       "title": "Le Défi",
