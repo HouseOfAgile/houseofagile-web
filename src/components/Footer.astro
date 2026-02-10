@@ -1,0 +1,153 @@
+---
+import { useTranslations } from '../i18n/ui';
+import type { Lang } from '../i18n/ui';
+import { getLocalePath } from '../i18n/utils';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang as Lang);
+const lp = (path: string) => getLocalePath(lang as Lang, path);
+
+const services = [
+  { slug: 'fractional-cto-technical-leadership', label: t('home.services.cto.title') },
+  { slug: 'ai-workflow-automation', label: t('home.services.automation.title') },
+  { slug: 'internal-tools-business-platforms', label: t('home.services.platforms.title') },
+  { slug: 'legacy-modernization-system-rescue', label: t('home.services.modernization.title') },
+  { slug: 'product-delivery-leadership', label: t('home.services.product.title') },
+  { slug: 'devops-cloud-platforms', label: t('home.services.devops.title') },
+];
+
+const caseStudies = [
+  { slug: 'universal-music-group', label: 'Universal Music Group' },
+  { slug: 'marketing-automation', label: 'Marketing Automation' },
+  { slug: 'scanbots', label: 'Scanbots' },
+  { slug: 'ai-trading-platform', label: 'AI Trading Platform' },
+  { slug: 'vodafone-live', label: 'Vodafone Live!' },
+  { slug: 'heybuddies', label: 'HeyBuddies' },
+];
+
+const platforms = [
+  { url: 'https://heybuddi.es', label: 'heybuddi.es' },
+];
+---
+
+<footer class="bg-gray-950 text-white pt-16 pb-8">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Top section: brand + CTA -->
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+      <div>
+        <a href={lp('')} class="flex items-center gap-2.5 mb-3">
+          <img src="/assets/hoa-logo-full.png" alt="House of Agile" width="36" height="36" class="w-9 h-9" />
+          <span class="nav-brand text-white" style="-webkit-text-fill-color: white; background: none;">House of Agile</span>
+        </a>
+        <p class="text-gray-500 text-sm leading-relaxed max-w-sm">
+          {t('footer.tagline')}
+        </p>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="mailto:jc@houseofagile.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-all">
+          <i class="fa-solid fa-envelope text-hoa-400"></i>
+          jc@houseofagile.com
+        </a>
+        <a
+          href="https://www.linkedin.com/company/house-of-agile"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 transition-all"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Links grid: 4 columns on large, 2 on medium -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-14">
+
+      <!-- Services -->
+      <div class="col-span-2 lg:col-span-1">
+        <h3 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 mb-4">
+          {t('footer.services')}
+        </h3>
+        <ul class="space-y-2.5">
+          {services.map((s) => (
+            <li>
+              <a href={lp(`services/${s.slug}`)} class="text-gray-400 hover:text-white text-sm transition-colors leading-snug block">
+                {s.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Work -->
+      <div>
+        <h3 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 mb-4">
+          {t('footer.caseStudies')}
+        </h3>
+        <ul class="space-y-2.5">
+          {caseStudies.map((cs) => (
+            <li>
+              <a href={lp(`case-studies/${cs.slug}`)} class="text-gray-400 hover:text-white text-sm transition-colors block">
+                {cs.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Company + Platforms -->
+      <div>
+        <h3 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 mb-4">
+          Company
+        </h3>
+        <ul class="space-y-2.5">
+          <li>
+            <a href={lp('about')} class="text-gray-400 hover:text-white text-sm transition-colors block">
+              {t('footer.about')}
+            </a>
+          </li>
+          <li class="text-gray-500 text-sm flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-gray-600 w-3.5 text-center text-xs"></i>
+            France · Switzerland · Germany
+          </li>
+        </ul>
+
+        <h3 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 mt-6 mb-3">
+          {t('footer.platforms')}
+        </h3>
+        <ul class="space-y-2.5">
+          {platforms.map((p) => (
+            <li>
+              <a href={p.url} target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                {p.label}
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-gray-600"></i>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-gray-600 text-xs">{t('footer.copyright')}</p>
+      <div class="flex items-center gap-4 text-xs text-gray-600">
+        <span>Symfony</span>
+        <span class="w-1 h-1 rounded-full bg-gray-700"></span>
+        <span>Node.js</span>
+        <span class="w-1 h-1 rounded-full bg-gray-700"></span>
+        <span>Python</span>
+        <span class="w-1 h-1 rounded-full bg-gray-700"></span>
+        <span>Vue.js</span>
+        <span class="w-1 h-1 rounded-full bg-gray-700"></span>
+        <span>AWS</span>
+        <span class="w-1 h-1 rounded-full bg-gray-700"></span>
+        <span>AI/ML</span>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from './Navigation.astro';
+import Footer from './Footer.astro';
+import { useTranslations, getTranslationArray, getTranslationObjects } from '../i18n/ui';
+import type { Lang } from '../i18n/ui';
+import { getLocalePath } from '../i18n/utils';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang as Lang);
+const lp = (path: string) => getLocalePath(lang as Lang, path);
+
+const highlights = getTranslationArray(lang as Lang, 'about.principal.highlights');
+const modelItems = getTranslationObjects(lang as Lang, 'about.model.items');
+const whyItems = getTranslationArray(lang as Lang, 'about.why.items');
+
+const base = 'https://houseofagile.com';
+const hreflangUrls = {
+  en: `${base}/about`,
+  de: `${base}/de/about`,
+  fr: `${base}/fr/about`,
+};
+const canonicalUrl = lang === 'en' ? hreflangUrls.en : lang === 'de' ? hreflangUrls.de : hreflangUrls.fr;
+---
+
+<BaseLayout
+  title={t('about.hero.title') + ' - House of Agile'}
+  description={t('about.hero.description')}
+  lang={lang}
+  canonicalUrl={canonicalUrl}
+  hreflangUrls={hreflangUrls}
+>
+  <Navigation lang={lang} />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(56,189,148,0.08),transparent_60%)]"></div>
+      <div class="relative max-w-4xl mx-auto px-4 py-20 md:py-28 text-center">
+        <span class="inline-block px-3 py-1 text-xs font-semibold tracking-wider uppercase rounded-full bg-hoa-500/10 text-hoa-400 border border-hoa-500/20 mb-6">
+          {t('about.hero.label')}
+        </span>
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
+          {t('about.hero.title')}
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          {t('about.hero.description')}
+        </p>
+      </div>
+    </section>
+
+    <!-- Principal section -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="md:flex md:gap-12 items-start">
+          <div class="md:w-1/3 mb-8 md:mb-0">
+            <div class="w-32 h-32 md:w-40 md:h-40 rounded-2xl bg-gradient-to-br from-hoa-500 to-hoa-700 flex items-center justify-center text-white text-4xl md:text-5xl font-bold shadow-lg mx-auto md:mx-0">
+              JC
+            </div>
+          </div>
+          <div class="md:w-2/3">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-1">
+              {t('about.principal.title')}
+            </h2>
+            <p class="text-hoa-600 font-medium mb-4">
+              {t('about.principal.role')}
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              {t('about.principal.bio')}
+            </p>
+            <ul class="space-y-3">
+              {highlights.map((item) => (
+                <li class="flex items-start gap-3 text-gray-700">
+                  <i class="fa-solid fa-check text-hoa-500 mt-1 flex-shrink-0"></i>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How the practice works -->
+    <section class="py-16 md:py-24 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+          {t('about.model.title')}
+        </h2>
+        <p class="text-gray-600 leading-relaxed mb-10 max-w-3xl">
+          {t('about.model.description')}
+        </p>
+        <div class="grid md:grid-cols-3 gap-6">
+          {modelItems.map((item) => (
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+              <h3 class="font-bold text-gray-900 mb-2">{item.title}</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why clients work with us -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+          {t('about.why.title')}
+        </h2>
+        <ul class="space-y-4">
+          {whyItems.map((item) => (
+            <li class="flex items-start gap-4 p-4 rounded-lg bg-gray-50 border border-gray-100">
+              <i class="fa-solid fa-arrow-right text-hoa-500 mt-1 flex-shrink-0"></i>
+              <span class="text-gray-700 leading-relaxed">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+          {t('home.cta.title')}
+        </h2>
+        <p class="text-gray-600 mb-8 leading-relaxed">
+          {t('home.cta.description')}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={lp('') + '#contact'} class="btn-primary text-center">
+            {t('home.cta.primary')}
+          </a>
+          <a href={lp('')} class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-gray-300 text-gray-700 font-semibold hover:bg-gray-50 transition-colors">
+            {t('home.cta.secondary')}
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} />
+</BaseLayout>

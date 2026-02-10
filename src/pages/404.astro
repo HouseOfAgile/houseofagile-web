@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<BaseLayout
+  title="404 — Page Not Found | House of Agile"
+  description="The page you're looking for doesn't exist."
+  lang="en"
+>
+  <Navigation lang="en" />
+
+  <section class="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center text-white">
+    <div class="text-center px-4">
+      <div class="text-9xl font-black text-hoa-400 mb-4">404</div>
+      <h1 class="text-4xl font-black mb-4">Page Not Found</h1>
+      <p class="text-xl text-gray-300 mb-10 max-w-md mx-auto">
+        The page you're looking for doesn't exist or has been moved.
+      </p>
+      <a href="/" class="btn-primary text-base">
+        <i class="fa-solid fa-house mr-2"></i>Return to Home
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,452 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from './Navigation.astro';
+import Footer from './Footer.astro';
+import { useTranslations, getTranslationArray, getTranslationObjects } from '../i18n/ui';
+import type { Lang } from '../i18n/ui';
+import { getLocalePath } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const credibility = getTranslationArray(lang, 'home.hero.credibility');
+const situations = getTranslationObjects(lang, 'home.howWeHelp.situations');
+const steps = getTranslationObjects(lang, 'home.howWeWork.steps');
+
+const lp = (path: string) => getLocalePath(lang, path);
+
+const hreflangUrls = {
+  en: 'https://houseofagile.com/',
+  de: 'https://houseofagile.com/de/',
+  fr: 'https://houseofagile.com/fr/',
+};
+
+const services = [
+  { key: 'cto', slug: 'fractional-cto-technical-leadership', icon: 'fa-sitemap', color: 'green' },
+  { key: 'automation', slug: 'ai-workflow-automation', icon: 'fa-robot', color: 'blue' },
+  { key: 'platforms', slug: 'internal-tools-business-platforms', icon: 'fa-cubes', color: 'purple' },
+  { key: 'modernization', slug: 'legacy-modernization-system-rescue', icon: 'fa-screwdriver-wrench', color: 'orange' },
+  { key: 'product', slug: 'product-delivery-leadership', icon: 'fa-rocket', color: 'cyan' },
+  { key: 'devops', slug: 'devops-cloud-platforms', icon: 'fa-cloud', color: 'slate' },
+] as const;
+
+type ServiceKey = typeof services[number]['key'];
+
+const caseStudies = [
+  {
+    slug: 'universal-music-group',
+    title: 'Universal Music Group',
+    role: { en: 'Delivery Manager', de: 'Delivery Manager', fr: 'Delivery Manager' }[lang] || 'Delivery Manager',
+    context: { en: 'Enterprise platform leadership', de: 'Enterprise-Plattform-Leadership', fr: 'Leadership plateforme enterprise' }[lang] || '',
+    stat: '120+',
+    statLabel: { en: 'Engineers Led', de: 'Ingenieure geleitet', fr: 'Ingénieurs dirigés' }[lang] || 'Engineers Led',
+    desc: { en: 'Led the overhaul of Universal\'s global music metadata and delivery systems - managing 120+ engineers across 5 teams in a multi-year SOA transformation.', de: 'Leitete die Überarbeitung von Universals globalen Musik-Metadaten- und Liefersystemen - 120+ Ingenieure in 5 Teams.', fr: 'Direction de la refonte des systèmes de métadonnées musicales d\'Universal - 120+ ingénieurs dans 5 équipes.' }[lang] || '',
+    gradient: 'from-indigo-600 to-violet-700',
+  },
+  {
+    slug: 'marketing-automation',
+    title: { en: 'Marketing Automation Platform', de: 'Marketing-Automatisierungsplattform', fr: 'Plateforme d\'Automatisation Marketing' }[lang] || 'Marketing Automation Platform',
+    role: { en: 'Lead Architect', de: 'Lead Architect', fr: 'Architecte Principal' }[lang] || 'Lead Architect',
+    context: { en: 'Full-stack automation platform', de: 'Full-Stack-Automatisierungsplattform', fr: 'Plateforme d\'automatisation full-stack' }[lang] || '',
+    stat: '35%',
+    statLabel: { en: 'ROI Improvement', de: 'ROI-Verbesserung', fr: 'Amélioration ROI' }[lang] || 'ROI Improvement',
+    desc: { en: 'Full-stack Symfony platform with Facebook Event bots, Ad API integration, and automated creative generation. Managed €700k+/month ad budgets with 35% ROI improvement.', de: 'Full-Stack Symfony-Plattform mit Facebook-Event-Bots, Ad-API-Integration und automatisierter Kreativ-Generierung. €700k+/Monat Werbebudgets.', fr: 'Plateforme full-stack Symfony avec bots Facebook Events, intégration Ad API et génération créative automatisée. €700k+/mois de budgets pub.' }[lang] || '',
+    gradient: 'from-emerald-600 to-teal-700',
+  },
+  {
+    slug: 'scanbots',
+    title: 'Scanbots',
+    role: { en: 'Co-founder & CTO', de: 'Mitgründer & CTO', fr: 'Co-fondateur & CTO' }[lang] || 'Co-founder & CTO',
+    context: { en: 'Startup CTO & product leadership', de: 'Startup CTO & Produktführung', fr: 'CTO Startup & leadership produit' }[lang] || '',
+    stat: '€2M+',
+    statLabel: { en: 'Funding Raised', de: 'Finanzierung', fr: 'Financement levé' }[lang] || 'Funding Raised',
+    desc: { en: 'Co-founded an autonomous drone platform for infrastructure inspection. Built the technical team, raised €2M+, and processed 200TB+ of sensor data with real-time AI defect detection.', de: 'Mitgründung einer autonomen Drohnenplattform. Team aufgebaut, €2M+ Finanzierung, 200TB+ Sensordaten mit KI-Fehlererkennung.', fr: 'Co-fondation d\'une plateforme de drones autonomes. Équipe technique, €2M+ levés, 200TB+ de données capteur avec détection IA.' }[lang] || '',
+    gradient: 'from-cyan-600 to-teal-700',
+  },
+  {
+    slug: 'ai-trading-platform',
+    title: { en: 'AI Trading Platform', de: 'KI-Handelsplattform', fr: 'Plateforme de Trading IA' }[lang] || 'AI Trading Platform',
+    role: { en: 'Product & Engineering Lead', de: 'Produkt- & Engineering-Lead', fr: 'Lead Produit & Engineering' }[lang] || 'Product & Engineering Lead',
+    context: { en: 'AI product engineering', de: 'KI-Produktentwicklung', fr: 'Ingénierie produit IA' }[lang] || '',
+    stat: '45%',
+    statLabel: { en: 'ROI Increase', de: 'ROI-Steigerung', fr: 'Augmentation ROI' }[lang] || 'ROI Increase',
+    desc: { en: 'Designed and built a serverless trading platform with TensorFlow/PyTorch models - from architecture through to production deployment on AWS.', de: 'Entwurf und Bau einer serverlosen Handelsplattform mit TensorFlow/PyTorch - von der Architektur bis zum Produktions-Deployment.', fr: 'Conception et construction d\'une plateforme de trading serverless avec TensorFlow/PyTorch - de l\'architecture au déploiement en production.' }[lang] || '',
+    gradient: 'from-purple-600 to-fuchsia-700',
+  },
+  {
+    slug: 'vodafone-live',
+    title: 'Vodafone Live!',
+    role: { en: 'Technical Lead', de: 'Technical Lead', fr: 'Lead Technique' }[lang] || 'Technical Lead',
+    context: { en: 'Enterprise platform at scale', de: 'Enterprise-Plattform im großen Maßstab', fr: 'Plateforme enterprise à grande échelle' }[lang] || '',
+    stat: '30M+',
+    statLabel: { en: 'Daily Users', de: 'Tägliche Nutzer', fr: 'Utilisateurs/jour' }[lang] || 'Daily Users',
+    desc: { en: 'Technical lead on Vodafone\'s mobile content platform serving 30M+ daily users across 15+ European markets with 99.9% uptime.', de: 'Technical Lead der mobilen Content-Plattform von Vodafone mit 30M+ täglichen Nutzern in 15+ europäischen Märkten.', fr: 'Lead technique de la plateforme de contenu mobile Vodafone avec 30M+ utilisateurs quotidiens dans 15+ marchés européens.' }[lang] || '',
+    gradient: 'from-rose-600 to-red-700',
+  },
+  {
+    slug: 'heybuddies',
+    title: 'HeyBuddies',
+    role: { en: 'Founder & Lead Dev', de: 'Gründer & Lead Dev', fr: 'Fondateur & Lead Dev' }[lang] || 'Founder & Lead Dev',
+    context: { en: 'Own product - live platform', de: 'Eigenes Produkt - Live-Plattform', fr: 'Produit propre - plateforme live' }[lang] || '',
+    stat: 'Live',
+    statLabel: { en: 'In Production', de: 'In Produktion', fr: 'En production' }[lang] || 'In Production',
+    desc: { en: 'Built and operate heybuddi.es - a social platform connecting people through shared activities. Symfony, Vue.js, PostgreSQL on AWS.', de: 'Aufbau und Betrieb von heybuddi.es - einer sozialen Plattform. Symfony, Vue.js, PostgreSQL auf AWS.', fr: 'Construction et exploitation de heybuddi.es - une plateforme sociale. Symfony, Vue.js, PostgreSQL sur AWS.' }[lang] || '',
+    gradient: 'from-amber-500 to-orange-600',
+  },
+];
+
+const localTitle = {
+  en: 'House of Agile - Senior Technology Consulting • Workflow Automation • Fractional CTO',
+  de: 'House of Agile - Senior-Technologieberatung • Workflow-Automatisierung • Fractional CTO',
+  fr: 'House of Agile - Conseil Technologique Senior • Automatisation • CTO Fractionnel',
+}[lang] || '';
+
+const localDesc = {
+  en: 'House of Agile helps businesses modernize operations, automate workflows, and build internal platforms. Senior consulting and hands-on delivery.',
+  de: 'House of Agile hilft Unternehmen, Abläufe zu modernisieren, Workflows zu automatisieren und interne Plattformen zu bauen.',
+  fr: 'House of Agile aide les entreprises à moderniser leurs opérations, automatiser les workflows et construire des plateformes internes.',
+}[lang] || '';
+---
+
+<BaseLayout
+  title={localTitle}
+  description={localDesc}
+  lang={lang}
+  canonicalUrl={hreflangUrls[lang]}
+  hreflangUrls={hreflangUrls}
+  schemaType="homepage"
+>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <Navigation lang={lang} />
+
+  <!-- ============ HERO ============ -->
+  <section class="hero-gradient relative overflow-hidden min-h-[88vh] flex items-center">
+    <!-- Animated orbs -->
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+
+    <!-- Grid pattern -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px); background-size: 32px 32px;"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="max-w-3xl">
+        <div class="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.06] border border-white/10 text-sm font-medium text-gray-300 mb-8">
+          <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+          Senior Technology Consulting
+        </div>
+
+        <h1 class="reveal text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight text-white mb-3 leading-[1.12]" style="transition-delay: 80ms">
+          {t('home.hero.title')}
+        </h1>
+        <h1 class="reveal text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight text-white mb-3 leading-[1.12]" style="transition-delay: 140ms">
+          {t('home.hero.title2')}
+        </h1>
+        <h1 class="reveal text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight mb-8 leading-[1.12]" style="transition-delay: 200ms">
+          <span class="bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent">{t('home.hero.title3')}</span>
+        </h1>
+
+        <p class="reveal text-lg sm:text-xl text-gray-300/90 leading-relaxed max-w-2xl mb-10" style="transition-delay: 260ms">
+          {t('home.hero.description')}
+        </p>
+
+        <div class="reveal flex flex-col sm:flex-row gap-4 mb-14" style="transition-delay: 320ms">
+          <a href="#contact" class="btn-primary text-base px-7 py-4">
+            <i class="fa-solid fa-arrow-right -rotate-45"></i>
+            {t('home.hero.ctaPrimary')}
+          </a>
+          <a href="#services" class="btn-secondary text-base px-7 py-4">
+            {t('home.hero.ctaSecondary')}
+          </a>
+        </div>
+
+        <!-- Credibility strip -->
+        <div class="reveal grid grid-cols-2 gap-3" style="transition-delay: 400ms">
+          {credibility.map((item) => (
+            <div class="flex items-start gap-2.5 text-sm text-gray-400">
+              <span class="text-green-400 mt-0.5 flex-shrink-0 text-xs"><i class="fa-solid fa-check"></i></span>
+              <span>{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center mb-16">
+        <p class="text-sm font-semibold text-green-600 uppercase tracking-wider mb-3">{t('home.services.label')}</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mb-4">{t('home.services.title')}</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto">{t('home.services.subtitle')}</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 stagger-children">
+        {services.map((s, i) => {
+          const titleKey = `home.services.${s.key}.title` as const;
+          const descKey = `home.services.${s.key}.desc` as const;
+          const itemsKey = `home.services.${s.key}.items` as const;
+          const items = getTranslationArray(lang, itemsKey);
+          return (
+            <a href={lp(`services/${s.slug}`)} class="reveal tilt-card block hoa-card p-6 group" style={`--i: ${i}`}>
+              <div class={`service-icon service-icon--${s.color} mb-4`}>
+                <i class={`fa-solid ${s.icon}`} aria-hidden="true"></i>
+              </div>
+              <h3 class="font-bold text-lg text-gray-900 mb-2 group-hover:text-green-700 transition-colors">{t(titleKey)}</h3>
+              <p class="text-gray-500 text-sm mb-3 leading-relaxed">{t(descKey)}</p>
+              <ul class="text-sm text-gray-400 space-y-1.5">
+                {items.map((item) => (
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-check text-green-500 mt-0.5 text-xs flex-shrink-0"></i>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div class="mt-4 text-green-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                {t('home.services.learnMore')}
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHO THIS IS FOR ============ -->
+  <section class="py-24 bg-gray-50/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal mb-14">
+        <p class="text-sm font-semibold text-green-600 uppercase tracking-wider mb-3">{t('home.howWeHelp.label')}</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900">{t('home.howWeHelp.title')}</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 stagger-children">
+        {situations.map((sit, i) => (
+          <div class="reveal hoa-card p-6" style={`--i: ${i}`}>
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500/10 to-emerald-500/10 flex items-center justify-center mb-4">
+              <i class="fa-solid fa-bullseye text-green-600"></i>
+            </div>
+            <h3 class="font-bold text-base text-gray-900 mb-2 leading-snug">{sit.title}</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">{sit.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW WE WORK ============ -->
+  <section class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-start">
+        <div class="reveal">
+          <p class="text-sm font-semibold text-green-600 uppercase tracking-wider mb-3">{t('home.howWeWork.label')}</p>
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mb-6">{t('home.howWeWork.title')}</h2>
+          <p class="text-gray-500 text-lg leading-relaxed">{t('home.howWeWork.description')}</p>
+        </div>
+        <div class="space-y-5 stagger-children">
+          {steps.map((step, i) => (
+            <div class="reveal flex gap-4" style={`--i: ${i}`}>
+              <div class="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-xl flex items-center justify-center text-sm font-bold">{i + 1}</div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">{step.title}</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASE STUDIES ============ -->
+  <section id="case-studies" class="py-24 bg-gradient-to-b from-gray-900 via-gray-900 to-gray-800 text-white relative overflow-hidden">
+    <!-- Background effects -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 40px 40px;"></div>
+    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-green-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal mb-16">
+        <p class="text-sm font-semibold text-green-400 uppercase tracking-wider mb-3">{t('home.caseStudies.label')}</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">{t('home.caseStudies.title')}</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-5 stagger-children">
+        {caseStudies.map((cs, i) => (
+          <a href={lp(`case-studies/${cs.slug}`)} class="reveal group block relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.04] backdrop-blur-sm hover:bg-white/[0.08] transition-all duration-500 hover:border-white/[0.12]" style={`--i: ${i}`}>
+            <div class={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${cs.gradient}`}></div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xs font-semibold text-green-400 uppercase tracking-wider">{cs.context}</span>
+              </div>
+              <div class="flex items-start justify-between mb-3">
+                <div>
+                  <h3 class="font-bold text-lg text-white group-hover:text-green-400 transition-colors">{cs.title}</h3>
+                  <p class="text-xs text-gray-400 mt-0.5">{cs.role}</p>
+                </div>
+                <div class="text-right flex-shrink-0 ml-3">
+                  <div class="text-2xl font-extrabold text-green-400">{cs.stat}</div>
+                  <div class="text-[10px] text-gray-500 uppercase tracking-wider">{cs.statLabel}</div>
+                </div>
+              </div>
+              <p class="text-sm text-gray-400 leading-relaxed mb-4">{cs.desc}</p>
+              <span class="text-green-400 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                {t('home.caseStudies.viewFull')} <i class="fa-solid fa-arrow-right text-xs"></i>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT TEASER ============ -->
+  <section class="py-24 bg-gray-50/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal grid lg:grid-cols-5 gap-12 items-center">
+        <div class="lg:col-span-3">
+          <p class="text-sm font-semibold text-green-600 uppercase tracking-wider mb-3">{t('home.about.label')}</p>
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mb-6">{t('home.about.title')}</h2>
+          <p class="text-gray-500 text-lg leading-relaxed mb-6">{t('home.about.text')}</p>
+          <a href={lp('about')} class="text-green-600 font-semibold hover:text-green-700 transition-colors">
+            {t('home.about.cta')}
+          </a>
+        </div>
+        <div class="lg:col-span-2">
+          <div class="hoa-card p-8">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mb-5 shadow-lg">
+              <span class="text-2xl font-bold text-white">JC</span>
+            </div>
+            <h3 class="font-bold text-xl text-gray-900 mb-1">Jean-Christophe Meillaud</h3>
+            <p class="text-green-600 font-semibold text-sm mb-4">Founder & Principal Consultant</p>
+            <div class="space-y-2 text-sm text-gray-500">
+              <div class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-0.5 text-xs flex-shrink-0"></i>20 years enterprise & startup delivery</div>
+              <div class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-0.5 text-xs flex-shrink-0"></i>Universal Music, Vodafone, startups</div>
+              <div class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-0.5 text-xs flex-shrink-0"></i>France, Switzerland & Germany</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 32px 32px;"></div>
+    <div class="absolute top-0 right-1/4 w-[400px] h-[400px] bg-green-500/8 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="reveal">
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-5">{t('home.cta.title')}</h2>
+        <p class="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">{t('home.cta.description')}</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#contact" class="btn-primary text-lg px-8 py-4">
+            <i class="fa-solid fa-arrow-right -rotate-45"></i>
+            {t('home.cta.primary')}
+          </a>
+          <a href="mailto:jc@houseofagile.com" class="text-gray-300 hover:text-white font-medium transition-colors">
+            {t('home.cta.secondary')}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT FORM ============ -->
+  <section id="contact" class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center mb-14">
+        <p class="text-sm font-semibold text-green-600 uppercase tracking-wider mb-3">{t('nav.contact')}</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mb-4">{t('home.consultation.title')}</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto">{t('home.consultation.subtitle')}</p>
+      </div>
+      <div class="reveal max-w-2xl mx-auto">
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+          <form method="POST" action="https://formspree.io/f/mwpnzjel" class="space-y-5">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">{t('home.consultation.fullName')}</label>
+                <input type="text" name="name" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition text-sm" />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">{t('home.consultation.company')}</label>
+                <input type="text" name="company" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition text-sm" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2">{t('home.consultation.email')}</label>
+              <input type="email" name="email" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition text-sm" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2">{t('home.consultation.engagementType')}</label>
+              <select name="engagement_type" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition text-sm">
+                <option value="">{t('form.selectEngagement')}</option>
+                <option value="cto">{t('form.engagementCTO')}</option>
+                <option value="automation">{t('form.engagementAutomation')}</option>
+                <option value="platform">{t('form.engagementPlatform')}</option>
+                <option value="modernization">{t('form.engagementModernization')}</option>
+                <option value="product">{t('form.engagementProduct')}</option>
+                <option value="advisory">{t('form.engagementAdvisory')}</option>
+                <option value="other">{t('form.engagementOther')}</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2">{t('home.consultation.description')}</label>
+              <textarea name="description" required rows="4" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition resize-none text-sm"></textarea>
+            </div>
+            <button type="submit" class="w-full btn-primary py-4 text-base">
+              <i class="fa-solid fa-paper-plane mr-2"></i>{t('home.consultation.submit')}
+            </button>
+            <p class="text-center text-xs text-gray-400">{t('home.consultation.privacy')}</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer lang={lang} />
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Scroll progress bar
+    const progressBar = document.getElementById('scroll-progress');
+    if (progressBar) {
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+        progressBar.style.transform = `scaleX(${progress})`;
+      }, { passive: true });
+    }
+
+    // Tilt effect on service cards
+    document.querySelectorAll('.tilt-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform = `perspective(800px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-4px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+  </script>
+</BaseLayout>
