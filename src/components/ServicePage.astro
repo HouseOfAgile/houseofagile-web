@@ -1,0 +1,292 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from './Navigation.astro';
+import Footer from './Footer.astro';
+import { useTranslations } from '../i18n/ui';
+import { getAlternateUrls } from '../i18n/utils';
+
+const { entry, lang, ContentComponent } = Astro.props;
+const { data } = entry;
+const t = useTranslations(lang);
+const slug = entry.id.replace(`${lang}/`, '');
+const hreflangUrls = getAlternateUrls(slug, 'services');
+const homePath = lang === 'en' ? '/' : `/${lang}/`;
+---
+
+<BaseLayout
+  title={data.seo.title}
+  description={data.seo.description}
+  lang={lang}
+  canonicalUrl={hreflangUrls[lang]}
+  hreflangUrls={hreflangUrls}
+  ogTitle={data.seo.ogTitle}
+  ogDescription={data.seo.ogDescription}
+>
+  <Navigation lang={lang} />
+
+  <main class="svc-page">
+    <!-- Hero with floating orbs -->
+    <section class="svc-hero relative overflow-hidden py-24 sm:py-32">
+      <!-- Animated background -->
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950"></div>
+
+      <!-- Floating orbs -->
+      <div class="svc-orb svc-orb-1"></div>
+      <div class="svc-orb svc-orb-2"></div>
+      <div class="svc-orb svc-orb-3"></div>
+
+      <!-- Grid pattern -->
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px); background-size: 32px 32px;"></div>
+
+      <!-- Top glow -->
+      <div class="absolute top-0 left-1/3 w-96 h-96 rounded-full blur-[120px] opacity-20 bg-emerald-500"></div>
+
+      <!-- Back link -->
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 relative z-10">
+        <a href={`${homePath}#services`} class="inline-flex items-center gap-2 text-sm font-semibold text-white/50 hover:text-white transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          {t('svc.backLink')}
+        </a>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Badge -->
+        <div class="reveal mb-6">
+          <span class="inline-block px-4 py-1.5 text-xs font-bold uppercase tracking-widest rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            {data.badge}
+          </span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="reveal text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.05] tracking-tight">
+          {data.hero.title}
+          <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent"> {data.hero.titleHighlight}</span>
+        </h1>
+
+        <!-- Description -->
+        <p class="reveal text-lg sm:text-xl text-white/60 max-w-3xl mb-10 leading-relaxed">
+          {data.hero.description}
+        </p>
+
+        <!-- CTA buttons -->
+        <div class="reveal flex flex-col sm:flex-row gap-4">
+          <a href={`${homePath}#contact`} class="btn-primary text-lg px-7 py-3.5">
+            {data.hero.ctaConsultation}
+          </a>
+          <a href="#services-grid" class="btn-secondary text-lg px-7 py-3.5">
+            {data.hero.ctaExpertise}
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content section -->
+    <section class="svc-content-section py-20 relative overflow-hidden">
+      <!-- Subtle background pattern -->
+      <div class="absolute inset-0 opacity-[0.015]" style="background-image: radial-gradient(circle, rgba(16,185,129,0.8) 1px, transparent 1px); background-size: 48px 48px;"></div>
+      <!-- Side accent glow -->
+      <div class="absolute -left-32 top-1/4 w-64 h-[500px] rounded-full blur-[120px] opacity-[0.07] bg-emerald-400"></div>
+      <div class="absolute -right-32 bottom-1/4 w-64 h-[400px] rounded-full blur-[120px] opacity-[0.05] bg-cyan-400"></div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal svc-prose-card">
+          <div class="svc-prose-accent-bar"></div>
+          <div class="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600 prose-strong:text-gray-900 prose-li:text-gray-600 prose-a:text-emerald-600 prose-a:no-underline hover:prose-a:text-emerald-700">
+            <ContentComponent />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services grid -->
+    <section id="services-grid" class="svc-grid-section py-20 relative overflow-hidden">
+      <!-- Subtle grid pattern -->
+      <div class="absolute inset-0 opacity-[0.025]" style="background-image: radial-gradient(circle, rgba(15,23,42,0.5) 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 class="reveal text-3xl sm:text-4xl font-black text-gray-900 mb-12 flex items-center gap-4">
+          <span class="w-3 h-3 rounded-full bg-emerald-500" style="box-shadow: 0 0 20px rgba(16,185,129,0.3);"></span>
+          {data.sectionTitle}
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {data.serviceItems.map((item: any, idx: number) => (
+            <div class="reveal svc-item-card" style={`--i: ${idx};`}>
+              <div class="flex items-start gap-3 mb-4">
+                {item.emoji && <span class="text-2xl flex-shrink-0">{item.emoji}</span>}
+                <h3 class="text-lg font-bold text-gray-900 leading-tight">{item.title}</h3>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">{item.description}</p>
+
+              {item.badges && item.badges.length > 0 && (
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  {item.badges.map((badge: string) => (
+                    <span class="inline-block px-2.5 py-0.5 text-xs bg-emerald-50 text-emerald-700 rounded-full border border-emerald-200/60">{badge}</span>
+                  ))}
+                </div>
+              )}
+
+              {item.features && item.features.length > 0 && (
+                <ul class="space-y-2">
+                  {item.features.map((feature: string) => (
+                    <li class="text-sm text-gray-500 flex items-start gap-2.5">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-1.5 flex-shrink-0"></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="svc-cta-section py-24 relative overflow-hidden">
+      <div class="absolute bottom-0 right-1/4 w-80 h-80 rounded-full blur-[120px] opacity-[0.06] bg-emerald-400"></div>
+      <div class="absolute top-0 left-1/3 w-64 h-64 rounded-full blur-[100px] opacity-[0.04] bg-cyan-400"></div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="reveal">
+          <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-5">
+            {data.cta.title}
+          </h2>
+          <p class="text-gray-500 mb-10 max-w-2xl mx-auto text-lg">
+            {data.cta.description}
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href={`${homePath}#contact`} class="btn-primary text-lg px-8 py-4">
+              {data.cta.btnConsultation}
+            </a>
+            <a href={`${homePath}#services`} class="btn-secondary-light text-lg px-8 py-4">
+              {data.cta.btnAllServices}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} />
+
+  <!-- Scroll-triggered animations -->
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            observer.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</BaseLayout>
+
+<style>
+  /* Service page orbs */
+  .svc-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+  }
+  .svc-orb-1 {
+    width: 500px; height: 500px;
+    background: rgba(16, 185, 129, 0.12);
+    top: -15%; left: -10%;
+    animation: svc-float-1 18s ease-in-out infinite;
+  }
+  .svc-orb-2 {
+    width: 350px; height: 350px;
+    background: rgba(14, 165, 233, 0.08);
+    top: 20%; right: -8%;
+    animation: svc-float-2 22s ease-in-out infinite;
+  }
+  .svc-orb-3 {
+    width: 280px; height: 280px;
+    background: rgba(168, 85, 247, 0.06);
+    bottom: -5%; left: 35%;
+    animation: svc-float-3 15s ease-in-out infinite;
+  }
+
+  @keyframes svc-float-1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -40px) scale(1.05); }
+    66% { transform: translate(-20px, 20px) scale(0.95); }
+  }
+  @keyframes svc-float-2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-40px, 30px) scale(1.08); }
+    66% { transform: translate(25px, -25px) scale(0.92); }
+  }
+  @keyframes svc-float-3 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(20px, -30px) scale(1.1); }
+  }
+
+  /* Content section */
+  .svc-content-section {
+    background: linear-gradient(180deg, #f8fafb 0%, #f1f5f0 50%, #f8fafb 100%);
+  }
+
+  /* Prose card */
+  .svc-prose-card {
+    position: relative;
+    padding: 3rem 3rem 3rem 3.5rem;
+    border-radius: 24px;
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.04),
+      0 12px 40px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+  }
+  .svc-prose-accent-bar {
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    bottom: 2rem;
+    width: 3px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #16a34a, #0ea5e9, transparent);
+  }
+
+  @media (max-width: 640px) {
+    .svc-prose-card {
+      padding: 1.5rem 1.5rem 1.5rem 2rem;
+      border-radius: 16px;
+    }
+  }
+
+  /* Services grid section */
+  .svc-grid-section {
+    background: #f8fafb;
+  }
+
+  /* Service item cards - light */
+  .svc-item-card {
+    padding: 1.75rem;
+    border-radius: 20px;
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .svc-item-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(22, 163, 74, 0.15);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.07);
+  }
+
+  /* CTA section */
+  .svc-cta-section {
+    background: linear-gradient(180deg, #f8fafb, #ffffff);
+  }
+</style>
