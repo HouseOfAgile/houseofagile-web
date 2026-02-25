@@ -1,0 +1,16 @@
+---
+import { getCollection, render } from 'astro:content';
+import CaseStudyPage from '../../components/CaseStudyPage.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('caseStudies', ({ id }) => id.startsWith('en/'));
+  return entries.map((entry) => ({
+    params: { slug: entry.id.replace('en/', '') },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<CaseStudyPage entry={entry} lang="en" ContentComponent={Content} />
