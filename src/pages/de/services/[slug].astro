@@ -1,0 +1,16 @@
+---
+import { getCollection, render } from 'astro:content';
+import ServicePage from '../../../components/ServicePage.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('services', ({ id }) => id.startsWith('de/'));
+  return entries.map((entry) => ({
+    params: { slug: entry.id.replace('de/', '') },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<ServicePage entry={entry} lang="de" ContentComponent={Content} />
