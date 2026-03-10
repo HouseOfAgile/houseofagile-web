@@ -1,23 +1,53 @@
-# House of Agile — Static Site
+# House of Agile — Website
 
-This is a lightweight, single‑file site for **houseofagile.com**. It’s optimized for GitHub Pages and easy to customize.
+Agency website for **houseofagile.com**, built with [Astro](https://astro.build/) and Tailwind CSS.
 
-## Quick deploy (GitHub Pages)
+## Tech Stack
 
-1. Create a new repo (e.g. `houseofagile-site`) and push these files.
-2. In **Settings → Pages**, select **Build and deployment: Deploy from a branch**, pick **main** and **root**.
-3. (Optional) Custom domain: set your domain in **Settings → Pages → Custom domain** to `houseofagile.com`.
-   - The `CNAME` file is already included.
-   - Point your DNS to GitHub Pages per the official docs (A/AAAA records).
-4. Visit your site once Pages finishes the first deploy.
+- **Astro 6** — Static site generator
+- **Tailwind CSS 3** — Utility-first styling
+- **TypeScript** — Type-safe frontmatter and components
+- **i18n** — Three languages: English (default), German (`/de/`), French (`/fr/`)
 
-## Customize
+## Project Structure
 
-- Edit `index.html` content sections.
-- Replace `assets/hoa-logo.svg` and `favicon.svg` with your own branding.
-- Update contact links (email, LinkedIn, GitHub) in the footer and CTA.
+```
+src/
+├── components/       # Shared Astro components (Navigation, Footer, HomePage, etc.)
+├── content/          # Content collections (case studies, services) as Markdown
+│   ├── caseStudies/  # en/, de/, fr/ subdirectories
+│   └── services/     # en/, de/, fr/ subdirectories
+├── i18n/             # Translation strings and utilities
+├── layouts/          # BaseLayout with SEO, hreflang, Schema.org
+├── pages/            # Route pages (index, case-studies/[slug], services/[slug])
+│   ├── de/           # German routes
+│   └── fr/           # French routes
+└── styles/           # global.css (design tokens, animations, component styles)
+public/               # Static assets (favicons, logos, webmanifest)
+```
 
-## Notes
+## Development
 
-- Tailwind is loaded via CDN for simplicity (fast enough for a small brochure site).
-- Add a PDF resume at `/Jean-Christophe-Meillaud-CV.pdf` if you want the “Download CV” button to work.
+Requires **Node.js >= 22.12.0** (use `nvm use 22` if needed).
+
+```bash
+npm install
+npm run dev          # Starts dev server on http://localhost:8001
+npm run build        # Production build to dist/
+npm run preview      # Preview production build
+```
+
+## Deployment
+
+Deployed to **GitHub Pages** via GitHub Actions. The workflow at `.github/workflows/deploy.yml` builds and deploys on push to `main`.
+
+## Key Features
+
+- Dark-themed design with animated floating orbs and glow effects
+- Scroll-triggered reveal animations (IntersectionObserver)
+- Morphing text effect in the hero section
+- Glass-morphism cards with 3D tilt on hover
+- Client logo marquee strip
+- Responsive layout optimized for mobile and desktop
+- Shared page components to avoid code duplication across languages
+- SEO: sitemap, hreflang tags, Schema.org structured data, Open Graph

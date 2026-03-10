@@ -22,7 +22,17 @@ Thumbs.db
 # Logs
 *.log
 
+# Astro
+dist/
+.astro/
+
 # Temporary files
 *.tmp
 .cache/
 node_modules/
+
+# Legacy site backup
+legacy-site/
+
+# Environment
+.env
