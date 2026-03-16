@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
@@ -7,9 +6,6 @@ export default defineConfig({
   output: 'static',
   server: { port: 8001 },
   integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
     sitemap({
       i18n: {
         defaultLocale: 'en',

@@ -22,7 +22,6 @@
   "homepage": "https://github.com/HouseOfAgile/houseofagile-web#readme",
   "dependencies": {
     "@astrojs/sitemap": "^3.7.1",
-    "@astrojs/tailwind": "^6.0.2",
     "astro": "^6.0.4"
   },
   "devDependencies": {
