@@ -1,0 +1,325 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import CollectivitesContactForm from '../../components/CollectivitesContactForm.astro';
+
+const lang = 'fr';
+const contactUrl = '#contact-collectivites';
+
+const services = [
+  {
+    emoji: '🏛️',
+    title: 'Refonte de site communal',
+    description: 'Audit du site existant, architecture de contenu, design responsive accessible, développement CMS ou Symfony/PHP adapté à votre commune.',
+    badges: ['CMS', 'Symfony', 'PHP', 'WordPress'],
+    features: [
+      'Audit du site et du contenu existant',
+      'Architecture et arborescence adaptée',
+      'Design responsive mobile et accessibilité',
+      'Formation équipe mairie à la prise en main',
+    ],
+  },
+  {
+    emoji: '🔧',
+    title: 'Maintenance corrective & évolutive',
+    description: 'Corrections de bugs, mises à jour de sécurité, petites évolutions fonctionnelles et documentation des interventions. Contrat clair, délais définis.',
+    badges: ['Maintenance', 'Correctif', 'Évolutif'],
+    features: [
+      'Corrections de bugs et anomalies',
+      'Mises à jour CMS et plugins',
+      'Petites évolutions fonctionnelles',
+      'Documentation des interventions',
+    ],
+  },
+  {
+    emoji: '🖥️',
+    title: 'Hébergement sécurisé & infogérance',
+    description: 'Hébergement managé sur serveurs en France, certificat SSL/TLS, sauvegardes automatiques, monitoring de disponibilité et mises à jour de sécurité.',
+    badges: ['SSL', 'Sauvegardes', 'Monitoring', 'VPS'],
+    features: [
+      'Hébergement VPS/dédié en France',
+      'Sauvegardes quotidiennes avec restauration testée',
+      'Monitoring de disponibilité 24/7',
+      'Mises à jour système et CMS',
+    ],
+  },
+  {
+    emoji: '♿',
+    title: 'Accessibilité numérique & RGAA',
+    description: "Pré-audit RGAA 4.1, indicateurs d'accessibilité, recommandations priorisées et vérification de la conformité RGPD du site communal.",
+    badges: ['RGAA', 'Accessibilité', 'WCAG', 'RGPD'],
+    features: [
+      'Pré-audit des indicateurs RGAA 4.1',
+      'Vérification des contrastes et structures',
+      'Navigation clavier et alternatives textuelles',
+      'Recommandations priorisées',
+    ],
+  },
+  {
+    emoji: '📝',
+    title: 'Formulaires citoyens & démarches',
+    description: 'Formulaires de contact, dépôt de dossier ou petites démarches en ligne. Confirmation par email, conformité RGPD, intégration simple dans votre site.',
+    badges: ['PHP', 'Symfony', 'Formulaires', 'RGPD'],
+    features: [
+      'Formulaires de contact ou dépôt de dossier',
+      'Confirmation email automatique',
+      'Conformité RGPD et protection des données',
+      'Intégration dans site existant ou nouveau',
+    ],
+  },
+  {
+    emoji: '🔍',
+    title: 'Audit technique de site communal',
+    description: "Analyse de performance, sécurité, accessibilité RGAA, SEO fondamentaux et risques CMS. Rapport court et priorisé, adapté aux équipes non-techniques.",
+    badges: ['Performance', 'Sécurité', 'SEO', 'RGAA'],
+    features: [
+      'Performance et Core Web Vitals',
+      'Sécurité et vulnérabilités connues',
+      'Accessibilité et indicateurs RGAA',
+      'Rapport priorisé (5–10 pages)',
+    ],
+  },
+];
+
+const subPages = [
+  {
+    href: '/fr/refonte-maintenance-site-mairie',
+    emoji: '🏛️',
+    title: 'Refonte & maintenance de site mairie',
+    desc: 'Audit initial, architecture de contenu, design, développement CMS ou Symfony, hébergement, maintenance et formation équipe.',
+  },
+  {
+    href: '/fr/hebergement-infogerance-web-collectivites',
+    emoji: '🖥️',
+    title: 'Hébergement & infogérance web',
+    desc: 'Hébergement managé, SSL/TLS, sauvegardes, monitoring de disponibilité, mises à jour de sécurité et documentation.',
+  },
+  {
+    href: '/fr/audit-technique-site-communal',
+    emoji: '🔍',
+    title: 'Audit technique de site communal',
+    desc: 'Performance, sécurité, accessibilité RGAA, SEO fondamentaux, CMS et DNS. Rapport court et priorisé.',
+  },
+];
+---
+
+<BaseLayout
+  title="Services numériques pour communes et collectivités - House of Agile"
+  description="House of Agile accompagne les communes et collectivités : refonte de site communal, hébergement, maintenance, sécurité et accessibilité RGAA. Budget maîtrisé, documentation claire, continuité de service."
+  lang={lang}
+  canonicalUrl="https://houseofagile.com/fr/collectivites-communes-services-numeriques"
+  ogTitle="Services numériques pour communes et collectivités - House of Agile"
+  ogDescription="Refonte, maintenance, hébergement et audit de site communal. Approche pragmatique adaptée aux équipes mairie."
+>
+  <Navigation lang={lang} frOnlyPage={true} />
+
+  <main>
+    <!-- Hero -->
+    <section class="svc-hero relative overflow-hidden py-24 sm:py-32">
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950"></div>
+      <div class="svc-orb svc-orb-1"></div>
+      <div class="svc-orb svc-orb-2"></div>
+      <div class="svc-orb svc-orb-3"></div>
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px); background-size: 32px 32px;"></div>
+      <div class="absolute top-0 left-1/3 w-96 h-96 rounded-full blur-[120px] opacity-20 bg-emerald-500"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal mb-6">
+          <span class="inline-block px-4 py-1.5 text-xs font-bold uppercase tracking-widest rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            Secteur Public
+          </span>
+        </div>
+        <h1 class="reveal text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.05] tracking-tight">
+          Services numériques
+          <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent"> pour communes et collectivités</span>
+        </h1>
+        <p class="reveal text-lg sm:text-xl text-white/60 max-w-3xl mb-10 leading-relaxed">
+          Refonte, maintenance, hébergement, sécurité et accessibilité numérique. Périmètre adapté aux équipes communales&nbsp;: budget maîtrisé, documentation claire, continuité de service.
+        </p>
+        <div class="reveal flex flex-col sm:flex-row gap-4">
+          <a href={contactUrl} class="btn-primary text-lg px-7 py-3.5">
+            Discuter de votre projet
+          </a>
+          <a href="#services-grid" class="btn-secondary text-lg px-7 py-3.5">
+            Nos services
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="svc-content-section py-20 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.015]" style="background-image: radial-gradient(circle, rgba(16,185,129,0.8) 1px, transparent 1px); background-size: 48px 48px;"></div>
+      <div class="absolute -left-32 top-1/4 w-64 h-[500px] rounded-full blur-[120px] opacity-[0.07] bg-emerald-400"></div>
+      <div class="absolute -right-32 bottom-1/4 w-64 h-[400px] rounded-full blur-[120px] opacity-[0.05] bg-cyan-400"></div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal svc-prose-card">
+          <div class="svc-prose-accent-bar"></div>
+          <div class="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600 prose-strong:text-gray-900 prose-li:text-gray-600">
+            <h2>Ce que nous faisons pour les communes</h2>
+            <p>
+              House of Agile accompagne les communes et petites collectivités dans la maintenance, la refonte et la sécurisation de leurs sites web et applications métier.
+            </p>
+            <p>
+              Nous intervenons sur des périmètres pragmatiques&nbsp;: audit technique, hébergement, sauvegardes, maintenance corrective et évolutive, accessibilité numérique, formulaires citoyens et petits outils web sur mesure.
+            </p>
+            <p>
+              <strong>Documentation claire, budget maîtrisé, priorités explicites, maintenance durable.</strong> Nous adaptons notre communication et nos livrables aux équipes communales, sans jargon inutile.
+            </p>
+            <h2>Marchés publics BOAMP</h2>
+            <p>
+              Nous répondons aux marchés publics pour des prestations web communales&nbsp;: refonte de site internet, hébergement et maintenance, audit technique. Notre expérience sur des systèmes web à forte disponibilité nous permet de respecter les exigences de continuité de service attendues dans un marché public.
+            </p>
+            <p>
+              Nous n'avons pas de références mairie à ce jour — nous le disons clairement. Ce que nous apportons&nbsp;: une rigueur technique éprouvée, des livrables précis et la transparence attendue dans un marché public.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services grid -->
+    <section id="services-grid" class="svc-grid-section py-20 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.025]" style="background-image: radial-gradient(circle, rgba(15,23,42,0.5) 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 class="reveal text-3xl sm:text-4xl font-black text-gray-900 mb-12 flex items-center gap-4">
+          <span class="w-3 h-3 rounded-full bg-emerald-500" style="box-shadow: 0 0 20px rgba(16,185,129,0.3);"></span>
+          Nos prestations pour collectivités
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {services.map((item, idx) => (
+            <div class="reveal svc-item-card" style={`--i: ${idx};`}>
+              <div class="flex items-start gap-3 mb-4">
+                <span class="text-2xl flex-shrink-0">{item.emoji}</span>
+                <h3 class="text-lg font-bold text-gray-900 leading-tight">{item.title}</h3>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">{item.description}</p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                {item.badges.map((badge) => (
+                  <span class="inline-block px-2.5 py-0.5 text-xs bg-emerald-50 text-emerald-700 rounded-full border border-emerald-200/60">{badge}</span>
+                ))}
+              </div>
+              <ul class="space-y-2">
+                {item.features.map((feature) => (
+                  <li class="text-sm text-gray-500 flex items-start gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-1.5 flex-shrink-0"></span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Sub-pages links -->
+    <section class="py-20 bg-white relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(circle, rgba(15,23,42,0.5) 1px, transparent 1px); background-size: 40px 40px;"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 class="reveal text-3xl sm:text-4xl font-black text-gray-900 mb-4">
+          Services détaillés
+        </h2>
+        <p class="reveal text-gray-500 mb-12 max-w-2xl text-lg">
+          Consultez nos pages dédiées pour un descriptif complet de chaque prestation.
+        </p>
+        <div class="grid sm:grid-cols-3 gap-5">
+          {subPages.map((page, idx) => (
+            <a href={page.href} class="reveal svc-item-card group flex flex-col" style={`--i: ${idx};`}>
+              <div class="flex items-start gap-3 mb-3">
+                <span class="text-2xl flex-shrink-0">{page.emoji}</span>
+                <h3 class="text-lg font-bold text-gray-900 leading-tight group-hover:text-emerald-700 transition-colors">{page.title}</h3>
+              </div>
+              <p class="text-gray-500 text-sm leading-relaxed flex-1">{page.desc}</p>
+              <span class="mt-4 text-sm font-semibold text-emerald-600 group-hover:text-emerald-700 transition-colors">En savoir plus →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CollectivitesContactForm />
+  </main>
+
+  <Footer lang={lang} />
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            observer.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</BaseLayout>
+
+<style>
+  .svc-orb {
+    position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none;
+  }
+  .svc-orb-1 {
+    width: 500px; height: 500px; background: rgba(16, 185, 129, 0.12);
+    top: -15%; left: -10%; animation: svc-float-1 18s ease-in-out infinite;
+  }
+  .svc-orb-2 {
+    width: 350px; height: 350px; background: rgba(14, 165, 233, 0.08);
+    top: 20%; right: -8%; animation: svc-float-2 22s ease-in-out infinite;
+  }
+  .svc-orb-3 {
+    width: 280px; height: 280px; background: rgba(168, 85, 247, 0.06);
+    bottom: -5%; left: 35%; animation: svc-float-3 15s ease-in-out infinite;
+  }
+  @keyframes svc-float-1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -40px) scale(1.05); }
+    66% { transform: translate(-20px, 20px) scale(0.95); }
+  }
+  @keyframes svc-float-2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-40px, 30px) scale(1.08); }
+    66% { transform: translate(25px, -25px) scale(0.92); }
+  }
+  @keyframes svc-float-3 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(20px, -30px) scale(1.1); }
+  }
+  .svc-content-section {
+    background: linear-gradient(180deg, #f8fafb 0%, #f1f5f0 50%, #f8fafb 100%);
+  }
+  .svc-prose-card {
+    position: relative; padding: 3rem 3rem 3rem 3.5rem; border-radius: 24px;
+    background: #ffffff; border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 12px 40px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+  }
+  .svc-prose-accent-bar {
+    position: absolute; left: 0; top: 2rem; bottom: 2rem;
+    width: 3px; border-radius: 999px;
+    background: linear-gradient(180deg, #16a34a, #0ea5e9, transparent);
+  }
+  @media (max-width: 640px) {
+    .svc-prose-card { padding: 1.5rem 1.5rem 1.5rem 2rem; border-radius: 16px; }
+  }
+  .svc-grid-section { background: #f8fafb; }
+  .svc-item-card {
+    padding: 1.75rem; border-radius: 20px; background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .svc-item-card:hover {
+    transform: translateY(-4px); border-color: rgba(22, 163, 74, 0.15);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.07);
+  }
+  .svc-cta-section { background: linear-gradient(180deg, #f8fafb, #ffffff); }
+</style>

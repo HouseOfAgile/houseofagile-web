@@ -6,9 +6,10 @@ import { getLocalePath } from '../i18n/utils';
 interface Props {
   lang: string;
   currentPath?: string;
+  frOnlyPage?: boolean; // Pages that only exist in French
 }
 
-const { lang, currentPath = '' } = Astro.props;
+const { lang, currentPath = '', frOnlyPage = false } = Astro.props;
 const t = useTranslations(lang as Lang);
 
 const pathname = Astro.url.pathname;
@@ -29,11 +30,17 @@ else if (basePath.startsWith('/fr/')) basePath = basePath.slice(4);
 else if (basePath.startsWith('/')) basePath = basePath.slice(1);
 if (basePath.endsWith('/')) basePath = basePath.slice(0, -1);
 
-const langLinks = [
-  { code: 'en', label: 'EN', href: basePath ? `/${basePath}` : '/' },
-  { code: 'de', label: 'DE', href: basePath ? `/de/${basePath}` : '/de/' },
-  { code: 'fr', label: 'FR', href: basePath ? `/fr/${basePath}` : '/fr/' },
-];
+const langLinks = frOnlyPage
+  ? [
+      { code: 'en', label: 'EN', href: '/' },
+      { code: 'de', label: 'DE', href: '/de/' },
+      { code: 'fr', label: 'FR', href: pathname },
+    ]
+  : [
+      { code: 'en', label: 'EN', href: basePath ? `/${basePath}` : '/' },
+      { code: 'de', label: 'DE', href: basePath ? `/de/${basePath}` : '/de/' },
+      { code: 'fr', label: 'FR', href: basePath ? `/fr/${basePath}` : '/fr/' },
+    ];
 ---
 
 <nav class="nav-glass sticky top-0 z-50 border-b border-hoa-100/50" id="main-nav">
@@ -54,6 +61,11 @@ const langLinks = [
           {t(link.key)}
         </a>
       ))}
+      {lang === 'fr' && (
+        <a href="/fr/collectivites-communes-services-numeriques" class="nav-link text-sm font-medium text-emerald-700 hover:text-emerald-900 transition-colors px-3 py-2 rounded-lg hover:bg-emerald-50/80">
+          Collectivités
+        </a>
+      )}
     </div>
 
     <!-- Right side -->
@@ -106,6 +118,11 @@ const langLinks = [
           {t(link.key)}
         </a>
       ))}
+      {lang === 'fr' && (
+        <a href="/fr/collectivites-communes-services-numeriques" class="text-base font-medium text-emerald-700 hover:text-emerald-900 py-3 px-3 rounded-xl hover:bg-emerald-50 transition-colors mobile-nav-link">
+          Collectivités
+        </a>
+      )}
       <!-- Mobile language pills -->
       <div class="flex items-center gap-2 px-3 py-3 mt-2 border-t border-gray-100">
         {langLinks.map((l) => (

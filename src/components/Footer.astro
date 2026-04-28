@@ -67,7 +67,7 @@ const platforms = [
     <!-- Links grid: 4 columns on large, 2 on medium -->
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-14">
 
-      <!-- Services -->
+      <!-- Services (with Collectivités for FR) -->
       <div class="col-span-2 lg:col-span-1">
         <h3 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 mb-4">
           {t('footer.services')}
@@ -81,10 +81,67 @@ const platforms = [
             </li>
           ))}
         </ul>
+
+        {lang === 'fr' && (
+          <>
+            <h3 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 mt-6 mb-3">
+              Collectivités & communes
+            </h3>
+            <ul class="space-y-2.5">
+              <li>
+                <a href="/fr/collectivites-communes-services-numeriques" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug block">
+                  Services numériques communaux
+                </a>
+              </li>
+              <li>
+                <a href="/fr/refonte-maintenance-site-mairie" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug block">
+                  Refonte & maintenance mairie
+                </a>
+              </li>
+              <li>
+                <a href="/fr/hebergement-infogerance-web-collectivites" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug block">
+                  Hébergement & infogérance web
+                </a>
+              </li>
+              <li>
+                <a href="/fr/audit-technique-site-communal" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug block">
+                  Audit technique de site communal
+                </a>
+              </li>
+            </ul>
+          </>
+        )}
       </div>
 
       <!-- Work -->
       <div>
+        {lang !== 'fr' && (
+          <>
+            <h3 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 mb-4">
+              {lang === 'de' ? 'Öffentliche Auftraggeber' : 'Public Sector'}
+            </h3>
+            <ul class="space-y-2.5 mb-6">
+              <li>
+                <a href="/fr/collectivites-communes-services-numeriques" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug flex items-center gap-1.5">
+                  {lang === 'de' ? 'Services communes & collectivités' : 'Municipal digital services'}
+                  <span class="text-[10px] text-gray-600 font-semibold">FR</span>
+                </a>
+              </li>
+              <li>
+                <a href="/fr/refonte-maintenance-site-mairie" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug flex items-center gap-1.5">
+                  {lang === 'de' ? 'Webseite Gemeinde: Relaunch & Pflege' : 'Municipal website redesign'}
+                  <span class="text-[10px] text-gray-600 font-semibold">FR</span>
+                </a>
+              </li>
+              <li>
+                <a href="/fr/audit-technique-site-communal" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug flex items-center gap-1.5">
+                  {lang === 'de' ? 'Technisches Audit Gemeindewebseite' : 'Municipal website audit'}
+                  <span class="text-[10px] text-gray-600 font-semibold">FR</span>
+                </a>
+              </li>
+            </ul>
+          </>
+        )}
         <h3 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 mb-4">
           {t('footer.caseStudies')}
         </h3>
