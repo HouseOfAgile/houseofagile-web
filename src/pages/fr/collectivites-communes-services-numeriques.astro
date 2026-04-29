@@ -11,8 +11,8 @@ const services = [
   {
     emoji: '🏛️',
     title: 'Refonte de site communal',
-    description: 'Audit du site existant, architecture de contenu, design responsive accessible, développement CMS ou Symfony/PHP adapté à votre commune.',
-    badges: ['CMS', 'Symfony', 'PHP', 'WordPress'],
+    description: 'Audit du site existant, architecture de contenu, design responsive accessible, développement CMS, Symfony/PHP, Next.js ou React selon vos contraintes.',
+    badges: ['CMS', 'Symfony', 'PHP', 'WordPress', 'Next.js', 'React'],
     features: [
       'Audit du site et du contenu existant',
       'Architecture et arborescence adaptée',
@@ -36,7 +36,7 @@ const services = [
     emoji: '🖥️',
     title: 'Hébergement sécurisé & infogérance',
     description: 'Hébergement managé sur serveurs en France, certificat SSL/TLS, sauvegardes automatiques, monitoring de disponibilité et mises à jour de sécurité.',
-    badges: ['SSL', 'Sauvegardes', 'Monitoring', 'VPS'],
+    badges: ['SSL', 'Sauvegardes', 'Monitoring', 'VPS', 'Docker'],
     features: [
       'Hébergement VPS/dédié en France',
       'Sauvegardes quotidiennes avec restauration testée',
@@ -59,8 +59,8 @@ const services = [
   {
     emoji: '📝',
     title: 'Formulaires citoyens & démarches',
-    description: 'Formulaires de contact, dépôt de dossier ou petites démarches en ligne. Confirmation par email, conformité RGPD, intégration simple dans votre site.',
-    badges: ['PHP', 'Symfony', 'Formulaires', 'RGPD'],
+    description: 'Formulaires de contact, dépôt de dossier ou petites démarches en ligne. Confirmation par email, conformité RGPD, intégration dans votre site.',
+    badges: ['PHP', 'Symfony', 'Python', 'Node.js', 'Formulaires', 'RGPD'],
     features: [
       'Formulaires de contact ou dépôt de dossier',
       'Confirmation email automatique',
@@ -79,6 +79,106 @@ const services = [
       'Accessibilité et indicateurs RGAA',
       'Rapport priorisé (5–10 pages)',
     ],
+  },
+];
+
+const whyItems = [
+  {
+    icon: '🎯',
+    title: 'Un périmètre clair',
+    desc: 'Cadrage, livrables, planning et hypothèses définis contractuellement. Pas de dérapage en cours de marché.',
+  },
+  {
+    icon: '🔧',
+    title: 'Une maintenance durable',
+    desc: 'Sauvegardes, mises à jour, supervision et documentation. Votre site reste opérationnel dans la durée.',
+  },
+  {
+    icon: '💻',
+    title: 'Une expertise technique large',
+    desc: 'Symfony/PHP, Python, Java, Next.js, React, Vue, Node.js, APIs, PostgreSQL, MySQL, Docker, CI/CD.',
+  },
+  {
+    icon: '🤝',
+    title: 'Adapté aux équipes communales',
+    desc: 'Communication claire, formation incluse, transfert de compétences. Votre équipe reste autonome.',
+  },
+  {
+    icon: '🏆',
+    title: 'Transparence sur les références',
+    desc: "Pas de fausses références mairie. Une expérience éprouvée sur des systèmes web critiques à fort trafic.",
+  },
+  {
+    icon: '📋',
+    title: 'Réponse structurée aux marchés',
+    desc: "Nous répondons via BOAMP et canaux officiels. Notre réponse est structurée pour faciliter l'évaluation par la commission.",
+  },
+];
+
+const methodSteps = [
+  { step: '01', label: 'Lecture du DCE', desc: "Analyse du dossier de consultation, identification des exigences techniques et administratives, clarification du périmètre." },
+  { step: '02', label: 'Cadrage fonctionnel', desc: "Compréhension du besoin, objectifs, contraintes CMS, RGAA, accessibilité, interopérabilité." },
+  { step: '03', label: 'Planning par phases', desc: "Jalons identifiés : audit initial, maquettes, développement, recette, formation, mise en ligne." },
+  { step: '04', label: 'Livrables définis', desc: "Chaque livrable est nommé, daté et validable : maquettes, cahier de recette, rapport d'audit, guide utilisateur." },
+  { step: '05', label: 'Recette & mise en ligne', desc: "Tests fonctionnels, accessibilité, performance et sécurité avant toute mise en production." },
+  { step: '06', label: 'Formation & maintenance', desc: "Formation équipe mairie, documentation utilisateur et contrat de maintenance avec délais contractuels." },
+];
+
+const references = [
+  {
+    client: 'Universal Music Group',
+    desc: "Interfaces web et systèmes à fort trafic. Fiabilité, disponibilité et maintenance longue durée.",
+    tag: 'Entreprise internationale',
+  },
+  {
+    client: 'Vodafone / SFR / France Telecom',
+    desc: "Plateformes web haute disponibilité pour des millions d'utilisateurs.",
+    tag: 'Télécoms, fort trafic',
+  },
+  {
+    client: 'Plateforme Symfony & automation',
+    desc: "Développement et maintenance d'un système métier complexe sur plusieurs années.",
+    tag: 'Maintenance longue durée',
+  },
+  {
+    client: 'HeyBuddies',
+    desc: 'Application Symfony/Vue/PostgreSQL/AWS en production. Fonctionnalités, performances, CI/CD.',
+    tag: 'Symfony / Vue / AWS',
+  },
+];
+
+const faqItems = [
+  {
+    q: "Intervenez-vous dans le cadre d'un marché public ?",
+    a: "Oui. Nous répondons aux marchés publics pour des prestations web communales : refonte de site internet, hébergement, maintenance et audit technique. Notre réponse est structurée pour faciliter l'analyse par la commission d'évaluation.",
+  },
+  {
+    q: "Pouvez-vous répondre à une consultation BOAMP ?",
+    a: "Oui. Nous consultons régulièrement BOAMP pour identifier des marchés publics web adaptés à notre périmètre. Nous pouvons répondre en procédure adaptée (MAPA) ou appel d'offres classique.",
+  },
+  {
+    q: "Avez-vous des références mairie ?",
+    a: "Nous n'avons pas de références mairie à ce jour — nous le disons clairement. Nous apportons une rigueur technique éprouvée sur des systèmes web critiques (Universal Music Group, Vodafone, SFR, France Telecom) et une méthodologie adaptée aux exigences des marchés publics.",
+  },
+  {
+    q: "Pouvez-vous gérer l'hébergement et la maintenance après mise en ligne ?",
+    a: "Oui. Notre offre d'hébergement managé couvre : serveur en France, SSL/TLS, sauvegardes quotidiennes testées, monitoring de disponibilité et mises à jour de sécurité. La maintenance corrective et évolutive est proposée en contrat avec délais définis.",
+  },
+  {
+    q: "Pouvez-vous travailler avec un CMS existant ?",
+    a: "Oui. Nous intervenons sur WordPress, SPIP, Drupal et autres CMS standards. Nous pouvons aussi développer sur mesure en Symfony/PHP, Next.js ou d'autres technologies selon les contraintes du marché.",
+  },
+  {
+    q: "Pouvez-vous intervenir sur Symfony, PHP, Python, Java ou JavaScript ?",
+    a: "Oui. Notre expertise couvre Symfony/PHP, Python, Java, JavaScript/TypeScript, Next.js, React, Vue et Node.js. Nous choisissons la technologie adaptée au besoin, pas selon nos préférences.",
+  },
+  {
+    q: "Pouvez-vous aider sur l'accessibilité RGAA ?",
+    a: "Oui. Nous réalisons des pré-audits RGAA 4.1 avec rapport priorisé. Nous accompagnons les corrections et intégrons les exigences d'accessibilité dès la conception. Nous ne certifions pas la conformité totale, mais nous mettons en place les corrections identifiées.",
+  },
+  {
+    q: "Faites-vous du support poste de travail, imprimantes ou téléphonie ?",
+    a: "Non. Notre périmètre est strictement web et applicatif : hébergement, applications, bases de données, sécurité web, monitoring. Nous n'intervenons pas sur les postes de travail, imprimantes, téléphones ou équipements physiques sur site.",
   },
 ];
 
@@ -105,14 +205,29 @@ const subPages = [
 ---
 
 <BaseLayout
-  title="Services numériques pour communes et collectivités - House of Agile"
-  description="House of Agile accompagne les communes et collectivités : refonte de site communal, hébergement, maintenance, sécurité et accessibilité RGAA. Budget maîtrisé, documentation claire, continuité de service."
+  title="Prestataire web pour mairies et collectivités — refonte, hébergement, maintenance - House of Agile"
+  description="House of Agile répond aux marchés publics BOAMP pour communes et collectivités : refonte de site internet de mairie, hébergement, infogérance web, audit RGAA. Périmètre maîtrisé, documentation, continuité de service."
   lang={lang}
   canonicalUrl="https://houseofagile.com/fr/collectivites-communes-services-numeriques"
-  ogTitle="Services numériques pour communes et collectivités - House of Agile"
-  ogDescription="Refonte, maintenance, hébergement et audit de site communal. Approche pragmatique adaptée aux équipes mairie."
+  ogTitle="Prestataire web pour mairies et collectivités - House of Agile"
+  ogDescription="Refonte de site internet mairie, hébergement, maintenance et audit RGAA pour communes et collectivités. Marché public BOAMP."
 >
   <Navigation lang={lang} frOnlyPage={true} />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Services numériques pour communes et collectivités",
+    "provider": {"@type": "Organization", "name": "House of Agile", "url": "https://houseofagile.com"},
+    "areaServed": {"@type": "Country", "name": "France"},
+    "serviceType": ["Refonte site internet mairie", "Hébergement web collectivité", "Maintenance site communal", "Audit RGAA", "Infogérance web"],
+    "url": "https://houseofagile.com/fr/collectivites-communes-services-numeriques"
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(f => ({"@type": "Question", "name": f.q, "acceptedAnswer": {"@type": "Answer", "text": f.a}}))
+  })} />
 
   <main>
     <!-- Hero -->
@@ -127,7 +242,7 @@ const subPages = [
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="reveal mb-6">
           <span class="inline-block px-4 py-1.5 text-xs font-bold uppercase tracking-widest rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-            Secteur Public
+            Secteur Public · Marchés BOAMP
           </span>
         </div>
         <h1 class="reveal text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.05] tracking-tight">
@@ -135,7 +250,7 @@ const subPages = [
           <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent"> pour communes et collectivités</span>
         </h1>
         <p class="reveal text-lg sm:text-xl text-white/60 max-w-3xl mb-10 leading-relaxed">
-          Refonte, maintenance, hébergement, sécurité et accessibilité numérique. Périmètre adapté aux équipes communales&nbsp;: budget maîtrisé, documentation claire, continuité de service.
+          Refonte de site internet mairie, hébergement, maintenance, audit RGAA et développement d'applications. Périmètre adapté aux équipes communales&nbsp;: budget maîtrisé, documentation claire, continuité de service.
         </p>
         <div class="reveal flex flex-col sm:flex-row gap-4">
           <a href={contactUrl} class="btn-primary text-lg px-7 py-3.5">
@@ -160,22 +275,52 @@ const subPages = [
           <div class="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600 prose-strong:text-gray-900 prose-li:text-gray-600">
             <h2>Ce que nous faisons pour les communes</h2>
             <p>
-              House of Agile accompagne les communes et petites collectivités dans la maintenance, la refonte et la sécurisation de leurs sites web et applications métier.
+              House of Agile accompagne les communes et collectivités dans la maintenance, la refonte et la sécurisation de leurs sites web et applications métier.
             </p>
             <p>
-              Nous intervenons sur des périmètres pragmatiques&nbsp;: audit technique, hébergement, sauvegardes, maintenance corrective et évolutive, accessibilité numérique, formulaires citoyens et petits outils web sur mesure.
+              Nous intervenons sur des périmètres pragmatiques&nbsp;: audit technique, hébergement, sauvegardes, maintenance corrective et évolutive, accessibilité numérique, formulaires citoyens et outils web sur mesure. Selon le besoin, nous intervenons sur CMS standards, Symfony/PHP, Python, Java, Next.js/React/Vue, APIs, bases de données et infrastructure DevOps.
             </p>
             <p>
               <strong>Documentation claire, budget maîtrisé, priorités explicites, maintenance durable.</strong> Nous adaptons notre communication et nos livrables aux équipes communales, sans jargon inutile.
             </p>
-            <h2>Marchés publics BOAMP</h2>
+            <h2>Marchés publics et consultations BOAMP</h2>
             <p>
               Nous répondons aux marchés publics pour des prestations web communales&nbsp;: refonte de site internet, hébergement et maintenance, audit technique. Notre expérience sur des systèmes web à forte disponibilité nous permet de respecter les exigences de continuité de service attendues dans un marché public.
+            </p>
+            <p>
+              Lorsqu'un marché public est engagé, les questions et échanges passent par le canal officiel prévu par l'acheteur. Notre réponse technique est structurée pour faciliter l'analyse&nbsp;: compréhension du besoin, méthode, planning, livrables, maintenance, risques et options.
             </p>
             <p>
               Nous n'avons pas de références mairie à ce jour — nous le disons clairement. Ce que nous apportons&nbsp;: une rigueur technique éprouvée, des livrables précis et la transparence attendue dans un marché public.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pourquoi nous choisir -->
+    <section class="py-20 bg-white relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(circle, rgba(15,23,42,0.5) 1px, transparent 1px); background-size: 40px 40px;"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal mb-10">
+          <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60 mb-4">
+            Pourquoi nous choisir
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4">Réduire les risques du projet</h2>
+          <p class="text-gray-500 text-lg max-w-3xl">
+            Une collectivité ne choisit pas seulement une technologie. Elle choisit un prestataire capable de réduire les risques&nbsp;: projet maîtrisé, site maintenable, sauvegardes, sécurité, accessibilité, documentation et continuité de service.
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {whyItems.map((item, idx) => (
+            <div class="reveal svc-item-card" style={`--i: ${idx};`}>
+              <div class="flex items-start gap-3 mb-3">
+                <span class="text-2xl flex-shrink-0">{item.icon}</span>
+                <h3 class="text-base font-bold text-gray-900 leading-tight">{item.title}</h3>
+              </div>
+              <p class="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -217,6 +362,85 @@ const subPages = [
       </div>
     </section>
 
+    <!-- Méthode de réponse marché public -->
+    <section class="svc-content-section py-20 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.015]" style="background-image: radial-gradient(circle, rgba(16,185,129,0.8) 1px, transparent 1px); background-size: 48px 48px;"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal mb-10">
+          <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60 mb-4">
+            Méthode
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4">Réponse à un marché public</h2>
+          <p class="text-gray-500 text-lg max-w-3xl">
+            Lorsqu'un marché public est engagé, notre réponse technique est structurée pour faciliter l'analyse par la commission&nbsp;: compréhension du besoin, méthode, planning, livrables, maintenance, risques et options.
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {methodSteps.map((s, idx) => (
+            <div class="reveal svc-item-card" style={`--i: ${idx};`}>
+              <div class="flex items-start gap-3 mb-3">
+                <span class="text-xs font-black text-emerald-600 bg-emerald-50 border border-emerald-200/60 rounded-full px-2.5 py-1 flex-shrink-0 mt-0.5">{s.step}</span>
+                <h3 class="text-base font-bold text-gray-900 leading-tight">{s.label}</h3>
+              </div>
+              <p class="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Références techniques mobilisables -->
+    <section class="py-20 bg-white relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(circle, rgba(15,23,42,0.5) 1px, transparent 1px); background-size: 40px 40px;"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal mb-4">
+          <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60 mb-4">
+            Références techniques
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4">Références techniques mobilisables</h2>
+          <p class="text-gray-500 text-lg max-w-3xl mb-2">
+            Ces références ne sont pas des références mairie. Elles démontrent notre capacité à concevoir, maintenir et exploiter des systèmes web fiables dans des contextes exigeants.
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-6">
+          {references.map((ref, idx) => (
+            <div class="reveal svc-item-card" style={`--i: ${idx};`}>
+              <span class="inline-block px-2.5 py-0.5 text-xs bg-gray-50 text-gray-600 rounded-full border border-gray-200/60 mb-3">{ref.tag}</span>
+              <h3 class="text-base font-bold text-gray-900 mb-2">{ref.client}</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">{ref.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Dossier de capacité CTA -->
+    <section class="py-16 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-emerald-950 via-emerald-900 to-gray-950"></div>
+      <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px); background-size: 32px 32px;"></div>
+      <div class="absolute top-0 right-1/4 w-64 h-64 rounded-full blur-[100px] opacity-20 bg-emerald-400"></div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="reveal">
+          <span class="inline-block px-4 py-1.5 text-xs font-bold uppercase tracking-widest rounded-full bg-white/10 text-emerald-300 border border-white/20 mb-6">
+            Dossier de capacité
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-white mb-4">
+            Vous préparez un marché public ?
+          </h2>
+          <p class="text-white/70 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+            Nous pouvons vous transmettre un dossier de capacité synthétique&nbsp;: compétences, méthodologie, références techniques, maintenance et modalités d'intervention.
+          </p>
+          <a href={contactUrl} class="inline-flex items-center gap-3 bg-white text-emerald-900 font-bold px-8 py-4 rounded-2xl text-base hover:bg-emerald-50 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Demander le dossier de capacité
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Sub-pages links -->
     <section class="py-20 bg-white relative overflow-hidden">
       <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(circle, rgba(15,23,42,0.5) 1px, transparent 1px); background-size: 40px 40px;"></div>
@@ -237,6 +461,34 @@ const subPages = [
               <p class="text-gray-500 text-sm leading-relaxed flex-1">{page.desc}</p>
               <span class="mt-4 text-sm font-semibold text-emerald-600 group-hover:text-emerald-700 transition-colors">En savoir plus →</span>
             </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="svc-content-section py-20 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.015]" style="background-image: radial-gradient(circle, rgba(16,185,129,0.8) 1px, transparent 1px); background-size: 48px 48px;"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal mb-10">
+          <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60 mb-4">
+            Questions fréquentes
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-gray-900">Questions fréquentes</h2>
+        </div>
+        <div class="space-y-3">
+          {faqItems.map((item, idx) => (
+            <details class="reveal svc-faq-item" style={`--i: ${idx};`}>
+              <summary class="svc-faq-summary">
+                <span>{item.q}</span>
+                <svg class="svc-faq-icon w-5 h-5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="px-6 pb-5">
+                <p class="text-gray-500 text-sm leading-relaxed">{item.a}</p>
+              </div>
+            </details>
           ))}
         </div>
       </div>
@@ -321,5 +573,22 @@ const subPages = [
     transform: translateY(-4px); border-color: rgba(22, 163, 74, 0.15);
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.07);
   }
+  .svc-faq-item {
+    border-radius: 16px; background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+  }
+  .svc-faq-summary {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: 1.25rem 1.5rem; cursor: pointer; font-weight: 600;
+    font-size: 0.9rem; color: #111827; list-style: none;
+    transition: background 200ms ease;
+  }
+  .svc-faq-summary::-webkit-details-marker { display: none; }
+  .svc-faq-summary:hover { background: #f8fafb; }
+  details[open] .svc-faq-summary { border-bottom: 1px solid rgba(15, 23, 42, 0.06); }
+  details[open] .svc-faq-icon { transform: rotate(180deg); }
+  .svc-faq-icon { transition: transform 200ms ease; }
   .svc-cta-section { background: linear-gradient(180deg, #f8fafb, #ffffff); }
 </style>

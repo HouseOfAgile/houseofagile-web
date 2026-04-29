@@ -5,11 +5,14 @@ interface Props {
 const { preselectedService = '' } = Astro.props;
 
 const services = [
+  { value: 'dossier-capacite', label: 'Demande de dossier de capacité' },
+  { value: 'marche-public', label: 'Réponse à un marché public / DCE' },
   { value: 'refonte', label: 'Refonte de site communal' },
   { value: 'maintenance', label: 'Maintenance corrective & évolutive' },
   { value: 'hebergement', label: 'Hébergement & infogérance web' },
   { value: 'audit', label: 'Audit technique de site communal' },
   { value: 'formulaires', label: 'Formulaires citoyens / démarches en ligne' },
+  { value: 'audit-avant-consultation', label: 'Audit avant consultation' },
   { value: 'plusieurs', label: 'Plusieurs prestations / à définir' },
 ];
 ---
@@ -23,7 +26,7 @@ const services = [
         Contact
       </span>
       <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4">
-        Décrivez votre projet communal
+        Décrivez votre projet ou demandez le dossier
       </h2>
       <p class="text-gray-500 max-w-2xl mx-auto text-lg">
         Remplissez ce formulaire pour que nous puissions évaluer votre besoin rapidement. Nous répondons sous 24h avec une évaluation honnête du périmètre.

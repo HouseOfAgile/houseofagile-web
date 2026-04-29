@@ -8,6 +8,33 @@ const lang = 'fr';
 const contactUrl = '#contact-collectivites';
 const backUrl = '/fr/collectivites-communes-services-numeriques';
 
+const faqItems = [
+  {
+    q: "À quoi sert un audit technique avant une refonte ?",
+    a: "L'audit permet d'établir un état des lieux objectif avant toute décision : points de risque identifiés, priorités d'action, estimation de charge. Il sert de base au DCE pour une refonte ou de point de départ pour un contrat de maintenance.",
+  },
+  {
+    q: "Le rapport RGAA est-il une certification officielle ?",
+    a: "Non. Nous réalisons un pré-audit RGAA 4.1 avec rapport priorisé. Ce n'est pas une certification officielle, mais un état des lieux des indicateurs principaux avec des recommandations concrètes de correction. La certification officielle requiert un organisme accrédité.",
+  },
+  {
+    q: "En combien de temps réalisez-vous l'audit ?",
+    a: "L'audit est réalisable en 5 à 10 jours ouvrés selon la complexité du site. Un site CMS standard prend moins de temps qu'une application sur mesure. Le délai précis est communiqué après une première analyse.",
+  },
+  {
+    q: "L'audit peut-il servir de base à un DCE ?",
+    a: "Oui. Le rapport d'audit peut être utilisé comme annexe technique d'un dossier de consultation. Il fournit une description précise de l'existant, des risques identifiés et des besoins de correction, ce qui facilite la rédaction du cahier des charges.",
+  },
+  {
+    q: "Intervenez-vous sur site ou à distance ?",
+    a: "L'audit technique se réalise entièrement à distance sur la base de l'URL publique du site, des accès CMS et serveur si disponibles. Aucune intervention physique n'est nécessaire.",
+  },
+  {
+    q: "Pouvez-vous répondre à une consultation BOAMP pour un audit ?",
+    a: "Oui. Nous répondons aux marchés publics pour des prestations d'audit technique de sites communaux. Notre réponse est structurée pour faciliter l'évaluation par la commission : périmètre, méthode, livrables, délais et tarif.",
+  },
+];
+
 const services = [
   {
     emoji: '⚡',
@@ -85,12 +112,12 @@ const services = [
 ---
 
 <BaseLayout
-  title="Audit technique de site communal - House of Agile"
-  description="Audit technique de site communal : performance, sécurité, accessibilité RGAA, SEO fondamentaux, CMS et DNS. Rapport court et priorisé, adapté aux équipes mairie."
+  title="Audit technique de site communal — performance, sécurité, RGAA, SEO - House of Agile"
+  description="Audit technique de site de mairie : performance, sécurité, accessibilité RGAA 4.1, SEO fondamentaux, CMS et DNS. Rapport court et priorisé, adapté aux équipes non-techniques. Marché public BOAMP."
   lang={lang}
   canonicalUrl="https://houseofagile.com/fr/audit-technique-site-communal"
   ogTitle="Audit technique de site communal - House of Agile"
-  ogDescription="Performance, sécurité, RGAA, SEO et DNS. Rapport court et priorisé pour les communes."
+  ogDescription="Performance, sécurité, RGAA, SEO et DNS. Rapport priorisé pour les communes et collectivités. Réponse aux marchés publics."
 >
   <Navigation lang={lang} frOnlyPage={true} />
 
@@ -207,6 +234,69 @@ const services = [
       </div>
     </section>
 
+    <!-- Dossier de capacité CTA -->
+    <section class="py-16 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-emerald-950 via-emerald-900 to-gray-950"></div>
+      <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px); background-size: 32px 32px;"></div>
+      <div class="absolute top-0 right-1/4 w-64 h-64 rounded-full blur-[100px] opacity-20 bg-emerald-400"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="reveal">
+          <span class="inline-block px-4 py-1.5 text-xs font-bold uppercase tracking-widest rounded-full bg-white/10 text-emerald-300 border border-white/20 mb-6">
+            Dossier de capacité
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-white mb-4">Vous préparez un audit ou une consultation ?</h2>
+          <p class="text-white/70 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+            Nous pouvons vous transmettre un dossier de capacité synthétique&nbsp;: compétences, méthodologie, références techniques, maintenance et modalités d'intervention.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={contactUrl} class="inline-flex items-center gap-3 bg-white text-emerald-900 font-bold px-8 py-4 rounded-2xl text-base hover:bg-emerald-50 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Demander le dossier de capacité
+            </a>
+            <a href={backUrl} class="inline-flex items-center gap-2 text-white/60 font-semibold px-6 py-4 rounded-2xl text-base hover:text-white transition-colors">
+              ← Tous nos services collectivités
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="svc-content-section py-20 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.015]" style="background-image: radial-gradient(circle, rgba(16,185,129,0.8) 1px, transparent 1px); background-size: 48px 48px;"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal mb-10">
+          <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60 mb-4">
+            Questions fréquentes
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-gray-900">Questions sur l'audit</h2>
+        </div>
+        <div class="space-y-3">
+          {faqItems.map((item, idx) => (
+            <details class="reveal svc-faq-item" style={`--i: ${idx};`}>
+              <summary class="svc-faq-summary">
+                <span>{item.q}</span>
+                <svg class="svc-faq-icon w-5 h-5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="px-6 pb-5">
+                <p class="text-gray-500 text-sm leading-relaxed">{item.a}</p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqItems.map(f => ({"@type": "Question", "name": f.q, "acceptedAnswer": {"@type": "Answer", "text": f.a}}))
+    })} />
+
     <CollectivitesContactForm preselectedService="audit" />
   </main>
 
@@ -287,4 +377,21 @@ const services = [
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.07);
   }
   .svc-cta-section { background: linear-gradient(180deg, #f8fafb, #ffffff); }
+  .svc-faq-item {
+    border-radius: 16px; background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+  }
+  .svc-faq-summary {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: 1.25rem 1.5rem; cursor: pointer; font-weight: 600;
+    font-size: 0.9rem; color: #111827; list-style: none;
+    transition: background 200ms ease;
+  }
+  .svc-faq-summary::-webkit-details-marker { display: none; }
+  .svc-faq-summary:hover { background: #f8fafb; }
+  details[open] .svc-faq-summary { border-bottom: 1px solid rgba(15, 23, 42, 0.06); }
+  details[open] .svc-faq-icon { transform: rotate(180deg); }
+  .svc-faq-icon { transition: transform 200ms ease; }
 </style>
