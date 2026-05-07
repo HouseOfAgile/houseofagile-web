@@ -49,5 +49,10 @@ Deployed to **GitHub Pages** via GitHub Actions. The workflow at `.github/workfl
 - Glass-morphism cards with 3D tilt on hover
 - Client logo marquee strip
 - Responsive layout optimized for mobile and desktop
-- Shared page components to avoid code duplication across languages
-- SEO: sitemap, hreflang tags, Schema.org structured data, Open Graph
+## SEO & Sitemap
+
+Astro generates `sitemap-index.xml` and `sitemap-0.xml` by default. To ensure legacy compatibility with SEO tools and crawlers that explicitly look for `/sitemap.xml`, the `build` script automatically copies `sitemap-index.xml` to `sitemap.xml`. The `robots.txt` is configured to point to `sitemap.xml`.
+
+## AI Agent Guidelines
+
+If you are an AI assistant working in this repository, please read the `CLAUDE.md` file for strict project conventions, build steps, and guidelines.
