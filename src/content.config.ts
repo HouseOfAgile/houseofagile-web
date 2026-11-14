@@ -43,6 +43,11 @@ const ServiceBadgeGroupSchema = z.object({
   features: z.array(z.string()),
 });
 
+const FaqSchema = z.object({
+  question: z.string(),
+  answer: z.string(),
+});
+
 const services = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/services' }),
   schema: z.object({
@@ -63,6 +68,8 @@ const services = defineCollection({
       btnConsultation: z.string().default('Schedule Consultation'),
       btnAllServices: z.string().default('View All Services'),
     }),
+    faqTitle: z.string().default('Frequently asked questions'),
+    faq: z.array(FaqSchema).optional(),
     seo: SeoSchema,
   }),
 });

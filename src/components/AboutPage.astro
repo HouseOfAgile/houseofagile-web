@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from './Navigation.astro';
 import Footer from './Footer.astro';
@@ -20,9 +21,9 @@ const whyItems = getTranslationArray(lang as Lang, 'about.why.items');
 
 const base = 'https://houseofagile.com';
 const hreflangUrls = {
-  en: `${base}/about`,
-  de: `${base}/de/about`,
-  fr: `${base}/fr/about`,
+  en: `${base}/about/`,
+  de: `${base}/de/about/`,
+  fr: `${base}/fr/about/`,
 };
 const canonicalUrl = lang === 'en' ? hreflangUrls.en : lang === 'de' ? hreflangUrls.de : hreflangUrls.fr;
 ---
@@ -75,7 +76,7 @@ const canonicalUrl = lang === 'en' ? hreflangUrls.en : lang === 'de' ? hreflangU
             <ul class="space-y-3">
               {highlights.map((item) => (
                 <li class="flex items-start gap-3 text-gray-700">
-                  <i class="fa-solid fa-check text-hoa-500 mt-1 flex-shrink-0"></i>
+                  <Icon name="check" class="text-hoa-500 mt-1 flex-shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -114,7 +115,7 @@ const canonicalUrl = lang === 'en' ? hreflangUrls.en : lang === 'de' ? hreflangU
         <ul class="space-y-4">
           {whyItems.map((item) => (
             <li class="flex items-start gap-4 p-4 rounded-lg bg-gray-50 border border-gray-100">
-              <i class="fa-solid fa-arrow-right text-hoa-500 mt-1 flex-shrink-0"></i>
+              <Icon name="arrow-right" class="text-hoa-500 mt-1 flex-shrink-0" />
               <span class="text-gray-700 leading-relaxed">{item}</span>
             </li>
           ))}

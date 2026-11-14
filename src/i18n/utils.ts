@@ -15,14 +15,16 @@ export function getLangFromUrl(url: URL): Lang {
 }
 
 export function getLocalePath(lang: Lang, path: string = ''): string {
-  if (lang === defaultLang) return `/${path}`;
-  return `/${lang}/${path}`;
+  // Pages are served as directories: link with a trailing slash to avoid a redirect hop.
+  const suffix = path && !path.endsWith('/') && !path.includes('#') ? '/' : '';
+  if (lang === defaultLang) return `/${path}${suffix}`;
+  return `/${lang}/${path}${suffix}`;
 }
 
 export function getAlternateUrls(slug: string, type: 'case-studies' | 'services'): Record<Lang, string> {
   return {
-    en: `https://houseofagile.com/${type}/${slug}`,
-    de: `https://houseofagile.com/de/${type}/${slug}`,
-    fr: `https://houseofagile.com/fr/${type}/${slug}`,
+    en: `https://houseofagile.com/${type}/${slug}/`,
+    de: `https://houseofagile.com/de/${type}/${slug}/`,
+    fr: `https://houseofagile.com/fr/${type}/${slug}/`,
   };
 }

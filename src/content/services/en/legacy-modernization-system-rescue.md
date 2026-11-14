@@ -41,6 +41,14 @@ serviceItems:
       - "Schema redesign and normalization"
       - "Data migration with validation"
       - "Performance optimization"
+  - title: E-Commerce & Shop Platform Migration
+    emoji: "🛒"
+    description: "Stuck on an aging Gambio or xt:Commerce shop? We modernize it in place or migrate it to Shopify or Shopware - keeping your data, your JTL-Wawi workflows and your search rankings intact."
+    badges: ["Gambio", "Shopify", "JTL-Wawi", "SEO"]
+    features:
+      - "Products, customers, orders and vouchers migrated with validation"
+      - "Legacy URL redirect mapping to preserve rankings"
+      - "Zero-downtime cutover, proven on a Gambio-to-Shopify migration"
   - title: Security & Compliance Updates
     emoji: "🛡️"
     description: "Legacy systems are security liabilities. We patch, harden, and bring your systems up to current security and compliance standards."
@@ -64,7 +72,7 @@ cta:
   btnAllServices: "All Services"
 seo:
   title: "Legacy Modernization & System Rescue - House of Agile"
-  description: "Modernize legacy systems without the big-bang rewrite. Incremental migration, API layers, database modernization, and security updates for aging business-critical software."
+  description: "Modernize legacy systems without a big-bang rewrite: incremental migration, API layers, database modernization and security updates for aging software."
   ogTitle: "Legacy Modernization & System Rescue - House of Agile"
   ogDescription: "Your old system still works. Let's make it work better. Incremental modernization without the risky rewrite."
 ---
@@ -87,3 +95,7 @@ Instead of replacing everything at once, we wrap the old system and gradually mi
 ## When to Modernize vs. When to Leave It Alone
 
 Not every legacy system needs modernization. If it works, is secure, and isn't blocking business goals - sometimes the right answer is to leave it running. We'll tell you honestly which category your system falls into.
+
+## Old Systems, Old Risks
+
+Aging software usually comes with aging security: unpatched servers, shared admin passwords, and backups nobody has tested. The PHP2Shell vulnerabilities of October 2026 made the point sharply: PHP 8.2 and newer received fixes within days, while applications still running on PHP 8.1 or older got nothing from the PHP project. A modernization project is a good moment for an [IT security review](/services/cybersecurity-consulting/). And if the "legacy system" is a dead machine with data still on it, we also do [data recovery](/services/data-recovery/).

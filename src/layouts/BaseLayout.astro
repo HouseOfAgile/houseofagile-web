@@ -1,4 +1,6 @@
 ---
+import '@fontsource-variable/dm-sans';
+import '@fontsource-variable/outfit';
 import '../styles/global.css';
 
 interface Props {
@@ -9,12 +11,12 @@ interface Props {
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
-  hreflangUrls?: { en: string; de: string; fr: string };
+  hreflangUrls?: { en?: string; de?: string; fr?: string };
   schemaType?: 'homepage' | 'casestudy' | 'service';
 }
 
 const {
-  title,
+  title: rawTitle,
   description,
   lang = 'en',
   canonicalUrl,
@@ -25,6 +27,8 @@ const {
   schemaType,
 } = Astro.props;
 
+// Search engines truncate titles past ~60 characters: drop the brand suffix on long ones.
+const title = rawTitle.length > 60 ? rawTitle.replace(/\s[-|]\sHouse of Agile$/, '') : rawTitle;
 const resolvedOgTitle = ogTitle || title;
 const resolvedOgDescription = ogDescription || description;
 const ogLocaleMap: Record<string, string> = { en: 'en_US', de: 'de_DE', fr: 'fr_FR' };
@@ -77,14 +81,12 @@ const ogLocale = ogLocaleMap[lang] || 'en_US';
 
   {hreflangUrls && (
     <>
-      <link rel="alternate" hreflang="en" href={hreflangUrls.en} />
-      <link rel="alternate" hreflang="de" href={hreflangUrls.de} />
-      <link rel="alternate" hreflang="fr" href={hreflangUrls.fr} />
-      <link rel="alternate" hreflang="x-default" href={hreflangUrls.en} />
+      {hreflangUrls.en && <link rel="alternate" hreflang="en" href={hreflangUrls.en} />}
+      {hreflangUrls.de && <link rel="alternate" hreflang="de" href={hreflangUrls.de} />}
+      {hreflangUrls.fr && <link rel="alternate" hreflang="fr" href={hreflangUrls.fr} />}
+      {hreflangUrls.en && <link rel="alternate" hreflang="x-default" href={hreflangUrls.en} />}
     </>
   )}
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
 
   {schemaType === 'homepage' && (
     <>
@@ -94,7 +96,7 @@ const ogLocale = ogLocaleMap[lang] || 'en_US';
         "name": "House of Agile",
         "url": "https://houseofagile.com",
         "logo": "https://houseofagile.com/assets/hoa-logo-full.png",
-        "description": "Senior technology consultancy — fractional CTO, AI workflow automation, and custom business platforms for SMEs across Europe",
+        "description": "Senior technology consultancy - fractional CTO, AI workflow automation, custom business platforms, and IT security for SMEs across Europe",
         "areaServed": ["France", "Switzerland", "Germany"],
         "founder": { "@type": "Person", "name": "Jean-Christophe Meillaud" },
         "email": "mailto:jc@houseofagile.com"
@@ -106,18 +108,21 @@ const ogLocale = ogLocaleMap[lang] || 'en_US';
         "image": "https://houseofagile.com/assets/hoa-logo-full.png",
         "url": "https://houseofagile.com",
         "email": "jc@houseofagile.com",
-        "description": "Senior technology consultancy helping businesses modernize operations, automate workflows, and build scalable platforms.",
+        "description": "Senior technology consultancy helping businesses modernize operations, automate workflows, build scalable platforms, and secure their devices, networks, and data.",
         "priceRange": "€€€",
         "areaServed": [
+          { "@type": "Country", "name": "France" },
           { "@type": "Country", "name": "Switzerland" },
           { "@type": "Country", "name": "Germany" }
         ],
-        "serviceType": ["Fractional CTO", "AI Workflow Automation", "Custom Business Platforms", "Legacy Modernization", "Product Delivery Leadership"],
+        "serviceType": ["Fractional CTO", "AI Workflow Automation", "Custom Business Platforms", "Legacy Modernization", "Product Delivery Leadership", "Cybersecurity Consulting", "Secure Linux Workstations", "Secure Wi-Fi Network Installation", "Data Recovery"],
         "founder": { "@type": "Person", "name": "Jean-Christophe Meillaud", "jobTitle": "Founder & Lead Consultant" },
         "sameAs": ["https://www.linkedin.com/company/house-of-agile"]
       })} />
     </>
   )}
+
+  <slot name="head" />
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->

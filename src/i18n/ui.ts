@@ -12,22 +12,23 @@ export const ui = {
     'nav.ctaShort': 'Get a Quote →',
 
     // Hero
+    'home.hero.heading': 'Technology consulting, automation and cybersecurity for growing businesses',
     'home.hero.title': 'Modernize operations.',
     'home.hero.title2': 'Automate workflows.',
     'home.hero.title3': 'Build what matters.',
-    'home.hero.description': 'House of Agile is a senior technology consultancy that helps businesses replace manual processes, disconnected tools, and legacy systems with practical, AI-enabled solutions that actually work.',
+    'home.hero.description': 'House of Agile is a senior technology consultancy that helps businesses replace manual processes, disconnected tools, and legacy systems with practical, AI-enabled solutions - and keeps their devices, networks, and data secure.',
     'home.hero.ctaPrimary': 'Get a Quote',
     'home.hero.ctaSecondary': 'See How We Help',
     'home.hero.credibility': [
       '20 years of enterprise & startup delivery',
       'Platforms scaled to 30M+ users',
       'AI-enabled workflow automation',
-      'Principal-led, hands-on execution',
+      'Cybersecurity, hardened devices & data recovery',
     ],
 
     // Services section (homepage)
     'home.services.label': 'What We Do',
-    'home.services.title': 'Senior consulting meets hands-on delivery',
+    'home.services.title': 'Technology consulting and hands-on delivery',
     'home.services.subtitle': 'We help businesses that have outgrown spreadsheets, disconnected tools, or legacy systems - but aren\'t ready to hire a full technical team.',
     'home.services.learnMore': 'Learn more →',
 
@@ -51,16 +52,31 @@ export const ui = {
     'home.services.devops.desc': 'CI/CD pipelines, cloud architecture, monitoring, and security - so your team ships fast and sleeps at night.',
     'home.services.devops.items': ['CI/CD pipeline design & automation', 'Cloud architecture (AWS, GCP, Azure)', 'Monitoring, security & cost optimization'],
 
+    // Security section (homepage)
+    'home.security.label': 'Cybersecurity & Data Recovery',
+    'home.security.title': 'IT security for small businesses - devices, Wi-Fi and data',
+    'home.security.subtitle': 'The same engineers who run production infrastructure also harden laptops, lock down office networks, and bring data back from devices that have given up.',
+    'home.security.consulting.title': 'Cybersecurity Consulting',
+    'home.security.consulting.desc': 'Practical IT security for businesses without a security team: audit, fixes, and a setup people can live with.',
+    'home.security.consulting.items': ['IT security audit & risk report', 'MFA, password manager & hardware keys', 'Tested, encrypted backups'],
+    'home.security.linux.title': 'Secure Linux Laptops',
+    'home.security.linux.desc': 'Hardened Linux installed on ThinkPad laptops and workstations, ready for sensitive work.',
+    'home.security.linux.items': ['Full-disk encryption & Secure Boot', 'Firmware lockdown & system hardening', 'Hardware-key login & encrypted backups'],
+    'home.security.wifi.title': 'Secure Wi-Fi & Network Security',
+    'home.security.wifi.desc': 'Office and home networks designed on purpose: encrypted, segmented, and maintained.',
+    'home.security.wifi.items': ['WPA3 & per-user authentication', 'Separate staff, guest & IoT networks', 'Firewall hardening & VPN access'],
+    'home.security.recovery.title': 'Data Recovery',
+    'home.security.recovery.desc': 'Files and photos recovered from old hard drives, laptops that won\'t start, iPhones, and phones.',
+    'home.security.recovery.items': ['Hard drives, SSDs & memory cards', 'Old iPhones, iPads & Android phones', 'Migration & secure erase'],
+
     // How we help section
     'home.howWeHelp.label': 'Who This Is For',
     'home.howWeHelp.title': 'You probably need us if...',
     'home.howWeHelp.situations': [
       { title: 'Your operations run on spreadsheets and workarounds', desc: 'You know it\'s not sustainable, but you don\'t have the technical team to fix it.' },
-      { title: 'You need a senior technical partner, not a coding factory', desc: 'You\'ve been burned by agencies that delivered code but didn\'t understand your business.' },
       { title: 'Your existing systems are holding you back', desc: 'Legacy software, technical debt, or disconnected tools are slowing your growth.' },
-      { title: 'You\'re building something ambitious and need a strong technical lead', desc: 'A product, platform, or marketplace that requires real architecture thinking.' },
-      { title: 'You want to use AI practically, not as a buzzword', desc: 'You need someone who can identify where AI actually helps and make it work in production.' },
-      { title: 'Your infrastructure is fragile and deployments are stressful', desc: 'No CI/CD, manual deployments, mystery server configs - you need DevOps done right.' },
+      { title: 'Nobody is really in charge of IT security', desc: 'Shared passwords, unencrypted laptops, one Wi-Fi for everyone - and no one who owns the problem.' },
+      { title: 'Important files are stuck on a device that died', desc: 'An old drive, a laptop that won\'t boot, a phone in a drawer - and no backup you trust.' },
     ],
 
     // How we work section
@@ -111,11 +127,14 @@ export const ui = {
     'form.engagementModernization': 'Legacy Modernization / System Rescue',
     'form.engagementProduct': 'Product / Delivery Leadership',
     'form.engagementAdvisory': 'Advisory / Technical Due Diligence',
+    'form.engagementSecurity': 'Cybersecurity / Secure Devices & Networks',
+    'form.engagementRecovery': 'Data Recovery',
     'form.engagementOther': 'Something Else',
 
     // Footer
     'footer.tagline': 'Senior technology consulting for businesses that need more than code.',
     'footer.services': 'Services',
+    'footer.security': 'Security',
     'footer.caseStudies': 'Work',
     'footer.about': 'About',
     'footer.contact': 'Contact',
@@ -178,6 +197,7 @@ export const ui = {
     'nav.ctaShort': 'Angebot anfragen →',
 
     // Hero - placeholder, will be translated via DeepL
+    'home.hero.heading': 'Technologieberatung, Automatisierung und Cybersicherheit für wachsende Unternehmen',
     'home.hero.title': 'Prozesse modernisieren.',
     'home.hero.title2': 'Workflows automatisieren.',
     'home.hero.title3': 'Das Richtige bauen.',
@@ -343,6 +363,7 @@ export const ui = {
     'nav.ctaShort': 'Demander un devis →',
 
     // Hero - placeholder, will be polished via DeepL
+    'home.hero.heading': 'Conseil technologique, automatisation et cybersécurité pour les entreprises en croissance',
     'home.hero.title': 'Moderniser les opérations.',
     'home.hero.title2': 'Automatiser les workflows.',
     'home.hero.title3': 'Construire ce qui compte.',
@@ -507,13 +528,13 @@ export function useTranslations(lang: Lang) {
 }
 
 export function getTranslationArray(lang: Lang, key: UIKey): string[] {
-  const val = (ui[lang] as Record<string, unknown>)[key];
+  const val = (ui[lang] as Record<string, unknown>)[key] ?? (ui['en'] as Record<string, unknown>)[key];
   if (Array.isArray(val)) return val as string[];
   return [];
 }
 
 export function getTranslationObjects(lang: Lang, key: UIKey): Array<{ title: string; desc: string }> {
-  const val = (ui[lang] as Record<string, unknown>)[key];
+  const val = (ui[lang] as Record<string, unknown>)[key] ?? (ui['en'] as Record<string, unknown>)[key];
   if (Array.isArray(val)) return val as Array<{ title: string; desc: string }>;
   return [];
 }

@@ -7,9 +7,10 @@ interface Props {
   lang: string;
   currentPath?: string;
   frOnlyPage?: boolean; // Pages that only exist in French
+  availableLangs?: string[]; // Locales this page exists in (defaults to all)
 }
 
-const { lang, currentPath = '', frOnlyPage = false } = Astro.props;
+const { lang, currentPath = '', frOnlyPage = false, availableLangs } = Astro.props;
 const t = useTranslations(lang as Lang);
 
 const pathname = Astro.url.pathname;
@@ -37,10 +38,15 @@ const langLinks = frOnlyPage
       { code: 'fr', label: 'FR', href: pathname },
     ]
   : [
-      { code: 'en', label: 'EN', href: basePath ? `/${basePath}` : '/' },
-      { code: 'de', label: 'DE', href: basePath ? `/de/${basePath}` : '/de/' },
-      { code: 'fr', label: 'FR', href: basePath ? `/fr/${basePath}` : '/fr/' },
-    ];
+      { code: 'en', label: 'EN', href: basePath ? `/${basePath}/` : '/' },
+      { code: 'de', label: 'DE', href: basePath ? `/de/${basePath}/` : '/de/' },
+      { code: 'fr', label: 'FR', href: basePath ? `/fr/${basePath}/` : '/fr/' },
+    ].map((l) => (
+      // Untranslated page: send the switcher to that locale's homepage instead of a 404.
+      availableLangs && !availableLangs.includes(l.code)
+        ? { ...l, href: l.code === 'en' ? '/' : `/${l.code}/` }
+        : l
+    ));
 ---
 
 <nav class="nav-glass sticky top-0 z-50 border-b border-hoa-100/50" id="main-nav">
@@ -62,7 +68,7 @@ const langLinks = frOnlyPage
         </a>
       ))}
       {lang === 'fr' && (
-        <a href="/fr/collectivites-communes-services-numeriques" class="nav-link text-sm font-medium text-emerald-700 hover:text-emerald-900 transition-colors px-3 py-2 rounded-lg hover:bg-emerald-50/80">
+        <a href="/fr/collectivites-communes-services-numeriques/" class="nav-link text-sm font-medium text-emerald-700 hover:text-emerald-900 transition-colors px-3 py-2 rounded-lg hover:bg-emerald-50/80">
           Collectivités
         </a>
       )}
@@ -119,7 +125,7 @@ const langLinks = frOnlyPage
         </a>
       ))}
       {lang === 'fr' && (
-        <a href="/fr/collectivites-communes-services-numeriques" class="text-base font-medium text-emerald-700 hover:text-emerald-900 py-3 px-3 rounded-xl hover:bg-emerald-50 transition-colors mobile-nav-link">
+        <a href="/fr/collectivites-communes-services-numeriques/" class="text-base font-medium text-emerald-700 hover:text-emerald-900 py-3 px-3 rounded-xl hover:bg-emerald-50 transition-colors mobile-nav-link">
           Collectivités
         </a>
       )}

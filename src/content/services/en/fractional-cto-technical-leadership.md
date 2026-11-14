@@ -89,3 +89,7 @@ Every engagement is different, but typical scenarios include:
 We start with a focused discovery session to understand your business, your current technology, and where you need to go. From there, we define a clear engagement scope - whether that's a one-time strategy project or ongoing advisory.
 
 You always work directly with the principal consultant. No handoffs, no layers.
+
+## Security as Part of Technical Leadership
+
+A CTO is also accountable for how well the company is protected. Where it helps, we pair technical leadership with hands-on [cybersecurity consulting](/services/cybersecurity-consulting/) - from access management and backups to hardened workstations for the people holding the keys.

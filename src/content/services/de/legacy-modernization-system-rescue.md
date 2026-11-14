@@ -41,6 +41,14 @@ serviceItems:
       - "Schema redesign and normalization"
       - "Data migration with validation"
       - "Performance optimization"
+  - title: E-Commerce & Shop Platform Migration
+    emoji: "🛒"
+    description: "Stuck on an aging Gambio or xt:Commerce shop? We modernize it in place or migrate it to Shopify or Shopware - keeping your data, your JTL-Wawi workflows and your search rankings intact."
+    badges: ["Gambio", "Shopify", "JTL-Wawi", "SEO"]
+    features:
+      - "Products, customers, orders and vouchers migrated with validation"
+      - "Legacy URL redirect mapping to preserve rankings"
+      - "Zero-downtime cutover, proven on a Gambio-to-Shopify migration"
   - title: Security & Compliance Updates
     emoji: "🛡️"
     description: "Legacy systems are security liabilities. We patch, harden, and bring your systems up to current security and compliance standards."

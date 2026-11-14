@@ -83,3 +83,7 @@ Cloud infrastructure isn't about which provider you choose - it's about how well
 ## Our Approach
 
 We assess your current setup, identify the highest-impact improvements, and implement them. We don't push you toward over-engineered Kubernetes clusters when a simple Docker Compose setup would serve you better. The goal is reliability and simplicity, not resume-driven architecture.
+
+## Security Beyond the Servers
+
+Hardened infrastructure is only part of the picture - most incidents start on a laptop, an account, or the office network. Our [cybersecurity consulting](/services/cybersecurity-consulting/) covers the rest: security audits, [hardened Linux workstations](/services/secure-linux-workstations/), and [secure Wi-Fi and network setups](/services/secure-wifi-network/).

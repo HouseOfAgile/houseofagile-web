@@ -1,7 +1,9 @@
 ---
+import Icon from './Icon.astro';
 import { useTranslations } from '../i18n/ui';
 import type { Lang } from '../i18n/ui';
 import { getLocalePath } from '../i18n/utils';
+import { getCollection } from 'astro:content';
 
 interface Props {
   lang: string;
@@ -19,6 +21,18 @@ const services = [
   { slug: 'product-delivery-leadership', label: t('home.services.product.title') },
   { slug: 'devops-cloud-platforms', label: t('home.services.devops.title') },
 ];
+
+const securityServices = [
+  { slug: 'cybersecurity-consulting', label: t('home.security.consulting.title') },
+  { slug: 'secure-linux-workstations', label: t('home.security.linux.title') },
+  { slug: 'secure-wifi-network', label: t('home.security.wifi.title') },
+  { slug: 'data-recovery', label: t('home.security.recovery.title') },
+];
+
+// Link to the localized service page when it exists, otherwise to the English one.
+const serviceIds = new Set((await getCollection('services')).map((e) => e.id));
+const servicePath = (slug: string) =>
+  serviceIds.has(`${lang}/${slug}`) ? lp(`services/${slug}`) : getLocalePath('en', `services/${slug}`);
 
 const caseStudies = [
   { slug: 'universal-music-group', label: 'Universal Music Group' },
@@ -49,7 +63,7 @@ const platforms = [
       </div>
       <div class="flex items-center gap-4">
         <a href="mailto:jc@houseofagile.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-all">
-          <i class="fa-solid fa-envelope text-hoa-400"></i>
+          <Icon name="envelope" class="text-hoa-400" />
           jc@houseofagile.com
         </a>
         <a
@@ -59,7 +73,7 @@ const platforms = [
           class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 transition-all"
           aria-label="LinkedIn"
         >
-          <i class="fa-brands fa-linkedin"></i>
+          <Icon name="linkedin" />
         </a>
       </div>
     </div>
@@ -82,6 +96,19 @@ const platforms = [
           ))}
         </ul>
 
+        <h3 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 mt-6 mb-3">
+          {t('footer.security')}
+        </h3>
+        <ul class="space-y-2.5">
+          {securityServices.map((s) => (
+            <li>
+              <a href={servicePath(s.slug)} class="text-gray-400 hover:text-white text-sm transition-colors leading-snug block">
+                {s.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
         {lang === 'fr' && (
           <>
             <h3 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 mt-6 mb-3">
@@ -89,22 +116,22 @@ const platforms = [
             </h3>
             <ul class="space-y-2.5">
               <li>
-                <a href="/fr/collectivites-communes-services-numeriques" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug block">
+                <a href="/fr/collectivites-communes-services-numeriques/" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug block">
                   Services numériques communaux
                 </a>
               </li>
               <li>
-                <a href="/fr/refonte-maintenance-site-mairie" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug block">
+                <a href="/fr/refonte-maintenance-site-mairie/" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug block">
                   Refonte & maintenance mairie
                 </a>
               </li>
               <li>
-                <a href="/fr/hebergement-infogerance-web-collectivites" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug block">
+                <a href="/fr/hebergement-infogerance-web-collectivites/" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug block">
                   Hébergement & infogérance web
                 </a>
               </li>
               <li>
-                <a href="/fr/audit-technique-site-communal" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug block">
+                <a href="/fr/audit-technique-site-communal/" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug block">
                   Audit technique de site communal
                 </a>
               </li>
@@ -122,19 +149,19 @@ const platforms = [
             </h3>
             <ul class="space-y-2.5 mb-6">
               <li>
-                <a href="/fr/collectivites-communes-services-numeriques" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug flex items-center gap-1.5">
+                <a href="/fr/collectivites-communes-services-numeriques/" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug flex items-center gap-1.5">
                   {lang === 'de' ? 'Services communes & collectivités' : 'Municipal digital services'}
                   <span class="text-[10px] text-gray-600 font-semibold">FR</span>
                 </a>
               </li>
               <li>
-                <a href="/fr/refonte-maintenance-site-mairie" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug flex items-center gap-1.5">
+                <a href="/fr/refonte-maintenance-site-mairie/" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug flex items-center gap-1.5">
                   {lang === 'de' ? 'Webseite Gemeinde: Relaunch & Pflege' : 'Municipal website redesign'}
                   <span class="text-[10px] text-gray-600 font-semibold">FR</span>
                 </a>
               </li>
               <li>
-                <a href="/fr/audit-technique-site-communal" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug flex items-center gap-1.5">
+                <a href="/fr/audit-technique-site-communal/" class="text-gray-400 hover:text-white text-sm transition-colors leading-snug flex items-center gap-1.5">
                   {lang === 'de' ? 'Technisches Audit Gemeindewebseite' : 'Municipal website audit'}
                   <span class="text-[10px] text-gray-600 font-semibold">FR</span>
                 </a>
@@ -168,7 +195,7 @@ const platforms = [
             </a>
           </li>
           <li class="text-gray-500 text-sm flex items-center gap-2">
-            <i class="fa-solid fa-location-dot text-gray-600 w-3.5 text-center text-xs"></i>
+            <Icon name="location-dot" class="text-gray-600 w-3.5 text-center text-xs" />
             France · Switzerland · Germany
           </li>
         </ul>
@@ -181,7 +208,7 @@ const platforms = [
             <li>
               <a href={p.url} target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2">
                 {p.label}
-                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-gray-600"></i>
+                <Icon name="arrow-up-right-from-square" class="text-[10px] text-gray-600" />
               </a>
             </li>
           ))}

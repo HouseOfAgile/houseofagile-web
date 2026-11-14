@@ -1,10 +1,12 @@
 ---
+import Icon from './Icon.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from './Navigation.astro';
 import Footer from './Footer.astro';
 import { useTranslations, getTranslationArray, getTranslationObjects } from '../i18n/ui';
 import type { Lang } from '../i18n/ui';
 import { getLocalePath } from '../i18n/utils';
+import { getCollection } from 'astro:content';
 
 interface Props {
   lang: Lang;
@@ -25,15 +27,27 @@ const hreflangUrls = {
 };
 
 const services = [
-  { key: 'cto', slug: 'fractional-cto-technical-leadership', icon: 'fa-sitemap', color: 'green' },
-  { key: 'automation', slug: 'ai-workflow-automation', icon: 'fa-robot', color: 'blue' },
-  { key: 'platforms', slug: 'internal-tools-business-platforms', icon: 'fa-cubes', color: 'purple' },
-  { key: 'modernization', slug: 'legacy-modernization-system-rescue', icon: 'fa-screwdriver-wrench', color: 'orange' },
-  { key: 'product', slug: 'product-delivery-leadership', icon: 'fa-rocket', color: 'cyan' },
-  { key: 'devops', slug: 'devops-cloud-platforms', icon: 'fa-cloud', color: 'slate' },
+  { key: 'cto', slug: 'fractional-cto-technical-leadership', icon: 'sitemap', color: 'green' },
+  { key: 'automation', slug: 'ai-workflow-automation', icon: 'robot', color: 'blue' },
+  { key: 'platforms', slug: 'internal-tools-business-platforms', icon: 'cubes', color: 'purple' },
+  { key: 'modernization', slug: 'legacy-modernization-system-rescue', icon: 'screwdriver-wrench', color: 'orange' },
+  { key: 'product', slug: 'product-delivery-leadership', icon: 'rocket', color: 'cyan' },
+  { key: 'devops', slug: 'devops-cloud-platforms', icon: 'cloud', color: 'slate' },
 ] as const;
 
 type ServiceKey = typeof services[number]['key'];
+
+const securityServices = [
+  { key: 'consulting', slug: 'cybersecurity-consulting', icon: 'shield-halved' },
+  { key: 'linux', slug: 'secure-linux-workstations', icon: 'laptop-code' },
+  { key: 'wifi', slug: 'secure-wifi-network', icon: 'wifi' },
+  { key: 'recovery', slug: 'data-recovery', icon: 'hard-drive' },
+] as const;
+
+// Link to the localized service page when it exists, otherwise to the English one.
+const serviceIds = new Set((await getCollection('services')).map((e) => e.id));
+const servicePath = (slug: string) =>
+  serviceIds.has(`${lang}/${slug}`) ? lp(`services/${slug}`) : getLocalePath('en', `services/${slug}`);
 
 const caseStudies = [
   {
@@ -87,6 +101,16 @@ const caseStudies = [
     gradient: 'from-rose-600 to-red-700',
   },
   {
+    slug: 'gambio-shopify-migration',
+    title: { en: 'Gambio to Shopify Migration', de: 'Migration von Gambio zu Shopify', fr: 'Migration Gambio vers Shopify' }[lang] || 'Gambio to Shopify Migration',
+    role: { en: 'Freelance Engineer', de: 'Freelance Engineer', fr: 'Ingénieur Freelance' }[lang] || 'Freelance Engineer',
+    context: { en: 'E-commerce platform migration', de: 'E-Commerce-Plattform-Migration', fr: 'Migration de plateforme e-commerce' }[lang] || '',
+    stat: '0',
+    statLabel: { en: 'Launch Downtime', de: 'Ausfallzeit', fr: 'Interruption' }[lang] || 'Launch Downtime',
+    desc: { en: 'Six months across dev, DevOps, architecture and product: moved a German Gambio shop to Shopify with JTL-Wawi integration - products, customers, orders and vouchers transferred, SEO preserved.', de: 'Sechs Monate in Entwicklung, DevOps, Architektur und Produkt: deutschen Gambio-Shop mit JTL-Wawi-Anbindung zu Shopify migriert - Produkte, Kunden, Bestellungen und Gutscheine übernommen, SEO erhalten.', fr: 'Six mois en dev, DevOps, architecture et produit : migration d\'une boutique allemande Gambio vers Shopify avec intégration JTL-Wawi - produits, clients, commandes et bons repris, SEO préservé.' }[lang] || '',
+    gradient: 'from-orange-500 to-amber-700',
+  },
+  {
     slug: 'heybuddies',
     title: 'HeyBuddies',
     role: { en: 'Founder & Lead Dev', de: 'Gründer & Lead Dev', fr: 'Fondateur & Lead Dev' }[lang] || 'Founder & Lead Dev',
@@ -99,13 +123,13 @@ const caseStudies = [
 ];
 
 const localTitle = {
-  en: 'House of Agile - Senior Technology Consulting • Workflow Automation • Fractional CTO',
+  en: 'House of Agile - Fractional CTO, Automation & Cybersecurity',
   de: 'House of Agile - Senior-Technologieberatung • Workflow-Automatisierung • Fractional CTO',
   fr: 'House of Agile - Conseil Technologique Senior • Automatisation • CTO Fractionnel',
 }[lang] || '';
 
 const localDesc = {
-  en: 'House of Agile helps businesses modernize operations, automate workflows, and build internal platforms. Senior consulting and hands-on delivery.',
+  en: 'Senior technology consultancy: fractional CTO, AI workflow automation, custom platforms, cybersecurity consulting, secure Linux setups and data recovery.',
   de: 'House of Agile hilft Unternehmen, Abläufe zu modernisieren, Workflows zu automatisieren und interne Plattformen zu bauen.',
   fr: 'House of Agile aide les entreprises à moderniser leurs opérations, automatiser les workflows et construire des plateformes internes.',
 }[lang] || '';
@@ -119,45 +143,27 @@ const localDesc = {
   hreflangUrls={hreflangUrls}
   schemaType="homepage"
 >
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" id="scroll-progress"></div>
-
   <Navigation lang={lang} />
 
   <!-- ============ HERO ============ -->
-  <section class="hero-gradient relative overflow-hidden min-h-[88vh] flex items-center">
-    <!-- Animated orbs -->
-    <div class="hero-orb hero-orb-1"></div>
-    <div class="hero-orb hero-orb-2"></div>
-    <div class="hero-orb hero-orb-3"></div>
-
-    <!-- Grid pattern -->
-    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px); background-size: 32px 32px;"></div>
-
-    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+  <section class="hero-gradient relative overflow-hidden">
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
       <div class="max-w-3xl">
-        <div class="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.06] border border-white/10 text-sm font-medium text-gray-300 mb-8">
-          <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-          Senior Technology Consulting
-        </div>
+        <p class="text-sm sm:text-base font-semibold text-green-400 tracking-wide mb-5">
+          {t('home.hero.title')} {t('home.hero.title2')} {t('home.hero.title3')}
+        </p>
 
-        <h1 class="reveal text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight text-white mb-3 leading-[1.12]" style="transition-delay: 80ms">
-          {t('home.hero.title')}
-        </h1>
-        <h1 class="reveal text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight text-white mb-3 leading-[1.12]" style="transition-delay: 140ms">
-          {t('home.hero.title2')}
-        </h1>
-        <h1 class="reveal text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight mb-8 leading-[1.12]" style="transition-delay: 200ms">
-          <span class="bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent">{t('home.hero.title3')}</span>
+        <h1 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-white mb-7 leading-[1.12]">
+          {t('home.hero.heading')}
         </h1>
 
-        <p class="reveal text-lg sm:text-xl text-gray-300/90 leading-relaxed max-w-2xl mb-10" style="transition-delay: 260ms">
+        <p class="text-lg sm:text-xl text-gray-300/90 leading-relaxed max-w-2xl mb-10">
           {t('home.hero.description')}
         </p>
 
-        <div class="reveal flex flex-col sm:flex-row gap-4 mb-14" style="transition-delay: 320ms">
+        <div class="flex flex-col sm:flex-row gap-4 mb-12">
           <a href="#contact" class="btn-primary text-base px-7 py-4">
-            <i class="fa-solid fa-arrow-right -rotate-45"></i>
+            <Icon name="arrow-right" class="-rotate-45" />
             {t('home.hero.ctaPrimary')}
           </a>
           <a href="#services" class="btn-secondary text-base px-7 py-4">
@@ -166,10 +172,10 @@ const localDesc = {
         </div>
 
         <!-- Credibility strip -->
-        <div class="reveal grid grid-cols-2 gap-3" style="transition-delay: 400ms">
+        <div class="grid sm:grid-cols-2 gap-3">
           {credibility.map((item) => (
             <div class="flex items-start gap-2.5 text-sm text-gray-400">
-              <span class="text-green-400 mt-0.5 flex-shrink-0 text-xs"><i class="fa-solid fa-check"></i></span>
+              <Icon name="check" class="text-green-400 mt-1 flex-shrink-0 text-xs" />
               <span>{item}</span>
             </div>
           ))}
@@ -179,7 +185,7 @@ const localDesc = {
   </section>
 
   <!-- ============ SERVICES ============ -->
-  <section id="services" class="py-24 bg-white">
+  <section id="services" class="py-16 md:py-20 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="reveal text-center mb-16">
         <p class="text-sm font-semibold text-green-600 uppercase tracking-wider mb-3">{t('home.services.label')}</p>
@@ -190,23 +196,13 @@ const localDesc = {
         {services.map((s, i) => {
           const titleKey = `home.services.${s.key}.title` as const;
           const descKey = `home.services.${s.key}.desc` as const;
-          const itemsKey = `home.services.${s.key}.items` as const;
-          const items = getTranslationArray(lang, itemsKey);
           return (
-            <a href={lp(`services/${s.slug}`)} class="reveal tilt-card block hoa-card p-6 group" style={`--i: ${i}`}>
+            <a href={lp(`services/${s.slug}`)} class="reveal block hoa-card p-6 group" style={`--i: ${i}`}>
               <div class={`service-icon service-icon--${s.color} mb-4`}>
-                <i class={`fa-solid ${s.icon}`} aria-hidden="true"></i>
+                <Icon name={s.icon} />
               </div>
               <h3 class="font-bold text-lg text-gray-900 mb-2 group-hover:text-green-700 transition-colors">{t(titleKey)}</h3>
               <p class="text-gray-500 text-sm mb-3 leading-relaxed">{t(descKey)}</p>
-              <ul class="text-sm text-gray-400 space-y-1.5">
-                {items.map((item) => (
-                  <li class="flex items-start gap-2">
-                    <i class="fa-solid fa-check text-green-500 mt-0.5 text-xs flex-shrink-0"></i>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
               <div class="mt-4 text-green-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
                 {t('home.services.learnMore')}
               </div>
@@ -217,20 +213,42 @@ const localDesc = {
     </div>
   </section>
 
-  <!-- ============ WHO THIS IS FOR ============ -->
-  <section class="py-24 bg-gray-50/80">
+  <!-- ============ SECURITY ============ -->
+  <section id="security" class="py-16 md:py-20 bg-gray-50/80">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="reveal mb-14">
+      <div class="reveal max-w-3xl mb-10">
+        <p class="text-sm font-semibold text-green-600 uppercase tracking-wider mb-3">{t('home.security.label')}</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mb-4">{t('home.security.title')}</h2>
+        <p class="text-gray-500 text-lg leading-relaxed">{t('home.security.subtitle')}</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger-children">
+        {securityServices.map((s, i) => (
+          <a href={servicePath(s.slug)} class="reveal block hoa-card p-6 group" style={`--i: ${i}`}>
+            <div class="service-icon service-icon--green mb-4">
+              <Icon name={s.icon} />
+            </div>
+            <h3 class="font-bold text-lg text-gray-900 mb-2 group-hover:text-green-700 transition-colors">{t(`home.security.${s.key}.title` as const)}</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">{t(`home.security.${s.key}.desc` as const)}</p>
+            <div class="mt-4 text-green-600 font-semibold text-sm">
+              {t('home.services.learnMore')}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHO THIS IS FOR ============ -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal mb-10">
         <p class="text-sm font-semibold text-green-600 uppercase tracking-wider mb-3">{t('home.howWeHelp.label')}</p>
         <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900">{t('home.howWeHelp.title')}</h2>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 stagger-children">
-        {situations.map((sit, i) => (
-          <div class="reveal hoa-card p-6" style={`--i: ${i}`}>
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500/10 to-emerald-500/10 flex items-center justify-center mb-4">
-              <i class="fa-solid fa-bullseye text-green-600"></i>
-            </div>
-            <h3 class="font-bold text-base text-gray-900 mb-2 leading-snug">{sit.title}</h3>
+      <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+        {situations.map((sit) => (
+          <div class="reveal border-l-2 border-green-500/40 pl-5">
+            <h3 class="font-bold text-base text-gray-900 mb-1.5 leading-snug">{sit.title}</h3>
             <p class="text-gray-500 text-sm leading-relaxed">{sit.desc}</p>
           </div>
         ))}
@@ -239,7 +257,7 @@ const localDesc = {
   </section>
 
   <!-- ============ HOW WE WORK ============ -->
-  <section class="py-24 bg-white">
+  <section class="py-16 md:py-20 bg-gray-50/80">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-16 items-start">
         <div class="reveal">
@@ -263,7 +281,7 @@ const localDesc = {
   </section>
 
   <!-- ============ CASE STUDIES ============ -->
-  <section id="case-studies" class="py-24 bg-gradient-to-b from-gray-900 via-gray-900 to-gray-800 text-white relative overflow-hidden">
+  <section id="case-studies" class="py-16 md:py-20 bg-gradient-to-b from-gray-900 via-gray-900 to-gray-800 text-white relative overflow-hidden">
     <!-- Background effects -->
     <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 40px 40px;"></div>
     <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-green-500/5 rounded-full blur-[120px] pointer-events-none"></div>
@@ -276,7 +294,7 @@ const localDesc = {
 
       <div class="grid md:grid-cols-2 gap-5 stagger-children">
         {caseStudies.map((cs, i) => (
-          <a href={lp(`case-studies/${cs.slug}`)} class="reveal group block relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.04] backdrop-blur-sm hover:bg-white/[0.08] transition-all duration-500 hover:border-white/[0.12]" style={`--i: ${i}`}>
+          <a href={lp(`case-studies/${cs.slug}`)} class:list={[{ 'md:col-span-2': caseStudies.length % 2 === 1 && i === caseStudies.length - 1 }, 'reveal group block relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.04] backdrop-blur-sm hover:bg-white/[0.08] transition-all duration-500 hover:border-white/[0.12]']} style={`--i: ${i}`}>
             <div class={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${cs.gradient}`}></div>
             <div class="p-6">
               <div class="flex items-center gap-2 mb-3">
@@ -294,7 +312,7 @@ const localDesc = {
               </div>
               <p class="text-sm text-gray-400 leading-relaxed mb-4">{cs.desc}</p>
               <span class="text-green-400 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                {t('home.caseStudies.viewFull')} <i class="fa-solid fa-arrow-right text-xs"></i>
+                {t('home.caseStudies.viewFull')} <Icon name="arrow-right" class="text-xs" />
               </span>
             </div>
           </a>
@@ -304,7 +322,7 @@ const localDesc = {
   </section>
 
   <!-- ============ ABOUT TEASER ============ -->
-  <section class="py-24 bg-gray-50/80">
+  <section class="py-16 md:py-20 bg-gray-50/80">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="reveal grid lg:grid-cols-5 gap-12 items-center">
         <div class="lg:col-span-3">
@@ -323,9 +341,9 @@ const localDesc = {
             <h3 class="font-bold text-xl text-gray-900 mb-1">Jean-Christophe Meillaud</h3>
             <p class="text-green-600 font-semibold text-sm mb-4">Founder & Principal Consultant</p>
             <div class="space-y-2 text-sm text-gray-500">
-              <div class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-0.5 text-xs flex-shrink-0"></i>20 years enterprise & startup delivery</div>
-              <div class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-0.5 text-xs flex-shrink-0"></i>Universal Music, Vodafone, startups</div>
-              <div class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-0.5 text-xs flex-shrink-0"></i>France, Switzerland & Germany</div>
+              <div class="flex items-start gap-2"><Icon name="check" class="text-green-500 mt-0.5 text-xs flex-shrink-0" />20 years enterprise & startup delivery</div>
+              <div class="flex items-start gap-2"><Icon name="check" class="text-green-500 mt-0.5 text-xs flex-shrink-0" />Universal Music, Vodafone, startups</div>
+              <div class="flex items-start gap-2"><Icon name="check" class="text-green-500 mt-0.5 text-xs flex-shrink-0" />France, Switzerland & Germany</div>
             </div>
           </div>
         </div>
@@ -333,30 +351,8 @@ const localDesc = {
     </div>
   </section>
 
-  <!-- ============ CTA ============ -->
-  <section class="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
-    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 32px 32px;"></div>
-    <div class="absolute top-0 right-1/4 w-[400px] h-[400px] bg-green-500/8 rounded-full blur-[120px] pointer-events-none"></div>
-
-    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div class="reveal">
-        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-5">{t('home.cta.title')}</h2>
-        <p class="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">{t('home.cta.description')}</p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#contact" class="btn-primary text-lg px-8 py-4">
-            <i class="fa-solid fa-arrow-right -rotate-45"></i>
-            {t('home.cta.primary')}
-          </a>
-          <a href="mailto:jc@houseofagile.com" class="text-gray-300 hover:text-white font-medium transition-colors">
-            {t('home.cta.secondary')}
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ CONTACT FORM ============ -->
-  <section id="contact" class="py-24 bg-white">
+  <section id="contact" class="py-16 md:py-20 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="reveal text-center mb-14">
         <p class="text-sm font-semibold text-green-600 uppercase tracking-wider mb-3">{t('nav.contact')}</p>
@@ -390,6 +386,8 @@ const localDesc = {
                 <option value="modernization">{t('form.engagementModernization')}</option>
                 <option value="product">{t('form.engagementProduct')}</option>
                 <option value="advisory">{t('form.engagementAdvisory')}</option>
+                <option value="security">{t('form.engagementSecurity')}</option>
+                <option value="data-recovery">{t('form.engagementRecovery')}</option>
                 <option value="other">{t('form.engagementOther')}</option>
               </select>
             </div>
@@ -398,7 +396,7 @@ const localDesc = {
               <textarea name="description" required rows="4" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition resize-none text-sm"></textarea>
             </div>
             <button type="submit" class="w-full btn-primary py-4 text-base">
-              <i class="fa-solid fa-paper-plane mr-2"></i>{t('home.consultation.submit')}
+              <Icon name="paper-plane" class="mr-2" />{t('home.consultation.submit')}
             </button>
             <p class="text-center text-xs text-gray-400">{t('home.consultation.privacy')}</p>
           </form>
@@ -423,30 +421,6 @@ const localDesc = {
 
     document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
       observer.observe(el);
-    });
-
-    // Scroll progress bar
-    const progressBar = document.getElementById('scroll-progress');
-    if (progressBar) {
-      window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = docHeight > 0 ? scrollTop / docHeight : 0;
-        progressBar.style.transform = `scaleX(${progress})`;
-      }, { passive: true });
-    }
-
-    // Tilt effect on service cards
-    document.querySelectorAll('.tilt-card').forEach(card => {
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-        card.style.transform = `perspective(800px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-4px)`;
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = '';
-      });
     });
   </script>
 </BaseLayout>
