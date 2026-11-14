@@ -122,6 +122,23 @@ const caseStudies = [
   },
 ];
 
+const L = <T,>(o: Record<Lang, T>): T => o[lang];
+
+const heroChecks = [
+  { label: L({ en: 'Disk encryption', de: 'Festplattenverschlüsselung', fr: 'Chiffrement du disque' }), value: 'LUKS2' },
+  { label: L({ en: 'Wi-Fi', de: 'WLAN', fr: 'Wi-Fi' }), value: 'WPA3 · VLAN' },
+  { label: L({ en: 'Backups', de: 'Backups', fr: 'Sauvegardes' }), value: L({ en: 'restore tested', de: 'Restore getestet', fr: 'restauration testée' }) },
+  { label: 'PHP', value: L({ en: '8.4.27 · patched', de: '8.4.27 · gepatcht', fr: '8.4.27 · corrigé' }) },
+];
+const heroStats = [
+  { value: '30M+', label: L({ en: 'daily users on platforms we led', de: 'tägliche Nutzer auf von uns geführten Plattformen', fr: 'utilisateurs quotidiens sur nos plateformes' }) },
+  { value: '20', label: L({ en: 'years of hands-on delivery', de: 'Jahre praktische Erfahrung', fr: "ans d'expérience terrain" }) },
+];
+const experienceLabel = L({ en: 'Experience from', de: 'Erfahrung aus', fr: 'Expérience chez' });
+const experience = ['Universal Music Group', 'Vodafone', 'Scanbots', 'HeyBuddies'];
+const php2shellLabel = L({ en: 'PHP2Shell: how we responded', de: 'PHP2Shell: unsere Reaktion', fr: 'PHP2Shell : notre réponse' });
+const pad = (n: number) => String(n + 1).padStart(2, '0');
+
 const localTitle = {
   en: 'House of Agile - Fractional CTO, Automation & Cybersecurity',
   de: 'House of Agile - Senior-Technologieberatung • Workflow-Automatisierung • Fractional CTO',
@@ -146,38 +163,74 @@ const localDesc = {
   <Navigation lang={lang} />
 
   <!-- ============ HERO ============ -->
-  <section class="hero-gradient relative overflow-hidden">
-    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-      <div class="max-w-3xl">
-        <p class="text-sm sm:text-base font-semibold text-green-400 tracking-wide mb-5">
-          {t('home.hero.title')} {t('home.hero.title2')} {t('home.hero.title3')}
-        </p>
+  <section class="px-3 sm:px-4 pt-3">
+    <div class="hoa-panel-dark">
+      <div class="hoa-aurora hoa-aurora--a"></div>
+      <div class="hoa-aurora hoa-aurora--b"></div>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-white mb-7 leading-[1.12]">
-          {t('home.hero.heading')}
-        </h1>
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-16 pb-10 md:pt-24 md:pb-12">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          <div class="lg:col-span-7">
+            <p class="hoa-chip mb-7">
+              <span class="hoa-dot"></span>
+              {t('home.hero.title')} {t('home.hero.title2')} {t('home.hero.title3')}
+            </p>
 
-        <p class="text-lg sm:text-xl text-gray-300/90 leading-relaxed max-w-2xl mb-10">
-          {t('home.hero.description')}
-        </p>
+            <h1 class="hoa-display-xl text-white mb-7">
+              {t('home.hero.heading')}
+            </h1>
 
-        <div class="flex flex-col sm:flex-row gap-4 mb-12">
-          <a href="#contact" class="btn-primary text-base px-7 py-4">
-            <Icon name="arrow-right" class="-rotate-45" />
-            {t('home.hero.ctaPrimary')}
-          </a>
-          <a href="#services" class="btn-secondary text-base px-7 py-4">
-            {t('home.hero.ctaSecondary')}
-          </a>
+            <p class="text-lg sm:text-xl text-white/60 leading-relaxed max-w-2xl mb-10">
+              {t('home.hero.description')}
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a href="#contact" class="btn-primary text-base">
+                {t('home.hero.ctaPrimary')}
+                <Icon name="arrow-right" class="-rotate-45 text-sm" />
+              </a>
+              <a href="#services" class="btn-secondary text-base">
+                {t('home.hero.ctaSecondary')}
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero bento -->
+          <div class="lg:col-span-5" aria-hidden="true">
+            <div class="grid grid-cols-2 gap-3">
+              <div class="hoa-glass col-span-2 p-5 sm:p-6">
+                <div class="flex items-center justify-between mb-5">
+                  <span class="hoa-mono text-white/40">security-check</span>
+                  <span class="hoa-mono text-green-400">{heroChecks.length}/{heroChecks.length} ok</span>
+                </div>
+                <ul class="space-y-3">
+                  {heroChecks.map((c) => (
+                    <li class="flex items-center gap-3 text-sm">
+                      <span class="w-5 h-5 rounded-full bg-green-400/15 text-green-400 flex items-center justify-center flex-shrink-0">
+                        <Icon name="check" class="text-[10px]" />
+                      </span>
+                      <span class="text-white/85">{c.label}</span>
+                      <span class="flex-1 border-t border-dashed border-white/10"></span>
+                      <span class="hoa-mono normal-case tracking-normal text-white/45">{c.value}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              {heroStats.map((st) => (
+                <div class="hoa-glass p-5 sm:p-6">
+                  <div class="text-4xl sm:text-5xl font-bold tracking-tight text-white" style="font-family: var(--font-display)">{st.value}</div>
+                  <p class="text-xs sm:text-sm text-white/50 mt-2 leading-snug">{st.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
-        <!-- Credibility strip -->
-        <div class="grid sm:grid-cols-2 gap-3">
-          {credibility.map((item) => (
-            <div class="flex items-start gap-2.5 text-sm text-gray-400">
-              <Icon name="check" class="text-green-400 mt-1 flex-shrink-0 text-xs" />
-              <span>{item}</span>
-            </div>
+        <!-- Experience strip -->
+        <div class="mt-14 md:mt-20 pt-6 border-t border-white/10 flex flex-wrap items-center gap-x-8 gap-y-3">
+          <span class="hoa-mono text-white/35">{experienceLabel}</span>
+          {experience.map((name) => (
+            <span class="text-sm sm:text-base font-semibold text-white/55" style="font-family: var(--font-display)">{name}</span>
           ))}
         </div>
       </div>
@@ -185,27 +238,30 @@ const localDesc = {
   </section>
 
   <!-- ============ SERVICES ============ -->
-  <section id="services" class="py-16 md:py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="reveal text-center mb-16">
-        <p class="text-sm font-semibold text-green-600 uppercase tracking-wider mb-3">{t('home.services.label')}</p>
-        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mb-4">{t('home.services.title')}</h2>
-        <p class="text-gray-500 max-w-2xl mx-auto">{t('home.services.subtitle')}</p>
+  <section id="services" class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="reveal grid lg:grid-cols-12 gap-6 mb-12 md:mb-16 items-end">
+        <div class="lg:col-span-7">
+          <p class="hoa-mono text-green-700 mb-4">01 / {t('home.services.label')}</p>
+          <h2 class="hoa-h2 text-gray-900">{t('home.services.title')}</h2>
+        </div>
+        <p class="lg:col-span-5 text-gray-500 text-lg leading-relaxed">{t('home.services.subtitle')}</p>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 stagger-children">
+      <div class="grid md:grid-cols-2 lg:grid-cols-6 gap-4 stagger-children">
         {services.map((s, i) => {
           const titleKey = `home.services.${s.key}.title` as const;
           const descKey = `home.services.${s.key}.desc` as const;
           return (
-            <a href={lp(`services/${s.slug}`)} class="reveal block hoa-card p-6 group" style={`--i: ${i}`}>
-              <div class={`service-icon service-icon--${s.color} mb-4`}>
-                <Icon name={s.icon} />
+            <a href={lp(`services/${s.slug}`)} class:list={['reveal hoa-bento group', ['lg:col-span-4', 'lg:col-span-2', 'lg:col-span-2', 'lg:col-span-4', 'lg:col-span-3', 'lg:col-span-3'][i % 6]]} style={`--i: ${i}`}>
+              <div class="flex items-start justify-between mb-10">
+                <div class="service-icon service-icon--green">
+                  <Icon name={s.icon} />
+                </div>
+                <span class="hoa-mono text-gray-300">{pad(i)}</span>
               </div>
-              <h3 class="font-bold text-lg text-gray-900 mb-2 group-hover:text-green-700 transition-colors">{t(titleKey)}</h3>
-              <p class="text-gray-500 text-sm mb-3 leading-relaxed">{t(descKey)}</p>
-              <div class="mt-4 text-green-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                {t('home.services.learnMore')}
-              </div>
+              <h3 class:list={['font-bold text-gray-900 mb-2 leading-tight tracking-tight', [0, 3].includes(i % 6) ? 'text-2xl sm:text-3xl' : 'text-xl']}>{t(titleKey)}</h3>
+              <p class="text-gray-500 text-[0.95rem] leading-relaxed mb-6">{t(descKey)}</p>
+              <span class="hoa-arrow mt-auto"><Icon name="arrow-right" class="-rotate-45" /></span>
             </a>
           );
         })}
@@ -214,64 +270,71 @@ const localDesc = {
   </section>
 
   <!-- ============ SECURITY ============ -->
-  <section id="security" class="py-16 md:py-20 bg-gray-50/80">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="reveal max-w-3xl mb-10">
-        <p class="text-sm font-semibold text-green-600 uppercase tracking-wider mb-3">{t('home.security.label')}</p>
-        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mb-4">{t('home.security.title')}</h2>
-        <p class="text-gray-500 text-lg leading-relaxed">{t('home.security.subtitle')}</p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger-children">
-        {securityServices.map((s, i) => (
-          <a href={servicePath(s.slug)} class="reveal block hoa-card p-6 group" style={`--i: ${i}`}>
-            <div class="service-icon service-icon--green mb-4">
-              <Icon name={s.icon} />
-            </div>
-            <h3 class="font-bold text-lg text-gray-900 mb-2 group-hover:text-green-700 transition-colors">{t(`home.security.${s.key}.title` as const)}</h3>
-            <p class="text-gray-500 text-sm leading-relaxed">{t(`home.security.${s.key}.desc` as const)}</p>
-            <div class="mt-4 text-green-600 font-semibold text-sm">
-              {t('home.services.learnMore')}
-            </div>
-          </a>
-        ))}
+  <section id="security" class="px-3 sm:px-4">
+    <div class="hoa-panel-dark">
+      <div class="hoa-aurora hoa-aurora--c"></div>
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16 md:py-24">
+        <div class="reveal grid lg:grid-cols-12 gap-6 mb-12 items-end">
+          <div class="lg:col-span-7">
+            <p class="hoa-mono text-green-400 mb-4">02 / {t('home.security.label')}</p>
+            <h2 class="hoa-h2 text-white">{t('home.security.title')}</h2>
+          </div>
+          <p class="lg:col-span-5 text-white/55 text-lg leading-relaxed">{t('home.security.subtitle')}</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 stagger-children">
+          {securityServices.map((s, i) => (
+            <a href={servicePath(s.slug)} class:list={['reveal hoa-glass hoa-glass--link group flex flex-col p-6 sm:p-7', i === 0 ? 'sm:col-span-2 lg:row-span-2' : i === 1 ? 'sm:col-span-2' : '']} style={`--i: ${i}`}>
+              <div class="flex items-start justify-between mb-8">
+                <div class="w-11 h-11 rounded-2xl bg-green-400/10 border border-green-400/20 text-green-400 flex items-center justify-center text-lg">
+                  <Icon name={s.icon} />
+                </div>
+                <span class="hoa-mono text-white/25">{pad(i)}</span>
+              </div>
+              <h3 class:list={['font-bold text-white mb-2 leading-tight tracking-tight', i === 0 ? 'text-2xl sm:text-3xl' : 'text-xl']}>{t(`home.security.${s.key}.title` as const)}</h3>
+              <p class:list={['text-white/55 leading-relaxed mb-6', i === 0 ? 'text-base max-w-md' : 'text-sm']}>{t(`home.security.${s.key}.desc` as const)}</p>
+              {i === 0 && (
+                <ul class="grid gap-3 mb-8 mt-2">
+                  {getTranslationArray(lang, 'home.security.consulting.items').map((item) => (
+                    <li class="flex items-center gap-3 text-sm sm:text-base text-white/80 py-3 border-t border-white/10">
+                      <span class="w-5 h-5 rounded-full bg-green-400/15 text-green-400 flex items-center justify-center flex-shrink-0">
+                        <Icon name="check" class="text-[10px]" />
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {i === 0 && (
+                <span class="hoa-chip hoa-chip--alert self-start mb-6">
+                  <span class="hoa-dot hoa-dot--amber"></span>
+                  {php2shellLabel}
+                </span>
+              )}
+              <span class="hoa-arrow hoa-arrow--dark mt-auto"><Icon name="arrow-right" class="-rotate-45" /></span>
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ============ WHO THIS IS FOR ============ -->
-  <section class="py-16 md:py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="reveal mb-10">
-        <p class="text-sm font-semibold text-green-600 uppercase tracking-wider mb-3">{t('home.howWeHelp.label')}</p>
-        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900">{t('home.howWeHelp.title')}</h2>
-      </div>
-      <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
-        {situations.map((sit) => (
-          <div class="reveal border-l-2 border-green-500/40 pl-5">
-            <h3 class="font-bold text-base text-gray-900 mb-1.5 leading-snug">{sit.title}</h3>
-            <p class="text-gray-500 text-sm leading-relaxed">{sit.desc}</p>
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="grid lg:grid-cols-12 gap-10">
+        <div class="reveal lg:col-span-5">
+          <div class="lg:sticky lg:top-28">
+            <p class="hoa-mono text-green-700 mb-4">03 / {t('home.howWeHelp.label')}</p>
+            <h2 class="hoa-h2 text-gray-900">{t('home.howWeHelp.title')}</h2>
           </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ HOW WE WORK ============ -->
-  <section class="py-16 md:py-20 bg-gray-50/80">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16 items-start">
-        <div class="reveal">
-          <p class="text-sm font-semibold text-green-600 uppercase tracking-wider mb-3">{t('home.howWeWork.label')}</p>
-          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mb-6">{t('home.howWeWork.title')}</h2>
-          <p class="text-gray-500 text-lg leading-relaxed">{t('home.howWeWork.description')}</p>
         </div>
-        <div class="space-y-5 stagger-children">
-          {steps.map((step, i) => (
-            <div class="reveal flex gap-4" style={`--i: ${i}`}>
-              <div class="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-xl flex items-center justify-center text-sm font-bold">{i + 1}</div>
+        <div class="lg:col-span-7">
+          {situations.map((sit, i) => (
+            <div class="reveal flex gap-5 sm:gap-8 py-7 border-t border-gray-900/10 last:border-b">
+              <span class="hoa-mono text-green-700 pt-1.5">{pad(i)}</span>
               <div>
-                <h3 class="font-bold text-gray-900 mb-1">{step.title}</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
+                <h3 class="font-bold text-xl text-gray-900 mb-2 leading-snug tracking-tight">{sit.title}</h3>
+                <p class="text-gray-500 leading-relaxed">{sit.desc}</p>
               </div>
             </div>
           ))}
@@ -280,126 +343,129 @@ const localDesc = {
     </div>
   </section>
 
-  <!-- ============ CASE STUDIES ============ -->
-  <section id="case-studies" class="py-16 md:py-20 bg-gradient-to-b from-gray-900 via-gray-900 to-gray-800 text-white relative overflow-hidden">
-    <!-- Background effects -->
-    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 40px 40px;"></div>
-    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-green-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+  <!-- ============ HOW WE WORK ============ -->
+  <section class="pb-20 md:pb-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="hoa-panel-light p-7 sm:p-10 lg:p-14">
+        <div class="reveal grid lg:grid-cols-12 gap-6 mb-12 items-end">
+          <div class="lg:col-span-6">
+            <p class="hoa-mono text-green-700 mb-4">04 / {t('home.howWeWork.label')}</p>
+            <h2 class="hoa-h2 text-gray-900">{t('home.howWeWork.title')}</h2>
+          </div>
+          <p class="lg:col-span-6 text-gray-500 text-lg leading-relaxed">{t('home.howWeWork.description')}</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 stagger-children">
+          {steps.map((step, i) => (
+            <div class="reveal border-t-2 border-gray-900 pt-5" style={`--i: ${i}`}>
+              <div class="hoa-numeral mb-4">{pad(i)}</div>
+              <h3 class="font-bold text-lg text-gray-900 mb-2 tracking-tight">{step.title}</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="reveal mb-16">
-        <p class="text-sm font-semibold text-green-400 uppercase tracking-wider mb-3">{t('home.caseStudies.label')}</p>
-        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">{t('home.caseStudies.title')}</h2>
+  <!-- ============ CASE STUDIES ============ -->
+  <section id="case-studies" class="pb-20 md:pb-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="reveal mb-10 md:mb-14">
+        <p class="hoa-mono text-green-700 mb-4">05 / {t('home.caseStudies.label')}</p>
+        <h2 class="hoa-h2 text-gray-900">{t('home.caseStudies.title')}</h2>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-5 stagger-children">
-        {caseStudies.map((cs, i) => (
-          <a href={lp(`case-studies/${cs.slug}`)} class:list={[{ 'md:col-span-2': caseStudies.length % 2 === 1 && i === caseStudies.length - 1 }, 'reveal group block relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.04] backdrop-blur-sm hover:bg-white/[0.08] transition-all duration-500 hover:border-white/[0.12]']} style={`--i: ${i}`}>
-            <div class={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${cs.gradient}`}></div>
-            <div class="p-6">
-              <div class="flex items-center gap-2 mb-3">
-                <span class="text-xs font-semibold text-green-400 uppercase tracking-wider">{cs.context}</span>
-              </div>
-              <div class="flex items-start justify-between mb-3">
-                <div>
-                  <h3 class="font-bold text-lg text-white group-hover:text-green-400 transition-colors">{cs.title}</h3>
-                  <p class="text-xs text-gray-400 mt-0.5">{cs.role}</p>
-                </div>
-                <div class="text-right flex-shrink-0 ml-3">
-                  <div class="text-2xl font-extrabold text-green-400">{cs.stat}</div>
-                  <div class="text-[10px] text-gray-500 uppercase tracking-wider">{cs.statLabel}</div>
-                </div>
-              </div>
-              <p class="text-sm text-gray-400 leading-relaxed mb-4">{cs.desc}</p>
-              <span class="text-green-400 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                {t('home.caseStudies.viewFull')} <Icon name="arrow-right" class="text-xs" />
-              </span>
+      <div class="border-b border-gray-900/10">
+        {caseStudies.map((cs) => (
+          <a href={lp(`case-studies/${cs.slug}`)} class="reveal hoa-row group">
+            <div class="md:w-[38%] flex-shrink-0">
+              <p class="hoa-mono text-green-700 mb-2">{cs.context}</p>
+              <h3 class="font-bold text-2xl md:text-[1.7rem] text-gray-900 leading-tight tracking-tight">{cs.title}</h3>
+              <p class="text-sm text-gray-400 mt-1">{cs.role}</p>
             </div>
+            <p class="flex-1 text-gray-500 leading-relaxed text-[0.95rem]">{cs.desc}</p>
+            <div class="md:w-40 flex-shrink-0 md:text-right">
+              <div class="hoa-stat">{cs.stat}</div>
+              <div class="hoa-mono text-gray-400 mt-1">{cs.statLabel}</div>
+            </div>
+            <span class="hoa-arrow hidden md:inline-flex flex-shrink-0 self-center"><Icon name="arrow-right" class="-rotate-45" /></span>
           </a>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- ============ ABOUT TEASER ============ -->
-  <section class="py-16 md:py-20 bg-gray-50/80">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="reveal grid lg:grid-cols-5 gap-12 items-center">
-        <div class="lg:col-span-3">
-          <p class="text-sm font-semibold text-green-600 uppercase tracking-wider mb-3">{t('home.about.label')}</p>
-          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mb-6">{t('home.about.title')}</h2>
-          <p class="text-gray-500 text-lg leading-relaxed mb-6">{t('home.about.text')}</p>
-          <a href={lp('about')} class="text-green-600 font-semibold hover:text-green-700 transition-colors">
-            {t('home.about.cta')}
-          </a>
-        </div>
-        <div class="lg:col-span-2">
-          <div class="hoa-card p-8">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mb-5 shadow-lg">
-              <span class="text-2xl font-bold text-white">JC</span>
-            </div>
-            <h3 class="font-bold text-xl text-gray-900 mb-1">Jean-Christophe Meillaud</h3>
-            <p class="text-green-600 font-semibold text-sm mb-4">Founder & Principal Consultant</p>
-            <div class="space-y-2 text-sm text-gray-500">
-              <div class="flex items-start gap-2"><Icon name="check" class="text-green-500 mt-0.5 text-xs flex-shrink-0" />20 years enterprise & startup delivery</div>
-              <div class="flex items-start gap-2"><Icon name="check" class="text-green-500 mt-0.5 text-xs flex-shrink-0" />Universal Music, Vodafone, startups</div>
-              <div class="flex items-start gap-2"><Icon name="check" class="text-green-500 mt-0.5 text-xs flex-shrink-0" />France, Switzerland & Germany</div>
+  <!-- ============ ABOUT + CONTACT ============ -->
+  <section id="contact" class="px-3 sm:px-4 pb-3">
+    <div class="hoa-panel-dark">
+      <div class="hoa-aurora hoa-aurora--a"></div>
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16 md:py-24">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
+          <div class="reveal lg:col-span-5">
+            <p class="hoa-mono text-green-400 mb-4">06 / {t('nav.contact')}</p>
+            <h2 class="hoa-h2 text-white mb-5">{t('home.consultation.title')}</h2>
+            <p class="text-white/60 text-lg leading-relaxed mb-10">{t('home.consultation.subtitle')}</p>
+
+            <div class="hoa-glass p-6">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 rounded-2xl bg-green-500 text-gray-950 flex items-center justify-center font-bold text-lg" style="font-family: var(--font-display)">JC</div>
+                <div>
+                  <h3 class="font-bold text-white leading-tight">Jean-Christophe Meillaud</h3>
+                  <p class="text-green-400 text-sm">Founder & Principal Consultant</p>
+                </div>
+              </div>
+              <p class="text-white/55 text-sm leading-relaxed mb-4">{t('home.about.text')}</p>
+              <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold">
+                <a href={lp('about')} class="text-green-400 hover:text-green-300 transition-colors">{t('home.about.cta')}</a>
+                <a href="mailto:jc@houseofagile.com" class="text-white/70 hover:text-white transition-colors">jc@houseofagile.com</a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ============ CONTACT FORM ============ -->
-  <section id="contact" class="py-16 md:py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="reveal text-center mb-14">
-        <p class="text-sm font-semibold text-green-600 uppercase tracking-wider mb-3">{t('nav.contact')}</p>
-        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mb-4">{t('home.consultation.title')}</h2>
-        <p class="text-gray-500 max-w-2xl mx-auto">{t('home.consultation.subtitle')}</p>
-      </div>
-      <div class="reveal max-w-2xl mx-auto">
-        <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
-          <form method="POST" action="https://formspree.io/f/mwpnzjel" class="space-y-5">
-            <div class="grid md:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-2">{t('home.consultation.fullName')}</label>
-                <input type="text" name="name" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition text-sm" />
-              </div>
-              <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-2">{t('home.consultation.company')}</label>
-                <input type="text" name="company" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition text-sm" />
-              </div>
+          <div class="reveal lg:col-span-7">
+            <div class="bg-white rounded-[28px] p-6 sm:p-9 text-gray-900">
+              <form method="POST" action="https://formspree.io/f/mwpnzjel" class="space-y-5">
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label for="cf-name" class="hoa-label">{t('home.consultation.fullName')}</label>
+                    <input id="cf-name" type="text" name="name" required class="hoa-input" />
+                  </div>
+                  <div>
+                    <label for="cf-company" class="hoa-label">{t('home.consultation.company')}</label>
+                    <input id="cf-company" type="text" name="company" class="hoa-input" />
+                  </div>
+                </div>
+                <div>
+                  <label for="cf-email" class="hoa-label">{t('home.consultation.email')}</label>
+                  <input id="cf-email" type="email" name="email" required class="hoa-input" />
+                </div>
+                <div>
+                  <label for="cf-type" class="hoa-label">{t('home.consultation.engagementType')}</label>
+                  <select id="cf-type" name="engagement_type" required class="hoa-input">
+                    <option value="">{t('form.selectEngagement')}</option>
+                    <option value="cto">{t('form.engagementCTO')}</option>
+                    <option value="automation">{t('form.engagementAutomation')}</option>
+                    <option value="platform">{t('form.engagementPlatform')}</option>
+                    <option value="modernization">{t('form.engagementModernization')}</option>
+                    <option value="product">{t('form.engagementProduct')}</option>
+                    <option value="advisory">{t('form.engagementAdvisory')}</option>
+                    <option value="security">{t('form.engagementSecurity')}</option>
+                    <option value="data-recovery">{t('form.engagementRecovery')}</option>
+                    <option value="other">{t('form.engagementOther')}</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="cf-desc" class="hoa-label">{t('home.consultation.description')}</label>
+                  <textarea id="cf-desc" name="description" required rows="4" class="hoa-input resize-none"></textarea>
+                </div>
+                <button type="submit" class="w-full btn-primary text-base">
+                  {t('home.consultation.submit')}
+                  <Icon name="paper-plane" class="text-sm" />
+                </button>
+                <p class="text-center text-xs text-gray-400">{t('home.consultation.privacy')}</p>
+              </form>
             </div>
-            <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-2">{t('home.consultation.email')}</label>
-              <input type="email" name="email" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition text-sm" />
-            </div>
-            <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-2">{t('home.consultation.engagementType')}</label>
-              <select name="engagement_type" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition text-sm">
-                <option value="">{t('form.selectEngagement')}</option>
-                <option value="cto">{t('form.engagementCTO')}</option>
-                <option value="automation">{t('form.engagementAutomation')}</option>
-                <option value="platform">{t('form.engagementPlatform')}</option>
-                <option value="modernization">{t('form.engagementModernization')}</option>
-                <option value="product">{t('form.engagementProduct')}</option>
-                <option value="advisory">{t('form.engagementAdvisory')}</option>
-                <option value="security">{t('form.engagementSecurity')}</option>
-                <option value="data-recovery">{t('form.engagementRecovery')}</option>
-                <option value="other">{t('form.engagementOther')}</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-2">{t('home.consultation.description')}</label>
-              <textarea name="description" required rows="4" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition resize-none text-sm"></textarea>
-            </div>
-            <button type="submit" class="w-full btn-primary py-4 text-base">
-              <Icon name="paper-plane" class="mr-2" />{t('home.consultation.submit')}
-            </button>
-            <p class="text-center text-xs text-gray-400">{t('home.consultation.privacy')}</p>
-          </form>
+          </div>
         </div>
       </div>
     </div>

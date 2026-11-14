@@ -49,8 +49,8 @@ const langLinks = frOnlyPage
     ));
 ---
 
-<nav class="nav-glass sticky top-0 z-50 border-b border-hoa-100/50" id="main-nav">
-  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+<nav class="sticky top-3 z-50 px-3 sm:px-4 pt-3" id="main-nav">
+  <div class="nav-pill max-w-6xl mx-auto pl-4 pr-2.5 py-2 flex items-center justify-between gap-4">
     <!-- Logo + Brand -->
     <a href={getLocalePath(lang as Lang)} class="flex items-center gap-2.5 flex-shrink-0 group">
       <div class="relative">
@@ -68,7 +68,7 @@ const langLinks = frOnlyPage
         </a>
       ))}
       {lang === 'fr' && (
-        <a href="/fr/collectivites-communes-services-numeriques/" class="nav-link text-sm font-medium text-emerald-700 hover:text-emerald-900 transition-colors px-3 py-2 rounded-lg hover:bg-emerald-50/80">
+        <a href="/fr/collectivites-communes-services-numeriques/" class="nav-link text-sm font-medium text-green-700 hover:text-green-900 transition-colors px-3 py-2 rounded-lg hover:bg-green-50/80">
           Collectivités
         </a>
       )}
@@ -117,15 +117,15 @@ const langLinks = frOnlyPage
   </div>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100/80 bg-white/98 backdrop-blur-xl">
-    <div class="max-w-6xl mx-auto px-4 py-5 flex flex-col gap-1">
+  <div id="mobile-menu" class="hidden lg:hidden max-w-6xl mx-auto mt-2 rounded-3xl bg-white border border-gray-900/5 shadow-xl">
+    <div class="px-4 py-5 flex flex-col gap-1">
       {navLinks.map((link) => (
         <a href={link.href} class="text-base font-medium text-gray-700 hover:text-hoa-600 py-3 px-3 rounded-xl hover:bg-gray-50 transition-colors mobile-nav-link">
           {t(link.key)}
         </a>
       ))}
       {lang === 'fr' && (
-        <a href="/fr/collectivites-communes-services-numeriques/" class="text-base font-medium text-emerald-700 hover:text-emerald-900 py-3 px-3 rounded-xl hover:bg-emerald-50 transition-colors mobile-nav-link">
+        <a href="/fr/collectivites-communes-services-numeriques/" class="text-base font-medium text-green-700 hover:text-green-900 py-3 px-3 rounded-xl hover:bg-green-50 transition-colors mobile-nav-link">
           Collectivités
         </a>
       )}
